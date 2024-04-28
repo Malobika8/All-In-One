@@ -1,3 +1,5 @@
+INTRODUCTION
+
 JDBC has list of api's which lets user interact with the database without having to know structured query language.
 It bridges the gap between a java application and database. It was originally developed by Sun Microsystems, later acquired by Oracle. Oracle now develops and maintains the same.
 JDBC mostly has interfaces so that can be utilized for various databases available. Depending on the databases are JDBC Drivers which have relevant implementation that are made
@@ -14,15 +16,19 @@ Steps to connect with Database
   1) Loads the Class in memory - Class.forName("com.mysql.jdbc.Driver_name") (mention entire package name) Once the class is loaded, all the static statements/blocks will be executed.
   2) Or Pass  the object to Drivermanager - DriverManager.registerDriver(com.mysql.jdbc.Driver_name()
 - Create a connection
-  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname","root","password") (Static method)
+
+      Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbname","root","password") (Static method)
 - Create query, Statement, PreparedStatement, CallableStatement
-  E.g: String q = "Select * from Students";
+  E.g:
+
+       String q = "Select * from Students";
        Statement smt = con.createStatement();
        ResultSet set = smt.executeQuery(q);
 - Process the data:
-  while(set.next()){
-      int id = set.getInt("studentID");
-      String name = set.getName("studentName");
-      System.out.println("ID:"+id+", Name:"+name);
-  }
+
+      while(set.next()){
+          int id = set.getInt("studentID");
+          String name = set.getName("studentName");
+          System.out.println("ID:"+id+", Name:"+name);
+      }
 - Close the connection: con.close();
