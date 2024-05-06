@@ -12,7 +12,7 @@
   
 3) Declare all the properties under "hibernate-configuration" -> "session-factory" tag.
 
-      <hibernate-configuration>
+       <hibernate-configuration>
         <session-factory>
         <!-- Driver class -->
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
@@ -29,11 +29,11 @@
         <!-- To show sequel queries -->
         <property name="show_sql">true</property>
         </session-factory>
-      </hibernate-configuration>
+       </hibernate-configuration>
 
 4) Create an object of SessionFactory(Interface): Session Factory is a thread safe object that creates session which helps in saving objects/data.
  
-      //file path of hibernate.cfg.xml should be added in configure() if it's not auto-detected
-      SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+          //file path of hibernate.cfg.xml should be added in configure() if it's not auto-detected
+          SessionFactory sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
 
-5) 
+
