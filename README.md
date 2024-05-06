@@ -36,27 +36,35 @@ Maven is a project under the Apache Software Foundation umbrella. It came into e
 
 <img width="1010" alt="Screenshot 2024-05-02 at 10 39 29 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/edb3f009-424f-446e-99f0-3ace91c4a1c1">
 
-- "project" tag is the root tag of every pom.xml file
-- "<groupId>" unique id of the org
+-  "project" tag is the root tag of every pom.xml file
+- "groupId" unique id of the org
 - under development: snapshot
 - released: release
-- "<packaging>" tells what type of package it will be. By default, its a jar
+- "packaging" tells what type of package it will be. By default, its a jar
 - mvn package: creates a jar file that contains the content of the project
-- "<name>": informal name of the project (in place of official artifact name)
-- "<description>": used to describe the project
-- "<url>": If there's any url for more info
-- "<organization><name></name></organization>": used to specify who is behind the project
-- "<developers><developer><name></name><email></email></developer></developers>": used to mention the developers of the project
+- "name": informal name of the project (in place of official artifact name)
+- "description": used to describe the project
+- "url": If there's any url for more info
+- Used to specify who is behind the project:
+
+      <organization><name></name></organization>
+  
+- Used to mention the developers of the project:
+
+      <developers><developer><name></name><email></email></developer></developers>
+  
 - Maven provides a way to take all the information provided in pom and build a site for it. This can be done with "mvn site". Go to target->site->index.html
 - Maven's standard directory layout. The files,configs,resources etc are supposed to be as per the directory layout. This is basically convention over configuration. This is 
   essentially how maven knows where the .class files can be located
 - The directory structure can be conigured and changed. However, its not recommended to do so in case of new projects. For legacy projects, it may be done. This can be configured using
-  <build><sourceDirectory></sourceDirectory><directory></directory></build> tags.
+
+      <build><sourceDirectory></sourceDirectory><directory></directory></build> 
+  
 - To see child pom and inherited pom(parent), type "mvn help:effective-pom
 - To build one pom that inherits another pom:
   <img width="1145" alt="Screenshot 2024-05-03 at 10 25 09 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9bfd814f-82e3-4180-bef6-f75eaa84fe45">
 - mvn install: build our project and puts it in the local repository
-- Maven "<Profile>" allows us to build our project for different environments like dev,eng etc. It provides us the provision to customize our build as per the environment.
+- Maven "Profile" allows us to build our project for different environments like dev,eng etc. It provides us the provision to customize our build as per the environment.
   After creating a profile, the same can be run with "mvn -P<profile_id> package". However, we don't want to define the profile we would like to apply by using that command line flag 
   when we execute the goal. Sometimes it's not possible to specify that flag. Maven provides us a mechanism to take other environment characteristics into consideration when we 
   determine which profile to apply. This is known an activator. It checks something similar to the environment value and determine what profile to apply based on the value.
@@ -87,7 +95,7 @@ Dependency management is pulling in the dependencies that is required for the pr
 
 - To pull down the dependencies: "mvn dependency:copy-dependencies"
 - The local repository acts as a cache
-- How does maven know which repository to pull dependencies from? It pull in from the repositories mentioned in pom under "<repositories>" tag
+- How does maven know which repository to pull dependencies from? It pull in from the repositories mentioned in pom under "repositories" tag
   <img width="1082" alt="Screenshot 2024-05-03 at 5 24 17 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/be62e028-c97c-4273-b86e-dd993c58d60a">
 - If a repo is used extensively, it can be added in Settings.xml present inside the Apache Maven folder.
   <img width="1139" alt="Screenshot 2024-05-03 at 5 31 35 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/f9a588f0-eb5e-4e97-bf59-fdb14b1dddb3">
@@ -127,7 +135,11 @@ Dependency management is pulling in the dependencies that is required for the pr
  
  # **Goals and plugins**
   - Goals perform tasks and those tasks are run against our project in order for something to happen. Plugins are comprised of a number of goals. Goal could be analogous to method and     plugins to class.
-  - Syntax for executing a plugin: "mvn <nameOfThePlugin>:<goal>". Ex. "mvn compiler:compile"
+  - Syntax for executing a plugin:
+
+        "mvn <nameOfThePlugin>:<goal>".
+
+    Ex. "mvn compiler:compile"
   - Where these plugins come from? : In our pom.xml, the plugins are not specified. Then where does it come from? It comes from the super pom which can be confirmed by taking a look       at the effective pom. PluginRepositories are very similar to dependency repositories. We get a lot of default plugins from the same when working with plugin. Along with it, there      are basic 4 plugins generally listed in maven super-pom.
 
     <img width="1032" alt="Screenshot 2024-05-03 at 9 42 35 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/e6dbeb87-94e1-4620-9ff6-2ca851111e49">
@@ -139,9 +151,11 @@ Dependency management is pulling in the dependencies that is required for the pr
     There are a list of properties that can be set for goals.
     **How to set a property?**
     1) Specify property using command line
-    mvn compiler:compile -Dmaven.compiler.verbose=true
-    mvn <plugin>:<goal> -D<User property name>=<boolean>
-    2) Specify propery using pom.xml (Add plugin we would like to adjust)
+
+           mvn compiler:compile -Dmaven.compiler.verbose=true
+            mvn <plugin>:<goal> -D<User property name>=<boolean>
+       
+    3) Specify propery using pom.xml (Add plugin we would like to adjust)
 
            <build>
            <pluginManagement>
@@ -164,7 +178,12 @@ We need to have a basic create archetype which can be created by the following c
 -> Then do "mvn install"
 
 *Long way of referring our plugin
--> Add groupId artifactId and touch goal of Maven custom compiler to other project - "mvn org.example:MavenCustomPlugin:touch" "mvn <groupId>:<artifactId>:goal"
+-> Add groupId artifactId and touch goal of Maven custom compiler to other project - 
+        
+    "mvn org.example:MavenCustomPlugin:touch" 
+    
+    i.e. "mvn <groupId>:<artifactId>:goal"
+    
 -> When we refresh the other project, we see touch.txt created in target folder
 
 * Concise way of referring our plugin
@@ -209,7 +228,7 @@ We need to have a basic create archetype which can be created by the following c
   -> we have now setup of custom plugin that we want to use in the target project
   -> To run custom plugin within our target project: "mvn <pluginPrefix>:<goal>" eg: mvn customPlugin:touch
 
-#**Goals and Plugins**
+# **Goals and Plugins**
 To know more about different available plugins, check https://maven.apache.org/plugins/
 1) **Clean Plugin**:
    Clears the target directory. It is generally executed when we're starting over. The clean plugin only has one goal "mvn clean:clean"
@@ -278,19 +297,18 @@ Post the below changes, we will be able to execute different maven commands on t
 When working with web applications, we need somewhere to deploy that web application too.
 Tomcat is not a full blown J2EE application server. It is a servlet container. But it still allows us to deploy our applications/war file to a server.
 * Download tomcat zip
-* 
+
+# **TO BE CONTINUED**
 
   
-  
-<img width="1067" alt="Screenshot 2024-05-02 at 6 00 34 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3bdcaeb3-f753-4733-b5b5-e17575e705cd">
-<img width="1067" alt="Screenshot 2024-05-02 at 6 01 57 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/60bf72a4-be7c-4a67-bf7e-6dfdc06a0efb">
 
-**Maven installation in Mac**
+# **Maven installation in Mac**
 - Go to Terminal
 - Type "brew install maven"
 - Check if it's installed correctly by checking "mvn --version"
 **Note**: To uninstall - "brew uninstall maven"
 
+# **TO SUMMARIZE:**
 <img width="1004" alt="Screenshot 2024-05-02 at 6 11 49 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/c73b78b6-31ad-4260-84e4-e8baf603d13d">
 <img width="1020" alt="Screenshot 2024-05-02 at 6 12 53 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/85356f9b-66a6-4670-8bea-39044fbb659a">
 <img width="1090" alt="Screenshot 2024-05-02 at 6 31 28 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/886ace01-4fd1-4b9a-be76-a2e17a017e4b">
