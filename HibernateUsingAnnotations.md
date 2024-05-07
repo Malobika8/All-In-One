@@ -228,13 +228,42 @@
    
    In case of Bidirectional mapping,
    
-   <img width="960" alt="Screenshot 2024-05-07 at 1 22 02 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/c0d80935-f7c5-4f54-93ca-c686a1f842d9">
+   <img width="886" alt="Screenshot 2024-05-07 at 10 10 14 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/b881bd24-2405-429d-8bac-f0be6c1ae6f9">
 
    Foreign key column can be renamed by using @JoinColumn annotation
    <img width="861" alt="Screenshot 2024-05-07 at 1 12 32 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1b88b3c3-4f8c-4055-964b-8725f55a110b">
 
    # **OneToManyMapping**
    
+   <img width="875" alt="Screenshot 2024-05-07 at 10 42 05 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/db23fbcc-cdf5-4e64-879f-52f8367e8e6b">
+   <img width="896" alt="Screenshot 2024-05-07 at 10 42 14 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3e1b7852-335c-42a3-a124-5229b5b138a4">
+   <img width="1309" alt="Screenshot 2024-05-07 at 10 42 38 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/f9996215-fa14-4358-a765-f769709f6915">
+   <img width="1261" alt="Screenshot 2024-05-07 at 10 44 59 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/5d609055-e0fb-426a-a169-e1905a815e79">
+   <img width="872" alt="Screenshot 2024-05-07 at 10 45 26 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/745dfed7-b79f-4215-a425-37bf2d86e16a">
+   <img width="929" alt="Screenshot 2024-05-07 at 10 45 42 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/519f2d25-fff6-4cbb-b564-79bc7f98eb74">
+
+   # **ManyToMany**
+   <img width="935" alt="Screenshot 2024-05-07 at 11 22 54 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/b8f03ccb-7919-4cdd-ab13-33b71c9259cf">
+   <img width="1035" alt="Screenshot 2024-05-07 at 11 23 14 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/e099b614-a18d-426b-bd18-aa24d4fa1756">
+   <img width="1195" alt="Screenshot 2024-05-07 at 11 23 33 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1be59101-e079-4a4d-920b-bc357f24e945">
+   <img width="1228" alt="Screenshot 2024-05-07 at 11 25 14 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/b1ac018c-1269-492e-b869-253cca608f75">
+   <img width="1170" alt="Screenshot 2024-05-07 at 11 25 01 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/20f27a6e-12a7-4c5b-a7e2-1ba6586fab15">
+   <img width="852" alt="Screenshot 2024-05-07 at 11 26 31 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/878e997c-b582-418d-aa4f-243d269a0d98">
+   <img width="881" alt="Screenshot 2024-05-07 at 11 26 43 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/fa772386-5da6-4858-b823-9a8d0dae35ca">
+   <img width="898" alt="Screenshot 2024-05-07 at 11 26 54 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/5a36f98a-d4dd-4131-a769-851a8e409ea3">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
