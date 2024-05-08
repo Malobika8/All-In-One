@@ -22,3 +22,7 @@ Set starting index and maximum no of results that can be fetched
 Retrieved batchwise as per the configuration done using setMaxResult and setFirstResult
 <img width="1314" alt="Screenshot 2024-05-08 at 1 39 17 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9fbd36b5-d63a-44fe-b160-b3dddfc64026">
 
+# **Native SQL Query**
+<img width="931" alt="Screenshot 2024-05-08 at 2 54 58 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/84e25856-5ac3-47dd-a613-06a3655848c5">
+
+
