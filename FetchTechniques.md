@@ -24,13 +24,4 @@
   <img width="903" alt="Screenshot 2024-05-08 at 9 31 37 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/16b0fbd6-cec8-4228-8e80-88dd9c447c7f">
   <img width="901" alt="Screenshot 2024-05-08 at 9 31 46 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ef51cab8-ad0d-409f-87cf-42313d8e9864">
 
-# **Pagination**
-6 entries exist for Citizen table
-<img width="930" alt="Screenshot 2024-05-08 at 1 37 12 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d807ac18-e0dc-4ccf-8967-afd4ab6163b7">
-
-Set starting index and maximum no of results that can be fetched
-<img width="1014" alt="Screenshot 2024-05-08 at 1 36 01 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/cf3486c8-2cb5-4ecc-92d1-5cd52bf6b5da">
-
-Retrieved batchwise as per the configuration done using setMaxResult and setFirstResult
-<img width="1314" alt="Screenshot 2024-05-08 at 1 39 17 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9fbd36b5-d63a-44fe-b160-b3dddfc64026">
 
