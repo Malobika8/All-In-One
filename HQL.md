@@ -12,5 +12,13 @@ For dynamic queries, a parameter can be passed and set using session's setParame
 <img width="900" alt="Screenshot 2024-05-08 at 11 47 07 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3ef8ea2c-2198-4ecb-864e-be54e0071739">
 <img width="897" alt="Screenshot 2024-05-08 at 11 52 02 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/76436884-3ced-457d-92f2-7af39a41f41a">
 
+# **Pagination**
+6 entries exist for Citizen table
+<img width="930" alt="Screenshot 2024-05-08 at 1 37 12 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d807ac18-e0dc-4ccf-8967-afd4ab6163b7">
 
+Set starting index and maximum no of results that can be fetched
+<img width="1014" alt="Screenshot 2024-05-08 at 1 36 01 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/cf3486c8-2cb5-4ecc-92d1-5cd52bf6b5da">
+
+Retrieved batchwise as per the configuration done using setMaxResult and setFirstResult
+<img width="1314" alt="Screenshot 2024-05-08 at 1 39 17 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9fbd36b5-d63a-44fe-b160-b3dddfc64026">
 
