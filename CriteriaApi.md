@@ -4,6 +4,7 @@ Criteri api is used to implement various database operations without creating qu
 
 Conside the following example,
 
+Pass the object to createCriteria api that we wish to fetch
 <img width="995" alt="Screenshot 2024-05-08 at 10 46 58 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9c7e0dcb-d9b0-49e1-a349-035c3be3f27a">
 <img width="958" alt="Screenshot 2024-05-08 at 10 47 46 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/6ca6eaef-0264-40dd-8f93-a448489d3975">
 
