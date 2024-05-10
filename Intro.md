@@ -48,6 +48,7 @@ Even if we don't immediately use the object, spring creates and keeps the object
 
 ApplicationContext creates a Spring container for us. The container will have spring beans. The classes are specified in the xml file. Spring container checks the file and 
 creates beans accordingly.
+
 <img width="502" alt="Screenshot 2024-05-11 at 12 18 35 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d8592d51-1744-4466-ab6f-b57b320ae585">
 
 
