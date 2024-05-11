@@ -51,6 +51,47 @@ creates beans accordingly.
 
 <img width="502" alt="Screenshot 2024-05-11 at 12 18 35 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d8592d51-1744-4466-ab6f-b57b320ae585">
 
+By default Spring follows Singleton pattern i.e. it gives only one instance of a class. Even if we ask multiple times, it will give the same instance.
+All the Spring beans are called Singleton beans because objects are created only once. All the references refer to the same object.
+For example, even though obj2 didn't set age, it still prints 15(the age set by obj1. 
+<img width="1372" alt="Screenshot 2024-05-11 at 9 07 46 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/e14f6fc8-8b98-4a10-94be-30ff902ecf26">
+
+*What if we don't want to follow singleton pattern?*
+We can use a different scope.
+Prototype means whenever we ask for a bean, Spring container creates an object at that time. So even if we ask 10 time, it will give 10 different instances of the class.
+<img width="972" alt="Screenshot 2024-05-11 at 9 16 15 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/bfab0a72-c3ee-4b66-b76f-b1ef7d9b8531">
+in case of Singleton, even if we dont ask for an object, Spring container creates and keeps the object ready for future use. However, when the scope is changed to Protoype, objects are created only when we ask for it.
+
+# **Setter Injection**
+<img width="915" alt="Screenshot 2024-05-11 at 9 31 34 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/8462b743-5c83-4e5a-9d35-86005016b9be">
+<img width="1359" alt="Screenshot 2024-05-11 at 9 31 46 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/11bc46d7-61d1-43e9-b87e-651f95d2e1ae">
+**Ref Attribute**
+Create a bean of the new class. Reference can be added by using property "ref"
+<img width="911" alt="Screenshot 2024-05-11 at 5 57 05 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/490abac8-6287-41d9-8452-60fffe5256d7">
+<img width="845" alt="Screenshot 2024-05-11 at 5 57 15 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3f50b3a4-3476-4245-974b-69871ed072fb">
+# **Constructor Injection**
+By default, the Spring container calls the default constructor. To call parameterized constuctor, tag "constructor-arg" can be used.
+<img width="895" alt="Screenshot 2024-05-11 at 6 05 26 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/7ed9e6c8-116e-49c2-8177-18c01614fb24">
+<img width="891" alt="Screenshot 2024-05-11 at 6 05 43 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/073b8869-6b70-44d0-bd51-e4160b118d56">
+
+# **Autowire**
+If there are multiple implementations of an Interface, instead of manually adding reference of bean in property, autowire can be used. So
+in case of autowire, we don't have to mention the property. It searches for a particular bean automatically based on name/type.
+Hence, Autowire can be done byName or byType.
+<img width="852" alt="Screenshot 2024-05-11 at 8 00 16 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/5437ba13-ad8e-4d57-acca-ea8c1b14fa43">
+<img width="847" alt="Screenshot 2024-05-11 at 8 00 45 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/fc94fe8d-6ece-4ec0-8c1d-9eead7bff5b2">
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
