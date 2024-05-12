@@ -16,10 +16,10 @@
 
 <img width="1008" alt="Screenshot 2024-05-12 at 10 22 28 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/67518f8b-f32f-4b46-9b4e-0db3e0da36bd">
 
+*To enable all annotations,*
+
 <img width="927" alt="Screenshot 2024-05-12 at 10 25 28 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/40494342-fe36-47f5-b398-4a69044f7aba">
 <img width="852" alt="Screenshot 2024-05-12 at 10 24 15 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/fcc13d43-113b-41b5-b1b1-34d6b8a2b867">
-
-*To enable all annotations,*
 
 <img width="583" alt="Screenshot 2024-05-12 at 10 26 24 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d8c5bff5-766a-4d33-92ca-329eefea403c">
 
