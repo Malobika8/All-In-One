@@ -5,7 +5,9 @@
 
 If there are multiple implementations of an Interface, instead of manually adding reference of bean in property, autowire can be used. So
 in case of autowire, we don't have to mention the property. It searches for a particular bean automatically based on name/type.
-Hence, Autowire can be done byName or byType.
+
+# **Through XML config**
+Autowire can be done byName or byType.
 
 <img width="912" alt="Screenshot 2024-05-12 at 11 21 45 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/de01e6b4-230f-47fa-9c96-4f28c7ef6d01">
 
@@ -28,6 +30,7 @@ Hence, Autowire can be done byName or byType.
   
   <img width="1340" alt="Screenshot 2024-05-12 at 8 36 19 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/99932428-3d45-46a3-9bfb-1d1ef843cbd7">
   The issue can be solved by 2 ways:
+  
   * We can just remove autowiring and make use of property where we can mention the reference.
   
     <img width="949" alt="Screenshot 2024-05-12 at 8 41 54 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/7940b08b-0654-4d03-b6cf-7e0b1319d66e">
@@ -38,7 +41,7 @@ Hence, Autowire can be done byName or byType.
     <img width="963" alt="Screenshot 2024-05-12 at 8 42 40 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/91fedf15-e91e-4387-8e97-4cef12f85264">
     <img width="1219" alt="Screenshot 2024-05-12 at 8 43 12 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/7828d50d-191b-4674-81bf-2f8248b04cea">
 
-**Through annotations**
+# **Through annotations**
 
 If @Autowired annotation will be added on :
 1) property , only default constructor will be called.
