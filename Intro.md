@@ -99,43 +99,6 @@ Prototype means whenever we ask for a bean, Spring container creates an object a
 <img width="972" alt="Screenshot 2024-05-11 at 9 16 15 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/bfab0a72-c3ee-4b66-b76f-b1ef7d9b8531">
 in case of Singleton, even if we dont ask for an object, Spring container creates and keeps the object ready for future use. However, when the scope is changed to Protoype, objects are created only when we ask for it.
 
-# **Setter Injection**
-<img width="915" alt="Screenshot 2024-05-11 at 9 31 34 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/8462b743-5c83-4e5a-9d35-86005016b9be">
-<img width="1359" alt="Screenshot 2024-05-11 at 9 31 46 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/11bc46d7-61d1-43e9-b87e-651f95d2e1ae">
-**Ref Attribute**
-Create a bean of the new class. Reference can be added by using property "ref"
-<img width="911" alt="Screenshot 2024-05-11 at 5 57 05 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/490abac8-6287-41d9-8452-60fffe5256d7">
-<img width="845" alt="Screenshot 2024-05-11 at 5 57 15 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3f50b3a4-3476-4245-974b-69871ed072fb">
-
-# **Constructor Injection**
-By default, the Spring container calls the default constructor. To call parameterized constuctor, tag "constructor-arg" can be used.
-<img width="895" alt="Screenshot 2024-05-11 at 6 05 26 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/7ed9e6c8-116e-49c2-8177-18c01614fb24">
-<img width="891" alt="Screenshot 2024-05-11 at 6 05 43 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/073b8869-6b70-44d0-bd51-e4160b118d56">
-
-*Note: Property values can be injected by three ways*
-  * value as a property
-  * value as a tag
-  * using p schema
-
-  <img width="591" alt="Screenshot 2024-05-12 at 9 16 41 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/8439e2e7-2c18-40ff-9f4f-f1fd2a169865">
-  <img width="962" alt="Screenshot 2024-05-12 at 9 20 16 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/6a1eed3f-5a55-4328-932a-2622817fd01b">
-  <img width="979" alt="Screenshot 2024-05-12 at 9 20 37 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/de2d34c3-c2d8-43bb-b983-86c6de417087">
-  <img width="1105" alt="Screenshot 2024-05-12 at 9 21 10 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/815175e6-5d1f-4afa-9764-765d0d6fbe72">
-  <img width="1075" alt="Screenshot 2024-05-12 at 9 21 34 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/0c130211-a381-4d26-8d30-54c6adf53cb8">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
