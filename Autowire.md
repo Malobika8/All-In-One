@@ -43,6 +43,20 @@ Autowire can be done byName or byType.
 
 # **Through annotations**
 
+**Note**: @Component is added to create an object of the class. It will just be available in the Spring container till a spring bean of the 
+class is created. When we do "getBean", it checks if the bean of type specified is available in the container.
+The object still gets created even if we get the bean. This is because, by default, spring framework uses the concept of singleton design 
+pattern i.e. it creates the object prehand.
+
+<img width="692" alt="Screenshot 2024-05-15 at 11 09 23 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/10d5ae0b-32c2-42d6-b228-a85f84b228a9">
+
+We can modify if we want to use prototype insead of singleton by changing scope. However, it doesn't create an instance by default in the beginning. Only when a bean is required, an instance of the class is created.
+
+<img width="656" alt="Screenshot 2024-05-15 at 11 13 30 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/51a47978-be9e-44dc-a5b2-ce6bdf419300">
+
+@Autowire: Tries to search for object in the spring container. It, by default, searches by type.
+@Qualifier: It, by default, searches by name in the container.
+
 If @Autowired annotation will be added on :
 1) property , only default constructor will be called.
 2) setter method , both default constructor and setter method will be called.
