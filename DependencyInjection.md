@@ -17,7 +17,7 @@ In such case, instance of Address class is provided by external souce such as XM
 
 # **Types of Spring Dependency Injection:**
 * **Setter Injection**
-* 
+  
   With "property" tag in place, spring looks for setter method for the property specified.
   <img width="1149" alt="Screenshot 2024-05-15 at 6 06 00 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/40023619-f8dc-455e-8481-135276f2d4cf">
 
