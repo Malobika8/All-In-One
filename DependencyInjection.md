@@ -1,5 +1,3 @@
-Dependency Injection
-
 # **Dependency Injection**
 Injecting a value to the dependency.
 The Dependency Injection is a design pattern that removes the dependency of the programs. In such case we provide the information from the external source such as XML file. It makes our code loosely coupled and easier for testing. In such case we write the code as:
