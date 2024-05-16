@@ -80,6 +80,11 @@ In such case, instance of Address class is provided by external souce such as XM
 In case of interface, we can provide the implementation required.
 Example,
 
+<img width="546" alt="Screenshot 2024-05-16 at 5 53 22 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/7ac2307d-8ed5-493b-9b12-1838fddb1cb3">
+<img width="895" alt="Screenshot 2024-05-16 at 5 53 28 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d21b18a6-80cc-4949-88dd-a21fd2d937ab">
+<img width="921" alt="Screenshot 2024-05-16 at 5 53 34 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/fde1032c-a8d4-4308-9293-e11dbfa8afe7">
+<img width="955" alt="Screenshot 2024-05-16 at 5 54 04 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9d3dd67c-de08-481b-a91c-6250d0e41d49">
+<img width="948" alt="Screenshot 2024-05-16 at 5 54 21 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d7fd37e6-c442-455c-a0fb-7577e734fe48">
 <img width="972" alt="Screenshot 2024-05-16 at 5 41 35 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/e7e27b8c-943e-4652-a2ef-b3e3d21a0ec6">
 <img width="1158" alt="Screenshot 2024-05-16 at 5 41 58 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ca9417e7-acee-4987-a993-ae1a569b440f">
 
