@@ -66,7 +66,7 @@
   <img width="1029" alt="Screenshot 2024-05-21 at 11 15 29 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/18cdb9f4-d493-49e9-8385-23f6a1655809">
   <img width="824" alt="Screenshot 2024-05-21 at 11 12 23 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d70e7ba9-4342-437e-8c12-3f3845da3e54">
 
-But what if we don't want to set properties through xml file? - We can use annotations.
+**But what if we don't want to set properties through xml file? - We can use annotations.**
 
 * @Value:
 
@@ -86,7 +86,7 @@ But what if we don't want to set properties through xml file? - We can use annot
   
   <img width="773" alt="Screenshot 2024-05-21 at 11 28 45 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/6a2c44a8-17e7-4ac9-a047-da9300eefa5b">
 
-**Note:** We can set from properties file as well.
+*Note: We can set from properties file as well.*
 
 <img width="781" alt="Screenshot 2024-05-21 at 11 32 07 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/0b7c834e-b1fc-477f-85fc-8ce47ddfad14">
 
@@ -94,7 +94,7 @@ But what if we don't want to set properties through xml file? - We can use annot
 
 <img width="709" alt="Screenshot 2024-05-21 at 11 38 25 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/eda6043e-1cd4-4526-9b22-71d1d72626f1">
 
-**Note:** @Require can only be used above setter method and cant be used with fields directly.
+*Note: @Require can only be used above setter method and cant be used with fields directly.* 
 
 <img width="723" alt="Screenshot 2024-05-22 at 9 43 59 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/4e3b2ca7-7765-4bbb-8d60-ce69a1c950fb">
 
