@@ -1,6 +1,6 @@
 # **Spring Annotations**
 
-* *@Component:* Creates an object for us and registers that object in the IOC container. @Component annotation can be used instead of       
+1. *@Component:* Creates an object for us and registers that object in the IOC container. @Component annotation can be used instead of       
   specifying beans in xml file. Similar to how an id was added in xml file to each bean, an id can be added to each component.
 
   <img width="722" alt="Screenshot 2024-05-22 at 7 21 41 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/af1662ac-ba86-4903-be21-3000c4d5c398">
@@ -13,11 +13,11 @@
 
   <img width="1155" alt="Screenshot 2024-05-22 at 7 51 20 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/19ff8fb4-826e-47c3-be54-797c14889137">
 
-* *@Configuration:*  **What if we don't want to configure anything using xml file?**
+2. *@Configuration:*  **What if we don't want to configure anything using xml file?**
 
   We can create a Config class using @Configuration annotation.
 
-* *@ComponentScan:* We can enable component scan using this annotation.
+3. *@ComponentScan:* We can enable component scan using this annotation.
 
   <img width="1033" alt="Screenshot 2024-05-22 at 7 57 32 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/aa6e7de3-c678-4fb5-b599-dcbc49dcee6c">
 
@@ -25,7 +25,7 @@
 
   <img width="1039" alt="Screenshot 2024-05-22 at 8 01 50 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ca5bcf80-3685-4fdb-854e-17ca036d3778">
 
-* *@Bean:* There's another way to create a bean. A method can be created in the Config class, method name being the bean id, which return the
+4. *@Bean:* There's another way to create a bean. A method can be created in the Config class, method name being the bean id, which return the
   object. For Spring to recognise method name as the bean id, @Bean annotation should be used.
 
   <img width="703" alt="Screenshot 2024-05-22 at 8 11 26 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3df91297-313d-4020-97c4-5addc4784938">
@@ -47,12 +47,12 @@
     <img width="731" alt="Screenshot 2024-05-22 at 8 33 04 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/0a7393b6-f582-41ff-85ad-52d25cd5d6b7">
     <img width="739" alt="Screenshot 2024-05-22 at 8 33 43 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/929c7033-533a-4ae8-9825-ac69181057e2">
 
-* *@Autowired:* For dependency injection.
-* *@Primary:* This can be used to declare one implementation as the primary implementation.
+5. *@Autowired:* For dependency injection.
+6. *@Primary:* This can be used to declare one implementation as the primary implementation.
 
   <img width="742" alt="Screenshot 2024-05-22 at 9 35 56 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ab8e38e3-c9c5-4115-a158-84c49c4d3890">
 
-* *@Qualifier:* In case of multiple implementation classes(for an interface), this annotation can be used to specify preferred implementation.
+7. *@Qualifier:* In case of multiple implementation classes(for an interface), this annotation can be used to specify preferred implementation.
 
   <img width="513" alt="Screenshot 2024-05-22 at 9 37 39 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3f8d5da0-3745-471b-ab19-3957b37edf19">
 
@@ -68,7 +68,7 @@
 
 **But what if we don't want to set properties through xml file? - We can use annotations.**
 
-* *@Value:*
+8. *@Value:*
 
   <img width="1033" alt="Screenshot 2024-05-21 at 11 21 50 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/89379d1b-3b88-4887-a008-12413c958708">
   <img width="1126" alt="Screenshot 2024-05-21 at 11 21 59 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/748dcbb0-4f05-4803-86cb-e00b9d7f8b9f">
@@ -82,7 +82,7 @@
   <img width="1026" alt="Screenshot 2024-05-21 at 11 26 00 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/161b9ff2-7867-4211-9596-28a5b5b08da8">
   <img width="475" alt="Screenshot 2024-05-21 at 11 26 45 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1535104a-1ba6-44c3-bee2-a51f06cf1560">
 
-* *@Require:*
+9. *@Require:*
   
   <img width="773" alt="Screenshot 2024-05-21 at 11 28 45 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/6a2c44a8-17e7-4ac9-a047-da9300eefa5b">
 
