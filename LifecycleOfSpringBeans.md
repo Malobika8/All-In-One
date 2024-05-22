@@ -1,13 +1,13 @@
 # **Lifecycle of Spring beans**
 - **Using xml**
-<img width="1127" alt="Screenshot 2024-05-12 at 9 41 00 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/96a55736-9571-41fb-9745-6123e0e3bf40">
-<img width="1122" alt="Screenshot 2024-05-12 at 9 43 32 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/fdf1fe85-6206-4c29-a03a-bfd88f0d56db">
-<img width="1060" alt="Screenshot 2024-05-12 at 9 44 49 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/be3811e2-c31d-4ad6-9d4d-f39cfcdd1280">
-<img width="914" alt="Screenshot 2024-05-12 at 10 12 52 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ffb8682d-807f-452c-bdf8-c27fe5b03aa1">
-<img width="935" alt="Screenshot 2024-05-12 at 10 14 06 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/61ede481-9789-40c4-83dd-5e68279fe976">
-<img width="396" alt="Screenshot 2024-05-12 at 10 14 19 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3915cca3-e383-45ee-a553-23748cc7d3df">
-<img width="934" alt="Screenshot 2024-05-12 at 10 12 26 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1cc4cbca-22cf-4ca8-a3f7-1a132dbd997a">
-<img width="1220" alt="Screenshot 2024-05-22 at 11 16 47 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/c4bf0f67-53a5-429c-83cf-a3681c752615">
+  <img width="1127" alt="Screenshot 2024-05-12 at 9 41 00 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/96a55736-9571-41fb-9745-6123e0e3bf40">
+  <img width="1122" alt="Screenshot 2024-05-12 at 9 43 32 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/fdf1fe85-6206-4c29-a03a-bfd88f0d56db">
+  <img width="1060" alt="Screenshot 2024-05-12 at 9 44 49 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/be3811e2-c31d-4ad6-9d4d-f39cfcdd1280">
+  <img width="914" alt="Screenshot 2024-05-12 at 10 12 52 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ffb8682d-807f-452c-bdf8-c27fe5b03aa1">
+  <img width="935" alt="Screenshot 2024-05-12 at 10 14 06 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/61ede481-9789-40c4-83dd-5e68279fe976">
+  <img width="396" alt="Screenshot 2024-05-12 at 10 14 19 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3915cca3-e383-45ee-a553-23748cc7d3df">
+  <img width="934" alt="Screenshot 2024-05-12 at 10 12 26 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1cc4cbca-22cf-4ca8-a3f7-1a132dbd997a">
+  <img width="1220" alt="Screenshot 2024-05-22 at 11 16 47 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/c4bf0f67-53a5-429c-83cf-a3681c752615">
 
 - **Using annotation**
 
