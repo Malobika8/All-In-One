@@ -47,3 +47,23 @@
   **Why is the xml file for DispatcherServlet required though?** - DispatcherServlet receives all of the HTTP requests and delegates them to 
   Controller classes. Hence, a Configuration File is required for the DispatcherServlet for forwarding different requests to different 
   Controllers based on the requirement.
+
+  **What happens when DispatcherServlet is initialized?** - It looks for a configuration file and tries to create a container using the same.
+  It tries to create a container called WebApplicationContext.
+  For core Standalone containers, we have ApplicationContext & for Web Applications, we have WebApplicationContainer.
+  *Note:* In Web Application, it's not our responsibility to start and close WebApplicationContext.
+
+  <img width="1146" alt="Screenshot 2024-05-27 at 6 50 40 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ff880ffe-d46a-4795-8b16-8a8fcef33474">
+  <img width="827" alt="Screenshot 2024-05-27 at 6 51 44 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9e2c6c8e-6dd4-4ed3-a2b8-aa96dba324dd">
+
+WebApplicationContext is an Interface and extends ApplicationContext. So, it has all the features of ApplicationContext and some additional features.
+
+<img width="992" alt="Screenshot 2024-05-27 at 7 00 20 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/5f927d7a-3bc6-4e7e-8cee-dcda912da243">
+
+The DispatcherServlet creates WebApplicationContext through the xml configuration file, <servlet-name>-servlet.xml. It then checks the file and registers the controller classes onto the container based on the config. It checks if the incoming URL request pattern matches with the URL pattern associated with Request Handlers(methods).
+
+<img width="1085" alt="Screenshot 2024-05-27 at 7 04 14 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/db4f548f-5d99-416a-b5fd-94e61ac1e766">
+<img width="1150" alt="Screenshot 2024-05-27 at 7 04 34 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/a2ffe122-8abe-40b0-8474-c8eb738435a3">
+<img width="1070" alt="Screenshot 2024-05-27 at 7 11 15 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/f0286172-8fdc-4fde-8224-cac07a24d827">
+
+
