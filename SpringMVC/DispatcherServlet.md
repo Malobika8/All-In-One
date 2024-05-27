@@ -42,4 +42,6 @@
 
   Re-run the application. It should work fine this time.
 
-  **Why is the xml file for DispatcherServlet required though?** - 
+  **Why is the xml file for DispatcherServlet required though?** - DispatcherServlet receives all of the HTTP requests and delegates them to 
+  Controller classes. Hence, a Configuration File is required for the DispatcherServlet for forwarding different requests to different 
+  Controllers based on the requirement.
