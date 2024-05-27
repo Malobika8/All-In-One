@@ -26,3 +26,14 @@ Consider the following,
   <img width="1012" alt="Screenshot 2024-05-27 at 4 16 02 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/de2ccb16-d5c1-4afb-8e5c-c8ea1f36a391">
 
   <img width="1183" alt="Screenshot 2024-05-27 at 4 06 38 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/cdb74cbe-9bd8-4124-ab06-48955b429cb1">
+
+  **Note:** One controller can have multiple request handlers.
+  <img width="1143" alt="Screenshot 2024-05-27 at 7 19 55 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/71acef70-5be6-4dba-bc65-22db1c8a9c07">
+  <img width="955" alt="Screenshot 2024-05-27 at 7 20 30 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/71aa2597-44fc-4939-94bb-ddd6de0d08b3">
+
+  RequestMapping can be added at class level as well.
+
+  <img width="992" alt="Screenshot 2024-05-27 at 7 23 36 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/42306918-26e6-49a6-ba64-058fe10ac749">
+
+  
+
