@@ -29,15 +29,17 @@
 
   <img width="458" alt="Screenshot 2024-05-27 at 2 02 20 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/db6bb10a-5425-4dc3-9656-525e1107e6e4">
 
-    <?xml version="1.0" encoding="UTF-8"?>
+    <?xml version="1.0" encoding="UTF-8" ?>
     <beans xmlns="http://www.springframework.org/schema/beans"
-	  xmlns:mvc="http://www.springframework.org/schema/mvc"
-	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xsi:schemaLocation="
-		http://www.springframework.org/schema/beans
-		https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/mvc
-		https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/mvc
+    https://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     </beans>
 
   Re-run the application. It should work fine this time.
