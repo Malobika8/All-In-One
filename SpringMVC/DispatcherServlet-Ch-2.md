@@ -66,4 +66,11 @@ The DispatcherServlet creates WebApplicationContext through the xml configuratio
 <img width="1150" alt="Screenshot 2024-05-27 at 7 04 34 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/a2ffe122-8abe-40b0-8474-c8eb738435a3">
 <img width="1070" alt="Screenshot 2024-05-27 at 7 11 15 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/f0286172-8fdc-4fde-8224-cac07a24d827">
 
+**How to change the DispatcherServlet name?** - We can use "init-param" to change the default name. Param name should be "contextConfigLocation".
+
+<img width="1210" alt="Screenshot 2024-05-27 at 7 28 01 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d09aeb73-b761-4bea-bdb0-7647ebaed93a">
+<img width="710" alt="Screenshot 2024-05-27 at 7 43 17 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/a7fd6201-75f8-4672-a7c1-575844a9c886">
+<img width="993" alt="Screenshot 2024-05-27 at 7 40 34 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/657f9e90-d355-4b7f-af37-06b0d19968b4">
+
+
 
