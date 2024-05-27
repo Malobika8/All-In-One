@@ -1,3 +1,6 @@
+Consider the following, 
+![image](https://github.com/Malobika8/GitDemo/assets/111234135/f4642947-378b-4082-8da6-7fe999baac0c)
+
 * *@Controller annotation:* We can annotate classic controllers with the @Controller annotation. This is simply a specialization of the
   @Component class, which allows us to auto-detect implementation classes through the classpath scanning. We typically use @Controller in
   combination with a @RequestMapping annotation for request handling methods.
@@ -16,5 +19,10 @@
   JSON and passed back into the HttpResponse object. When you use the @ResponseBody annotation on a method, Spring converts the return value
   and writes it to the HTTP response automatically. Each method in the Controller class must be annotated with @ResponseBody.
 
-<img width="855" alt="Screenshot 2024-05-27 at 4 02 01 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/210a6372-05cf-484b-ba97-89ede034174a">
-<img width="1183" alt="Screenshot 2024-05-27 at 4 06 38 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/cdb74cbe-9bd8-4124-ab06-48955b429cb1">
+  <img width="855" alt="Screenshot 2024-05-27 at 4 02 01 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/210a6372-05cf-484b-ba97-89ede034174a">
+
+  We need to enable Component Scan
+
+  <img width="1012" alt="Screenshot 2024-05-27 at 4 16 02 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/de2ccb16-d5c1-4afb-8e5c-c8ea1f36a391">
+
+  <img width="1183" alt="Screenshot 2024-05-27 at 4 06 38 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/cdb74cbe-9bd8-4124-ab06-48955b429cb1">
