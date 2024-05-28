@@ -26,7 +26,7 @@
       <version>6.1.8</version>
     </dependency>
 
-**Note**: Initially, we can just add the following jars
+**Note**: Initially, we can just add the following jars. Spring webmvc pulls in all other Spring jars.
 
 <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
     <dependency>
