@@ -124,6 +124,12 @@ Similarly, there should be another another class which will act as a replacement
 
   <img width="1228" alt="Screenshot 2024-05-28 at 12 23 50 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/5fb19708-f8d9-4da7-8089-42bf245ec0b4">
 
+**Note:** - In order to make Spring know that the Config file that we created is actually a SpringConfig file, always use @EnableWebMvc in SpringConfig class.
+This annotation activates Spring mvc Configurations.
+
+<img width="1003" alt="Screenshot 2024-05-28 at 12 29 00 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/47f6bcad-36f0-4894-83d5-10af4ac6cdd0">
+
+
 
   
 
