@@ -108,9 +108,9 @@ Similarly, there should be another another class which will act as a replacement
   <img width="969" alt="Screenshot 2024-05-28 at 11 40 05 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/6b804c47-96e2-4dca-9a63-093a7dc3f7a0">
   <img width="1249" alt="Screenshot 2024-05-28 at 11 40 49 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/bf3562b5-f17b-445b-aca1-14f56819e749">
 
-- Create a View. Create a folder in WEB_INF and add a jsp page.
+- Create a View. Create a folder under webapp and add a jsp page.
 
-  <img width="1057" alt="Screenshot 2024-05-28 at 12 00 48 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3066675b-105e-45e3-82be-dbce8a2cad52">
+  <img width="1312" alt="Screenshot 2024-05-28 at 12 22 36 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/c241193a-effa-47db-9d80-883b44a37a46">
 
   Return jsp page in Controller
 
@@ -118,9 +118,12 @@ Similarly, there should be another another class which will act as a replacement
 
 - Create ViewResolver.
 
-  <img width="1013" alt="Screenshot 2024-05-28 at 11 51 59 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/65b53164-06f0-4601-b085-f52c05fa9a9c">
+  <img width="1011" alt="Screenshot 2024-05-28 at 12 23 29 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/389ccba8-6a5f-4212-b367-fddcb393c198">
 
 - Run the application.
+
+  <img width="1228" alt="Screenshot 2024-05-28 at 12 23 50 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/5fb19708-f8d9-4da7-8089-42bf245ec0b4">
+
 
   
 
