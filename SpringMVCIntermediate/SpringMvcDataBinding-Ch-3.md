@@ -55,7 +55,7 @@
   <img width="1211" alt="Screenshot 2024-05-30 at 7 06 42 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/4664e6f4-cf73-443c-bb9b-4911b4287b88">
   <img width="1115" alt="Screenshot 2024-05-30 at 7 06 54 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/b166ae7b-5fe5-451c-b188-18c8589a73c5">
   <img width="1141" alt="Screenshot 2024-05-30 at 7 09 39 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/03077bba-a439-494c-971c-840eb3cad824">
-  <img width="845" alt="Screenshot 2024-05-30 at 7 10 00 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/e859984f-6bcf-472c-b9ef-87cf273a8185">
+  <img width="1097" alt="Screenshot 2024-05-30 at 7 39 08 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/8d8d4f19-5181-4242-ae5d-4d351513b0b3">
 
   We can add default values to properties
 
