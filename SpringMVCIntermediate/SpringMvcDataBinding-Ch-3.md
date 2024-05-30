@@ -81,6 +81,104 @@
   <img width="654" alt="Screenshot 2024-05-30 at 7 30 42 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/bb5ccb64-8f3c-41f7-abbf-af26e0cf64bf">
   <img width="677" alt="Screenshot 2024-05-30 at 7 30 51 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/b56d9ec1-636c-4f66-a29f-bfd61157cc1c">
 
+* Design Registration page:
+
+  <img width="975" alt="Screenshot 2024-05-30 at 7 40 56 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1236cc76-a463-4d7c-b204-1e40c349a4bf">
+
+  - Create UserRegistrationDTO
+
+    <img width="941" alt="Screenshot 2024-05-30 at 9 22 11 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/633c4ce7-dff5-471d-99df-37a64744b76d">
+
+  - Create RegistrationController
+  
+    <img width="967" alt="Screenshot 2024-05-30 at 9 23 07 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/f2c12db2-18ab-4839-afe1-ad920e135f7e">
+
+    When we hit "/register", it redirects to "user-registration-page".
+
+  - Add dependency for jstl
+
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+  user-registration-page.jsp
+
+      <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+      <%@page language="java" contentType="text/html; charset=UTF-8"
+      pageEncoding="UTF-8"%>
+
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <title>Registration Page</title>
+      </head>
+
+      <body>
+      <h1 align="center"> Please register here </h1>
+      <hr/>
+
+      <form:form action="registration-successful" method="get" modelAttribute="registrationInfo">
+      <div align="center">
+        <p>
+            <label> Name: </label>
+            <form:input path="name"/>
+        </p>
+        <br/>
+        <p>
+            <label> User Name: </label>
+            <form:input path="userName"/>
+        </p>
+        <br/>
+        <p>
+            <label> Password: </label>
+            <form:password path="password"/>
+        </p>
+        <br/>
+        <p>
+            <label> Country: </label>
+            <form:select path="country">
+                <form:option value="ind" label="India"></form:option>
+                <form:option value="usa" label="USA"></form:option>
+                <form:option value="pak" label="Pakistan"></form:option>
+                <form:option value="sl" label="Sri Lanka"></form:option>
+            </form:select>
+        </p>
+        <br/>
+        <p>
+            <label> Hobbies: </label>
+            Cricket: <form:checkbox path="hobbies" value="cricket"/>
+            Reading: <form:checkbox path="hobbies" value="reading"/>
+            Travelling: <form:checkbox path="hobbies" value="travelling"/>
+            Programming: <form:checkbox path="hobbies" value="programming"/>
+        </p>
+        <br/>
+        <p>
+            <label> Gender: </label>
+            Male<form:radiobutton path="gender" value="male"/>
+            Female<form:radiobutton path="gender" value="female"/>
+        </p>
+        <br/>
+        <input type="submit" value="Register">
+      </div>
+      </form:form>
+      </body>
+      </html>
+
+  registration-successful.jsp
+
+  <img width="965" alt="Screenshot 2024-05-30 at 9 24 26 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/21ef6cd3-90c3-4c41-aec7-96bdab7f26c5">
+
+
+
+
+
 
   
   
