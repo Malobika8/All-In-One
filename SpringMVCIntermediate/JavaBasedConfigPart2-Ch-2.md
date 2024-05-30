@@ -14,7 +14,7 @@ Our class internally implements WebApplicationInitializer
 <img width="1124" alt="Screenshot 2024-05-30 at 1 11 36 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/f2f28a7f-12a0-43af-9b28-9d7bb2e0926e">
 <img width="799" alt="Screenshot 2024-05-30 at 1 11 52 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/961f208c-657d-4e65-93d6-145ce8d2678f">
 
-So,
+To summarize,
   - LCAppInitializer extends AbstractAnnotationConfigDispatcherServletInitialize
   - AbstractAnnotationConfigDispatcherServletInitializer extends AbstractDispatcherServletInitializer
   - AbstractDispatcherServletInitializer extends AbstractContextLoaderInitializer
@@ -29,4 +29,7 @@ Spring essentially does the same thing in background what we did in Approach 1,
 
 <img width="595" alt="Screenshot 2024-05-30 at 1 31 27 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ae68cc51-bea6-4272-8e38-06c94dee5e37">
 
-To fix, add "" in pom.xml.
+To fix, set "failOnMissingWebXml" to false in pom.xml.
+
+<img width="897" alt="Screenshot 2024-05-30 at 4 59 46 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/22722282-d06e-4a3a-a325-c9bfe4af5506">
+
