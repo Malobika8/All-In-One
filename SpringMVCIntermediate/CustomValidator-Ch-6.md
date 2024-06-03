@@ -38,7 +38,7 @@ How to know which validator class is implemented for which annotation?
 
 <img width="1062" alt="Screenshot 2024-06-03 at 8 14 29 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/8e7d76e0-dc60-4cdf-ad91-267550761ca3">
 
-There's a class called Constraint helper which helps locate the validator class.
+There's a class called ConstraintHelper which helps locate the validator class.
 
 <img width="816" alt="Screenshot 2024-06-03 at 8 15 27 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/679194b5-a387-466f-b17d-de77ff0297c9">
 
@@ -51,7 +51,7 @@ We need to have groups and payload for any annotations we want to have
 
 <img width="847" alt="Screenshot 2024-06-03 at 8 26 34 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/67d740f7-956a-4a14-870a-2e5da7af6592">
 
-##Let's write a Validator for "age" field.
+## Let's write a Validator for "age" field.
 
 Create an annotation called Age
 
@@ -92,7 +92,7 @@ Age between 30-75
 <img width="1084" alt="Screenshot 2024-06-03 at 9 19 48 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/5b8cf457-7469-4ef0-8ea1-4ddb518b9112">
 <img width="894" alt="Screenshot 2024-06-03 at 9 19 54 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/100f76ce-26b3-40e0-8017-f749de2d943f">
 
-##Adding a Properties file
+## Adding a Properties file
 
 Default message shouldn't be hardcoded
 
