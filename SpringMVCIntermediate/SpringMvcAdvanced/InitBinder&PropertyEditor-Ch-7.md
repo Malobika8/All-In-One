@@ -122,10 +122,5 @@ Consider a Bill page where we accept Credit Card, Amount, Currency, Date to pay.
   <img width="1101" alt="Screenshot 2024-06-04 at 11 06 48 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/fd3da70e-f506-4b29-b8ca-06bc979b1592">
   <img width="853" alt="Screenshot 2024-06-04 at 11 06 56 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/b653b6ab-4e83-4f31-8518-93f550fc4937">
 
-## CustomPropertyEditor
 
-<img width="1014" alt="Screenshot 2024-06-04 at 11 07 39 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/51271113-e6b5-4c9c-a4af-b31f50b70b19">
-<img width="937" alt="Screenshot 2024-06-04 at 11 08 19 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9e518f92-232e-4512-8567-b7cb83fb97ba">
-
-To create our own PropertyEditor, we need to extend PropertyEditorSupport.
   
