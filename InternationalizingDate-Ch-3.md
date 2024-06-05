@@ -16,5 +16,7 @@ In this example, we are displaying the date according to the different locale su
 Locale object as an instance. The format() method of the DateFormat class receives the Date object and returns the formatted and localized date as a string.
 
 <img width="995" alt="Screenshot 2024-06-05 at 1 19 12 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ecaca097-9c1d-4d1c-a7d7-169424b025ea">
+<img width="1261" alt="Screenshot 2024-06-05 at 2 00 22 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/aecf48ad-67bf-40bf-8399-70b3570fe822">
+
 
 
