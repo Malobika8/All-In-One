@@ -33,4 +33,7 @@ It can also be used to register Formatters. instead of registering in the config
 
 These two have very similar concept and can be used interchangaebly in most cases.
 Similar to how we use "print" method in Formatter, we can use "getAsText" method in Editor.
-Which one to use though? Formatter or Editor?
+
+### Which one to use though? Formatter or Editor?
+
+Should we use a Formatter(and use print and parse method) or PropertEditor(and use setAsText and getAsText method)?
