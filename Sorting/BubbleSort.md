@@ -9,10 +9,10 @@ Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping 
     
   If there are n number of elements?
   
-  * Total no. of passes: n-1
-  * Total no. of comparisons: n*(n-1)/2
+   * Total no. of passes: n-1
+   * Total no. of comparisons: n*(n-1)/2
 
-  **Time Complexity: O(N2)**
+  **Time Complexity: O(N2)** , 
   **Auxiliary Space: O(1)**
 
   <img width="762" alt="image" src="https://github.com/Malobika8/GitDemo/assets/111234135/e4d78484-a687-49c2-96de-733ced095892">
