@@ -9,12 +9,12 @@
   - StringBuilder
   - Arrays
  
-* Where the String object is created in memory?
+#### Q. Where the String object is created in memory?
 
-  The object is created in String Constant Pool first. Since we use new keyword to create an object of String, object is created in heap memory. Whenever String objects are created, it is
-  stored in the form of indexes.
-  When we create an object using new keyword, it points to object created in heap memory.
-  When we create String using double quotes, it creates an object only in String Constant pool.
+The object is created in String Constant Pool first. Since we use new keyword to create an object of String, object is created in heap memory. Whenever String objects are created, it is
+stored in the form of indexes.
+When we create an object using new keyword, it points to object created in heap memory.
+When we create String using double quotes, it creates an object only in String Constant pool.
 
 #### Q. What happens when we try to create String object with same content twice (by using new keyword or double quotes)?
 
