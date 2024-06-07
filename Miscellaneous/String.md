@@ -18,5 +18,5 @@
 
 #### Q. What happends when we try to create String object with same content twice (by using new keyword or double quotes?
 
-   Before creating an object in SCP, it checks if there's any already existing that has the same content. String Constant Pool doesn't allow duplicate objects. Object will be created in
+   Before creating an object in SCP, it checks if there's any existing String that has the same content. String Constant Pool doesn't allow duplicate objects. Object will be created in
    heap memory though. Heap doesn't have any restriction.
