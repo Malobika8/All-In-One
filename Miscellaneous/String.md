@@ -16,7 +16,7 @@
   When we create an object using new keyword, it points to object created in heap memory.
   When we create String using double quotes, it creates an object only in String Constant pool.
 
-#### Q. What happends when we try to create String object with same content twice (by using new keyword or double quotes?
+#### Q. What happens when we try to create String object with same content twice (by using new keyword or double quotes)?
 
 Before creating an object in SCP, it checks if there's any existing String that has the same content. String Constant Pool doesn't allow duplicate objects. Object will be created in
 heap memory though. Heap doesn't have any restriction.
@@ -101,6 +101,15 @@ Whenever hashCode() method of String class is called, the value of variable hash
 If hash is equals to 0, only then hashcode for correspoding String object is calculated and cached in variable hash as shown in line 1504.
 
 So when the next time hashCode() for the same String object  is called, value of hash does not come out to be 0 and hashcode is not recalcuated but is reused as stored in variable hash.
+
+<img width="1140" alt="Screenshot 2024-06-07 at 10 58 41 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/917d898a-ffa8-4400-b4d5-b52bf481f0c4">
+<img width="864" alt="Screenshot 2024-06-07 at 10 59 56 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1c427149-8d55-4a95-bb2b-7789bb4eb294">
+<img width="902" alt="Screenshot 2024-06-07 at 11 00 31 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/dd9bdb3c-7823-43a7-8260-3da4326fd419">
+<img width="977" alt="Screenshot 2024-06-07 at 11 00 59 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/dc0711a8-fc4f-4c47-8c98-3539329cfbfa">
+<img width="852" alt="Screenshot 2024-06-07 at 11 02 00 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9e5c03ff-cedc-4945-9396-47bd9365cbdf">
+<img width="1128" alt="Screenshot 2024-06-07 at 11 03 45 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/0eb356c4-7421-4662-aa91-a783fa8c6db5">
+<img width="1134" alt="Screenshot 2024-06-07 at 11 05 53 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3b75473b-1dd5-429b-af8f-d5d8f5ba7c7c">
+<img width="1126" alt="Screenshot 2024-06-07 at 11 13 24 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/16e4bd54-1c25-49e3-84b1-9bd5ced2d931">
 
 #### Must Read: 
 
