@@ -22,3 +22,8 @@
 - Download IDE(Intellij Community/Eclipse/Netbeans)
 
   <img width="1045" alt="Screenshot 2024-06-12 at 12 53 24 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/46913986-db80-4314-b262-858b2e4ad039">
+
+
+### Notes
+
+https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/04-introduction%20to%20java
