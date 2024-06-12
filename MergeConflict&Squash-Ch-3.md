@@ -31,3 +31,8 @@
 
  Merge conflict occurs when two or mpeople try to edit the same file or section of code simultaneously, causing changes to clash and become difficult to resolve. This can happen in collaborative coding environments or when working on the same project with multiple developers. To resolve merge conflicts, you typically need to identify the conflicting changes, determine which changes should be kept, and manually merge the changes together. It's important to communicate with other developers to ensure that everyone is on the same page and that the final version of the code reflects the intended changes.  
 
+
+### Notes
+
+https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/01-git
+
