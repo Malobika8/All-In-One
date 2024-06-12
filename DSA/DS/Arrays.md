@@ -1,4 +1,4 @@
-# Array 
+# Arrays 
 *Note:* ( Reference-C/C++ | Please check wrt Java )
 
 <img width="920" alt="Screenshot 2024-06-09 at 11 43 22 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/52549229-c5df-4b11-b892-80b2dd8c5d8a">
@@ -17,3 +17,7 @@
 ### Conclusion
 
 <img width="946" alt="Screenshot 2024-06-09 at 11 55 57 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d5854932-0e00-4bc5-99b9-8dee0f354af6">
+
+### Notes
+
+https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/08-arrays
