@@ -33,3 +33,8 @@ For 2-D arrays,
 #### Q. What happens when there is no reference variable to an object?
 
 It is removed from memory by Garbage Collector.
+
+
+### Notes
+
+https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/02-intro%20to%20programming
