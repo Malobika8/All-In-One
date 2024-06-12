@@ -44,4 +44,4 @@ Consider another problem,
 
 ### Notes
 
-https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/02-intro%20to%20programming
+https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/tree/main/lectures/03-flow%20of%20program
