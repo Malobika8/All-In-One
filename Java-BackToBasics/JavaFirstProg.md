@@ -73,6 +73,12 @@ data to be inputted.
 - ENVIRONMENT VARIABLE is basically a list of folder address in which our computer checks whether the command that we have written is
   available or not
 
+## Type Conversion
+
+Exceeds size limit. So it does result%size
+
+<img width="822" alt="Screenshot 2024-06-14 at 1 27 38 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/72cfa60e-52bf-4656-a7f3-798c49c17d70">
+
 ## Notes
 
 https://github.com/Malobika8/DSA-Bootcamp-Java/tree/main/lectures/05-first-java-program
