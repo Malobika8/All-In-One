@@ -73,11 +73,27 @@ data to be inputted.
 - ENVIRONMENT VARIABLE is basically a list of folder address in which our computer checks whether the command that we have written is
   available or not
 
-## Type Conversion
+## Type Conversion - Explicit & Implicit
 
 Exceeds size limit. So it does result%size
 
 <img width="822" alt="Screenshot 2024-06-14 at 1 27 38 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/72cfa60e-52bf-4656-a7f3-798c49c17d70">
+
+## Type promotion rules
+- byte,short,char will be promoted to int
+- if any one of the operands is long, whole operation will be promoted to long
+- if any one of the operands is float, result will be float
+- if any one of the operands is double, result will be double
+
+<img width="812" alt="Screenshot 2024-06-14 at 1 38 46 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a75cd55a-40b4-42c2-b0cb-0fc211a15e6e">
+<img width="680" alt="Screenshot 2024-06-14 at 1 39 01 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/f28d5413-8c21-4770-98d3-24cf020b66ca">
+
+## Unicode
+
+In Java, Unicode refers to the standard for representing characters from different writing systems in a single, uniform way. It allows for the use of a wide range of characters, including those that are not part of the ASCII character set, such as accented letters, symbols, and emojis. Unicode is used in Java through the use of the Unicode Standard, which defines the encoding of characters and provides a way to represent them in different formats. In Java, Unicode is typically used in conjunction with the String class, which represents a sequence of characters in a specific encoding.  
+
+<img width="747" alt="Screenshot 2024-06-14 at 1 33 22 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/92d6a7d3-a5cc-4486-a7d2-c71ec6f37eb3">
+<img width="760" alt="Screenshot 2024-06-14 at 1 33 29 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3a15cf2c-0b89-42bc-8370-2c3e78601ab4">
 
 ## Notes
 
