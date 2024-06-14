@@ -8,7 +8,7 @@ element is found or it reaches the end of the list without finding it.
 <img width="1022" alt="Screenshot 2024-06-14 at 2 41 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5dabafc6-56c5-480b-a332-55327725b742">
 <img width="936" alt="Screenshot 2024-06-14 at 2 42 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/29349224-b5a8-4511-bddd-75cdefaa40b0">
 <img width="840" alt="Screenshot 2024-06-14 at 2 43 21 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/edc512c8-a9b4-45b3-ab1f-305090dc9132">
-![Screenshot 2024-06-14 at 2 45 00 PM](https://github.com/Malobika8/All-In-One/assets/111234135/10afb5aa-f9c4-4e13-b909-0c9a15b1975b)
+<img width="956" alt="Screenshot 2024-06-14 at 2 45 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/07c215ec-3f71-4e59-a6e7-c9e98ad43534">
 
 Here is an example of linear search in Java:
 
