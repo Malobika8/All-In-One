@@ -1,6 +1,6 @@
 # Linear Search
 
-Linear search is a simple search althm that works by iterating through an array or list from the beginning to the end until the desired 
+Linear search is a simple search algorithm that works by iterating through an array or list from the beginning to the end until the desired 
 element is found or it reaches the end of the list without finding it.
 
 <img width="1076" alt="Screenshot 2024-06-14 at 2 40 05 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/44d23e2e-4ff3-4cac-9262-fb9f02cd28f2">
