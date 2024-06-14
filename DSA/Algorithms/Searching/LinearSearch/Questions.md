@@ -28,7 +28,7 @@ We can also use forEach
   <img width="815" alt="Screenshot 2024-06-14 at 5 44 23 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/eb6784a0-a030-441f-84ef-67babf5944d2">
 
 - Approach 2: Takd the numbers as String and count the length
-- Approach 3(Optimized): Take log10 of that num and add 1
+- Approach 3(Optimized): Find log10 of that num and add 1
 
   <img width="811" alt="Screenshot 2024-06-14 at 5 51 42 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/f57fd120-f624-419b-9b5f-4779478640ce">
   <img width="481" alt="Screenshot 2024-06-14 at 5 53 36 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a4376929-3531-4a8a-b2b9-9cb22887bd60">
