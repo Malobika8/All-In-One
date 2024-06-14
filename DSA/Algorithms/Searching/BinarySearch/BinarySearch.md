@@ -1,4 +1,4 @@
-#Binary Search
+# Binary Search
 
 Binary search is an efficient search algorithm used to find a specific element or value within a sorted list or array. It works by repeatedly
 dividing the search interval in half until the target value is found or the search interval is empty. Binary search typically takes O(log n)
@@ -114,6 +114,6 @@ value. This approach can improve the search time in unsorted arrays by avoiding 
     }
     }
 
-##Notes
+## Notes
 
 https://github.com/Malobika8/DSA-Bootcamp-Java/tree/main/lectures/10-binary%20search
