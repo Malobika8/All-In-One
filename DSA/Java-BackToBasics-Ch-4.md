@@ -4,7 +4,7 @@
 - To compile, "*javac \<ClassName\>.java*"
 - To run, "*java \<Classname\>*"
 
-Let's now look at the Following piece of code
+Let's now look at the following piece of code
 
 <img width="657" alt="Screenshot 2024-06-14 at 11 29 07 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/09220e8d-0e4c-436a-bd74-5d99985ad4a2">
 
