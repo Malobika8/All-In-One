@@ -52,4 +52,150 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
 
 <img width="669" alt="Screenshot 2024-06-16 at 1 33 01 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cb8909e0-182f-4af8-b851-959b35de2404">
 
+- Find bound first
+- Check for bound till the target is greater than end index of the array
+- Run binary search
+
+
+      public class FindInInfiniteSortedArray {
+        public static void main(String[] args) {
+          int[] arr = {1,2,4,5,6,7,8,9,12,14,16,17,18,21};
+          int target = 18;
+
+          System.out.println(findBoundsAndSearch(arr,target));
+        }
+  
+        public static int findBoundsAndSearch(int[] arr, int target){
+        int start=0;
+        int end=1;
+
+         while(target>arr[end]){
+            int newStart=end+1;
+            int size=end-start+1;
+            end = end+(2*size);
+            start=newStart;
+         }
+
+         System.out.println(end);
+         System.out.println(start);
+
+         return search(arr, start, end, target);
+         }
+  
+         public static int search(int[] arr, int start, int end, int target){
+
+         while(start<=end){
+            int mid=start + (end-start)/2;
+
+            if(target<arr[mid]){
+                end=mid-1;
+            }
+            else if(target>arr[mid]){
+                start=mid+1;
+            }
+            else{
+                return mid;
+            }
+          }
+          return -1;
+          }
+         }
+
+  ## Q6. Peak Index in a Mountain Array (bitonic array)
+
+  https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
+
+  <img width="1005" alt="Screenshot 2024-06-16 at 8 52 55 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/6ba9ffdd-1669-4a09-a36e-e9dbc9957b1d">
+  <img width="1012" alt="Screenshot 2024-06-16 at 8 53 08 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/24f8ad9a-8ad5-4539-bb3b-e8bc8b90708a">
+  <img width="1014" alt="Screenshot 2024-06-16 at 8 53 20 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/8b6607ff-c3b5-426c-99a1-ea64df7c93dd">
+  <img width="1015" alt="Screenshot 2024-06-16 at 8 53 30 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7a25b53b-0fdf-4191-8de1-4b88edf29da1">
+  <img width="1012" alt="Screenshot 2024-06-16 at 8 53 39 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7861a747-eaaf-4e97-abc5-52d91337af07">
+
+  <img width="810" alt="Screenshot 2024-06-16 at 8 54 07 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/960d63b5-1d7f-4c9e-b805-00dcf96a5e3c">
+
+  ## Q7. Find in Mountain Array
+
+  https://leetcode.com/problems/find-in-mountain-array/description/
+
+      /**
+       * // This is MountainArray's API interface.
+       * // You should not implement it, or speculate about its implementation
+       * interface MountainArray {
+       *     public int get(int index) {}
+       *     public int length() {}
+       * }
+       */
+ 
+      class Solution {
+      public int findInMountainArray(int target, MountainArray mountainArr) {
+        
+        int num;
+        boolean front=true;
+
+        int index = peakElementIndex(mountainArr);
+        num = binarySearch(target, mountainArr, index, true);
+
+        if(num == -1)
+            num = binarySearch(target, mountainArr, index, false);
+
+        return num;
+      }
+  
+      public int peakElementIndex(MountainArray mountainArr){
+        int start = 0;
+        int end = mountainArr.length()-1;
+
+        while(start<end){
+
+            int mid=start + (end-start)/2;
+
+            if(mountainArr.get(mid+1)<mountainArr.get(mid)){
+                end=mid;
+            }
+            else if(mountainArr.get(mid+1)>mountainArr.get(mid)){
+                start=mid+1;
+            }
+        }
+        return start;
+      }
+
+      public int binarySearch(int target, MountainArray mountainArr, int index, boolean front){
+        int start, end;
+        if(front){
+            start=0;
+            end=index;
+        }
+        else{
+            start=index;
+            end=mountainArr.length()-1;
+        }
+        
+        while(start<=end){
+            int mid=start + (end-start)/2;
+
+            if(front){
+                if(target< mountainArr.get(mid))
+                    end=mid-1;
+                else if(target> mountainArr.get(mid))
+                    start=mid+1;
+            }
+            else{
+                if(target > mountainArr.get(mid))
+                    end=mid-1;
+                else if(target< mountainArr.get(mid))
+                    start=mid+1;
+            }
+
+            if(target == mountainArr.get(mid))
+                return mid;
+        }
+        return -1;
+      }
+      }
+
+  
+
+
+  
+
 
