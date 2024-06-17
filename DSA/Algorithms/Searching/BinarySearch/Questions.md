@@ -4,6 +4,10 @@ are required to get one particular answer & we are following a continuous sequen
 
 Eg. sq root of a number
 
+### Note: To find size of an array by indices
+
+<img width="1021" alt="Screenshot 2024-06-17 at 11 53 32 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2987da0b-1008-4d5c-9ba6-4d7e21d062a8">
+
 ## Q1. Ceiling of a given number (Find the smallest number that is greater than or equal to target)
 
 https://leetcode.com/problems/search-insert-position/
@@ -117,6 +121,8 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
 
   https://leetcode.com/problems/find-in-mountain-array/description/
 
+  <img width="1012" alt="Screenshot 2024-06-17 at 11 58 45 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5432edc2-60de-44fb-9095-093ba9b63519">
+
       /**
        * // This is MountainArray's API interface.
        * // You should not implement it, or speculate about its implementation
@@ -192,6 +198,22 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
         return -1;
       }
       }
+
+  ## Q8. Search in Rotated Sorted Array
+
+  https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+
+  <img width="1013" alt="Screenshot 2024-06-17 at 1 19 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/059b98f5-748c-4e39-bc21-e21344f0c1f2">
+  <img width="1017" alt="Screenshot 2024-06-17 at 1 19 09 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/db247142-9b78-407d-a7ee-b6d49af12506">
+  <img width="1019" alt="Screenshot 2024-06-17 at 1 19 19 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/bbd953fb-4fd7-47bb-9b88-5282e2a0a43e">
+  <img width="1018" alt="Screenshot 2024-06-17 at 1 20 15 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/94232765-350e-4df3-abb4-c257979e73bb">
+  <img width="1017" alt="Screenshot 2024-06-17 at 1 20 25 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3fc691ab-09d5-4820-a752-ff04de615b0a">
+  <img width="1014" alt="Screenshot 2024-06-17 at 1 20 34 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0c44412a-3cbb-4e80-80a5-fc1416fa8bc5">
+  <img width="1020" alt="Screenshot 2024-06-17 at 1 20 43 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/dce2209d-5c80-49c6-95e2-c7eb787a26de">
+  <img width="1022" alt="Screenshot 2024-06-17 at 1 20 57 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c138af3b-0cdc-4890-aaa1-f4ffe70dc889">
+
+
+        
 
   
 
