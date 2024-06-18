@@ -11,6 +11,7 @@
 9. [Find in Mountain Array](#question7)
 10. [Search in Rotated Sorted Array](#question8)
 11. [What if the array contains duplicate values?](#question9)
+12. [Rotation Count](#question10)
 
 ## How do we know when to apply binary search? <a name="general"></a>
 If in the prolem statement, we are given a sorted array, we can try binary search first. Other problem statements include something like we
@@ -301,14 +302,6 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
   ## Q9. **What if the array contains duplicate values?** <a name="question9"></a>
   
   <img width="1013" alt="Screenshot 2024-06-17 at 3 02 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a28f90d0-b696-4047-be58-9c5a5907f270">
-  <img width="1009" alt="Screenshot 2024-06-17 at 3 03 08 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e0e0edbe-c92a-48d8-8812-e7cc41ec641e">
-  <img width="1011" alt="Screenshot 2024-06-17 at 3 03 19 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/33a03af2-fda2-41ac-bb3c-25b37f7440dd">
-  <img width="1011" alt="Screenshot 2024-06-17 at 3 03 30 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0c58c667-0ea1-4757-b295-6db4798e11be">
-  <img width="1012" alt="Screenshot 2024-06-17 at 3 03 39 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/377854c7-8e74-4b38-9395-e23a2d11d548">
-  <img width="1018" alt="Screenshot 2024-06-17 at 3 03 50 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/13cb7010-0f0b-45b1-9bd6-a7ea311113da">
-  <img width="1022" alt="Screenshot 2024-06-17 at 3 04 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/089ecfaf-21ba-496d-bed5-c38cd7119942">
-  <img width="1018" alt="Screenshot 2024-06-17 at 3 04 09 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3ccc05d2-3834-4719-b2c5-07903b88e7ab">
-  <img width="1023" alt="Screenshot 2024-06-17 at 3 04 17 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0a5fd5e5-3166-4c08-b4d2-c7efdb29eff9">
 
       static int findPivotWithDuplicates(int[] arr) {
         int start = 0;
@@ -348,6 +341,31 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
         }
         return -1;
       }
+
+  ## Q10. Find the Rotation Count in Rotated Sorted array <a name="question10"></a>
+
+  https://www.geeksforgeeks.org/find-rotation-count-rotated-sorted-array/
+
+  <img width="1009" alt="Screenshot 2024-06-17 at 3 03 08 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e0e0edbe-c92a-48d8-8812-e7cc41ec641e">
+
+  <img width="931" alt="Screenshot 2024-06-18 at 7 45 20 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1b3a51fa-3653-40fa-a515-2d79af0f0a36">
+
+  ## Q11. Split Array Largest Sum
+
+  https://leetcode.com/problems/split-array-largest-sum/description/
+
+  <img width="1011" alt="Screenshot 2024-06-17 at 3 03 19 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/33a03af2-fda2-41ac-bb3c-25b37f7440dd">
+  <img width="1011" alt="Screenshot 2024-06-17 at 3 03 30 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0c58c667-0ea1-4757-b295-6db4798e11be">
+  <img width="1012" alt="Screenshot 2024-06-17 at 3 03 39 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/377854c7-8e74-4b38-9395-e23a2d11d548">
+  <img width="1018" alt="Screenshot 2024-06-17 at 3 03 50 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/13cb7010-0f0b-45b1-9bd6-a7ea311113da">
+  <img width="1022" alt="Screenshot 2024-06-17 at 3 04 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/089ecfaf-21ba-496d-bed5-c38cd7119942">
+  <img width="1018" alt="Screenshot 2024-06-17 at 3 04 09 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3ccc05d2-3834-4719-b2c5-07903b88e7ab">
+  <img width="1023" alt="Screenshot 2024-06-17 at 3 04 17 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0a5fd5e5-3166-4c08-b4d2-c7efdb29eff9">
+
+  
+
+
+  
 
 
 
