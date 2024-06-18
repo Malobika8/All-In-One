@@ -212,6 +212,81 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
   <img width="1020" alt="Screenshot 2024-06-17 at 1 20 43 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/dce2209d-5c80-49c6-95e2-c7eb787a26de">
   <img width="1022" alt="Screenshot 2024-06-17 at 1 20 57 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c138af3b-0cdc-4890-aaa1-f4ffe70dc889">
   <img width="1013" alt="Screenshot 2024-06-17 at 3 02 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a28f90d0-b696-4047-be58-9c5a5907f270">
+  
+      public class SearchInRotatedSortedArray {
+      public static void main(String[] args) {
+
+        //Leetcode Medium
+        //Very important question
+
+        int[] nums = {3,5,1};
+        int target = 3;
+
+        System.out.println(search(nums, target));
+      }
+      public static int search(int[] nums, int target) {
+
+        int size = nums.length;
+        int pivot = pivot(nums);
+
+        System.out.println("Pivot: " + pivot);
+
+        if(pivot == -1){
+            //array is not rotated, do normal binary search
+            return binarySearch(nums,0,size-1, target);
+        }
+        else{
+            if(nums[pivot]==target)
+                return pivot;
+            else if(target>=nums[0])
+                return binarySearch(nums, 0, pivot-1, target);
+            else
+                return binarySearch(nums, pivot+1, size-1, target);
+        }
+       }
+
+       public static int pivot(int[] nums){
+        int start = 0;
+        int end = nums.length-1;
+        int mid=-1;
+
+        while(start<=end){
+            mid = start + (end-start)/2;
+
+            if(mid<end && nums[mid+1]<nums[mid])
+                return mid;
+            if(mid>start && nums[mid-1]>nums[mid])
+                return mid-1;
+            if(nums[start]>=nums[mid])
+                end=mid-1;
+            else
+                start=mid+1;
+        }
+
+        return -1;
+      }
+
+      public static int binarySearch(int[] nums, int start, int end, int target){
+
+        while(start<=end){
+            int mid = start + (end-start)/2;
+
+            if(target<nums[mid])
+                end=mid-1;
+            else if(target>nums[mid])
+                start=mid+1;
+            else
+                return mid;
+        }
+
+        return -1;
+      }
+      }
+
+
+  **What if the array contains duplicate values?**
+  
+  <img width="1013" alt="Screenshot 2024-06-17 at 3 02 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a28f90d0-b696-4047-be58-9c5a5907f270">
   <img width="1009" alt="Screenshot 2024-06-17 at 3 03 08 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e0e0edbe-c92a-48d8-8812-e7cc41ec641e">
   <img width="1011" alt="Screenshot 2024-06-17 at 3 03 19 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/33a03af2-fda2-41ac-bb3c-25b37f7440dd">
   <img width="1011" alt="Screenshot 2024-06-17 at 3 03 30 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0c58c667-0ea1-4757-b295-6db4798e11be">
