@@ -1,14 +1,28 @@
-## How do we know when to apply binary search? 
+# Table of Contents
+
+1. [Intro](#general)
+2. [To find size of an array by indices](#size)
+3. [Ceiling of a given number (Find the smallest number that is greater than or equal to target)](#question1)
+4. [Find the floor of a number (Find the largest number that is lesser than or equal to target)](#question2)
+5. [Find smallest letter greater than the target](#question3)
+6. [Find First and Last Position of Element in Sorted Array](#question4)
+7. [Position of an Element in Infinite Sorted Array](#question5)
+8. [Peak Index in a Mountain Array (bitonic array)](#question6)
+9. [Find in Mountain Array](#question7)
+10. [Search in Rotated Sorted Array](#question8)
+11. [What if the array contains duplicate values?](#question9)
+
+## How do we know when to apply binary search? <a name="general"></a>
 If in the prolem statement, we are given a sorted array, we can try binary search first. Other problem statements include something like we
 are required to get one particular answer & we are following a continuous sequence to get that answer.
 
 Eg. sq root of a number
 
-### Note: To find size of an array by indices
+### Note: To find size of an array by indices <a name="size"></a>
 
 <img width="1021" alt="Screenshot 2024-06-17 at 11 53 32 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2987da0b-1008-4d5c-9ba6-4d7e21d062a8">
 
-## Q1. Ceiling of a given number (Find the smallest number that is greater than or equal to target)
+## Q1. Ceiling of a given number (Find the smallest number that is greater than or equal to target) <a name="question1"></a>
 
 https://leetcode.com/problems/search-insert-position/
 
@@ -18,14 +32,14 @@ https://leetcode.com/problems/search-insert-position/
 
 <img width="811" alt="Screenshot 2024-06-15 at 12 39 43 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/11b00982-f1a2-43da-a8d1-5a11c1debf2c">
 
-## Q2. Find the floor of a number (Find the largest number that is lesser than or equal to target)
+## Q2. Find the floor of a number (Find the largest number that is lesser than or equal to target) <a name="question2"></a>
 
 <img width="1013" alt="Screenshot 2024-06-15 at 12 45 58 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ad3293c2-09c7-4cd9-b2ef-12f654270fe9">
 <img width="1012" alt="Screenshot 2024-06-15 at 12 46 06 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/67aa98f1-a714-42d3-8d4c-01d883b0ec4b">
 
 Same as above. Consider "end" this time.
 
-## Q3. Find smallest letter greater than the target
+## Q3. Find smallest letter greater than the target <a name="question3"></a>
 
 https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
 
@@ -36,7 +50,7 @@ https://leetcode.com/problems/find-smallest-letter-greater-than-target/descripti
 
 Or we can also just return "letters[start % letters.length]".
 
-## Q4. Find First and Last Position of Element in Sorted Array
+## Q4. Find First and Last Position of Element in Sorted Array <a name="question4"></a>
 
 https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 
@@ -50,7 +64,7 @@ Run binary search twice - to find first occurrence of target and last occurrence
 <img width="763" alt="Screenshot 2024-06-16 at 1 25 54 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7d41d60b-0685-427f-9e2a-e3d6ec891028">
 <img width="814" alt="Screenshot 2024-06-16 at 1 26 27 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ea7b2e17-c74b-42e6-b6b1-7bab5dfd84cf">
 
-## Q5. Position of an Element in Infinite Sorted Array
+## Q5. Position of an Element in Infinite Sorted Array <a name="question5"></a>
 
 https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
 
@@ -105,7 +119,7 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
           }
          }
 
-  ## Q6. Peak Index in a Mountain Array (bitonic array)
+  ## Q6. Peak Index in a Mountain Array (bitonic array) <a name="question6"></a>
 
   https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 
@@ -117,7 +131,7 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
 
   <img width="810" alt="Screenshot 2024-06-16 at 8 54 07 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/960d63b5-1d7f-4c9e-b805-00dcf96a5e3c">
 
-  ## Q7. Find in Mountain Array
+  ## Q7. Find in Mountain Array <a name="question7"></a>
 
   https://leetcode.com/problems/find-in-mountain-array/description/
 
@@ -199,7 +213,7 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
       }
       }
 
-  ## Q8. Search in Rotated Sorted Array
+  ## Q8. Search in Rotated Sorted Array <a name="question8"></a>
 
   https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 
@@ -284,7 +298,7 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
       }
 
 
-  **What if the array contains duplicate values?**
+  ## Q9. **What if the array contains duplicate values?** <a name="question9"></a>
   
   <img width="1013" alt="Screenshot 2024-06-17 at 3 02 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a28f90d0-b696-4047-be58-9c5a5907f270">
   <img width="1009" alt="Screenshot 2024-06-17 at 3 03 08 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e0e0edbe-c92a-48d8-8812-e7cc41ec641e">
@@ -295,6 +309,45 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
   <img width="1022" alt="Screenshot 2024-06-17 at 3 04 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/089ecfaf-21ba-496d-bed5-c38cd7119942">
   <img width="1018" alt="Screenshot 2024-06-17 at 3 04 09 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3ccc05d2-3834-4719-b2c5-07903b88e7ab">
   <img width="1023" alt="Screenshot 2024-06-17 at 3 04 17 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0a5fd5e5-3166-4c08-b4d2-c7efdb29eff9">
+
+      static int findPivotWithDuplicates(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            // 4 cases over here
+            if (mid < end && arr[mid] > arr[mid + 1]) {
+                return mid;
+            }
+            if (mid > start && arr[mid] < arr[mid - 1]) {
+                return mid-1;
+            }
+
+            // if elements at middle, start, end are equal then just skip the duplicates
+            if (arr[mid] == arr[start] && arr[mid] == arr[end]) {
+                // skip the duplicates
+                // NOTE: what if these elements at start and end were the pivot??
+                // check if start is pivot
+                if (start < end && arr[start] > arr[start + 1]) {
+                    return start;
+                }
+                start++;
+
+                // check whether end is pivot
+                if (end > start && arr[end] < arr[end - 1]) {
+                    return end - 1;
+                }
+                end--;
+            }
+            // left side is sorted, so pivot should be in right
+            else if(arr[start] < arr[mid] || (arr[start] == arr[mid] && arr[mid] > arr[end])) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
+        return -1;
+      }
 
 
 
