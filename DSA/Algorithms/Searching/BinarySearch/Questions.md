@@ -12,6 +12,7 @@
 10. [Search in Rotated Sorted Array](#question8)
 11. [What if the array contains duplicate values?](#question9)
 12. [Rotation Count](#question10)
+13. [Split Array Largest Sum](#question11)
 
 ## How do we know when to apply binary search? <a name="general"></a>
 If in the prolem statement, we are given a sorted array, we can try binary search first. Other problem statements include something like we
@@ -350,7 +351,7 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
 
   <img width="931" alt="Screenshot 2024-06-18 at 7 45 20 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1b3a51fa-3653-40fa-a515-2d79af0f0a36">
 
-  ## Q11. Split Array Largest Sum
+  ## Q11. Split Array Largest Sum <a name="question11"></a>
 
   https://leetcode.com/problems/split-array-largest-sum/description/
 
