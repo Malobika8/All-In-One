@@ -192,7 +192,30 @@ Also, @SessionAttributes is designed to have a conversational scope limited to *
   <img width="828" alt="Screenshot 2024-06-19 at 11 13 59 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/b06ea1f0-a9e6-41fe-8375-b2eeeb617221">
   <img width="1118" alt="Screenshot 2024-06-19 at 11 15 08 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/fafbd6c8-2bf5-4b5f-ae4c-8d81987f57a9">
 
-- But it is advised not to use Session Attribute in a different Controller: This is because if a Developer complete Session using     
-  setComplete in original Controller, another Developer who might be using it in a different Controller might be stuck as the Session 
-  attribute will return null.
+- But it is advised not to use Session Attribute in a different Controller: This is because if Session is cleared using     
+  setComplete in original Controller, in a different Controller, where Session attribute might have been used will now return null.
 
+  <img width="818" alt="Screenshot 2024-06-19 at 1 05 56 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2f21cd35-03da-43f7-8190-67c1bcacb0af">
+
+  ## HttpSession VS SessionAttribute
+
+  - HttpSession:
+
+    <img width="754" alt="Screenshot 2024-06-19 at 1 14 56 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/b669818c-9204-4629-9a04-d141c696bb16">
+    <img width="767" alt="Screenshot 2024-06-19 at 1 15 32 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1be4e422-4e89-4cfa-9558-25dd92444bc4">
+    <img width="810" alt="Screenshot 2024-06-19 at 1 17 36 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7acf74cb-e287-40e5-8cd0-1dd60e9f2dd3">
+
+    Removing objects from HttpSessions -
+
+    <img width="797" alt="Screenshot 2024-06-19 at 1 30 48 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1cb0fb45-78f4-4f6a-90ca-dedea9fcc4c5">
+    <img width="803" alt="Screenshot 2024-06-19 at 1 32 09 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/136aeeea-84bd-4dab-9e1c-0f9ba21acb03">
+
+  - SessionAttribute:
+
+    Will we get Session value if we clear session(HttpSession) using setComplete? - Whatever is there in Session attribute will be removed
+    but what has been added to HttpSession won't be removed. This is because with HttpSession we can add wide range of objects but with
+    @SessionAttributes, we can only add Model objects.
+
+    <img width="762" alt="Screenshot 2024-06-19 at 1 22 11 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0b9fedd9-656d-4ed1-8a6d-4ed30a5f1835">
+    <img width="564" alt="Screenshot 2024-06-19 at 1 23 24 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/70b107c1-d79e-4223-8e1e-d42912949817">
+    <img width="775" alt="Screenshot 2024-06-19 at 1 27 32 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ed68b3ac-17b2-406e-b3dc-b45908333820">
