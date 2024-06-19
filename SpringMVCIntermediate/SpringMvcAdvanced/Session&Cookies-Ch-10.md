@@ -108,10 +108,24 @@ In Controllers, we can get the attribute using *"session.getAttribute(\<attribut
 
 <img width="1026" alt="Screenshot 2024-06-18 at 11 53 28 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/768c767f-1360-46f3-a91b-dbe299ca1ebf">
 
+We can use HttpSession directly as well,
+
+<img width="774" alt="Screenshot 2024-06-19 at 7 00 03 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0eb2b2a7-8429-4a2d-b3c1-ff456c58b586">
+
 ## Note
 Session uses Cookie behind the scene.
 
-The ID that is used to keep track,
+When we initially visit the website, we can see a Cookie gets created. The Cookie has a JSESSIONID whi has a value associated. The value is nothing but the ID that the Server uses to keep track of the User.
 
 <img width="774" alt="Screenshot 2024-06-18 at 11 57 48 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/74488072-6a8f-4138-aa18-361c8631ae07">
+
+When we login or do others stuffs, since Server accesses the Jsp pages for the first time, behind the scene, it creates a Cookie for the User with JSESSIONID. We can disable this feature as well. All required info is stored in the Server memory and the key is used to track the user for future personalized results.
+
+*FYI:*
+
+<img width="925" alt="Screenshot 2024-06-19 at 7 00 54 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0bb2e615-6351-4c09-848f-c37343f9a4df">
+<img width="774" alt="Screenshot 2024-06-19 at 7 00 03 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0eb2b2a7-8429-4a2d-b3c1-ff456c58b586">
+
+
+
 
