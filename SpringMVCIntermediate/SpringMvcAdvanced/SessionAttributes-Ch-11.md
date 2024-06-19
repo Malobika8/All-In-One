@@ -192,8 +192,7 @@ Also, @SessionAttributes is designed to have a conversational scope limited to *
   <img width="828" alt="Screenshot 2024-06-19 at 11 13 59 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/b06ea1f0-a9e6-41fe-8375-b2eeeb617221">
   <img width="1118" alt="Screenshot 2024-06-19 at 11 15 08 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/fafbd6c8-2bf5-4b5f-ae4c-8d81987f57a9">
 
-#### But it is advised not to use Session Attribute in a different Controller
-
-This is because if a Developer complete Session using setComplete in original Controller, another Developer who might be using it in a different 
-Controller might be stuck as the Session attribute will return null.
+- But it is advised not to use Session Attribute in a different Controller: This is because if a Developer complete Session using     
+  setComplete in original Controller, another Developer who might be using it in a different Controller might be stuck as the Session 
+  attribute will return null.
 
