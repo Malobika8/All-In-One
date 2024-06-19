@@ -9,7 +9,7 @@
 
 1) Row and Column wise Sorted
 
-  <img width="1024" alt="Screenshot 2024-06-19 at 10 11 26 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ce12c206-6509-40a9-a942-a6622d613043">
+   <img width="1024" alt="Screenshot 2024-06-19 at 10 11 26 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ce12c206-6509-40a9-a942-a6622d613043">
 
   - Smallest element in a Row is the first element in first Column
   - Largest element in a Row is the last element in last Column
@@ -19,7 +19,7 @@
   - We can compare target with smallest(first) element of a Column and if target is greater, then first Row altogether can be ignored as rest of the items 
     in the left will be smaller
 
-  <img width="952" alt="Screenshot 2024-06-19 at 10 39 19 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/80e1929b-4a42-4fc5-b322-664347e27724">
+    <img width="952" alt="Screenshot 2024-06-19 at 10 39 19 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/80e1929b-4a42-4fc5-b322-664347e27724">
 
 2) Search in a sorted Matrix
 
