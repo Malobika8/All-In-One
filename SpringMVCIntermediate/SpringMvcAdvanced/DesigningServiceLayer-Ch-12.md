@@ -114,9 +114,9 @@
 
   <img width="750" alt="Screenshot 2024-06-20 at 9 37 49 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7c40ca7e-ca8c-48d1-9259-4d43fb143ab0">
 
-  * Create Utility/Helper methods which could be reusable
-  * Writting readable code. It's not advisable to dump all our code inside a single method
-  * Use Logger (No more System.out.println)
+* Create Utility/Helper methods which could be reusable
+* Writting readable code. It's not advisable to dump all our code inside a single method
+* Use Logger (No more System.out.println)
 
   <img width="905" alt="Screenshot 2024-06-20 at 9 34 07 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/439f24fa-69d1-494e-900f-7cfd30f1f144">
 
