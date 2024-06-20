@@ -84,7 +84,7 @@
   <img width="724" alt="Screenshot 2024-06-20 at 8 37 06 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/eef7403d-6fbc-4f9d-ba84-61e1e49396ae">
   <img width="524" alt="Screenshot 2024-06-20 at 8 37 20 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5875d402-bdee-4ca2-b05c-39efb4505c1e">
 
-#### We have used SimpleMailMessage class to send emails
+## Note: *We have used SimpleMailMessage class to send emails*
 
 <img width="1074" alt="Screenshot 2024-06-20 at 11 43 17 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/20cef457-4cf2-4e75-a01e-9c09d69a8328">
 
