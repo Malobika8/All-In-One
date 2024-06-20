@@ -1,15 +1,17 @@
-## Sending an email
+# Sending an email
 
 <img width="1148" alt="Screenshot 2024-06-20 at 7 24 07 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ebfbeccb-d4b6-434f-81f0-5cf6e6624006">
 <img width="734" alt="Screenshot 2024-06-20 at 7 24 23 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3a01d519-c7d0-426f-bb89-345f88b12e29">
 <img width="1021" alt="Screenshot 2024-06-20 at 7 24 32 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/445decb7-7c55-49aa-9e0e-0c083e6849ea">
 
-#### To construct an email
+----------------------------------------------------------------------------------------------------------------------------------------
+# To construct an email
 
 <img width="1147" alt="Screenshot 2024-06-20 at 7 25 45 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/4024817d-989f-4ab2-83ce-c4fb5e65281d">
 <img width="625" alt="Screenshot 2024-06-20 at 7 26 28 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ea15adb4-6967-47c4-b2e5-b2684d2a3b2d">
 
-## Let's implement Spring mail API
+----------------------------------------------------------------------------------------------------------------------------------------
+# Let's implement Spring mail API
 
 - Add these 3 dependencies:
 
@@ -62,19 +64,19 @@
   <img width="1056" alt="Screenshot 2024-06-20 at 8 05 57 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/6913fc9f-774e-4bfd-8208-091adf0d2a90">
   <img width="802" alt="Screenshot 2024-06-20 at 8 07 23 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/98855450-967b-49c6-9254-af711e7e2bcc">
 
-  Create an Interface
+- Create an Interface
 
   <img width="818" alt="Screenshot 2024-06-20 at 8 16 51 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/596bad3b-d404-4e9b-944f-54632ed147af">
 
-  Create Impl. @Service is same as @Component. It is basically extending @Component and is used to differentiate a service class.
+- Create Impl. @Service is same as @Component. It is basically extending @Component and is used to differentiate a service class.
 
   <img width="1059" alt="Screenshot 2024-06-20 at 8 23 38 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a0a19755-779a-4cb2-bdbe-422967f8e3bb">
 
-  Call the Service from Controller
+- Call the Service from Controller
 
   <img width="1032" alt="Screenshot 2024-06-20 at 8 17 15 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/103b2be5-3233-4f4b-9af8-80ea5a19d63e">
 
-  Run the Application
+- Run the Application
   
   <img width="611" alt="Screenshot 2024-06-20 at 8 35 02 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/88e11e0b-7bb0-4462-8541-68bdbfe13731">
   <img width="661" alt="Screenshot 2024-06-20 at 8 35 27 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/836d798e-dab9-47e2-8da3-73203255a9e9">
@@ -86,7 +88,8 @@
 
 <img width="1074" alt="Screenshot 2024-06-20 at 11 43 17 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/20cef457-4cf2-4e75-a01e-9c09d69a8328">
 
-## Best Practices
+----------------------------------------------------------------------------------------------------------------------------------------
+# Best Practices
 
 * Rather than hardcoding properties, we can load it from a properties file
 
@@ -98,8 +101,8 @@
 
   <img width="826" alt="Screenshot 2024-06-20 at 8 46 43 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/73682f96-7a4c-43aa-a0f2-b586e8aa6c42">
 
-  We need to mention the location of the properties file. This can be done using @PropertySource annotation. We can use *environment.getProperty*
-  method
+  We need to mention the location of the properties file. This can be done using @PropertySource annotation. We can use         
+  *environment.getProperty* method
 
   <img width="696" alt="Screenshot 2024-06-20 at 8 51 35 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c57c2d93-2889-4fa7-bcbd-b96edb3ae8a1">
   <img width="766" alt="Screenshot 2024-06-20 at 8 51 55 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/41c4eb49-6c62-46e6-a76c-9029cf40a033">
@@ -111,9 +114,9 @@
 
   <img width="750" alt="Screenshot 2024-06-20 at 9 37 49 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7c40ca7e-ca8c-48d1-9259-4d43fb143ab0">
 
-* Create Utility/Helper methods which could be reusable
-* Writting readable code. It's not advisable to dump all our code inside a single method
-* Use Logger (No more System.out.println)
+  * Create Utility/Helper methods which could be reusable
+  * Writting readable code. It's not advisable to dump all our code inside a single method
+  * Use Logger (No more System.out.println)
 
   <img width="905" alt="Screenshot 2024-06-20 at 9 34 07 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/439f24fa-69d1-494e-900f-7cfd30f1f144">
 
@@ -127,7 +130,7 @@
 
 * We shouldn't send complete dto object but only what is required
 
-## Let's write a Service for Calculator result
+# Let's write a Service for Calculator result
 
 <img width="786" alt="Screenshot 2024-06-20 at 11 08 57 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3cf5b06a-355c-4094-9987-7203278b3077">
 <img width="908" alt="Screenshot 2024-06-20 at 11 09 08 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/70c72a5b-dd81-4455-beac-dd8537991c81">
@@ -140,7 +143,8 @@
 
 <img width="755" alt="Screenshot 2024-06-20 at 11 40 03 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3d5c7ce2-5ec0-451b-ad91-ee7e89ed930a">
 
-## Extra:
+----------------------------------------------------------------------------------------------------------------------------------------
+# Extra:
 
 What if the user blocks Cookies? - We have used SessionAttributes
 
