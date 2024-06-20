@@ -56,7 +56,8 @@ Let's try to create a simple Hello World application first with Raw Spring Frame
 
    We had to do so much of Configuration to build a simple hello world application.
 
-   #### Note: We can use *@RestController* as well instead of @Controller and @ResponseBody. This is because RestController already has Controller and ResponseBody.
+   #### Note: We can use *@RestController* as well instead of @Controller and @ResponseBody. 
+   This is because RestController already has Controller and ResponseBody.
 
    <img width="869" alt="Screenshot 2024-06-20 at 10 23 41 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/358b2662-239f-4123-8559-57eff8bf4d76">
    <img width="576" alt="Screenshot 2024-06-20 at 10 27 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/85c5a4ee-676b-4634-b0a1-96d297fb4419">
