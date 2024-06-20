@@ -150,13 +150,16 @@ What if the user blocks Cookies? - We have used SessionAttributes
 
 <img width="1143" alt="Screenshot 2024-06-20 at 11 51 30 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3d006520-77ad-49b7-b366-90371406606f">
 <img width="736" alt="Screenshot 2024-06-20 at 11 44 49 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/355dbbfb-0ad9-4f24-920c-cb20234ebef7">
+
+Notice that the username is missing
+
 <img width="676" alt="Screenshot 2024-06-20 at 11 45 59 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/dd6059e7-21df-4861-be20-ee0ca9aafcdb">
 <img width="1088" alt="Screenshot 2024-06-20 at 11 46 13 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e92dfeaa-f597-4d32-84c5-08126d9d40a6">
 <img width="723" alt="Screenshot 2024-06-20 at 11 46 52 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/da412685-9ee1-4f46-b769-2f705fbf754f">
 <img width="562" alt="Screenshot 2024-06-20 at 11 47 12 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/6120b883-29d9-4dc7-835b-8e8a89896928">
 <img width="680" alt="Screenshot 2024-06-20 at 11 47 03 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1e46da09-eeef-4a84-8c5d-98b746c76477">
 
-There are 2 approaches:
+### There are 2 approaches:
 - Approach 1
 
   <img width="800" alt="Screenshot 2024-06-20 at 11 48 36 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/69821f99-6bb4-4589-85a0-4d203905ed03">
