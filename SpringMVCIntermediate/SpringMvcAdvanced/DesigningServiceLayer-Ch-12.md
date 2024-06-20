@@ -160,7 +160,7 @@ Notice that the username is missing
 <img width="680" alt="Screenshot 2024-06-20 at 11 47 03 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1e46da09-eeef-4a84-8c5d-98b746c76477">
 
 ### There are 2 approaches:
-- Approach 1
+- Approach 1: Ask user to allow Cookies
 
   <img width="800" alt="Screenshot 2024-06-20 at 11 48 36 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/69821f99-6bb4-4589-85a0-4d203905ed03">
 
@@ -175,7 +175,7 @@ Notice that the username is missing
   
   <img width="727" alt="Screenshot 2024-06-20 at 11 55 03 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ffc99c6b-bb6c-4947-9dc0-79ff27a5fd0e">
 
-  There's no Cookies in the Cookies session as they are blocked
+  There are no Cookies in the Cookies session as they are blocked
 
   <img width="1143" alt="Screenshot 2024-06-20 at 11 55 21 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2d75a3f8-c266-4595-b731-2596a6460f5a">
 
