@@ -149,10 +149,10 @@
 What if the user blocks Cookies? - We have used SessionAttributes
 
 <img width="1143" alt="Screenshot 2024-06-20 at 11 51 30 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3d006520-77ad-49b7-b366-90371406606f">
-<img width="736" alt="Screenshot 2024-06-20 at 11 44 49 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/355dbbfb-0ad9-4f24-920c-cb20234ebef7">
 
 Notice that the username is missing
 
+<img width="736" alt="Screenshot 2024-06-20 at 11 44 49 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/355dbbfb-0ad9-4f24-920c-cb20234ebef7">
 <img width="676" alt="Screenshot 2024-06-20 at 11 45 59 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/dd6059e7-21df-4861-be20-ee0ca9aafcdb">
 <img width="1088" alt="Screenshot 2024-06-20 at 11 46 13 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e92dfeaa-f597-4d32-84c5-08126d9d40a6">
 <img width="723" alt="Screenshot 2024-06-20 at 11 46 52 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/da412685-9ee1-4f46-b769-2f705fbf754f">
@@ -179,7 +179,9 @@ Notice that the username is missing
 
   <img width="1143" alt="Screenshot 2024-06-20 at 11 55 21 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2d75a3f8-c266-4595-b731-2596a6460f5a">
 
-  *Note: Only when the Cookies are blocked the JSESSIONID is appended to url*
+  *Note: Only when the Cookies are blocked the JSESSIONID is appended to url. If not, it works as expected*
+
+  Sample with Cookies unblocked
 
   <img width="1144" alt="Screenshot 2024-06-20 at 11 58 50 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c9b0c905-5903-4aa5-891e-5e0da74a2345">
   <img width="1030" alt="Screenshot 2024-06-20 at 11 59 20 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3621e6f1-a9f6-4068-9b45-b557e8a58877">
