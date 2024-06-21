@@ -1,6 +1,6 @@
 ## Executable SpringBoot Jar
 
-Let's say we are done with development and our Application is ready. How to deliver the Application to a Client?
+##### Let's say we are done with development and our Application is ready. How to deliver the Application to a Client?
 
 We can build a Jar/War and run it on a server(aws or any hosting server) and go live.
 
@@ -36,20 +36,20 @@ We can build a Jar/War and run it on a server(aws or any hosting server) and go 
 
   Let's see if we can run the Jar without any external Server.
 
-  i) Go to target folder where we have our Jar file
+  ##### i) Go to target folder where we have our Jar file
 
      <img width="525" alt="Screenshot 2024-06-21 at 7 35 39 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c0562907-8346-4f93-98da-10abccba6662">
 
-  ii) Open the same in terminal
+  ##### ii) Open the same in terminal
 
      <img width="717" alt="Screenshot 2024-06-21 at 7 35 56 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c3a82eae-f69a-4197-a201-daba88191dfc">
 
-  iii) Run the Jar file
+  ##### iii) Run the Jar file
 
      <img width="805" alt="Screenshot 2024-06-21 at 7 37 55 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/f43d715a-b35e-4164-802f-1b532007e6cb">
      <img width="665" alt="Screenshot 2024-06-21 at 7 39 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ebe2a9e3-6abc-4b9f-abd3-f5b567009b35">
 
-     Why we are not able to run the Jar though?
+     ##### Why we are not able to run the Jar though?
 
      The Jar that we are creating should be a Fat Jar. There's a maven plugins that does just the same - **spring-boot-maven-plugin**
 
