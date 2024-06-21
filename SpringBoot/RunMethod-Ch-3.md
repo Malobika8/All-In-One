@@ -23,7 +23,7 @@ Consider a simple class called "College" with *@Component* annotated. This instr
 <img width="1102" alt="Screenshot 2024-06-21 at 10 07 56 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/935e3016-ffae-4200-8001-03e758744521">
 <img width="1008" alt="Screenshot 2024-06-21 at 10 09 03 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/dd51232e-5838-4244-9966-4c8a452fbcf8">
 
-*What if we remove @Component from the class?*
+### *What if we remove @Component from the class?*
 
 <img width="864" alt="Screenshot 2024-06-21 at 10 19 40 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/25d7f631-329b-47e4-adf8-b24af5c3fa95">
 
