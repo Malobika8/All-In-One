@@ -1,4 +1,4 @@
-## Version management
+# Version management
 
 We know that spring-boot-starter-parent does **Version Management** for us.
 
@@ -35,7 +35,7 @@ We can check similarly for spring-webmvc.
 <img width="469" alt="Screenshot 2024-06-22 at 7 46 08 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d67b92d7-8767-42aa-8994-52beba082087">
 <img width="179" alt="Screenshot 2024-06-22 at 7 46 19 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/182e7730-4144-47ac-be9a-5e4ad39b363d">
 
-## Jackson API for Rest Support
+# Jackson API for Rest Support
 
 - Spring MVC:
   
