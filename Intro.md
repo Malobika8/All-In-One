@@ -26,12 +26,14 @@ There are primarily 2 different type:
      2) Data format: Requests would always be sent in the form of xml
      3) Response: Response received in the form of xml as well as Response code (success status)
 
-   - SOAP is not preferred these days. Consider a scenario where we are sending a Form with multiple fields. Web Page would convert it into single XML file and then send the same to 
-     Server. Server would then read data one by one and insert into the Database. Bounded to XML can be considered as a limitation as request can be sent only in the form of XML.
+   - SOAP is not preferred these days. Consider a scenario where we are sending a Form with multiple fields. Web Page would convert it into       single XML file and then send the same to 
+     Server. Server would then read data one by one and insert into the Database. Bounded to XML can be considered as a limitation as             request can be sent only in the form of XML.
      Moreover, XML is complex and sometimes not lightweight.
 
-   - XML was once considered one of the best communication medium between two Systems. But there are new Technologies nowadays which is why SOAP is almost gone.
+   - XML was once considered one of the best communication medium between two Systems. But there are new Technologies nowadays which is why       SOAP is almost gone.
    - SOAP also doesn't have any Header facility.
+  
+     <img width="265" alt="Screenshot 2024-06-22 at 9 44 22 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e8b74b2d-f78c-4ed0-998b-eb9f4ddce38d">
 
 3) *REST (Representational Stateful API's):*
    
@@ -40,9 +42,12 @@ There are primarily 2 different type:
      The different parameters we have to consider are:
      
       1) Endpoint URL: We would need this whenever we are sending any request.
-      2) Data Format: Need to pass Data. Unlike SOAP, in case of REST, different types of content are supported - XML, JSON, String, Doc etc. We can send request in any format. These            are called MIME Type. This is the biggest advantage over SOAP. 
+      2) Data Format: Need to pass Data. Unlike SOAP, in case of REST, different types of content are supported - XML, JSON, String, Doc              etc. We can send request in any format. These are called MIME Type. This is the biggest advantage over SOAP. 
       3) Diff types of operations can be performed with REST API's (CRUD).  
-      4) We need to pass Headers which basically contains info related to the Content Type that is passed (JSON/XML etc). It also includes Username or Password for Authentication.            5) Response: This can again be of any Type (JSON, XML, String etc).  We get Response in the form of Response Code (200..204..400.404 etc).
+      4) We need to pass Headers which basically contains info related to the Content Type that is passed (JSON/XML etc). It also includes            Username or Password for Authentication.
+      5) Response: This can again be of any Type (JSON, XML, String etc).  We get Response in the form of Response Code (200..204..400.404            etc).
+
+         <img width="375" alt="Screenshot 2024-06-22 at 9 59 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ec60a842-db8f-4aaa-ba45-cdb1d43e7112">
 
 ## In the Java world, there are 2 different specifications.
 - There's a specification for SOAP WebServices called JAX-WS
