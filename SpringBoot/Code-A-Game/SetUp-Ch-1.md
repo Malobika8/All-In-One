@@ -1,4 +1,4 @@
-## Project Dependencies
+## Project Setup
 
 1. Create a new Project (maven-archetype-quickstart)
 2. Add the following Dependencies
