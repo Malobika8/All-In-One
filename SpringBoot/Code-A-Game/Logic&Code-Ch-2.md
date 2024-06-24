@@ -50,6 +50,9 @@
 
 Default scope of a Bean is Singleton. We need to create object on demand. We can use prototype scope for the same.
 
+<img width="1133" alt="Screenshot 2024-06-23 at 12 58 23 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/4fc81ff8-b2cd-4330-b89b-c7c5b51fe05d">
+<img width="1150" alt="Screenshot 2024-06-23 at 12 59 40 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e8435387-cf9b-44b6-bd70-d9f2cb4ed95b">
+
     @Service
     @Scope("prototype")
     public class GameService {
