@@ -85,7 +85,7 @@
    We need to add packages which needs to be scanned for Entities.
 
    -----------------
-   Note: ComponentScan won't scan Entities. We need to tell EntityManager where our Entities are present. For this, we can use                  entityManagerFactoryBean.setPackagesToScan("com.springjpa.entity");
+   **Note:** ComponentScan won't scan Entities. We need to tell EntityManager where our Entities are present. For this, we can use             entityManagerFactoryBean.setPackagesToScan("com.springjpa.entity");
    
    OR
    
