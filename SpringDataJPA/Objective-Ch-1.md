@@ -8,7 +8,7 @@ To create an simple Application which can save data to a Database. Use Spring, J
 
    <img width="801" alt="Screenshot 2024-06-24 at 8 57 43 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/b70a3ab1-52fe-4b55-8638-d43592c024d0">
 
-2) Add required dependencies
+2) Required dependencies. (Note: We'll observe which scenario requires which Dependency)
 
    <!-- https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api -->
         <dependency>
@@ -48,18 +48,13 @@ To create an simple Application which can save data to a Database. Use Spring, J
             <version>3.3.0</version>
         </dependency>
 
-
-
-
-
-
 4) Create a simple Student Entity class. Add getters, setters and toString method.
 
    <img width="1025" alt="Screenshot 2024-06-24 at 9 10 23 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/40bb841b-6767-4181-9d77-21d512c4f74d">
 
+5) Create a Configuration class using which the Container would be created.
 
-
-Demo  - we need a configurtaion class becuase the bean will be searched inside that container. We want to create the container using a configuration file.
+   <img width="1023" alt="Screenshot 2024-06-25 at 6 32 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a9d0ff2a-5b26-4d67-8a09-f286f677bf7e">
 
 EntityManagerFactory creates EntityManager. How to create EntityManagerFactory? - We can use a class to create EntityManagerFactory
 
