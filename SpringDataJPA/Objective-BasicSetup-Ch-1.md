@@ -1,15 +1,19 @@
 ## Objective
 
-To create an simple Application which can save data to a Database. Use Spring, JPA, Spring Data JPA initially. Switch later to SpringBoot.
+To create a simple Application which can save data to a Database using Spring, JPA, Spring Data JPA initially & later switching to SpringBoot.
 
 ##### Let's begin
 
-1) Create a maven project. Use maven-archetype-quickstart.
+1) Create a Maven project. Use maven-archetype-quickstart.
 
    <img width="801" alt="Screenshot 2024-06-24 at 8 57 43 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/b70a3ab1-52fe-4b55-8638-d43592c024d0">
 
-2) Required dependencies. (Note: We'll observe which scenario requires which Dependency)
+2) Add Dependency: We initially need to add JPA dependency.
 
+   #### What is JPA?
+   The Java Persistence API (JPA) is a specification of Java. It is used to persist data between Java object and relational      database.      JPA acts as a bridge between object-oriented domain models and relational database systems.
+   As JPA is just a specification, it doesn't perform any operation by itself. It requires an implementation. So, ORM tools like Hibernate,     TopLink and iBatis implements JPA specifications for data persistence.
+   
    <!-- https://mvnrepository.com/artifact/jakarta.persistence/jakarta.persistence-api -->
         <dependency>
             <groupId>jakarta.persistence</groupId>
@@ -17,6 +21,8 @@ To create an simple Application which can save data to a Database. Use Spring, J
             <version>3.2.0</version>
         </dependency>
 
+   Other required dependencies. (Note: We'll be adding it as and when required)
+   
    <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -55,29 +61,3 @@ To create an simple Application which can save data to a Database. Use Spring, J
 5) Create a Configuration class using which the Container would be created.
 
    <img width="1023" alt="Screenshot 2024-06-25 at 6 32 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a9d0ff2a-5b26-4d67-8a09-f286f677bf7e">
-
-EntityManagerFactory creates EntityManager. How to create EntityManagerFactory? - We can use a class to create EntityManagerFactory
-
-We shouldnt be using DriverManagerDataSource in production as we need connection pool there. In our case, for every db operation, new connection is created. In realitime, we create connection
-using ConnectionPool. DriverManagerDataSource doesnt return any connection pool. our application is simple henche using the DriverManagerDataSource.
-
-In spring we have a class called LocalContainerEntityManagerFactoryBean which helps us create Entity mnagaer factory.
-
-We dont have to create Entitymanager by ourself. We cannot autowire EntityManager(we can do but on special cases. We need to use SpringDataJpa). How to inject EntityManager object then? To initialise it we need to use
-special annotation @PersistenceContext
-
-If we use PersistenceContext, we need to activate transaction. We need to configure TransactionManager. TransactionManager provides Transaction management facility to our application.
-Why we are using JpaTransactionManager and not JtaTransactionManager? - Whenever we connect to one database, we go with JpaTransactionManager. In case of connecting to multiple databases, we use 
-JtaTransactionManager.
-
-We need to tell spring to EnableTransaction.
-
-Note: ComponentScan wont scan Entities. We need to tell EntityManager where our Entities are present. For this, we can use entityManagerFactoryBean.setPackagesToScan("com.springjpa.entity");
-Or there's an annotation that can be used to achieve the same.
-
-SPRINGDATAJPA
-
-Why cant we use autowired with EntityManager? - We can use using SpringDataJPA. We need to use a special annotation over DBConfig i.e. @EnableJpaRepositories
-
-Now for different requirements, we would need to develop methods that can say fetch a particular student,, or maybe all students etc etc. Instead we can let our dao(StudentDAO) extend 
-JPARespository
