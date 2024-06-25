@@ -85,9 +85,12 @@
    We need to add packages which needs to be scanned for Entities.
 
    -----------------
-   Note: ComponentScan wont scan Entities. We need to tell EntityManager where our Entities are present. For this, we can use                  entityManagerFactoryBean.setPackagesToScan("com.springjpa.entity");
+   Note: ComponentScan won't scan Entities. We need to tell EntityManager where our Entities are present. For this, we can use                  entityManagerFactoryBean.setPackagesToScan("com.springjpa.entity");
+   
    OR
+   
    There's an annotation that can be used to achieve the same.
+   
    -----------------
 
    <img width="1030" alt="Screenshot 2024-06-25 at 8 09 20 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/43d70d23-168b-4c22-a9d0-2d02f98ccb32">
