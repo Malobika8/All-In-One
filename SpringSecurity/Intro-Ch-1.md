@@ -39,15 +39,15 @@ developers can focus on building their application's core functionality while en
               <scope>provided</scope>
           </dependency>
 
-    Spring Security dependencies:
+      Spring Security dependencies:
    
-    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
+      <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
           <dependency>
               <groupId>org.springframework.security</groupId>
               <artifactId>spring-security-config</artifactId>
               <version>${spring-security.version}</version>
           </dependency>
-    <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
+      <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
          <dependency>
               <groupId>org.springframework.security</groupId>
               <artifactId>spring-security-web</artifactId>
@@ -59,9 +59,9 @@ developers can focus on building their application's core functionality while en
               <version>${spring-security.version}</version>
           </dependency>
     
-     #### Spring security versions are not in sync with other Spring dependencies. We need to check and make sure version are compatible.
+       #### Spring security versions are not in sync with other Spring dependencies. We need to check and make sure version are compatible.
 
-     <img width="1025" alt="Screenshot 2024-06-26 at 1 02 47 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/608f2845-f393-40f2-b028-5890966147a6">
+       <img width="1025" alt="Screenshot 2024-06-26 at 1 02 47 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/608f2845-f393-40f2-b028-5890966147a6">
 
    - **MyAppConfig**
 
