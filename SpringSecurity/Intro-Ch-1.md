@@ -137,6 +137,6 @@ developers can focus on building their application's core functionality while en
 
    ------------
    SpringInitializer(This boots up our Spring Security Application. It registers Spring Security filter chain) **------->** MySecurityConfig(Helps create Filter chain)
-   We can also do XML config for the same.
-
    ------------
+
+   We can also do XML config for the same.
