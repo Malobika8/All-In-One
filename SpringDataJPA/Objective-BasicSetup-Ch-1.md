@@ -61,3 +61,19 @@ To create a simple Application which can save data to a Database using Spring, J
 5) Create a Configuration class using which the Container would be created.
 
    <img width="1023" alt="Screenshot 2024-06-25 at 6 32 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a9d0ff2a-5b26-4d67-8a09-f286f677bf7e">
+
+
+## IMPORTANT
+
+We might come across an error 
+
+-----
+      Spring Boot 3.2.2: EntityManagerFactory interface org.hibernate.SessionFactory seems to conflict with Spring's EntityManagerFactoryInfo mixin
+
+-----
+
+### Fix:
+
+It is probably due to using Jakarta Persistence-API version 3.2.0-M1.
+
+After changing Jakarta Persistence-API version from 3.2.0-M1 to 3.1.0 in Maven pom.xml (according to Spring Boot migration guide, v3.1.0 is the default version supported by Spring Boot 3.2.x), the previously thrown exception concerning Spring Data JPA/Hibernate/Jakarta incompatibility no longer occurs.
