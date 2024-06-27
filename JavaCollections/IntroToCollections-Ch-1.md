@@ -24,11 +24,11 @@ It contains common methods for all the collections like *size, isEmpty, iterator
 
 ------
 
-There are 3 Interfaces:
+### There are 3 Interfaces:
 
 ------
 
-## 1. List:
+### 1. List:
    * It is an ordered collection. It maintains insertion order.
    * It's like a Sequence
    * It has index which helps us access the elements at a particular position and even insert.
@@ -111,7 +111,8 @@ There are 3 Interfaces:
         
 ------
 
-## 2. Set: This need not necessarily have to be Ordered. By default, it's not ordered. It's a collection that doesn't contain any duplicate    elements. This only contains unique values.
+### 2. Set: This need not necessarily have to be Ordered. By default, it's not ordered. It's a collection that doesn't contain any 
+  duplicate elements. This only contains unique values.
 
    ------
    #### What is the use case of set? What is it best in?
@@ -140,7 +141,7 @@ There are 3 Interfaces:
 
 ------
 
-## 3. Queue:
+### 3. Queue:
    * It is an Interface.
    * By default FIFO. But order can be changed by priority.
    * Insertion happens on one end and deletion happens on the other.
@@ -180,7 +181,7 @@ There are 3 Interfaces:
 
    For *Custom sorting order*, we can use *Comparator*. We can implement Comparator and override a method called *compare* and put custom      compare logic.
 
-## 4. Map:
+### 4. Map:
    * This has key-value pair.
    * These are not Synchronized/Thread safe.
 
