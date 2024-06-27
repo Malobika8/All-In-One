@@ -1,4 +1,16 @@
-# Collections Framework
+# Table of Contents
+1. [Introduction](#intro)
+2. [List](#list)
+   1. [ArrayList](#listarray)
+   2. [LinkedList](#listll)
+   3. [Vector](#listvector)
+   4. [Stack](#liststack)
+3. [Set](#set)
+4. [Queue](#queue)
+5. [Map](#map)
+6. [Questions](#questions)
+
+# Collections Framework <a name="intro"></a>
 
 *Collections* Class is part of Collections framework which contains some commonly used methods eg. **Collections.sort**.
 
@@ -28,7 +40,7 @@ It contains common methods for all the collections like *size, isEmpty, iterator
 
 ------
 
-### 1. List:
+### 1. List: <a name="list"></a>
    * It is an ordered collection. It maintains insertion order.
    * It's like a Sequence
    * It has index which helps us access the elements at a particular position and even insert.
@@ -37,7 +49,7 @@ It contains common methods for all the collections like *size, isEmpty, iterator
 
   ### Implementations:
   
-  1. *ArrayList:*
+  1. *ArrayList:* <a name="listarray"></a>
      * Resizeable array implementation of the Interface.
      * It can increase its size on the fly.
      * It doubles the size once full. Note that both(old & new) the arrays are not maintained. Rather, it copies the info from first to            second. First one is later garbage collected.
@@ -45,11 +57,10 @@ It contains common methods for all the collections like *size, isEmpty, iterator
      * This is more frequesntly used when we have high no of reads.
      * Random search is very fast because of Contiguous memory allocation.
     
-       <img width="744" alt="Screenshot 2024-06-27 at 8 15 01 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a610040d-0e6e-4d43-a210-b62aa2d4c534">
        <img width="694" alt="Screenshot 2024-06-27 at 8 16 26 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/fbacc7b1-3c3a-486e-a469-17727f6e5501">
        <img width="995" alt="Screenshot 2024-06-27 at 8 46 40 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a365b8e4-f08c-42d5-b023-3407d6b9e0d1">
 
-   2. *LinkedList:*
+   2. *LinkedList:* <a name="listll"></a>
       * It is actually a doubly linked list Implementation.
       * It is not made of Contiguous memory allocation. They are connected with each other through pointers or references.
       * It maintains insertion order.
@@ -88,7 +99,9 @@ It contains common methods for all the collections like *size, isEmpty, iterator
       <img width="997" alt="Screenshot 2024-06-27 at 8 46 46 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ee1456cf-5c21-4ec5-93f5-6fe4d9c72775">
       ------
 
-  3. *Vector:* If multiple people try to insert in ArrayList and LL, there will be a lot of issues as they are not Thread safe. That is          what happens when multiple threads try to access the same block which is the reason why Synchronization is important. This ensures          that the data is not corrupted.
+  3. *Vector:* <a name="listvector"></a>
+
+     If multiple people try to insert in ArrayList and LL, there will be a lot of issues as they are not Thread safe. That is what               happens when multiple threads try to access the same block which is the reason why Synchronization is important. This ensures               that the data is not corrupted.
 
      * This Class is just like ArrayList but along with that, it ensures Thread safety.
      * It can be used in a multi-threaded environment and the data won't be corrupted.
@@ -101,7 +114,7 @@ It contains common methods for all the collections like *size, isEmpty, iterator
 
        <img width="1002" alt="Screenshot 2024-06-27 at 8 47 32 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d54e2ccd-dacb-4f77-aa74-414b61b85ee5">
 
-   4. *Stack:*
+   5. *Stack:* <a name="liststack"></a>
       * This supports LIFO.
       * This is implemented using ArrayList or LL "behind the scene".
       * Stack extends Vector which means Stacks are also Thread safe.
@@ -111,21 +124,16 @@ It contains common methods for all the collections like *size, isEmpty, iterator
         
 ------
 
-### 2. Set: This need not necessarily have to be Ordered. By default, it's not ordered. It's a collection that doesn't contain any 
-  duplicate elements. This only contains unique values.
+### 2. Set: <a name="set"></a>
 
-   ------
-   #### What is the use case of set? What is it best in?
+  * This need not necessarily have to be Ordered. By default, it's not ordered. It's a collection that doesn't contain any 
+    duplicate elements. This only contains unique values.
+  * Use Case: This is best in searching. Best case:O(1), worst:O(n)
+  * It is to be noted that Hashing is used behind the scenes.
 
-   This is best in searching. Best case:O(1), worst:O(n)
-   
-   ------
-  
-   It is to be noted that Hashing is used behind the scenes.
+  Lets try to add elements and print all the 3 sets. We can observe the order in which it prints the elements.
 
-   Lets try to add elements and print all the 3 sets. We can observe the order in which it prints the elements.
-
-   <img width="651" alt="Screenshot 2024-06-27 at 9 02 06 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/adf52aaf-f7cd-414e-9b78-7e651e446681">
+  <img width="651" alt="Screenshot 2024-06-27 at 9 02 06 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/adf52aaf-f7cd-414e-9b78-7e651e446681">
    
    * *HashSet* doesn't follow any order.
    * *LinkedHashSet* follows insertion order.
@@ -141,7 +149,7 @@ It contains common methods for all the collections like *size, isEmpty, iterator
 
 ------
 
-### 3. Queue:
+### 3. Queue: <a name="queue"></a>
    * It is an Interface.
    * By default FIFO. But order can be changed by priority.
    * Insertion happens on one end and deletion happens on the other.
@@ -181,7 +189,7 @@ It contains common methods for all the collections like *size, isEmpty, iterator
 
    For *Custom sorting order*, we can use *Comparator*. We can implement Comparator and override a method called *compare* and put custom      compare logic.
 
-### 4. Map:
+### 4. Map: <a name="map"></a>
    * This has key-value pair.
    * These are not Synchronized/Thread safe.
 
@@ -206,12 +214,12 @@ It contains common methods for all the collections like *size, isEmpty, iterator
    <img width="1010" alt="Screenshot 2024-06-27 at 9 36 22 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/bd02a2fe-8eaa-42a8-81ac-0346877e24f0">
    <img width="979" alt="Screenshot 2024-06-27 at 9 36 29 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2dfedd19-c974-495e-af10-7e994d87d2ef">
    
-### Questions
+## Questions <a name="questions"></a>
 
-##### 1. Why Indexes Started from zero?
-##### 2. "Parent interface can refer to the child". Which principle is this?
+#### 1. Why Indexes Started from zero?
+#### 2. "Parent interface can refer to the child". Which principle is this?
    - Polymorphism
-##### 3. Are Maps part of Collections framework?
+#### 3. Are Maps part of Collections framework?
    - Yes. Map interface is a part of Java Collection Framework, but it doesn't inherit Collection Interface. 
 
 
