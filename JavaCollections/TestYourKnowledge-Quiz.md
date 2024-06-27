@@ -1,0 +1,16 @@
+<img width="683" alt="Screenshot 2024-06-27 at 9 49 28 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2882df09-15f7-485a-855b-9502d1f6c529">
+<img width="748" alt="Screenshot 2024-06-27 at 9 50 14 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/28aedfc7-db8e-405c-a10f-e8ebe9e0be41">
+<img width="789" alt="Screenshot 2024-06-27 at 9 51 07 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/55662529-4140-4633-9f46-4bb26724ffda">
+<img width="605" alt="Screenshot 2024-06-27 at 9 51 56 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c2da67d0-ed17-43ae-b07b-8be439e76467">
+<img width="696" alt="Screenshot 2024-06-27 at 9 52 45 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1b185756-bb40-47cd-982e-e2fdc33b083e">
+<img width="578" alt="Screenshot 2024-06-27 at 9 53 32 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/48421f2b-cfde-4bd5-97bd-bc1166c88f19">
+<img width="625" alt="Screenshot 2024-06-27 at 9 54 21 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/99e93fce-b312-4eb2-a358-7fb740b93309">
+<img width="653" alt="Screenshot 2024-06-27 at 9 55 11 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e754ae72-40a5-447f-96ae-17e86eee4270">
+<img width="684" alt="Screenshot 2024-06-27 at 9 56 00 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7afe72cb-57a8-4375-991c-3b6c254b9c5d">
+<img width="893" alt="Screenshot 2024-06-27 at 9 57 05 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/6bef2acc-0abc-49dc-a3f9-9e83f2bf2be6">
+<img width="649" alt="Screenshot 2024-06-27 at 9 57 43 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/607263ab-cede-4d93-85d9-5066fe5d753f">
+<img width="806" alt="Screenshot 2024-06-27 at 9 58 33 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/809a98e7-488e-40a5-9d25-9950d93470a4">
+<img width="817" alt="Screenshot 2024-06-27 at 10 00 11 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1628ee94-cb06-476f-b2e5-3a2fa679cd36">
+<img width="694" alt="Screenshot 2024-06-27 at 10 01 02 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5dfae558-9b13-4396-8761-b3558d40598c">
+<img width="647" alt="Screenshot 2024-06-27 at 10 01 43 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/14625c25-5e6d-423b-addc-8cded8ce77e6">
+<img width="714" alt="Screenshot 2024-06-27 at 10 02 29 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cc56423c-5247-4423-bda5-06b01c1c7e43">
