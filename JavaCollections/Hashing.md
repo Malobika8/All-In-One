@@ -12,16 +12,19 @@
 - It has unique keys.
 - It doesn't preserve the insertion order (Unordered).
 
-### Implementation
+## Implementation
 
 - HashMap is internally used as an array of LinkedLists. Initially its a bucket of size 16. The indices are calculated using hashCode & are    generally referred as bucket indices.
+  
   1. n(nodes): Total number of elements
   2. N(size): Total number of buckets(size of the array)
- 
+
+   -----------  
   <img width="557" alt="Screenshot 2024-06-27 at 8 40 57 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5a54a6f9-5169-44cc-8c36-ab96d034c9e1">
   <img width="651" alt="Screenshot 2024-06-27 at 8 41 08 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e70c4fbf-3f0b-47d1-aca4-5d8b3dd497cf">
-     
-  #### How does it know which bucket to add the elements?
+  
+  -----------   
+  ### How does it know which bucket to add the elements?
   
   Through Hashing which essentially changes form of the input. There are multiple techniques like sha1, sha256 etc. It is mostly used for      storing passwords.
   - abc->123 (Example)
@@ -32,18 +35,21 @@
   
   <img width="625" alt="Screenshot 2024-05-05 at 1 42 55 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/416fa776-59f0-45ed-b086-b00e9fc59334">
   
-  An array of double the size than the previous one is declared and all the elements are moved to the new array. The key of the element is   
+  An array of double the size than the previous one is declared and all the elements are moved to the new array. The key of the element is  
   fed to the Hash function which returns a bucket index value. The element is then placed to the bucket number obtained.
   
   <img width="854" alt="Screenshot 2024-05-05 at 1 48 36 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/641b57dd-6b65-4748-885f-82de3d363e5b">
   <img width="1144" alt="Screenshot 2024-05-05 at 1 19 11 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ff3fda7a-1c75-4fa6-84d5-20b01e040ca3">
   <img width="1147" alt="Screenshot 2024-05-05 at 1 23 04 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/b55f205c-c746-4f89-b03d-960aee139f36" 
 
+  -----------  
   When we do put and insert a single value, we can see it getting stored in a table.
 
   <img width="632" alt="Screenshot 2024-06-27 at 8 41 53 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/9db11670-67f4-4971-ad35-c8773d76ca77">
 
+  -----------  
   We can see 4 things present
+
   - hash
   - key
   - value
@@ -89,7 +95,7 @@
   <img width="643" alt="Screenshot 2024-06-27 at 9 09 20 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e7fedd58-a04e-49bf-9473-b68e0960ed19">
   <img width="972" alt="Screenshot 2024-06-27 at 9 09 34 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/566ea804-ee8f-47b6-8fc6-3d641047734f">
 
-  ### FYI
+  ## FYI
 
   We usually create HashMap with a default constructor for which default table size is 16.
 
@@ -101,7 +107,7 @@
 
   <img width="552" alt="Screenshot 2024-06-27 at 9 11 59 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/f5c5ef3a-c07c-484c-9464-84286c61d286">
 
-  ### Good to Know info
+  ## Good to Know info
 
   We can debug Collections effectively using "Show logical structure" option provided by Eclipse.
 
