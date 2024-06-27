@@ -75,9 +75,9 @@ There are 3 Interfaces:
 
       <img width="997" alt="Screenshot 2024-06-27 at 8 46 46 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ee1456cf-5c21-4ec5-93f5-6fe4d9c72775">
 
-  4. Vector: If multiple people try to insert in ArrayList and LL, there will be lot of issues. That is what happens when multiple threads       try to access the same block which is the reason why Synchronization is important. This ensures that the data is not corrupted.
+  3. *Vector:* If multiple people try to insert in ArrayList and LL, there will be a lot of issues as they are not Thread safe. That is          what happens when multiple threads try to access the same block which is the reason why Synchronization is important. This ensures          that the data is not corrupted.
 
-     * This class is just like ArrayList but along with that, it ensures Thread safety.
+     * This Class is just like ArrayList but along with that, it ensures Thread safety.
      * It can be used in a multi-threaded environment and the data won't be corrupted.
      * This class implements "growable" array of objects similar to ArrayList.
      * Vector is not generally used though as there are better DataStructure available that are much faster. This is a legacy DataStructure.
@@ -86,7 +86,7 @@ There are 3 Interfaces:
 
        <img width="1002" alt="Screenshot 2024-06-27 at 8 47 32 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d54e2ccd-dacb-4f77-aa74-414b61b85ee5">
 
-   5. Stack:
+   4. *Stack:*
       * This supports LIFO.
       * This is implemented using ArrayList or LL "behind the scene".
       * Stack extends Vector which means Stacks are also Thread safe.
@@ -106,17 +106,17 @@ There are 3 Interfaces:
 
    <img width="651" alt="Screenshot 2024-06-27 at 9 02 06 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/adf52aaf-f7cd-414e-9b78-7e651e446681">
    
-   * HashSet doesn't follow any order.
-   * LinkedHashSet follows insertion order.
-   * TreeSet sorts the elements in natural order. (searching/insertion: O(logn))
+   * *HashSet* doesn't follow any order.
+   * *LinkedHashSet* follows insertion order.
+   * *TreeSet* sorts the elements in natural order. (searching/insertion: O(logn))
    
      <img width="719" alt="Screenshot 2024-06-27 at 9 05 21 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/ba937926-5ab9-463e-871a-18a613bd7f27">
      <img width="668" alt="Screenshot 2024-06-27 at 9 10 47 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d20e4a12-2650-4b6e-85e7-a8697f0eab0a">
 
    Implementations:
-   1. HashSet: Implementation done by array of LinkedList + Hashing
-   2. LinkedHashSet
-   3. TreeSet
+   1. *HashSet:* Implementation done by array of LinkedList + Hashing
+   2. *LinkedHashSet*
+   3. *TreeSet*
   
 3. Queue:
    * It is an Interface.
@@ -129,9 +129,9 @@ There are 3 Interfaces:
    <img width="999" alt="Screenshot 2024-06-27 at 9 35 34 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d1bfd0ee-5910-4d66-96bc-b0ab42fcc915">
    <img width="1020" alt="Screenshot 2024-06-27 at 9 35 41 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/4996efd9-b71b-4589-8eb3-03100be723ab">
 
-   ### Implementation Class: PriorityQueue (also knows as minHeap/maxheap)
+   ### Implementation Class: *PriorityQueue* (also knows as minHeap/maxheap)
 
-   PriorityQueue doesn't follow FIFO by default. It follows Natural Order.
+   *PriorityQueue* doesn't follow FIFO by default. It follows Natural Order.
   
    Let's observe,
 
