@@ -9,7 +9,7 @@ The algorithm repeatedly selects the smallest (or largest) element from the unso
                      One loop to select an element of Array one by one = O(N)
                      Another loop to compare that element with every other Array element = O(N)
                      Therefore overall complexity = O(N) * O(N) = O(N*N) = O(N2)
-  * Auxiliary Space: O(1) as the only extra memory used is for temporary variables while swapping two values in Array. The selection sort never makes more than O(N) swaps and can be useful when memory writing is costly.
+  * Auxiliary Space: O(1) as the only extra memory used is for temporary variables while swapping two values in Array. The selection sort        never makes more than O(N) swaps and can be useful when memory writing is costly.
 
     <img width="337" alt="image" src="https://github.com/Malobika8/GitDemo/assets/111234135/d4b0ac3e-e8ec-4df7-8781-7a64a0df99d2">
 
@@ -30,3 +30,9 @@ The algorithm repeatedly selects the smallest (or largest) element from the unso
         System.out.println(Arrays.toString(nums));
 
     Output: [1, 2, 3, 7, 8]
+
+### Note
+
+This is not a stable sorting algorithm. Original order of duplicate values is not maintained.
+
+Use-Case: It performs well on small lists/arrays.
