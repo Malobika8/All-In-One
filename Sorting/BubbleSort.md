@@ -38,12 +38,18 @@ Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping 
   <img width="1078" alt="Screenshot 2024-06-28 at 8 29 11 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/b19a908f-c8c5-4b38-a219-641f8bb66ab0">
 
   ---------------
+
+  ### Note
   
   This is a stable sorting algorithm which means the original order of the values(same values) is maintained.
 
+  ```
   Ex: 10(i1), 20(i1), 30(i1), 10(i2)
+  ```
 
   Post sorting: The order of 10i1 and 10i2 is maintained.
 
+  ```
   10(i1), 10(i2), 20(i1), 30(i1)
+  ```
 
