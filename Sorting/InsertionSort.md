@@ -24,17 +24,14 @@ Insertion sort is a simple sorting algorithm that works by building a sorted arr
       
       ![image](https://github.com/Malobika8/GitDemo/assets/111234135/57700b46-21f4-4ded-8fed-5116a420434c)
 
- 
-            int nums[]={7,8,3,1,2};
-            for(int j=1;j<nums.length;j++){
-                int key=nums[j];
-                int i=j-1;
-                while(i>=0 && nums[i]>key){
-                    nums[i+1]=nums[i];
-                    i--;
-                }
-                nums[i+1]=key;
-            }
-            System.out.println(Arrays.toString(nums));
+      <img width="697" alt="Screenshot 2024-06-28 at 9 42 40 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/bbad67d2-6a92-44e7-92d3-874bea26370c">
 
+      Input: [3, 7, 2, 1, 8]
       Output: [1, 2, 3, 7, 8]
+
+ ### Why do we use?
+
+  - It is adaptive. Steps gets reduced if sorted. No of swaps reduces as compared to Bubble sort.
+  - It is stable
+  - It is used for smaller values of N
+  - Works good when array is partially sorted. This is why it takes part in hybrid sorting algorithms.
