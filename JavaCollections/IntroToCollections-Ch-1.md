@@ -128,8 +128,14 @@ It contains common methods for all the collections like *size, isEmpty, iterator
 
   * This need not necessarily have to be Ordered. By default, it's not ordered. It's a collection that doesn't contain any 
     duplicate elements. This only contains unique values.
+
+    Ordered ? not ordered generally , there are some specific sets which are ordered.
+    
   * Use Case: This is best in searching. Best case:O(1), worst:O(n)
-  * It is to be noted that Hashing is used behind the scenes.
+
+    No duplicate elements , faster search : avg O(1)
+    
+  * It is to be noted that Hashing is used behind the scenes. Hashing techniques are used to make this search faster.
 
   Lets try to add elements and print all the 3 sets. We can observe the order in which it prints the elements.
 
@@ -143,9 +149,17 @@ It contains common methods for all the collections like *size, isEmpty, iterator
      <img width="668" alt="Screenshot 2024-06-27 at 9 10 47 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d20e4a12-2650-4b6e-85e7-a8697f0eab0a">
 
    ### Implementations:
-   1. *HashSet:* Implementation done by array of LinkedList + Hashing
-   2. *LinkedHashSet*
-   3. *TreeSet*
+   1. *HashSet:*:
+      - not ordered at all, random order
+      - Implementation done by array of LinkedList + Hashing
+      - avg : O(1)
+   2. *LinkedHashSet*:
+      - preserves the insertion order
+      - DLL (maintains insertion order)   +   hashmap (searching faster)
+   3. *TreeSet*:
+      - sorted order : natural ordering
+      - BBST : Balanced Binary Search Trees : uses RED Black Trees , AVL trees are also BBST
+      - searching , insertion : O(log2n)
 
 ------
 
