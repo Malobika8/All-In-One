@@ -29,10 +29,15 @@ association is a flexible way to connect objects without creating an "is-a" rela
 
 ## Dependency
 
-<img width="659" alt="Screenshot 2024-07-03 at 9 40 24 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/65540088-effa-4160-991d-8772786fcddd">
-<img width="764" alt="Screenshot 2024-07-03 at 9 47 34 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0485b463-46fe-4bcb-b10f-934ab36daa50">
+```
+In Object-Oriented Programming (OOP), a dependency refers to a relationship between two classes where one class relies on the other for its proper functioning. This is usually achieved through a coupling mechanism, such as method calls, data inheritance, or instance composition. Dependencies can be either strong (tightly coupled) or weak (loosely coupled). Strong dependencies make it difficult to change one class without affecting others, while weak dependencies facilitate more flexibility and modularity. Understanding dependencies is crucial for designing maintainable and scalable software systems in OOP.
+```
 
 Dependency will be of form parameter/method return type.
+
+<img width="1098" alt="Screenshot 2024-07-03 at 9 53 32 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/234a61a3-8326-4038-b777-3d5d54915c84">
+<img width="659" alt="Screenshot 2024-07-03 at 9 40 24 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/65540088-effa-4160-991d-8772786fcddd">
+<img width="764" alt="Screenshot 2024-07-03 at 9 47 34 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0485b463-46fe-4bcb-b10f-934ab36daa50">
 
 ## Try it yourself
 
