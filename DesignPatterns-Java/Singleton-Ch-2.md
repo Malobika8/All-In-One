@@ -1,6 +1,6 @@
 ## Singleton
 
-Certain times due to certain reason, we want to enforce that a person can create only one object.
+Certain times due to certain reasons, we want to enforce that a person can create only one object.
 - This design pattern allows us to enforce the creation of only one object
 - Delivering a single instance to everyone whoever needs it
 
@@ -15,16 +15,21 @@ Generally this is used when we have classes with costly shared resources.
 
 ### How to implement?
 
-suppose we have a class called DatabaseConnection with certain properties.  
+Suppose we have a class called DatabaseConnection with certain properties.  
 
-How to create an object for this? We can create with "new" as many time as we want.
+#### How to create an object for this?
+We can create with "new" as many time as we want.
 
-*But how can we stop anybody to create objects this way multiple times?*
+#### *But how can we stop anybody to create objects this way multiple times?*
 
-What if we make our Constructor private? Yes then nobody will be able to create any object outside of the class.
-But in this scenario will we be able to create one? - No. In this scenario, even creation of one is not allowed outside the class. We can create getInstance() method. but we would need to 
-create the object of the method.
-so to create the object, we need to call this method and to call the method we need to call the object.
+What if we make our Constructor private? - Yes. In that case, nobody will be able to create any object outside of the Class.
+But in this scenario, even creation of one object won't be allowed outside the class. 
+
+We can have a *getInstance()* method. 
+
+However, **we** would need to create the object of the method.
+
+It is like a cycle. *To create the object, we need to call this method and to call the method we need to call the object.*
 
 <img width="582" alt="Screenshot 2024-07-04 at 8 07 26 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d6320936-6989-4432-93bb-84818d3597bc">
 
@@ -40,7 +45,9 @@ We can check if we have already created an object, we can send the same object i
 
 Now, even if getInstance is called multiple times, the same object instance will be sent.
 
-There is still one concern. Even before the object is created, we want to use it. so we need to make it static as well. Or private static final.
+There is still one concern. Even before the object is created, we want to use it. So we need to make it static as well. 
+
+OR private static final.
 
 <img width="630" alt="Screenshot 2024-07-04 at 8 14 54 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2e6a425c-b620-4f37-84f4-36daad6194da">
 
@@ -55,7 +62,7 @@ Eager Instantiation:
 
 <img width="640" alt="Screenshot 2024-07-04 at 8 20 36 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5251e0e7-e5eb-49aa-99a7-1c59216388b9">
 
-Con: While testing. It is difficult to test.
+Con: It is difficult to test.
 
 Some other versions:
 <img width="600" alt="Screenshot 2024-07-04 at 8 22 33 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/57b5b441-035e-48c8-9fdf-821ff41c3a9f">
