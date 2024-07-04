@@ -101,4 +101,3 @@ We can represent it using Theta Notation.
 <img width="1018" alt="Screenshot 2024-07-04 at 9 11 18 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/4769e0b6-412b-4a49-93bc-d43d00789d7e">
 
 
-  
