@@ -62,7 +62,17 @@ Eager Instantiation:
 
 <img width="640" alt="Screenshot 2024-07-04 at 8 20 36 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5251e0e7-e5eb-49aa-99a7-1c59216388b9">
 
-Con: It is difficult to test.
+#### Con: It is difficult to test.
 
 Some other versions:
+
 <img width="600" alt="Screenshot 2024-07-04 at 8 22 33 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/57b5b441-035e-48c8-9fdf-821ff41c3a9f">
+
+
+## Singleton resources
+
+- https://dzone.com/articles/java-singletons-using-enum
+- https://www.digitalocean.com/community/tutorials/java-singleton-design-pattern-best-practices-examples
+- https://www.baeldung.com/java-patterns-singleton-cons
+- https://baeldung.com/java-singleton-double-checked-locking
+- https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html
