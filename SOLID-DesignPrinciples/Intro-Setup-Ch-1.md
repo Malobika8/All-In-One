@@ -35,4 +35,4 @@ systems.
 
 ## The code that we have written works but doesn't meet Industry Standard. 
 
-It doesn't follow any Design Principle. Moreover, the class works for everything and covers every functionality which should'nt be the case.
+It doesn't follow any Design Principle. Moreover, the class works for everything and covers every functionality which shouldn't be the case.
