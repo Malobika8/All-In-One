@@ -10,8 +10,9 @@ Consider a Course class.
 
 Existing Course class has Java and Spring courses. Suppose we want to add a new course now. 
 
-Should we add Hibernate course to the existing class? In that case, we might need to change multiple times in future for new courses. Rather than
-this, we can create Course specific classes for proper seggregation.
+#### What if we want to add Hibernate course to the existing class? 
+
+In that case, we might need to change the Class multiple times in future for new courses. Rather than this, we can create Course specific Classes for proper segregation.
 
 <img width="556" alt="Screenshot 2024-07-03 at 8 14 38 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/68caead7-78d9-43c2-bb1b-79862e81ffa5">
 <img width="806" alt="Screenshot 2024-07-03 at 8 16 10 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3e8b34d4-b333-4555-b7e4-31563cd77ba8">
