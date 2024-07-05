@@ -1,4 +1,4 @@
-### SOLID Design Principles
+# SOLID Design Principles
 
 SOLID is an acronym for first five Object Oriented Design principles by *Robert C. Martin.*
 
