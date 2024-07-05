@@ -4,7 +4,7 @@
 High level modules should not directly depend on low level modules, instead they should depend on abstractions.
 ```
 
-Consider a Class named *MyMessenger* thats sends message using TCPProtolHandler. TCPProtolHandler, in turn, actually sends the message.
+Consider a Class named *MyMessenger* thats sends message using *TCPProtolHandler*. *TCPProtolHandler*, in turn, actually sends the message.
 
 <img width="1020" alt="Screenshot 2024-07-05 at 1 00 02 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7d52ca18-d322-48ac-b154-394d0ce28135">
 <img width="865" alt="Screenshot 2024-07-05 at 12 59 41 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/45687203-fd30-4899-be23-ee4d1166f449">
