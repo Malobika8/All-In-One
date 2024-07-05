@@ -1,4 +1,8 @@
-### Solid design principles are a set of guidelines for building clean, maintainable, and scalable software architecture. SOLID stands for five design principles:
+### SOLID Design Principles
+
+SOLID is an acronym for first five Object Oriented Design principles by *Robert C. Martin.*
+
+It's a set of guidelines for building clean, maintainable, and scalable software architecture. SOLID stands for five design principles:
 
 1. Single Responsibility Principle (SRP): Each component should have only one reason to change.
 2. Open-Closed Principle (OCP): A class should be open for extension but closed for modification.
