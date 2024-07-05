@@ -39,7 +39,7 @@ We can have the Student class return a StudentBuilder object rather than **we** 
 <img width="833" alt="Screenshot 2024-07-04 at 8 54 28 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/821c1a48-c060-488f-bf4e-87db028f46d5">
 <img width="817" alt="Screenshot 2024-07-04 at 8 55 01 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/89f24063-528a-425a-a369-e3a40d424757">
 
-We can make it even better by letting the getter methods in Studentbuilder return StudentBuilder object(the same object back).
+We can make it even better by letting the setters in StudentBuilder return StudentBuilder object(the same object back).
 
 <img width="692" alt="Screenshot 2024-07-04 at 8 59 51 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e9929aff-8829-431f-aedd-f3a663c5222e">
 
@@ -68,3 +68,100 @@ We can add the class in Student class itself as static inner class. This wont al
 <img width="685" alt="Screenshot 2024-07-04 at 9 09 53 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0d4fbe05-f28e-4d46-8cff-bf17cacf307b">
 
 #### Reference: Google's example of Builder - https://firebase.google.com/docs/reference/android/com/google/android/gms/ads/RequestConfiguration
+
+
+## Final
+
+#### Student
+```
+package Builder;
+
+public class Student {
+    int id;
+    String name;
+    int age;
+    int gradYear;
+    String courseName;
+    // You can keep more attributes
+
+    // In the worst way we have to write a lot of diff constructors
+    Student(int id, String name, int age, int gradYear) {
+//
+    }
+
+    private Student(StudentBuilder builder) {
+        this.id = builder.id;
+        this.name = builder.name;
+        this.age = builder.age;
+        this.gradYear = builder.gradYear;
+    }
+
+    static StudentBuilder getBuilder(){
+        return new StudentBuilder();
+    }
+
+    public static class StudentBuilder {
+        int id;
+        String name;
+        int age;
+        int gradYear;
+        String courseName;
+
+        public StudentBuilder setCourseName(String courseName) {
+            this.courseName = courseName;
+            return this;
+        }
+
+        public StudentBuilder setId(int id) {
+            this.id = id;
+            return this;
+        }
+
+        public StudentBuilder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public StudentBuilder setAge(int age) {
+            this.age = age;
+            return this;
+        }
+
+        public StudentBuilder setGradYear(int gradYear) {
+            this.gradYear = gradYear;
+            return this;
+        }
+
+        Student build(){
+            // validations are being done over here
+            if(age < 20){
+                throw new IllegalArgumentException("Age must be greater than 20");
+            }
+            if(gradYear > 2024){
+                throw new IllegalArgumentException("GradYear must be greater than 2024");
+            }
+
+            return new Student(this);
+        }
+    }
+
+}
+```
+
+#### Client
+
+```
+package Builder;
+
+public class Client {
+    public static void main(String[] args) {
+           Student st = Student
+                        .getBuilder()
+                        .setName("Mohit")
+                        .setAge(25)
+                        .setGradYear(2000)
+                        .setCourseName("Academy")
+                        .build();
+    }
+}
+```
