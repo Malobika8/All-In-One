@@ -11,7 +11,7 @@ Consider a Class named *MyMessenger* thats sends message using TCPProtolHandler.
 
 We can clearly see that the High Level Module is directly dependent on Low Level Module. 
 
-Dependency Inversion principle says that direct dependency of High Level Modules on Low Level Modules should be avoided.
+*Dependency Inversion principle says that direct dependency of High Level Modules on Low Level Modules should be avoided.*
 
 ### How should we avoid then?
 
