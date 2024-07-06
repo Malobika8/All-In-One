@@ -61,5 +61,8 @@ It throws a warning when we try to pass only a single *null* argument
 It works fine when casting it to *Object*.
 
 <img width="686" alt="Screenshot 2024-07-06 at 12 32 25 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d22e85db-324b-42ef-bbca-51b927a4551d">
+
+Output:
+
 <img width="261" alt="Screenshot 2024-07-06 at 12 32 49 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/afd732a0-cf00-49cf-8320-e9f0e315c173">
 
