@@ -47,9 +47,3 @@ Let's now make this function work.
 We can even use varargs in main method as it uses *String[]* (String array)
 
 <img width="563" alt="Screenshot 2024-07-06 at 11 03 17 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/fe87f8df-7cef-4eae-a8d6-52a867901fc0">
-
-## Question
-
-<img width="1000" alt="Screenshot 2024-07-06 at 11 11 33 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d4a0cdd1-3089-4eff-901d-c5e63ddd3274">
-
-Ans: None of the above
