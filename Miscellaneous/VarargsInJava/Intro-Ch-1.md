@@ -21,10 +21,10 @@ Instead of that, we can now use varargs and find sum of as many numbers as we wa
 
 <img width="718" alt="Screenshot 2024-07-06 at 10 48 20 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/9715d0c8-d7b5-45d7-9627-8205db3c233e">
 
-#### Note:
+## Note:
 The 3 ellipses denote nothing but an array
 
-### *int[] numbers* is same as *int...numbers*
+#### *int[] numbers* is same as *int...numbers*
 
 <img width="1133" alt="Screenshot 2024-07-06 at 10 52 55 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/eb127c25-b37a-425a-8996-eb1135546f99">
 <img width="1010" alt="Screenshot 2024-07-06 at 10 53 34 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cf80c7f1-1b71-44e3-b26b-a3bc72775454">
