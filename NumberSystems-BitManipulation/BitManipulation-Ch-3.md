@@ -2,7 +2,7 @@
 Bit Mask: Manipulating bits of a number.
 
 ### Operations
-1) Get bit: Get the bit posiiton of a number.
+1) Get bit: Get the bit position of a number.
    
    <img width="922" alt="Screenshot 2024-05-06 at 10 09 33 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/24298844-c736-4f9c-b1cf-7da203a0985b">
    <img width="820" alt="Screenshot 2024-05-06 at 10 13 07 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/f5b3bc9c-9ef6-47d7-9e93-8b85b84d36ea">
