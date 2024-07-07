@@ -1,6 +1,6 @@
 # Operators
 
-Symbols that tell compiler to perform some operation. The variables are called operands.
+Symbols that tell Compiler to perform some Operations. The variables are called Operands.
 - Arithmetic operators: Binary(+,-,*,/,%) & Unary(++,--)(Pre & post increment/decrement)
 - Relational operators: ==,!=,<,>,<=,>=
 - Logical: &&,||,!
@@ -12,8 +12,8 @@ Symbols that tell compiler to perform some operation. The variables are called o
 
 # Binary Numer System
 
-Decimal number system has base 10
-Likewise binary number system has base 2
+- Decimal Number System has Base 10
+- Likewise, Binary Number System has Base 2
 
 <img width="621" alt="Screenshot 2024-05-06 at 9 49 04 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9920465b-8dfe-452d-8797-4829d1471a3a">
 
