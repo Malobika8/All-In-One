@@ -29,5 +29,3 @@ Bit Mask: Manipulating bits of a number.
    
    <img width="661" alt="Screenshot 2024-05-06 at 10 51 07 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/0fc758a1-9460-4af2-aa47-0c5563f88141">
 
-
-
