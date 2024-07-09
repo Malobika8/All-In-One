@@ -34,7 +34,7 @@
 <img width="1013" alt="Screenshot 2024-07-07 at 10 04 48 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/8a04ee55-7545-440a-b109-df6379da3859">
 <img width="851" alt="Screenshot 2024-07-07 at 10 12 23 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cfef3227-de2b-45fc-9f1e-1f52670f47ff">
 
-## Q2. Given an array of numbers, find the unique element.
+## Q2. Find the unique element in an array of numbers where every number appears twice (or even times).
 
 We know 2 things.
 - Any number XOR with itself gives 0.
