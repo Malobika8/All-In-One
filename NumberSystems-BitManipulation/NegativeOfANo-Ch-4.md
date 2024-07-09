@@ -1,4 +1,4 @@
-# Complement of a number
+# Complement of a number (Inversion)
 
 To find the complement of a number, we can subtract the number from 1.
 
