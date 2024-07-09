@@ -37,7 +37,7 @@ To find the complement of a number, we can subtract the number from 1.
 
    #### Why though?
 
-   Consider a number, 00001010. To find the complement of this number, we can substract it from 0(i.e. 00000000). This is because a positive
+   Consider a number, 00001010. To find the complement of this number, we can subtract it from 0(i.e. 00000000). This is because a positive
    number when subtracted from 0 becomes a negative number.
 
    Now, we can write this as 100000000 instead as 00000000. This is because the first bit won't be considered as it is the 9th bit which is     more than 1 byte that is considered.
