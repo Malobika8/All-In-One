@@ -1,3 +1,7 @@
+# Complement of a number
+
+To find the complement of a number, we can subtract the number from 1.
+
 # Range of a number
    
    ```
@@ -23,7 +27,7 @@
 
 # Negative of a number in Binary form.
 
-   ### 2's complement method
+   ### using 2's complement method
    Steps:
    - Take the complement of a number
    - Add 1 to it
@@ -48,7 +52,7 @@
    So, 00000000 - 00001010 == 100000000 - 00001010 == 11111111 + 1 - 00001010 == (11111111 - 00001010) + 1
 
    From this, we can deduce the steps to find using 2's complement method.
-   - Take the negative of a number (11111111 - 00001010)
+   - Take the complement of a number (11111111 - 00001010). We can find complement by subtracting that number from 1.
    - Add 1 to it ((11111111 - 00001010) + 1)
 
    <img width="1018" alt="Screenshot 2024-07-09 at 8 56 42 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cd1de8a1-6a05-4c8f-93db-4502071bf46f">
