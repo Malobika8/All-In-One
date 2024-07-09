@@ -1,6 +1,6 @@
 # Questions:
 
-### Important points;
+### Important points
 - Applicable to all binary numbers: All digits are power of 2 except the last digit of every Binary Number
 - The rightmost digit/last digit is known as LSB (least significant digit)
 - n & 1 == 1
@@ -17,7 +17,7 @@
 - Every number is calculated in binary form internally.
 - Bitwise Operators also follow associative properties.
   
-### Q1. Given a number, n, find if it is odd or even.
+## Q1. Given a number, n, find if it is odd or even.
 
 - If we add any number with 1, it gives the same number.
 - If we add any number with 0, it results to 0.
@@ -34,7 +34,7 @@
 <img width="1013" alt="Screenshot 2024-07-07 at 10 04 48 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/8a04ee55-7545-440a-b109-df6379da3859">
 <img width="851" alt="Screenshot 2024-07-07 at 10 12 23 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cfef3227-de2b-45fc-9f1e-1f52670f47ff">
 
-### Q2. Given an array of numbers, find the unique element.
+## Q2. Given an array of numbers, find the unique element.
 
 We know 2 things.
 - Any number XOR with itself gives 0.
@@ -48,7 +48,7 @@ Space Complexity: O(1)
 
 <img width="771" alt="Screenshot 2024-07-07 at 10 20 29 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/c55eefa9-431a-4f8e-ab69-38fee14a3452">
 
-### Q3. Find the ith bit of a number.
+## Q3. Find the ith bit of a number.
 
 We know that a number AND with 1 gives the number itself. So, we can do ith bit AND 1.
 
@@ -62,20 +62,20 @@ Ex: Position = 4,
 
 <img width="1025" alt="Screenshot 2024-07-08 at 9 30 55 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/61e02720-7657-43d4-a694-9fb1ee341f14">
 
-### Q4. Set the ith bit of a number.
+## Q4. Set the ith bit of a number.
 
 We know that a number OR with 1 gives 1.
 
 <img width="1021" alt="Screenshot 2024-07-08 at 9 31 06 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a773da10-c011-4527-ac22-7871154722ee">
 
-### Q5. Reset the ith bit of a number.
+## Q5. Reset the ith bit of a number.
 
 - number AND 0
 - get the mask and complement it
 
 <img width="1022" alt="Screenshot 2024-07-08 at 9 31 20 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/802cc20c-18b8-4740-9149-921d79efa066">
 
-### Q6. Find the position of the rightmost set bit.
+## Q6. Find the position of the rightmost set bit.
 
 <img width="1014" alt="Screenshot 2024-07-09 at 9 04 04 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1019194c-c65f-4810-8f40-d901485ae89f">
 
