@@ -34,6 +34,22 @@ Run the Application & we should get all the details related to the employee incl
 
 #### This is a very good example of MicroServices communication. 
 
+# FYI
+
+Another way to create RestTemplate object
+
+<img width="743" alt="Screenshot 2024-07-11 at 10 38 12 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a589dcb6-4194-4b30-b4c3-1d0ac9076229">
+<img width="673" alt="Screenshot 2024-07-11 at 10 37 54 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0b9ef414-8546-4397-9502-b8172800fffd">
+
+We can also add our addressBaseUrl in the same.
+
+<img width="1007" alt="Screenshot 2024-07-11 at 10 39 42 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/18affaf1-ee09-4842-8e75-0ce559c0a910">
+
+We need to add it as Constructor parameter otherwise it will be null as value is set after Bean creation.
+<img width="978" alt="Screenshot 2024-07-11 at 10 42 12 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/61a235aa-06e9-47d9-bb88-a47dfd673574">
+<img width="1056" alt="Screenshot 2024-07-11 at 10 43 14 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1909e347-2a95-490c-9adc-45e49457be12">
+
+
 
 
 
