@@ -127,16 +127,16 @@ We'll consider two microservices, emp-service & address-service, and then look i
 
 - Entity *Address*
 
-  <img width="1057" alt="Screenshot 2024-07-11 at 10 31 40 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/94dcef9d-f71f-496c-a875-d7c8da30305a">
+  <img width="1115" alt="Screenshot 2024-07-11 at 11 38 36 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/921ee75a-5484-4954-b323-8c87169d95ee">
 
 - AddressResponse
 
-  <img width="1052" alt="Screenshot 2024-07-11 at 10 31 53 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2486d648-1023-43f0-b8bf-2eda2883d13e">
+  <img width="1085" alt="Screenshot 2024-07-11 at 11 38 50 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/6ceb9d03-723d-4861-9cbf-a2fe8298e9e1">
 
 - AddressRepo
 
   <img width="1155" alt="Screenshot 2024-07-11 at 10 01 52 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7d2980c1-6265-4808-983e-3845aed7b3e2">
-  <img width="1280" alt="Screenshot 2024-07-11 at 10 34 26 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/0cc7bfb1-2768-45da-afe8-d2fcc0b05c05">
+  <img width="1296" alt="Screenshot 2024-07-11 at 11 38 20 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a3f99ad1-775e-488a-a2b9-9ac614220016">
 
 - AddressService
 
