@@ -35,4 +35,21 @@ If you want to keep the original main artifact in order to use it as a dependenc
 </plugin>
 ```
 
+For SpringBoot 3, we can just use
+
+```
+<plugin>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-maven-plugin</artifactId>
+  <version>1.4.1.RELEASE</version>
+  <executions>
+    <execution>
+      <goals>
+        <goal>repackage</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+```
+
 With this configuration, the Spring Boot Maven Plugin will create 2 JARs: the main one will be the same as a usual Maven project, while the second one will have the classifier appended and be the executable JAR.
