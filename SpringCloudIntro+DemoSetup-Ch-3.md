@@ -105,13 +105,26 @@ We'll consider two microservices, emp-service & address-service, and then look i
   Run the Application.
 
   ### IMPORTANT
-  *Note: We might come across a Dialect error. In that case, add these two properties as well.*
+  *Note: We might come across a Dialect error. In that case, add the following property.*
 
   ```
-  spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
   spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
   ```
+  
+  <img width="1408" alt="Screenshot 2024-07-11 at 11 59 00 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/7b8e751c-43b3-4dc3-a246-26bfc003a8e9">
+  <img width="1340" alt="Screenshot 2024-07-11 at 9 06 57 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/10ea8bd5-2414-4569-9997-6045ad80b7d4">
 
+  We might come across another error (NullPointer-SQLExceptionHelper)
+
+  <img width="1340" alt="Screenshot 2024-07-11 at 9 06 57 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cb2d5d9c-7ee3-4d26-9759-1104dfb78005">
+  <img width="1146" alt="Screenshot 2024-07-11 at 9 07 05 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/8d6aa697-b884-4627-b66a-32c05cf190c9">
+
+  Add the following property.
+  
+  ```
+  spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
+  ```
+	
   <img width="1039" alt="Screenshot 2024-07-11 at 10 26 41 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/646cf797-dd36-4920-a58c-949b32ff1e04">
   <img width="1383" alt="Screenshot 2024-07-11 at 10 30 15 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/9c5e8dcd-4fed-4aba-ae98-cc0c41f4c966">
 
