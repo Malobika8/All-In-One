@@ -101,7 +101,7 @@ It can easily integrate with other Spring cloud Projects like Eureka, Gateway, L
 
 The most compelling advantage of using @FeignClient is its declarative nature. You define an interface and annotate it with @FeignClient , and Spring takes care of the rest. You don't have to write code for HTTP calls, connection settings, or response parsing; Spring Boot handles all these concerns behind the scenes.
 
-### LoadBalancer
+# LoadBalancer
 Suppose there's too much of load to address-service and it can't handle all the incoming requests. We can scale up address-service so that requests can be routed to different instances of the service.
 Also, remember that we have hardcoded the url in FeignClient for the service(address-aservice).
 
@@ -124,7 +124,7 @@ If we remove URL, we need to define Loadbalancer for FiegnClient.
 
 <img width="1093" alt="Screenshot 2024-07-12 at 3 08 42 PM" src="https://github.com/user-attachments/assets/d90c727b-6928-4f1f-8e61-45ad27dc62dd">
 
-## Ribbon
+# Ribbon
 
 We have a client-side Loadbalancer called Ribbon.
 
