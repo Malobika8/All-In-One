@@ -114,7 +114,7 @@ Also, remember that we have hardcoded the url in FeignClient for the service(add
 
 We can have a Loadbalancer that can help in routing calls/requests to address-service from employee-service.
 
-<img width="1100" alt="Screenshot 2024-07-12 at 3 03 46 PM" src="https://github.com/user-attachments/assets/b4b54c1d-7378-4237-becf-3eb55167bc89">
+<img width="1100" alt="348213509-b4b54c1d-7378-4237-becf-3eb55167bc89" src="https://github.com/user-attachments/assets/a03db74b-4c3a-4336-a702-f35fcf222bb1">
 
 The configured Loadbalancer can route requests to multiple servers.
 
