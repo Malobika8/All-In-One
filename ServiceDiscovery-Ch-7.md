@@ -96,6 +96,7 @@ Services register with Discovery Services and cache the entire registry so that 
 
 <img width="1222" alt="Screenshot 2024-07-13 at 7 37 03 AM" src="https://github.com/user-attachments/assets/c0879d2a-e743-4243-802c-d77ca29cd198">
 <img width="1270" alt="Screenshot 2024-07-13 at 7 36 47 AM" src="https://github.com/user-attachments/assets/bf5a6815-e7ca-4757-af18-ae7f6b528e1c">
+<img width="1183" alt="Screenshot 2024-07-13 at 7 56 18 AM" src="https://github.com/user-attachments/assets/1a822ac5-b938-4d35-9e72-282d43eb9a94">
 
 ## Libraries to implement Client and Server Side Discovery
 
@@ -111,4 +112,13 @@ Services register with Discovery Services and cache the entire registry so that 
 
 <img width="1153" alt="Screenshot 2024-07-13 at 7 43 34 AM" src="https://github.com/user-attachments/assets/c8d52572-7dfe-4dcb-b8ad-3bc7217d5030">
 
+#### Q.How does the discovery Service know which service instances are alive?
+
+The services send a heartbeat to the Discovery Service at regular intervals. If the heartbeat stops, it indicates the service instance doesn't exist anymore.
+
+#### Q. Can Discovery Service be a single point of failure?
+
+Yes. But we can scale up Discovery Service as well for backup.
+
+<img width="807" alt="Screenshot 2024-07-13 at 8 00 52 AM" src="https://github.com/user-attachments/assets/09c13d7d-dff2-4d53-b90b-d8f3fd382d60">
 
