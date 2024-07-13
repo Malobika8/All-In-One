@@ -108,6 +108,8 @@ Services register with Discovery Services and cache the entire registry so that 
   - NGINX
   - AWS ELB
 
+<img width="504" alt="Screenshot 2024-07-13 at 9 02 18 AM" src="https://github.com/user-attachments/assets/0b6eb4f0-32e2-46a3-96b1-bc13b79c1886">
+
 ### FYI
 
 <img width="1153" alt="Screenshot 2024-07-13 at 7 43 34 AM" src="https://github.com/user-attachments/assets/c8d52572-7dfe-4dcb-b8ad-3bc7217d5030">
