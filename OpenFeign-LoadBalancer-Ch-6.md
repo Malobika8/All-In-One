@@ -154,6 +154,17 @@ Sometimes it is routed to 8081 and sometimes to 8082.
 
 Round Robin Fashion- sequentially distribute the routing. We can change the logic as well.
 
+### Problem
+
+The problem with this is we need to hardcording the instances. The more the server, the more we need to add.
+
+<img width="780" alt="Screenshot 2024-07-13 at 6 30 40 AM" src="https://github.com/user-attachments/assets/7f9d965a-0d85-4401-8e5c-9a3b8c4a5743">
+
+In our MicroService environment, it is not feasible to hardcode all the instances.
+There might be some dynamic IP addresses. Also, when the load decreases, the servers will be decreased.
+So, all the configurations need to be done manually.
+
+
 
 
 
