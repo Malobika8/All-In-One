@@ -82,11 +82,11 @@ Metadata is a Map.
 <img width="813" alt="Screenshot 2024-07-14 at 2 14 08 PM" src="https://github.com/user-attachments/assets/4605208d-0027-4d0d-a41d-70255f619dbc">
 <img width="978" alt="Screenshot 2024-07-14 at 2 16 44 PM" src="https://github.com/user-attachments/assets/30a1cc72-09ab-4334-80ca-cda05e07495f">
 
-## Magic
+# Magic
 
 Any of what we discussed is not required. We can directly ask Eureka to provide us with the details related to the ServiceId provided using *RestTemplate*.
 Our RestTemplate connects with Eureka and gets the context-path/other details with the service ID provided. SeviceId is nothing but the service name that has been set. 
-Eureka gets the list of instances form which any one is chosen.
+Eureka gets the list of instances from which any one is chosen.
 
 <img width="793" alt="Screenshot 2024-07-14 at 2 43 07 PM" src="https://github.com/user-attachments/assets/cb6f5d07-b461-41a2-986b-db8133281c6d">
 
@@ -101,7 +101,7 @@ We need to ask RestTemplate to do load balancing for us. This will do all the in
 <img width="1087" alt="Screenshot 2024-07-14 at 2 38 00 PM" src="https://github.com/user-attachments/assets/aaaa2fe9-8472-4362-8372-d70edbe1b3e4">
 <img width="1067" alt="Screenshot 2024-07-14 at 2 46 59 PM" src="https://github.com/user-attachments/assets/4a2766bf-2460-4731-8724-8afefa80a6f9">
 
-Our application uses Spring-cloud load balancer.
+Our application uses "Spring-cloud" load balancer.
 
 ## Disadvantage of Client-side load balancer
 
