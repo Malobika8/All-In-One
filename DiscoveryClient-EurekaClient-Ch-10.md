@@ -86,9 +86,17 @@ Run the address-service
 <img width="1147" alt="Screenshot 2024-07-13 at 11 52 33 AM" src="https://github.com/user-attachments/assets/8320ea35-9c5e-49de-b806-d33996578662">
 
 ## FYI
-We get this exception because of missing HeartBeat
+1. We get this exception because of missing HeartBeat
 
-<img width="1141" alt="Screenshot 2024-07-13 at 11 53 41 AM" src="https://github.com/user-attachments/assets/62f140cf-cf1b-40a2-86a9-7e37e4b3b25e">
+   <img width="1141" alt="Screenshot 2024-07-13 at 11 53 41 AM" src="https://github.com/user-attachments/assets/62f140cf-cf1b-40a2-86a9-7e37e4b3b25e">
+
+2. We can use @EnableEurekaClient for clients
+
+   <img width="799" alt="Screenshot 2024-07-14 at 2 01 56 PM" src="https://github.com/user-attachments/assets/2ea14d04-f9cf-4fa4-ad35-68dec041c28c">
+
+   But it is not a generic annotation. We can use this instead - *@EnableDiscoveryClient*
+
+   <img width="785" alt="Screenshot 2024-07-14 at 2 03 03 PM" src="https://github.com/user-attachments/assets/5b7868a1-5937-4317-8623-1b5b554623f9">
 
 
 
