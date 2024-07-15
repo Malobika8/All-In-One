@@ -1,11 +1,10 @@
-- Garbage collection happens automatically to free memory. We don't have to do it ourselves but we can tell what to do by overriding "finalize()" method. We don't need to call this method
-  as it is called automatically during garbage collection.
+## Brush Up
+- Garbage collection happens automatically to free memory. We don't have to do it ourselves but we can tell what to do by overriding the "finalize()" method. We don't need to call this   method as it is called automatically during garbage collection.
 
   <img width="784" alt="Screenshot 2024-07-15 at 8 56 15 PM" src="https://github.com/user-attachments/assets/d6dac31c-137d-46d8-9d0a-564404d1ffd8">
   <img width="1144" alt="Screenshot 2024-07-15 at 8 58 36 PM" src="https://github.com/user-attachments/assets/ce0cab42-85b8-4e06-a156-0754e5e94174">
 
-- Consider a class and object of that class. When we print the object, it checks if there's a "toString()" method available in our class. If yes, it prints whatever is there in that method.
-  Otherwise, it calls the default "toString()" method which basically prints the Hashcode.
+- Consider a class and object of that class. When we print the object, it checks if there's a "toString()" method available in our class. If yes, it prints whatever is there in that      method. Otherwise, it calls the default "toString()" method which basically prints the Hashcode.
 
   <img width="776" alt="Screenshot 2024-07-15 at 9 09 26 PM" src="https://github.com/user-attachments/assets/769518d1-2a10-4ab0-bbde-53f66c4ba49b">
   <img width="775" alt="Screenshot 2024-07-15 at 9 09 37 PM" src="https://github.com/user-attachments/assets/1b2b126d-d967-41cf-a31f-624b5c541953">
