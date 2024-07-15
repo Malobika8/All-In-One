@@ -14,7 +14,12 @@
 
   <img width="776" alt="Screenshot 2024-07-15 at 9 10 20 PM" src="https://github.com/user-attachments/assets/75b5ed87-4ad0-4b1c-ae9a-e8a24191a7fb">
 
+- From static, we cannot use non-static stuff. To use non-static items, we need to use object Reference.
+- We have some static variables. We want to initialize our static variables. We can do that via a static block. that block gets executed exactly once when that class is loaded.
 
-  
+  <img width="935" alt="Screenshot 2024-07-15 at 10 09 22 PM" src="https://github.com/user-attachments/assets/1573c898-b30a-4436-926b-643338d1b118">
+  <img width="766" alt="Screenshot 2024-07-15 at 10 08 22 PM" src="https://github.com/user-attachments/assets/843bd2d2-7d29-403b-89cf-a1a50e43b565">
+
+- Only Inner classes can be static
 ## Packages
 
