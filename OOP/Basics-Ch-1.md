@@ -23,6 +23,8 @@
 - Only Inner classes can be static
 - In Java, we only have Pass by Value and not Pass by Reference.
 - Every Class by default extends Object class.
+- We cannot override something which is declared as *final*. We can use it to prevent overriding and inheritance. A final class implicitly declares all of its methods as final.
+- (Early Binding)
   
 ## Singleton Class
 
