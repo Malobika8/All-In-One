@@ -21,5 +21,16 @@
   <img width="766" alt="Screenshot 2024-07-15 at 10 08 22 PM" src="https://github.com/user-attachments/assets/843bd2d2-7d29-403b-89cf-a1a50e43b565">
 
 - Only Inner classes can be static
-## Packages
+- In Java, we only have Pass by Value and not Pass by Reference.
+- Every Class by default extends Object class.
+  
+## Singleton Class
 
+Create only one instance of the class.
+
+<img width="942" alt="Screenshot 2024-07-16 at 6 16 35 PM" src="https://github.com/user-attachments/assets/bc932117-253f-44b8-8308-346291842235">
+
+
+
+
+     
