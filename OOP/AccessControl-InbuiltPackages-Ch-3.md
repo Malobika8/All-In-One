@@ -12,8 +12,8 @@ There are four types of access modifiers available in Java:
 
 <img width="1153" alt="Screenshot 2024-07-16 at 8 14 32 PM" src="https://github.com/user-attachments/assets/3021111b-878f-43b3-bc6a-69fae46c4d9e">
 
-### Java Access Modifiers
-1. Default Access Modifier
+## Java Access Modifiers
+### Default Access Modifier
 When no access modifier is specified for a class, method, or data member – It is said to have the default access modifier by default. The data members, classes, or methods that are not declared using any access modifiers i.e. having default access modifiers are accessible only within the same package.
 
 In this example, we will create two packages and the classes in the packages will have the default access modifiers and we will try to access a class from one package from a class of the second package.
@@ -60,7 +60,7 @@ class GeekNew
 
 Compile time error
 
-2. Private Access Modifier:
+### Private Access Modifier:
    
 The private access modifier is specified using the keyword private. The methods or data members declared as private are accessible only within the class in which they are declared.
 
@@ -103,7 +103,7 @@ class B {
 error: display() has private access in A
         obj.display();
 
-3. Protected Access Modifier:
+### Protected Access Modifier:
    
 The protected access modifier is specified using the keyword protected.
 
@@ -151,7 +151,7 @@ class B extends A {
 
 GeeksforGeeks
 
-4. Public Access modifier:
+### Public Access modifier:
    
 The public access modifier is specified using the keyword public. 
 
