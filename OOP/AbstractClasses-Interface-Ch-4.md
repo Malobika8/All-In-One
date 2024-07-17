@@ -6,8 +6,7 @@ Abstraction can be achieved using abstract class and abstract methods.
 The abstract Method is used for creating blueprints for classes or interfaces. Here methods are defined but these methods don’t provide the 
 implementation. Abstract Methods can only be implemented using subclasses or classes that implement the interfaces.
 
-These methods are sometimes referred to as subclass responsibility because they have no implementation specified in the super-class. Thus, a 
-subclass must override them to provide a method definition. 
+These methods are sometimes referred to as subclass responsibility because they have no implementation specified in the super-class. Thus, a subclass must override them to provide a method definition. 
 
 ### Declare Abstract Method in Java
 To declare an abstract method, use this general form:
@@ -45,7 +44,8 @@ abstract class so that it can be used to point to a subclass object.
 ```
 
 ### Java Abstract Method in Interface
-All the methods of an interface are public abstract by default because of which we can declare abstract methods inside an interface.
+All the methods of an interface are public & abstract by default because of which we can declare abstract methods inside an interface.
+All the variables are static and final.
 
 ### Final Method in Abstract Class
 As we have mentioned that we cannot use final with abstract Method as a modifier but we can create a Final concrete method in abstract class.
@@ -83,10 +83,13 @@ must implement all the methods declared in the interface. To implement the inter
 ### Uses of Interfaces in Java are mentioned below:
 
 - It is used to achieve total abstraction.
+- Interfaces cannot have any concrete methods.
 - Since java does not support multiple inheritances in the case of class, by using an interface it can achieve multiple inheritances.
 - Any class can extend only 1 class, but can any class implement an infinite number of interfaces.
 - It is also used to achieve loose coupling.
 - Interfaces are used to implement abstraction.
+- Interface methods are public and abstract by default.
+- Interface variables are static and final by default.
   
 ### So, the question arises why use interfaces when we have abstract classes?
 
@@ -364,4 +367,9 @@ From Java 9 onwards, interfaces can contain the following also:
 4. Why multiple inheritance is not supported through class in Java?
 
    Multiple Inheritance is not supported through class in Java so to avoid certain challenges like Ambiguity and diamond problems.
+
+
+
+
+
 
