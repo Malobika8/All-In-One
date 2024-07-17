@@ -144,8 +144,8 @@ public class Main {
 In the above example, t1.clone returns the shallow copy of the object t1. To obtain a deep copy of the object certain modifications have to 
 be made in the clone method after obtaining the copy.
 
-   ii) Usage of clone() method – Deep Copy : If we want to create a deep copy of object X and place it in a new object Y then a new copy of any referenced objects fields are created and these references are placed in object Y. This means any changes made in referenced object fields in object X or Y will be reflected only in that object and not in the other. In the below example, we create a deep copy of the object.
-       A deep copy copies all fields and makes copies of dynamically allocated memory pointed to by the fields. A deep copy occurs when an object is copied along with the objects to which it refers.
+   ii) Usage of clone() method – Deep Copy : If we want to create a deep copy of object X and place it in a new object Y then a new copy of        any referenced objects fields are created and these references are placed in object Y. This means any changes made in referenced            object fields in object X or Y will be reflected only in that object and not in the other. In the below example, we create a deep           copy of the object.
+       A deep copy copies all fields and makes copies of dynamically allocated memory pointed to by the fields. A deep copy occurs when an         object is copied along with the objects to which it refers.
 
 ```
 // A Java program to demonstrate 
