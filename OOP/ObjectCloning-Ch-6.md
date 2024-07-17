@@ -240,7 +240,6 @@ processing we use object cloning.
 ### Example of Cloning
 
 ```
-package com.kunal.cloning;
 
 public class Human implements Cloneable{
     int age;
