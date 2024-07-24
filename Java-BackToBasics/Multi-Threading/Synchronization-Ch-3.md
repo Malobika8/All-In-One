@@ -33,8 +33,8 @@ In Java, every object can be used as a lock.
 
 So, whichever thread has access to this lock will enter the synchronized block.
 
-**Note:** *If a particular synchronized method has a lock & that lock restricts access to other synchronized blocks as well, all the access to the 
-synchronized methods will be blocked for all other threads that doesn't have that particular lock.*
+**Note:** *If a particular synchronized method has a lock & that lock restricts access to other synchronized blocks as well, all the access to the synchronized methods will be blocked for all other threads that doesn't have that particular lock.*
 
+We are currently enclosing the entire method in a block. Instead of this, we can also declare the method itself as synchronized.
 
 
