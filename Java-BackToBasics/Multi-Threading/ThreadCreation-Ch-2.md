@@ -84,12 +84,12 @@ and "target"/"task".*run()* is nothing but the implementation that is provided b
 
 **We can implement Runnable and trigger the thread using the "Thread" class.**
 
-### Note: 
+## Note: 
 
 If we extend "Thread" then we won't be able to extend any other class as mutliple inheritence in not supported in Java. This will limit us.
 So, it is always better to implement "Runnable".
 
-### To sum up
+# To sum up
 
 <img width="1145" alt="Screenshot 2024-07-24 at 7 09 06 PM" src="https://github.com/user-attachments/assets/1e8e9c5a-99c8-451c-bf1f-9b6517e4ed6c">
 <img width="1063" alt="Screenshot 2024-07-24 at 7 10 20 PM" src="https://github.com/user-attachments/assets/1db18677-9008-4acf-a60a-d98f9fed8630">
