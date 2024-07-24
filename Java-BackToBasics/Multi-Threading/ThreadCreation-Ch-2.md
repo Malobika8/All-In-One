@@ -50,8 +50,11 @@ Creating threads is achieved in one of two ways:
    <img width="855" alt="Screenshot 2024-07-24 at 1 03 33 PM" src="https://github.com/user-attachments/assets/8c61419e-a9fc-4e14-b976-debafce35d93">
    <img width="571" alt="Screenshot 2024-07-24 at 1 05 45 PM" src="https://github.com/user-attachments/assets/23f345e3-165c-4c05-8cd1-dc5820fd8acb">
 
+### Let's analyze the reason behind 2 ways of creating Thread.
 
-If we look, the "Thread" class also implements "Runnable". Then why does it ask us to provide an object of Runnable?
+If we look closely, the "Thread" class also implements "Runnable". 
+
+#### Then why does it ask us to provide an object of Runnable?
 
 Also, the "Thread" class itself has a *run()* method which we can use. Why can't we just use it?
 
@@ -71,6 +74,25 @@ We can ensure that the "target"/"task" object is not null. When we pass the Runn
 <img width="934" alt="Screenshot 2024-07-24 at 5 55 55 PM" src="https://github.com/user-attachments/assets/63fec8b5-877d-49b0-9456-170802e1abfe">
 <img width="934" alt="Screenshot 2024-07-24 at 5 56 22 PM" src="https://github.com/user-attachments/assets/56610a88-bcbe-4149-a361-6043dc08e6a9">
 
+and "target"/"task".*run()* is nothing but the implementation that is provided by us. So, the *run()* of the object passed is called.
+
+<img width="965" alt="Screenshot 2024-07-24 at 6 01 17 PM" src="https://github.com/user-attachments/assets/df2b36d1-6c05-4b0e-b4bd-1f2ca136029b">
+
+**Hence, we can either extend Thread directly and override the *run()* method.**
+
+**OR,**
+
+**We can implement Runnable and trigger the thread using the "Thread" class.**
+
+### Note: 
+
+If we extend "Thread" then we won't be able to extend any other class as mutliple inheritence in not supported in Java. This will limit us.
+So, it is always better to implement "Runnable".
+
+### To sum up
+
+<img width="1145" alt="Screenshot 2024-07-24 at 7 09 06 PM" src="https://github.com/user-attachments/assets/1e8e9c5a-99c8-451c-bf1f-9b6517e4ed6c">
+<img width="1063" alt="Screenshot 2024-07-24 at 7 10 20 PM" src="https://github.com/user-attachments/assets/1db18677-9008-4acf-a60a-d98f9fed8630">
 
 
 
