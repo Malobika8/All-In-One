@@ -8,7 +8,9 @@
 
 **Database** - *A place where we store/organize our Data (Example: Google Drive).*
 
-<img width="807" alt="Screenshot 2024-07-24 at 8 21 21 PM" src="https://github.com/user-attachments/assets/b2262f1a-9f17-4c4a-a19a-88eaa6f4a96c">
+Let's take an example
+
+<img width="1428" alt="Screenshot 2024-07-24 at 9 57 50 PM" src="https://github.com/user-attachments/assets/e49f6213-2854-4de0-a754-e4b3867f389a">
 
 To deal with these kinds of Data, we use something called a "**Database**". It is itself divided into smaller parts called "**Tables**".
 
