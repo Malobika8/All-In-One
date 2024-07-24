@@ -50,11 +50,11 @@ Creating threads is achieved in one of two ways:
    <img width="855" alt="Screenshot 2024-07-24 at 1 03 33 PM" src="https://github.com/user-attachments/assets/8c61419e-a9fc-4e14-b976-debafce35d93">
    <img width="571" alt="Screenshot 2024-07-24 at 1 05 45 PM" src="https://github.com/user-attachments/assets/23f345e3-165c-4c05-8cd1-dc5820fd8acb">
 
-### Let's analyze the reason behind 2 ways of creating Thread.
+# Let's analyze the reason behind 2 ways of creating Thread.
 
 If we look closely, the "Thread" class also implements "Runnable". 
 
-#### Then why does it ask us to provide an object of Runnable?
+### Then why does it ask us to provide an object of Runnable?
 
 Also, the "Thread" class itself has a *run()* method which we can use. Why can't we just use it?
 
@@ -65,7 +65,7 @@ The *run()* method does nothing. It has an object(named "target"/"task"(lastest)
 <img width="803" alt="Screenshot 2024-07-24 at 5 47 58 PM" src="https://github.com/user-attachments/assets/5553a066-ea49-4a0e-967f-75a2009d4343">
 <img width="603" alt="Screenshot 2024-07-24 at 5 46 40 PM" src="https://github.com/user-attachments/assets/12f64ac1-5c95-404e-8fd5-c6af0e86c23e">
 
-#### What should we do to call the *target.run()* method?
+### What should we do to call the *target.run()* method?
 
 We can ensure that the "target"/"task" object is not null. When we pass the Runnable instance, it is set to "target"/"task".
 
