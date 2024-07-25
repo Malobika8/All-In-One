@@ -1,14 +1,14 @@
 # Producer Consumer Problem
 
-Consider a Queue and list of threads. One group of threads try to push items to the Queue and another group tries to pull items out of the Queue.
+Consider a Queue and list of threads. One group of threads tries to push items to the Queue and another group tries to pull items out of the Queue.
 
 <img width="999" alt="Screenshot 2024-07-25 at 6 28 34 PM" src="https://github.com/user-attachments/assets/3163ae63-50dc-4b71-84fa-afb186ab3683">
 
-* Pushing items is possible only if space for there's atleast 1 item in the Queue i.e. Queue is not full.
+* Pushing items is possible only if space for there's at least 1 item in the Queue i.e. Queue is not full.
 
   <img width="947" alt="Screenshot 2024-07-25 at 6 29 01 PM" src="https://github.com/user-attachments/assets/2dc347e9-241f-4e5b-bd2b-648b077c64bd">
 
-* Removing item is possible only if there's atleast 1 item in the Queue i.e. Queue is not empty.
+* Removing items is possible only if there's at least 1 item in the Queue i.e. Queue is not empty.
 
   <img width="951" alt="Screenshot 2024-07-25 at 6 29 20 PM" src="https://github.com/user-attachments/assets/13165b2c-f056-4682-a95c-7bd42c9110e7">
 
@@ -17,8 +17,8 @@ Consider the following,
 <img width="826" alt="Screenshot 2024-07-25 at 6 37 11 PM" src="https://github.com/user-attachments/assets/5521dd91-1b26-4e36-ae84-87bc96ea3dd7">
 
 We can observe two things
-- If (**q.size == capacity**), the thread needs to wait till atleast 1 item from the Queue is removed so that "push" operation can be done.
-- If (**q.size == 0**), the thread needs to wait till atleast 1 item is added so that "remove" operation can be done.
+- If (**q.size == capacity**), the thread needs to wait till at least 1 item from the Queue is removed so that the "push" operation can be     done.
+- If (**q.size == 0**), the thread needs to wait till at least 1 item is added so that the "remove" operation can be done.
 
 Let's consider the "remove" scenario.
 
@@ -28,18 +28,16 @@ unblock this "remover-thread") are also blocked as they don't have access to the
 
 ### What should the "remover-thread" do then?
 
-It has to wait till any other "added-threads" adds any item to the Queue. This is because if any "adder-thread" adds any item to the Queue, this
-particular thread would be free to remove an item from the Queue.
+It has to wait till any other "added-threads" add any item to the Queue. This is because if any "adder-thread" adds any item to the Queue, this particular thread would be free to remove an item from the Queue.
 
 Object class has three methods - *wait(), notify() & notifyAll()*
 
-The "remover-thread" has to wait and reliquish the lock. If a thread waits, then other threads get a chance to access the critical section.
-It will wait till the Queue has some item to be removed. 
+The "remover-thread" has to wait and relinquish the lock. If a thread waits, then other threads get a chance to access the critical section.
+It will wait till the Queue has some items to be removed. 
 
 ### But how will it know?
 
-It has to be notified about the same. The "adder-thread" would notify once an item is pushed to the Queue. *notifyAll()* notifies all the threads
-that are in waiting state.
+It has to be notified about the same. The "adder-thread" would notify once an item is pushed to the Queue. *notifyAll()* notifies all the threads that are in a "waiting" state.
 
 <img width="821" alt="Screenshot 2024-07-25 at 6 51 21 PM" src="https://github.com/user-attachments/assets/a3bf36f1-9fc5-488a-8ec0-4d7c0aa795a9">
 
@@ -49,9 +47,7 @@ The same is true for "adder" as well.
 
 There's one slight problem though.
 
-Suppose an "adder-thread" comes and gets lock to the synchronized block only to find out that the Queue is already full. So, it goes into waiting
-state and relinquishes the lock. Instantly, say another "adder-thread" gets the lock and find out that the Queue is full. Similar to the 
-previous one, it also goes to the waiting state and relinquishes the lock. 
+Suppose an "adder-thread" comes and gets lock for the synchronized block only to find out that the Queue is already full. So, it goes into a "waiting" state and relinquishes the lock. Instantly, say another "adder-thread" gets the lock and finds out that the Queue is full. Similar to the previous one, it also goes to the waiting state and relinquishes the lock. 
 
 <img width="1135" alt="Screenshot 2024-07-25 at 7 08 22 PM" src="https://github.com/user-attachments/assets/90481981-d5dd-49f4-8b14-1e2f15644cdf">
 
