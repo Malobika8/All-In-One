@@ -94,4 +94,6 @@ A thread can hold a lock on an object :
 • By executing the body of a synchronized block that synchronizes on the object. (this)
 • By executing a synchronized static method of a class or a block inside a static method (in which case, the object is the Class object        representing the class in the JVM)
 
+# Thread safety:
+It's the term used to describe the design of classes that ensure that the state of their objects is always consistent, even when the objects are used concurrently by multiple threads. Eg StringBuffer.
 
