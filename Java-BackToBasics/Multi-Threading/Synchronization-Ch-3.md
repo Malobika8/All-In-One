@@ -1,7 +1,7 @@
 # Synchronization
 
-• Threads share the same memory space, i.e. they can share resources (objects)
-• However, there are critical situations where it is desirable that only one thread at a time has access to a shared resource.
+* Threads share the same memory space, i.e. they can share resources (objects)
+* However, there are critical situations where it is desirable that only one thread at a time has access to a shared resource.
 
 Let's create a "Stack" class.
 
@@ -88,12 +88,12 @@ We synchronize on the class lock itself. We cannot use "this" in a static method
 It occurs when two or more threads simultaneously update the same value(stackTopIndex) and, as a consequence, leave the value in an undefined
 or inconsistent state.
 
-# Summary:
+# Summary
 A thread can hold a lock on an object :
-• By executing a synchronized instance method of the object. (this)
-• By executing the body of a synchronized block that synchronizes on the object. (this)
-• By executing a synchronized static method of a class or a block inside a static method (in which case, the object is the Class object        representing the class in the JVM)
+* By executing a synchronized instance method of the object. (this)
+* By executing the body of a synchronized block that synchronizes on the object. (this)
+* By executing a synchronized static method of a class or a block inside a static method (in which case, the object is the Class object        representing the class in the JVM)
 
-# Thread safety:
+# Thread safety
 It's the term used to describe the design of classes that ensure that the state of their objects is always consistent, even when the objects are used concurrently by multiple threads. Eg StringBuffer.
 
