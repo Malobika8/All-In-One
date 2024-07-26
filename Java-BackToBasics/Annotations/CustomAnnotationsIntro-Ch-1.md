@@ -61,7 +61,7 @@ There are 2 main annotations that we need to add
   - RUNTIME means Java keeps this annotation around throughout the actual running of the program and we can access this annotation while the
     program is running.
 
-# Processing the annotation
+
 
 
 
