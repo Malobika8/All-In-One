@@ -1,17 +1,17 @@
 # Process annotation for Class
 
-We have "*myCat*" object that is an instance of the "*Cat*" class annotated.
+We have an "*myCat*" object that is an instance of the "*Cat*" class annotated.
 
-We can check if the Class is annotated with *@VeryImportant* annotation.
+We can check if the Class is annotated with the *@VeryImportant* annotation.
 
 <img width="994" alt="Screenshot 2024-07-26 at 12 37 31 PM" src="https://github.com/user-attachments/assets/61012c1d-7a5b-4351-8cfb-2acba4aa3a55">
 
-## Let's create & process Custom Annotation for methods
+# Let's create & process Custom Annotation for methods
 
 <img width="868" alt="Screenshot 2024-07-26 at 12 40 19 PM" src="https://github.com/user-attachments/assets/86554f83-1aac-44af-a2d6-d2e0b4096b7b">
 <img width="857" alt="Screenshot 2024-07-26 at 12 40 29 PM" src="https://github.com/user-attachments/assets/ed4374c7-cb79-4447-8868-c692c52fb98a">
 
-Run immediately if *@RunImmediately* annotation is present.
+Run immediately if the *@RunImmediately* annotation is present.
 
 <img width="996" alt="Screenshot 2024-07-26 at 12 42 05 PM" src="https://github.com/user-attachments/assets/bba5e331-9c6f-444b-a24f-e5ca0732b37e">
 
@@ -19,8 +19,8 @@ It called the "*meow()*" method and not the "*eat()*" method.
 
 <img width="1063" alt="Screenshot 2024-07-26 at 12 42 29 PM" src="https://github.com/user-attachments/assets/88648619-7e19-4917-b449-86cab6cf8ebe">
 
-We can add our own parameters to our custom annotations. Suppose we want to  have parameter for the number of times the method should run.
-In the body of the Custom Annotation class, we need to add the parameter as method(and not a normal class field).
+We can add our own parameters to our custom annotations. Suppose we want to have a parameter for the number of times the method should run.
+In the body of the Custom Annotation class, we need to add the parameter as a method(and not a normal class field).
 
 <img width="852" alt="Screenshot 2024-07-26 at 12 44 03 PM" src="https://github.com/user-attachments/assets/f20cb604-657d-4038-abbe-c4d08d5f78ab">
 <img width="857" alt="Screenshot 2024-07-26 at 12 47 49 PM" src="https://github.com/user-attachments/assets/f3c7c867-bc00-4be1-a6f3-5d608ebad581">
@@ -33,7 +33,7 @@ There are a few things to note about these parameters
 
   <img width="1039" alt="Screenshot 2024-07-26 at 12 52 32 PM" src="https://github.com/user-attachments/assets/a2616a8b-ec5b-4fe0-8e29-fd47f62ef3fd">
 
-## Let's create & process Custom Annotation for a field in a Class
+# Let's create & process Custom Annotation for a field in a Class
 
 <img width="942" alt="Screenshot 2024-07-26 at 12 54 29 PM" src="https://github.com/user-attachments/assets/e57c5c53-2174-4eab-87f9-070978bfded3">
 <img width="942" alt="Screenshot 2024-07-26 at 12 54 29 PM" src="https://github.com/user-attachments/assets/dd54d264-3870-4c43-8c4f-2e6563304673">
