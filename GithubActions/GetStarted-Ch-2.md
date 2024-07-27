@@ -5,7 +5,7 @@ If we go to "Actions" and start with a simple workflow configuration, we can get
 <img width="1438" alt="Screenshot 2024-07-27 at 11 30 09 AM" src="https://github.com/user-attachments/assets/fb718c40-0231-424b-ae01-4c9d277005d5">
 <img width="965" alt="Screenshot 2024-07-27 at 11 30 21 AM" src="https://github.com/user-attachments/assets/e50b4c4f-e4e0-4f57-8d2f-3fff87bda506">
 
-## Let's look at the steps now.
+# Let's look at the steps now.
 
 1. Create a folder in the root folder named "*.github*". Create another folder inside it named "*workflows*". Here, if we create any "yml" files that have the structure & the configurations
    of GitHub Action, GitHub will be able to automatically read it
