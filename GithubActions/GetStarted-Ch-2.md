@@ -210,9 +210,8 @@ jobs:
    <img width="1086" alt="Screenshot 2024-07-27 at 3 18 39 PM" src="https://github.com/user-attachments/assets/d4a97e6f-5b6b-4dcb-8df9-2c5538ec9fe7">
    <img width="1431" alt="Screenshot 2024-07-27 at 3 19 45 PM" src="https://github.com/user-attachments/assets/7d3bca12-5a54-4f58-9463-b5804e74282b">
 
-   We might come across this format error if it's incorrect.
+   We might come across this format error if the date's format is incorrect.
 
-   <img width="840" alt="Screenshot 2024-07-27 at 3 23 30 PM" src="https://github.com/user-attachments/assets/1ea19c60-2527-4296-8622-e06d5211de44">
    <img width="841" alt="Screenshot 2024-07-27 at 3 26 46 PM" src="https://github.com/user-attachments/assets/dd82341d-3ed9-4e28-9a12-dafcb60f9f0c">
 
    Go to Docker Hub and we will be able to see the latest image that has been pushed.
