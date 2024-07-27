@@ -1,6 +1,6 @@
 # Let's get started
 
-If we just go to "Action" and start with a simple workflow configuration, we can get the sample file by clicking on "Configure".
+If we go to "Actions" and start with a simple workflow configuration, we can get the sample file by clicking on "Configure".
 
 <img width="1438" alt="Screenshot 2024-07-27 at 11 30 09 AM" src="https://github.com/user-attachments/assets/fb718c40-0231-424b-ae01-4c9d277005d5">
 <img width="965" alt="Screenshot 2024-07-27 at 11 30 21 AM" src="https://github.com/user-attachments/assets/e50b4c4f-e4e0-4f57-8d2f-3fff87bda506">
@@ -102,6 +102,17 @@ If we just go to "Action" and start with a simple workflow configuration, we can
      * We now need to push it to Docker.
        - Build Docker image
 
+         "build-push-action" tries to build a Docker image out of a Docker file that we need to specify.
+         
+         "context" is "**.**" which means we want to use the current file/path or docker which is on the base path of the Application.
+         
+         "push" will be false because, in this step, we want to check if we can build or not.
+
+         For "tags", we need the username or DockerHub username and project name.
+
+         ```
+         It would contain sensitive information & hence should never be exposed in public.
+         ```
          
          <img width="967" alt="Screenshot 2024-07-27 at 11 11 19 AM" src="https://github.com/user-attachments/assets/484adfba-ff74-46f8-9dbd-7f1f2307adc4">
 
