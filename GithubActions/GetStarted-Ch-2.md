@@ -102,6 +102,8 @@ If we go to "Actions" and start with a simple workflow configuration, we can get
      * We now need to push it to Docker.
        - Build Docker image
 
+         Actions are from Docker & hence "*uses: docker/build-push-action@v2*"
+         
          "build-push-action" tries to build a Docker image out of a Docker file that we need to specify.
          
          "context" is "**.**" which means we want to use the current file/path or docker which is on the base path of the Application.
@@ -113,22 +115,113 @@ If we go to "Actions" and start with a simple workflow configuration, we can get
          ```
          It would contain sensitive information & hence should never be exposed in public.
          ```
+
+         ### NOTE
+         ```
+         We can keep it in GitHub action Secrets. Check AddSecretsToOurApp.md to know more.
+         ```
+
+         For "tags", we need the username or DockerHub username and project name. We also need to mention the version.
          
-         <img width="967" alt="Screenshot 2024-07-27 at 11 11 19 AM" src="https://github.com/user-attachments/assets/484adfba-ff74-46f8-9dbd-7f1f2307adc4">
+         We also need to have a dockerfile as the building and pushing action will be based on "*Dockerfile*" file that we should have               within our project.
+
+         "latest": This means it will take the latest version always.
+
+         But we want this to be dynamic.
+    
+         We can have a date as well. The below format is incorrect. (Please check for the correct format else the build will fail due to             incorrect date format)
+    
+         <img width="988" alt="Screenshot 2024-07-27 at 3 07 50 PM" src="https://github.com/user-attachments/assets/78e98510-cf1f-459d-bfaf-a5e9a33e5bef">
+          <img width="967" alt="Screenshot 2024-07-27 at 11 11 19 AM" src="https://github.com/user-attachments/assets/484adfba-ff74-46f8-9dbd-7f1f2307adc4">
+
+         Within the project, we have a file called "Dockerfile". This contains the definition or blueprint of our application.
+  
+         <img width="383" alt="Screenshot 2024-07-27 at 3 09 07 PM" src="https://github.com/user-attachments/assets/be0999c3-ddac-4524-86f0-f69fb80642fe">
+         <img width="1017" alt="Screenshot 2024-07-27 at 3 11 55 PM" src="https://github.com/user-attachments/assets/9ddedd04-143b-4e9c-a07f-0cf7d47f3526">
+
+         CMD has a list of commands. It's a classic command to create a jar file.
 
        - Login to Docker
     
          <img width="963" alt="Screenshot 2024-07-27 at 11 11 26 AM" src="https://github.com/user-attachments/assets/86ec860e-7e39-4771-a67d-411496b2412f">
 
-       - Push image to Docker
+       - Push image to Docker. 
       
          <img width="962" alt="Screenshot 2024-07-27 at 11 11 32 AM" src="https://github.com/user-attachments/assets/6d8bb8dc-4e28-4fe7-a2e5-e79039448433">
 
-     * 
+# main.yml
+
+```
+name: Build & Deploy Spring app
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-deploy:
+    name: Build and Deploy Spring boot for beginner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'corretto'
+          java-version: 17
+
+      - name: Unit Tests
+        run: mvn -B test --file pom.xml
+
+      - name: Build the application
+        run: |
+          mvn clean
+          mvn -B package --file pom.xml
+
+      - name: Build Docker Image
+        uses: docker/build-push-action@v2
+        with:
+            context: .
+            dockerfile: Dockerfile
+            push: false
+            tags: ${{ secrets.DOCKER_HUB_USERNAME }}/spring-boot-for-beginners:today
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+             username: ${{ secrets.DOCKER_HUB_USERNAME }}
+             password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v2
+        with:
+             context: .
+             dockerfile: Dockerfile
+             push: true
+             tags: ${{ secrets.DOCKER_HUB_USERNAME }}/spring-boot-for-beginners:today
+```
 
          
+3. Push to GitHub & check pipeline.
 
-       
+   <img width="1086" alt="Screenshot 2024-07-27 at 3 18 39 PM" src="https://github.com/user-attachments/assets/d4a97e6f-5b6b-4dcb-8df9-2c5538ec9fe7">
+   <img width="1431" alt="Screenshot 2024-07-27 at 3 19 45 PM" src="https://github.com/user-attachments/assets/7d3bca12-5a54-4f58-9463-b5804e74282b">
+
+   We might come across this format error if it's incorrect.
+
+   <img width="840" alt="Screenshot 2024-07-27 at 3 23 30 PM" src="https://github.com/user-attachments/assets/1ea19c60-2527-4296-8622-e06d5211de44">
+   <img width="841" alt="Screenshot 2024-07-27 at 3 26 46 PM" src="https://github.com/user-attachments/assets/dd82341d-3ed9-4e28-9a12-dafcb60f9f0c">
+
+   Go to Docker Hub and we will be able to see the latest image that has been pushed.
+
+   https://hub.docker.com/
+
+   <img width="1385" alt="Screenshot 2024-07-27 at 3 31 56 PM" src="https://github.com/user-attachments/assets/794eedf9-1a71-4d34-b105-a8d23c34dc49">
+
+   All we need to do now is pull the image and run it. 😄
        
 
 
