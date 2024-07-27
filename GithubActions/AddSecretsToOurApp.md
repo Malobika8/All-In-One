@@ -17,3 +17,6 @@
 - Click on your profile 
 - Click on "Account Settings"
 - Click on "Generate New Access Token"
+
+<img width="1090" alt="Screenshot 2024-07-27 at 2 11 24 PM" src="https://github.com/user-attachments/assets/30537814-a262-42e1-818f-615bc2fc532e">
+
