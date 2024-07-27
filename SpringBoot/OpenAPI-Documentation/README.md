@@ -1,3 +1,7 @@
+# Agenda
+
+Add SwaggerUI API Docs in SpringBoot 3
+
 ## FYI
 
 Swagger UI and OpenAPI are related but distinct concepts. OpenAPI is a specification language used to describe RESTful APIs, providing a 
