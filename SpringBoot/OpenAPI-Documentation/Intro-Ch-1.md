@@ -40,7 +40,7 @@ If we want to expose API documentation to multiple environments, we can specify 
 
 <img width="937" alt="Screenshot 2024-07-27 at 8 48 38 PM" src="https://github.com/user-attachments/assets/35c24f48-7478-4c6b-8b4d-a3832bcf171b">
 
-#### How does it work?
+### How does it work?
 
 It scans our applications and reads all the resources & endpoints that we have. It scans for "Controller" or "RestControllers" that we have 
 & displays them one by one.
