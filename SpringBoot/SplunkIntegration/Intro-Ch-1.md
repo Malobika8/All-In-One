@@ -37,6 +37,8 @@
 
    Before that, Go to "Global Settings". Port no (where our logs will be generated)
 
+   **Note: Disable SSL**
+
    <img width="800" alt="Screenshot 2024-07-28 at 10 09 25 AM" src="https://github.com/user-attachments/assets/7777cfdd-a80a-48e2-8ba9-040ea1d9e6d0">
 
    Go to "Tokens"
