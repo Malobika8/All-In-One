@@ -1,7 +1,7 @@
 # Splunk Integration with a SpringBoot project
 
 1. Open any existing SpringBoot project.
-2. Include log4j & exclude default logging that SpringBoot provides.
+2. Include log4j & exclude the default logging that SpringBoot provides.
 
    Exclude spring boot logging.
   
@@ -109,7 +109,7 @@
 5. Run the Application and do some operations.
 6. Check in Splunk for logs.
 
-   Untick "Enable indexer acknowledgement"
+   Untick "Enable indexer acknowledgment"
 
    <img width="809" alt="Screenshot 2024-07-28 at 12 05 11 PM" src="https://github.com/user-attachments/assets/aaba99c1-930d-4ffe-9592-c255cadfdc0d">
 
@@ -118,6 +118,8 @@
    ```
    index="spring_dev"
    ```
+
+   <img width="1436" alt="Screenshot 2024-07-28 at 1 17 23 PM" src="https://github.com/user-attachments/assets/4b9cd037-9932-4b0f-9a1e-5f5d64b7b809">
 
     
 
