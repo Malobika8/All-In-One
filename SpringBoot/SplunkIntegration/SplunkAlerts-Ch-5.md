@@ -56,8 +56,6 @@ Let's see how to trigger alerts over email.
 
 ## Let's verify
 
-<img width="1136" alt="Screenshot 2024-07-29 at 1 16 00 PM" src="https://github.com/user-attachments/assets/990010db-ab01-4409-8073-f8e004a22f7a">
-
 Go to the Alert & select "Open in Search"
 
 <img width="1112" alt="Screenshot 2024-07-29 at 1 16 18 PM" src="https://github.com/user-attachments/assets/a4977ca6-a354-465d-aedb-736198998c76">
