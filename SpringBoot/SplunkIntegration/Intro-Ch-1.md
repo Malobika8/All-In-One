@@ -1,75 +1,108 @@
 # Introduction
 
-<img width="1044" alt="Screenshot 2024-07-27 at 10 16 02 PM" src="https://github.com/user-attachments/assets/b73ce2a4-557d-40f0-a313-6d5b552ce7d8">
+## What is Splunk?
+
+<img width="1000" alt="Screenshot 2024-07-29 at 11 49 30 AM" src="https://github.com/user-attachments/assets/b5acc2f6-2e23-4195-9ec8-9e3301b768bc">
+
+Splunk provides us with a User Interface using which we can filter out specific logs to Microservices. We can set alerts and monitor whole application logs directly using Splunk Dashboard.
+
+It is used for:
+- Operational Intelligence
+- Data Visualisation
+- Alerting
+- Reporting
+- Investigation
+
+## Benefits of Splunk
+
 <img width="1075" alt="Screenshot 2024-07-27 at 10 17 08 PM" src="https://github.com/user-attachments/assets/a0b17bc8-90eb-4a32-b42b-83fd7f38a2f9">
 
-### Main phase of Splunk
+## Main phases of Splunk
 
 <img width="1004" alt="Screenshot 2024-07-27 at 10 18 13 PM" src="https://github.com/user-attachments/assets/e7385fe6-d589-4cce-b95b-cae650a2556b">
+
+## How does it work?
+
 <img width="1062" alt="Screenshot 2024-07-27 at 10 18 27 PM" src="https://github.com/user-attachments/assets/8262d07d-9ca0-4e61-a35d-57e4e659c981">
+<img width="795" alt="Screenshot 2024-07-29 at 12 11 33 PM" src="https://github.com/user-attachments/assets/bedc44bf-2f39-4eae-9100-85b5a066e8db">
 
-# Splunk Setup
+- Indexer: Categorizes & applies meta-data to the data.
+- Search Heads: Acts as the User Interface & allows users to create alerts, reports & dashboards based on data.
 
-1. Search for Splunk in the browser.
+Splunk can also be trained to understand patterns. Next time onwards, it can detect patterns that can be used for visualization.
 
-   <img width="854" alt="Screenshot 2024-07-27 at 10 19 35 PM" src="https://github.com/user-attachments/assets/fa4ded33-893c-4b37-b493-e40249f35212">
+<img width="1014" alt="Screenshot 2024-07-29 at 12 15 55 PM" src="https://github.com/user-attachments/assets/042da0f9-0017-4113-b609-ac9be33fa0e0">
+<img width="853" alt="Screenshot 2024-07-29 at 12 16 04 PM" src="https://github.com/user-attachments/assets/3375c0fa-36cc-4f5b-89c7-f1a75cadb350">
 
-2. Go to "**Product**" -> "**Splunk Enterprise**"
+## Splunk Deployment models
 
-   <img width="1436" alt="Screenshot 2024-07-27 at 10 21 02 PM" src="https://github.com/user-attachments/assets/2653fdc5-663a-43bd-a73f-1d254ddd54a3">
+We need to understand the Basic components of Splunk deployment.
 
-3. Click on the free trial. Create an account (trial for 60 days).
-4. Install Splunk & log in with username "admin" & provide the same password we used for signup.
+<img width="1035" alt="Screenshot 2024-07-29 at 12 20 33 PM" src="https://github.com/user-attachments/assets/31584437-92e7-4d7f-849c-c281d94d9960">
 
-   <img width="1436" alt="Screenshot 2024-07-27 at 10 38 54 PM" src="https://github.com/user-attachments/assets/13ad9e88-6751-404b-bf4a-9c5ce36288c1">
+Forwarder can forward to "Indexer" or "Indexer+Search Head" combination.
 
-# Create Token & Indexes in Splunk
+There's a "Universal forwarder" that requires very little configuration & "heavy forwarder" that can be fine-tuned as per our needs.
 
--  Go to "Settings" & click on "Data Input"
+No matter what the configuration is, the data pipeline has four main components.
+- Input
+- Parsing
+- Indexing
+- Searching
 
-   <img width="713" alt="Screenshot 2024-07-27 at 10 45 05 PM" src="https://github.com/user-attachments/assets/bf436d2a-750d-4984-9589-0eb9e72b1ae6">
+Each of the primary components takes a part in the Data Pipeline.
 
-   We can see a lot of options but we'll be using "HTTP Event Collector"
+<img width="1009" alt="Screenshot 2024-07-29 at 12 26 31 PM" src="https://github.com/user-attachments/assets/8a4879f3-af49-44f8-9dc6-261a7febd0ee">
 
-   <img width="1172" alt="Screenshot 2024-07-27 at 10 46 11 PM" src="https://github.com/user-attachments/assets/2fb9cfc6-8d74-4393-b96b-720cee77298b">
+### Deployment models
+- Departmental deployment model: Up to 10 systems forwarding data into the search head/indexer.
 
-   We have to create indexes.
+  <img width="1028" alt="Screenshot 2024-07-29 at 12 28 52 PM" src="https://github.com/user-attachments/assets/184d1bed-89e3-4a1c-ac7b-43f353c3a9f3">
 
-   Before that, Go to "Global Settings". Port no (where our logs will be generated)
+- Small Enterprise Deployment model:
 
-   **Note: Disable SSL**
+  <img width="999" alt="Screenshot 2024-07-29 at 12 30 29 PM" src="https://github.com/user-attachments/assets/207f3314-1103-4497-9da7-52aef9cf1bda">
 
-   <img width="800" alt="Screenshot 2024-07-28 at 10 09 25 AM" src="https://github.com/user-attachments/assets/7777cfdd-a80a-48e2-8ba9-040ea1d9e6d0">
+- Large Enterprise Deployment model:
 
-   Go to "Tokens"
+  <img width="1040" alt="Screenshot 2024-07-29 at 12 31 11 PM" src="https://github.com/user-attachments/assets/7314d005-c422-4097-ac49-ccc6a203f837">
 
-   <img width="864" alt="Screenshot 2024-07-28 at 10 11 06 AM" src="https://github.com/user-attachments/assets/b8c13fb7-c36f-4d8f-9285-b815b5532756">
+- Distributed Deployment: Different classes of servers i.e. linux & windows.
 
-   Create indexes. (We can create different for different environments)
+  <img width="1037" alt="Screenshot 2024-07-29 at 12 32 53 PM" src="https://github.com/user-attachments/assets/87eb124e-99c1-4518-8bc4-e44d1730221e">
 
-   <img width="800" alt="Screenshot 2024-07-28 at 10 13 38 AM" src="https://github.com/user-attachments/assets/a5379fe3-199f-46a8-bf57-bc134a1e37c3">
+### License
 
-   Select "source type" where we need to log our data. (Whatever logging tool we use in our project, we need to select that)
+<img width="1068" alt="Screenshot 2024-07-29 at 12 35 26 PM" src="https://github.com/user-attachments/assets/a73fb9d8-77da-4887-9814-93c1440b3c0d">
+<img width="1064" alt="Screenshot 2024-07-29 at 12 35 40 PM" src="https://github.com/user-attachments/assets/a04ad081-bb5c-4525-93b0-52039f95ae48">
 
-   <img width="1164" alt="Screenshot 2024-07-28 at 10 15 23 AM" src="https://github.com/user-attachments/assets/eafebc55-1411-4bc8-abb4-ccd0e8c20014">
+## Metadata
 
-   We can see all the data in the review section. Save it somewhere as it'll be needed while integrating our Spring Boot application with       Splunk ( in the XML file).
+<img width="1009" alt="Screenshot 2024-07-29 at 12 42 52 PM" src="https://github.com/user-attachments/assets/418a29e7-a65d-454d-aae9-604f8b5c3058">
 
-   <img width="753" alt="Screenshot 2024-07-28 at 10 18 40 AM" src="https://github.com/user-attachments/assets/ab72f6e1-769e-4bb4-9050-ffcf3ab4bcba">
+### FYI
 
-   Click on submit. Our token is created.
+Splunk can consume a lot of different types of Data
 
-   <img width="886" alt="Screenshot 2024-07-28 at 10 19 56 AM" src="https://github.com/user-attachments/assets/a112ff72-b2ef-4358-9ff2-2f63de4fea3b">
+<img width="855" alt="Screenshot 2024-07-29 at 12 41 16 PM" src="https://github.com/user-attachments/assets/b97eb437-c401-4bce-bfce-b22d0b86d95b">
 
-   Click on "Start Searching".
 
-   We can see Splunk has provided the query that can be used to search logs.
 
-   <img width="1046" alt="Screenshot 2024-07-28 at 10 21 21 AM" src="https://github.com/user-attachments/assets/04c48635-6119-43e6-8c32-26466bbfb5eb">
 
-   We can go to "HTTP Event Collector" & see the token created.
 
-   <img width="1420" alt="Screenshot 2024-07-28 at 10 23 56 AM" src="https://github.com/user-attachments/assets/a769000c-7410-4d3c-a453-263dc7de5317">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    
 
