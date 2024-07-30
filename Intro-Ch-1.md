@@ -91,6 +91,7 @@ Basic protocols:
 
 #### How data is being transferred?
 In computers, everything is 0 and 1. So it doesn't make sense to send the entire data at once.  When we load a Web page or watch a movie online, the data we get are in packets.
+
 These are all individual calls and we get different packets of data.
 
 <img width="1143" alt="Screenshot 2024-07-29 at 10 41 01 PM" src="https://github.com/user-attachments/assets/c1fe963c-fd45-438f-83e4-0ee6a7a50b94">
