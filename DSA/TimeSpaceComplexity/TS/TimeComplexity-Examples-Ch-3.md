@@ -17,7 +17,7 @@ Let's take a look at this question,
 
 ## Recursive Algorithms
 
-In this case, time needs to considered for every single function call.
+In this case, time needs to be considered for every single function call.
 
 Space Complexity: Recursive programs do not have constant Space Complexity. This is because the function calls are stored in Stack and 
 hence takes memory.
