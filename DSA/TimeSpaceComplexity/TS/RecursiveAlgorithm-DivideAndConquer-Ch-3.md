@@ -65,6 +65,7 @@ There are a few ways:
   the value & just write O(1).
 
   <img width="298" alt="Screenshot 2024-07-31 at 1 42 32 PM" src="https://github.com/user-attachments/assets/f365f03f-b83d-4748-ac83-b19cd783cd06">
+  
   ---------------------------------------
 
   ### Q1. Let's consider Merge Sort example & find the complexity using the "*Akra Bazzi*" formula.
@@ -97,15 +98,7 @@ There are a few ways:
 
   <img width="1022" alt="Screenshot 2024-07-31 at 2 59 13 PM" src="https://github.com/user-attachments/assets/1b1b92a2-04cf-4664-a07d-bcad91901c8a">
   
-## Solve linear Recurrence Relation
 
-We can find formulas for these relations which can give us answers in a single step.
-
-Let's take the example of Fibonacci Number.
-
-Form of linear Recurrence Relation,
-
-<img width="1012" alt="Screenshot 2024-07-31 at 3 03 26 PM" src="https://github.com/user-attachments/assets/1481688f-26df-4291-b5a0-2e723c48379c">
 
   
 
