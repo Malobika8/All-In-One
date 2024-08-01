@@ -26,9 +26,42 @@ It was developed to have a standard way for computers to communicate with each o
       
 * Network layer: It works for the transmission of the received data segments from one computer to another that is located in a different       network. The router lives over here. (now it communicates with other computers outside). Function: Logical addressing (IP addressing done    in the network layer is known as logical addressing). The network layer assigns the sender's and receiver's IP Address to every              segment & it forms an IP Packet. Routing protocols & transportation of packets happen at the network layer. Load balancing also happens
   here.
-* DataLink Layer: It allows us to directly communicate with the computers and hosts. It receives the data Packet from the Network layer & 
-  this Data Packet contains the IP Addresses of the sender & reciever. Physical addressing is done at Datalink layer. Mac addreses of
-  sender & receiver are added to the Data Packets to form a frame. Frame is a data unit of the datalink layer. Mac address is the 12 digit
-  alphanumeric number of the network interface of our computer.
-* Physical Layer
+* DataLink Layer: It lets us communicate directly with the computers and hosts. It receives the data Packet from the Network layer & 
+  this data Packet contains the IP Addresses of the sender & receiver. Physical addressing is done at the Datalink layer. Mac addresses of
+  sender & receiver are added to the Data Packets to form a frame. A frame is a data unit of the datalink layer. Mac address is the 12-digit
+  an alphanumeric number of the network interface of our computer. It's not like our computer has only one Mac address. Our computer's 
+  Bluetooth may have another Mac address. Our computer's wifi may have another Mac address. The datalink layer adds a Mac address layer in a 
+  frame and then transports that frame.
+
+  <img width="564" alt="Screenshot 2024-07-31 at 3 18 02 PM" src="https://github.com/user-attachments/assets/abf381c6-4c31-4037-8919-f8fe0c5c5cb9">
+
+* Physical Layer: It contains the hardware. Here we actually have mechanical wires. It transmits the bits from electrical signals. It works
+  with cables and all those things.
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
