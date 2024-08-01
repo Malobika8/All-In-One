@@ -58,7 +58,6 @@ Recurrence Relation for Fibonacci,
 Form
 
 <img width="1016" alt="Screenshot 2024-07-31 at 11 42 22 PM" src="https://github.com/user-attachments/assets/9a785d5f-76e3-448c-bb57-98ed5ef2cb0f">
-<img width="1016" alt="Screenshot 2024-07-31 at 11 42 22 PM" src="https://github.com/user-attachments/assets/43777bf3-b1bd-4fa5-af0c-364fe9e37dc3">
 
 ## How to solve
 
@@ -70,6 +69,41 @@ Steps:
   <img width="1008" alt="Screenshot 2024-07-31 at 11 50 39 PM" src="https://github.com/user-attachments/assets/59fb1504-b461-4bbb-b504-92f3bf11fd54">
 
 - Put g(n) on one side and find a particular n.
+
+  <img width="1022" alt="Screenshot 2024-08-01 at 12 50 15 PM" src="https://github.com/user-attachments/assets/50e2b451-fc58-421a-9c06-ca1c39d2e0f4">
+
+- Add both solutions together.
+
+  <img width="1006" alt="Screenshot 2024-08-01 at 12 50 25 PM" src="https://github.com/user-attachments/assets/072a5868-2b72-4d25-85f5-e559713f8023">
+
+## How do we guess a particular solution?
+
+- If g(n) is exponential, guess of the same type.
+
+  <img width="997" alt="Screenshot 2024-08-01 at 12 51 34 PM" src="https://github.com/user-attachments/assets/8db4567a-cde8-41e3-9d22-59128366362e">
+  
+- If it is polynomial, guess of the same degree.
+
+  <img width="1014" alt="Screenshot 2024-08-01 at 12 52 45 PM" src="https://github.com/user-attachments/assets/06e36204-354b-44b3-aef4-54defb72288e">
+
+- If it fails, try for the next degree.
+
+  <img width="1014" alt="Screenshot 2024-08-01 at 12 53 53 PM" src="https://github.com/user-attachments/assets/80784d47-6583-4834-b1a9-fa0f7cdedf0b">
+
+  Example:
+
+  <img width="1003" alt="Screenshot 2024-08-01 at 12 54 01 PM" src="https://github.com/user-attachments/assets/15a29c06-93ea-450f-8404-c897f079c4af">
+  <img width="1010" alt="Screenshot 2024-08-01 at 12 54 10 PM" src="https://github.com/user-attachments/assets/e7bf387b-2584-4ff0-aaa9-3423ffc5730f">
+  <img width="1017" alt="Screenshot 2024-08-01 at 12 54 17 PM" src="https://github.com/user-attachments/assets/fc17cff6-a7fe-46cb-a40d-c7e058f56701">
+
+  General answer:
+
+  <img width="1009" alt="Screenshot 2024-08-01 at 12 55 08 PM" src="https://github.com/user-attachments/assets/810431a6-823d-4da8-a448-b2741b2b8840">
+
+
+
+  
+
 
   
 
