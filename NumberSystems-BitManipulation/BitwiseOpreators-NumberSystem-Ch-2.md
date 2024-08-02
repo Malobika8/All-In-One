@@ -36,8 +36,12 @@ Internally everything is stored in 0's and 1's.
      <img width="1011" alt="Screenshot 2024-07-07 at 9 18 18 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/54d32d1c-9830-4e9c-a63d-da93cc1bea40">
 
    - Similar to decimal numbers, leading 0's are ignored. i.e. 00011100 = 11100
+  
+## Note:
+- Left shift gives us double of a number
+- Right shift gives us half of a number
 
-3. AND Operator:
+4. AND Operator:
 
    <img width="996" alt="Screenshot 2024-07-07 at 8 30 00 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/687b9ae2-206f-4bee-96cf-497112b39ddb">
 
@@ -46,13 +50,13 @@ Internally everything is stored in 0's and 1's.
 
      <img width="1017" alt="Screenshot 2024-07-07 at 8 31 58 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/e7e7e576-f98e-4a24-b617-bfe5b625b7b5">
   
-4. OR Operator:
+5. OR Operator:
 
    If any one is true, entire expression is true.
 
    <img width="1018" alt="Screenshot 2024-07-07 at 8 32 27 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/eb61e49a-5ad2-413b-b67d-07008049679c">
 
-5. XOR Operator:
+6. XOR Operator:
    - If and only if
    - Exclusive if
    - If we have two numbers, only one of them should be true.
