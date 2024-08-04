@@ -108,6 +108,14 @@ Not a power of 2: 10010, 1010
 
 <img width="948" alt="Screenshot 2024-08-02 at 9 39 09 PM" src="https://github.com/user-attachments/assets/d7686965-3b75-4654-bbf4-06c629f56d2e">
 
+We can think of "b" in terms of binary and then multiply the base with the answer whenever the last digit is 1. Note that with every iteration, the base should be multiplied by itself.
+
+<img width="954" alt="Screenshot 2024-08-04 at 12 17 20 PM" src="https://github.com/user-attachments/assets/f1248e0a-d6e1-455f-995a-6c9d17f9b7b1">
+
+## Q7. Given a number n, find the number of set bits in it.
+
+- One way is to find the last digit and check if it's 1. Right shift at every iteration.
+- 
 
 
 
