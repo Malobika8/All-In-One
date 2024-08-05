@@ -115,20 +115,46 @@ We can think of "b" in terms of binary and then multiply the base with the answe
 ## Q7. Given a number n, find the number of set bits in it.
 
 - One way is to find the last digit and check if it's 1. Right shift at every iteration.
-- 
 
+## Q8. Find XOR of numbers from 0 to a.
 
+<img width="989" alt="Screenshot 2024-08-05 at 10 38 34 PM" src="https://github.com/user-attachments/assets/2e346815-4dc2-418f-833e-6b7bee488f3a">
+
+If we carefully observe, we can see a pattern.
+
+<img width="995" alt="Screenshot 2024-08-05 at 10 40 42 PM" src="https://github.com/user-attachments/assets/9656c010-5fd1-4cdb-a059-3bbcd426f9dd">
+
+## Q9. Find XOR of numbers between two ranges.
+
+<img width="982" alt="Screenshot 2024-08-05 at 10 41 43 PM" src="https://github.com/user-attachments/assets/3fe9c003-e0a8-46d6-a5e3-b07791855ac6">
+<img width="1013" alt="Screenshot 2024-08-05 at 10 42 09 PM" src="https://github.com/user-attachments/assets/c906e5be-6a0b-409f-89d3-e5bf01778b9c">
+
+This is because 
+- n XOR n = 0
+- 0 XOR n = n
+
+where n is any number.
+
+Code:
+
+<img width="427" alt="Screenshot 2024-08-05 at 10 46 21 PM" src="https://github.com/user-attachments/assets/6abcd47e-1808-4339-996f-a894c4e6853f">
+<img width="742" alt="Screenshot 2024-08-05 at 10 47 06 PM" src="https://github.com/user-attachments/assets/c0b2f543-ff1e-419e-ab61-6eb94bab7d73">
+
+## Q10. Flipping an image. (Google)
+
+https://leetcode.com/problems/flipping-an-image/description/
+
+<img width="1017" alt="Screenshot 2024-08-05 at 10 49 11 PM" src="https://github.com/user-attachments/assets/8c94950e-1532-4614-b3cd-f226a62e6578">
+
+We know that XORing (1 and 0) with 1 results in (0 & 1) (which is basically inversion).
+
+- 1 XOR 1 = 0
+- 0 XOR 1 = 1
+
+Hence, we can also invert while reversing by finding XOR with 1.
+
+Code:
+
+<img width="779" alt="Screenshot 2024-08-05 at 10 55 13 PM" src="https://github.com/user-attachments/assets/d2e66e1f-75f5-4945-8167-fd6710f0e5f6">
 
   
-  
-
-
-
-
-
-  
-
-  
-
-  
-
