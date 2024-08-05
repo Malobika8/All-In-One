@@ -16,7 +16,11 @@ We can combine method reference and Stream API,
 
 <img width="665" alt="Screenshot 2024-08-05 at 2 25 13 PM" src="https://github.com/user-attachments/assets/9bda83a2-dc6c-4904-8505-47356c921599">
 
-We want to convert the String to "Employee" object.
+We want to convert the String to "Employee" object. 
+
+```
+Note that "map" takes "Function" as a parameter.
+```
 
 <img width="1019" alt="Screenshot 2024-08-05 at 5 44 12 PM" src="https://github.com/user-attachments/assets/2b3c637e-40cd-4577-a6ee-a8c4c52037f8">
 
