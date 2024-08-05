@@ -88,6 +88,74 @@ Why method referencing? -> To reuse a method that is existing in the code base.
     <img width="644" alt="Screenshot 2024-08-05 at 10 51 15 AM" src="https://github.com/user-attachments/assets/3f770bba-1db1-4e3d-a7b9-0396783d0d61">
     <img width="750" alt="Screenshot 2024-08-05 at 10 52 31 AM" src="https://github.com/user-attachments/assets/2f4f93e4-f26b-4fd7-833c-18eb00d9e458">
 
+    ### Example 3: Print a String
+
+    We cannot do this as it's not a static method
+
+    <img width="711" alt="Screenshot 2024-08-05 at 1 57 00 PM" src="https://github.com/user-attachments/assets/406114e8-0def-40f5-9c27-b7f56143876a">
+
+    We can rather do,
+
+    <img width="812" alt="Screenshot 2024-08-05 at 1 58 09 PM" src="https://github.com/user-attachments/assets/f34e66b6-a2b8-416c-8529-86d134bbfeb6">
+
+    "out" is a static reference. This is a static way of calling the method.
+
+    <img width="805" alt="Screenshot 2024-08-05 at 2 00 29 PM" src="https://github.com/user-attachments/assets/8f4a51e3-e462-4e7d-a227-0c0e030d80ca">
+
+    Let's call it in instance(arbitrary) way.
+
+    <img width="747" alt="Screenshot 2024-08-05 at 2 02 37 PM" src="https://github.com/user-attachments/assets/9462f8e9-9fb2-41de-b27d-b3544023db7c">
+    <img width="779" alt="Screenshot 2024-08-05 at 2 02 43 PM" src="https://github.com/user-attachments/assets/8dbe0e0e-a19b-4455-b3d0-6d1530a165d8">
+
+    ### Example 3: Add elements in a list
+
+    We want to create a reference to "*add()*" method in ArrayList
+
+    <img width="651" alt="Screenshot 2024-08-05 at 2 04 25 PM" src="https://github.com/user-attachments/assets/42233bdd-38f1-4da6-ae91-1440f5d653cb">
+    <img width="932" alt="Screenshot 2024-08-05 at 2 07 07 PM" src="https://github.com/user-attachments/assets/c65bbc30-8a4a-4506-818f-3f552be2892b">
+
+4. ### Reference to a Constructor
+
+   Consider a simple POJO.
+
+   <img width="475" alt="Screenshot 2024-08-05 at 2 13 20 PM" src="https://github.com/user-attachments/assets/2a4c1279-5126-4978-bcbc-1a60429de36f">
+
+   Get a new employee object,
+
+   <img width="806" alt="Screenshot 2024-08-05 at 2 15 26 PM" src="https://github.com/user-attachments/assets/735c8042-7b62-4940-8820-132008914196">
+
+   Invoke default constructor
+
+   <img width="714" alt="Screenshot 2024-08-05 at 2 16 11 PM" src="https://github.com/user-attachments/assets/0ddb03ba-d551-461a-acd0-a9ebcaf0fabd">
+
+   To use the parameterized Constructor,
+
+   <img width="961" alt="Screenshot 2024-08-05 at 2 18 26 PM" src="https://github.com/user-attachments/assets/8467fe8c-13f0-4d51-bbc5-3facfd05e1e7">
+   <img width="971" alt="Screenshot 2024-08-05 at 2 18 58 PM" src="https://github.com/user-attachments/assets/a4d3da3a-12d8-4d19-b861-4cf8da2e22dd">
+   
+
+## FYI
+
+<img width="1116" alt="Screenshot 2024-08-05 at 2 19 48 PM" src="https://github.com/user-attachments/assets/68a984c6-45b9-4557-b509-e48dfe723cd7">
+<img width="1097" alt="Screenshot 2024-08-05 at 2 19 52 PM" src="https://github.com/user-attachments/assets/d4318f34-ce90-44c5-a5c8-f41fbdf0fb1c">
+
+# To Do
+
+<img width="1143" alt="Screenshot 2024-08-05 at 2 11 55 PM" src="https://github.com/user-attachments/assets/b6bca3c9-41bd-408d-b87e-3ae9356baf2e">
+
+
+
+
+
+   
+
+   
+
+    
+
+    
+    
+
     
 
 
