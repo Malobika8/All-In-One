@@ -54,14 +54,33 @@ The sieve thus produces a list of all prime numbers up to the given limit, makin
 ```
 
 ### Code:
-We can reverse the logic while coding so that we dont have to add an extra loop to make all numbers true initially.
+We can reverse the logic while coding so that we don't have to add an extra loop to make all numbers true initially.
 
 <img width="768" alt="Screenshot 2024-08-05 at 11 36 05 PM" src="https://github.com/user-attachments/assets/cf3bddf6-2fb2-430f-a532-b63f6248e388">
 <img width="764" alt="Screenshot 2024-08-05 at 11 36 44 PM" src="https://github.com/user-attachments/assets/48e844c6-89b6-4190-8cd1-c43242233109">
 
 ### Complexity Analysis
-- Space Complexity: O(n) (auxillary space taken - array)
-- Time Complexity: 
+- Space Complexity: O(n) (auxiliary space taken - array)
+- Time Complexity:
+
+  The first loop will run n times (or root n times? 🤔
+
+  Second loop: (Marking) 2 will run n/2 times. 3 will run n/3 times. 5 will run n/5 times. 7 will run n/7 times.
+  So, we can write,
+  
+  ```
+  n/2 + n/3 + n/5 + n/7 +...+ n/p (where p is the highest prime number that is less than n)
+  ```
+
+  <img width="1118" alt="Screenshot 2024-08-06 at 10 19 51 AM" src="https://github.com/user-attachments/assets/db845b44-f889-4cd5-a7fb-c36d80cae80d">
+
+  The value can be calculated via Harmonic Progression for primes. (Taylor's series)
+
+  <img width="742" alt="Screenshot 2024-08-06 at 10 20 46 AM" src="https://github.com/user-attachments/assets/28d068da-5348-42f1-9844-3273b67eea6c">
+
+  ### Total Time Complexity = N * (log(log N))
+  
+  
 
 
 
