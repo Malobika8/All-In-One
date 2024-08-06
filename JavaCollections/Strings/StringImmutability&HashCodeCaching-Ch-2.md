@@ -38,7 +38,7 @@ Suppose, an existing String is concatenated with another String and the object i
 
 As we have discussed, Strings are immutable which means it's value can't be changed. Now, let's look into the below example to understand why String objects are immutable in Java:
 
-<img width="659" alt="Screenshot 2024-06-07 at 10 53 44 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/27cb266c-7ad0-48c1-8215-920862b58878">
+<img width="1133" alt="Screenshot 2024-08-06 at 9 13 54 PM" src="https://github.com/user-attachments/assets/62eec520-8ce3-4ecc-aa5d-64cf607b94bc">
 
 Strings in Java are specified as immutable, as seen above because strings with the same content share storage in a single pool to minimize creating a copy of the same value. That is to say, once a String is generated, its content cannot be changed and hence changing content will lead to the creation of a new String. Otherwise, the update will affect the heap value, and then all other String references that share the same storage location will be changed. This change has the potential to be unpredictable, which is why it is not desirable.
 
