@@ -20,17 +20,15 @@ Another example,
 
 <img width="687" alt="Screenshot 2024-08-11 at 10 01 11 PM" src="https://github.com/user-attachments/assets/90a5408e-107b-48e4-9c68-d30893856c70">
 
-## 2. Unboxing & AutoUnboxing
+## 2. UnBoxing & AutoUnboxing
 
-### UnBoxing: 
-Conversion from Wrapper object type to primitive type
+*UnBoxing:* Conversion from Wrapper object type to primitive type
 
 #### Example:
 
 <img width="653" alt="Screenshot 2024-08-11 at 10 04 21 PM" src="https://github.com/user-attachments/assets/6a269119-04c6-445d-9b96-6954cde5429a">
 
-### AutoUnboxing: 
-Done automatically by the compiler.
+*AutoUnboxing:* Done automatically by the compiler.
 
 #### Example:
 
