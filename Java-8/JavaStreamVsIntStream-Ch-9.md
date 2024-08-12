@@ -4,7 +4,7 @@ Let's see an example of Boxing.
 
 ## Boxing & AutoBoxing
 
-For every primitive value, we have a Wrapper class. 
+For every primitive value, we have a **Wrapper** class. 
 
 ```
 Boxing is basically converting primitive type value to respective Wrapper class type done by ourselves.
@@ -12,7 +12,7 @@ Boxing is basically converting primitive type value to respective Wrapper class 
 
 <img width="682" alt="Screenshot 2024-08-11 at 9 58 27 PM" src="https://github.com/user-attachments/assets/2389ce2d-5cd9-4ec2-81d0-7cc777741d3e">
 
-If we don't want to do it ourselves, it's called "**Autoboxing**". Conversion happens internally by the compiler. The compiler does the same as what we did earlier.
+If it happens implicitly, it's called "**Autoboxing**". Conversion happens internally by the "Compiler". The compiler does the same as what we did earlier.
 
 <img width="672" alt="Screenshot 2024-08-11 at 9 59 08 PM" src="https://github.com/user-attachments/assets/4d811926-d910-4d1d-b271-006eb570e438">
 
@@ -38,7 +38,7 @@ We can also write,
 
 <img width="650" alt="Screenshot 2024-08-11 at 10 02 38 PM" src="https://github.com/user-attachments/assets/694a7e5d-a38e-4aa1-8780-e6feca191f9b">
 
-Conversion will happen automatically by the compiler.
+Conversion happens automatically by the Compiler.
 
 Another example,
 
@@ -51,26 +51,26 @@ Another example,
 <img width="719" alt="Screenshot 2024-08-11 at 10 07 44 PM" src="https://github.com/user-attachments/assets/5465aa9f-7590-47dc-a98d-c66614acdfda">
 <img width="959" alt="Screenshot 2024-08-11 at 10 08 26 PM" src="https://github.com/user-attachments/assets/6d363304-5f63-475a-b40f-971e4ad1b3d7">
 
-When we write something like this, there's always overhead that gets associated with the compiler and thus it might have performance issues. 
+However, implicit conversion has overhead associated with the Compiler and might have performance issues. 
 
-To work with integers specifically, we have "*IntStream*". This interface is like Stream API interface. It is still a stream but it's
+To work with integers specifically, we have "*IntStream*". This interface is similar to Stream API interface. It is still a stream but it's
 specifically designed to handle primitive **int** type.
 
-Earlier, when we used "*Stream.of*", and then did "*println*", it called the one that takes object in the parameter.
+Earlier, when we used "*Stream.of*", and did "*println*", it called the one that takes object in the parameter.
 
 <img width="930" alt="Screenshot 2024-08-11 at 10 11 51 PM" src="https://github.com/user-attachments/assets/d5832aac-ef70-4582-953f-a47a68c853f9">
 <img width="654" alt="Screenshot 2024-08-11 at 10 11 59 PM" src="https://github.com/user-attachments/assets/21dea11a-7056-47fb-95fd-20dafe3264ea">
 
-But when we use "*IntStream.of*", that "*println*" method is called whose parameter is int.
+However, when we use "*IntStream.of*", that "*println*" method is called whose parameter is int.
 
 <img width="884" alt="Screenshot 2024-08-11 at 10 11 02 PM" src="https://github.com/user-attachments/assets/e15a85b3-65da-4552-b4db-baf348547132">
 <img width="643" alt="Screenshot 2024-08-11 at 10 11 17 PM" src="https://github.com/user-attachments/assets/d44001ac-1d7e-44b0-ba2a-e72f5f5fdbdd">
 
-Whenever we store any primitive value, say int i = 10, it takes 4 bytes of memory. But an object type like Integer takes 20 bytes of memory.
+Whenever we store any primitive value (say int i = 10), it takes 4 bytes of memory. But an object type like Integer takes 20 bytes of memory.
 
 <img width="705" alt="Screenshot 2024-08-12 at 9 53 40 AM" src="https://github.com/user-attachments/assets/2c5cc21d-4da3-4342-94b0-3dba5f944e2b">
 
-Similarly, we have DoubleStream, LongStream, and other interfaces.
+Similarly, we have DoubleStream, LongStream, and other such interfaces.
 
 <img width="735" alt="Screenshot 2024-08-12 at 9 54 51 AM" src="https://github.com/user-attachments/assets/ef877d60-79ca-4d5d-8df7-02d92322d047">
 
@@ -83,7 +83,7 @@ Similarly, we have DoubleStream, LongStream, and other interfaces.
 
   ### *reduce* in Stream
   
-  #### How to find the sum from a Stream of integers?
+  #### How to find sum from a Stream of integers?
 
   There's no in-built method called "*sum*" but we can utilize "*reduce*".
 
@@ -91,7 +91,7 @@ Similarly, we have DoubleStream, LongStream, and other interfaces.
 
   #### How does reduce work?
 
-  In "*reduce*", we get a number of elements.
+  In "*reduce*", we get several elements.
 
   This is how it works,
 
@@ -129,11 +129,11 @@ Similarly, we have DoubleStream, LongStream, and other interfaces.
 
 # Unboxing in Stream API
 
-We can even convert Stream of integers to IntStream and let the compiler do auto unboxing. For this, we can use the "*mapToInt*" function in Stream
+We can convert Stream of integers to IntStream and let the Compiler do auto unboxing. For this, we can use "*mapToInt*" function available in Stream
 
 <img width="991" alt="Screenshot 2024-08-12 at 10 39 06 AM" src="https://github.com/user-attachments/assets/ce331d64-1890-44fc-b057-5b6e5c458924">
 
-We have a functional interface "*ToIntFunc*".
+We have a Functional Interface "*ToIntFunc*".
 
 <img width="749" alt="Screenshot 2024-08-12 at 10 39 22 AM" src="https://github.com/user-attachments/assets/a770c1f0-a989-4e5a-93b1-9612dcd2b34c">
 
@@ -155,7 +155,7 @@ OR
 
 ## "*boxed()*" in Stream API
 
-### Convert set of int to Integers?
+### Convert a set of ints to Integers?
 
 <img width="735" alt="Screenshot 2024-08-12 at 10 53 55 AM" src="https://github.com/user-attachments/assets/f0e44aa1-ef64-4441-86d0-1c0499afcb66">
 
@@ -165,7 +165,7 @@ The last one is exclusive in range.
 
 <img width="721" alt="Screenshot 2024-08-12 at 10 54 21 AM" src="https://github.com/user-attachments/assets/3b1f0497-334f-414a-861f-d28fefb023b5">
 
-Requirement: Applu hashCode method over every integer passed.
+*Requirement*: Apply "*hashCode()*" method over every integer passed.
 
 We cannot use "*hashCode*" directly on primitive numbers.
 
