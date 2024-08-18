@@ -41,3 +41,22 @@ We can have a List of List. Initially, the list will be copied, and then a new e
   - Add the element to the inner list
   - Add this new inner list to the outer list
 
+### Time & Space Complexity
+
+Total no of elements: n, Total no of subsets: 2^n
+
+So, Time Complexity: O(n*2^n)
+
+Space Complexity: O(2^n * n) i.e. Total subsets * space taken by each of the subsets
+
+### What if we have duplicate elements i.e. [1, 2, 2]?
+
+- When you find a duplicate element, only add it to the newly created subset of the previous step.
+- Array should be sorted
+  
+<img width="1019" alt="Screenshot 2024-08-18 at 11 37 02 AM" src="https://github.com/user-attachments/assets/e77f4577-9914-45d5-b112-f2086296b9da">
+<img width="974" alt="Screenshot 2024-08-18 at 12 13 17 PM" src="https://github.com/user-attachments/assets/2f1329a6-2566-43f4-9a51-8eefffc9ba9d">
+
+
+
+
