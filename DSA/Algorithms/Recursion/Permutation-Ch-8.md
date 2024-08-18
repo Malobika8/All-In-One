@@ -1,7 +1,9 @@
 *The difference between Permutation and Combination is that for Permutation, the order of the members is taken into consideration but for 
 Combination, orders of members does not matter.*
 
-Consider the Recursion flow.
+Suppose we want to find permutations of a String "*abc*".
+
+Consider recursion call diagram for the same,
 
 <img width="1326" alt="Screenshot 2024-08-18 at 1 32 44 PM" src="https://github.com/user-attachments/assets/1a2717fc-93b0-4b6d-b3aa-ef85ef91c4dc">
 
