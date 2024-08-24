@@ -77,7 +77,7 @@ We can also see logs in Intellij.
 
   <img width="1022" alt="Screenshot 2024-08-24 at 10 07 50 PM" src="https://github.com/user-attachments/assets/102e73e9-0ad2-493c-977b-c641f3206897">
 
-  Let's see of the consumer is consuming the message.
+  Let's see if the consumer is consuming messages.
 
   Run the application,
 
