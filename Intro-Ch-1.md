@@ -47,11 +47,15 @@ foundation project. It is designed to handle large volumes of data streams in re
 
   <img width="1081" alt="Screenshot 2024-08-24 at 1 47 21 PM" src="https://github.com/user-attachments/assets/fcb05506-46f7-4287-a2c6-483fc55fe5c8">
 
-* ### Kafka Consumer: Consumers can be part of a consumer group allowing them to parallelize the processing of messages.
+* ### Kafka Consumer:
+
+  Consumers can be part of a consumer group allowing them to parallelize the processing of messages.
 
   <img width="1083" alt="Screenshot 2024-08-24 at 1 48 27 PM" src="https://github.com/user-attachments/assets/90534f34-8494-41b7-82ba-f2021d31fa1a">
 
-* ### Kafka Topics: In Apache Kafka, a topic is a fundamental abstraction that represents a category/feed name to which records/messages are published by producers & from which messages     are consumed by consumers. Topics play a crucial role in organizing/categorizing the flow of data within a Kafka cluster. They provide a way to structure & manage data streams         allowing or the separation of concerns in a distributed & scalable manner.
+* ### Kafka Topics:
+
+  In Apache Kafka, a topic is a fundamental abstraction that represents a category/feed name to which records/messages are published by producers & from which messages     are consumed by consumers. Topics play a crucial role in organizing/categorizing the flow of data within a Kafka cluster. They provide a way to structure & manage data streams         allowing or the separation of concerns in a distributed & scalable manner.
 
   <img width="1064" alt="Screenshot 2024-08-24 at 1 49 53 PM" src="https://github.com/user-attachments/assets/d255b55b-c489-4059-b0ec-e1f3a5236033">
 
