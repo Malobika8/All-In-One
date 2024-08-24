@@ -38,20 +38,20 @@ foundation project. It is designed to handle large volumes of data streams in re
 
 ## Kafka Components
 
-* Kafka Cluster:
+* ### Kafka Cluster:
 
   <img width="1058" alt="Screenshot 2024-08-24 at 1 36 18 PM" src="https://github.com/user-attachments/assets/cb0431cf-fc91-4fe7-bc1e-ef86e53da6b5">
   <img width="1088" alt="Screenshot 2024-08-24 at 1 45 55 PM" src="https://github.com/user-attachments/assets/1f22dbd7-d658-470d-a86e-8db7b9776721">
 
-* Kafka Producer:
+* ### Kafka Producer:
 
   <img width="1081" alt="Screenshot 2024-08-24 at 1 47 21 PM" src="https://github.com/user-attachments/assets/fcb05506-46f7-4287-a2c6-483fc55fe5c8">
 
-* Kafka Consumer: Consumers can be part of a consumer group allowing them to parallelize the processing of messages.
+* ### Kafka Consumer: Consumers can be part of a consumer group allowing them to parallelize the processing of messages.
 
   <img width="1083" alt="Screenshot 2024-08-24 at 1 48 27 PM" src="https://github.com/user-attachments/assets/90534f34-8494-41b7-82ba-f2021d31fa1a">
 
-* Kafka Topics: In Apache Kafka, a topic is a fundamental abstraction that represents a category/feed name to which records/messages are published by producers & from which messages     are consumed by consumers. Topics play a crucial role in organizing/categorizing the flow of data within a Kafka cluster. They provide a way to structure & manage data streams         allowing or the separation of concerns in a distributed & scalable manner.
+* ### Kafka Topics: In Apache Kafka, a topic is a fundamental abstraction that represents a category/feed name to which records/messages are published by producers & from which messages     are consumed by consumers. Topics play a crucial role in organizing/categorizing the flow of data within a Kafka cluster. They provide a way to structure & manage data streams         allowing or the separation of concerns in a distributed & scalable manner.
 
   <img width="1064" alt="Screenshot 2024-08-24 at 1 49 53 PM" src="https://github.com/user-attachments/assets/d255b55b-c489-4059-b0ec-e1f3a5236033">
 
@@ -83,7 +83,7 @@ foundation project. It is designed to handle large volumes of data streams in re
 
   On the other hand, consumers track the offset at the last processed message in each partition. They consume from a consumer process message. It updates its offset to reflect the       position of the last successfully processed message. The offset is committed to a special Kafka topic called the "**Consumer Offsets**" topic. This topic stores the mapping between    consumer groups and their committed offsets. Now, in the event of a consumer restart or failure, the consumer uses the committed offset from the special CFA topic called "*consumer    offset*" to determine the last processed message for each partition. The consumer resumes consumption from the stored offset ensuring that it continues from the point of the last      successfully processed message. Consumers can write offsets periodically or after processing a batch of messages. This commit operation updates the stored offset or the Kafka          special offset called the consumer offset topic. Kafka provides different mechanisms for offset committing such as automatic committing or manual committing depending on the           consumer's configuration.
 
-* Consumer Groups:
+* ### Consumer Groups:
 
 <img width="1114" alt="Screenshot 2024-08-24 at 8 23 27 PM" src="https://github.com/user-attachments/assets/85d7f15a-e350-4add-8aa6-f4ec07a13038">
 
