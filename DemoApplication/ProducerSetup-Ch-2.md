@@ -39,3 +39,22 @@ It should be able to consume a stream of data from Wikimedia
 <img width="862" alt="Screenshot 2024-08-25 at 1 03 08 PM" src="https://github.com/user-attachments/assets/d42b6b9b-1761-4bf9-89f2-9c08adff95d1">
 <img width="1350" alt="Screenshot 2024-08-25 at 1 03 28 PM" src="https://github.com/user-attachments/assets/4a097201-1a7e-459d-af68-d1512e198075">
 <img width="1338" alt="Screenshot 2024-08-25 at 1 03 35 PM" src="https://github.com/user-attachments/assets/522e8b72-c883-4634-bb2d-bea9ebea9495">
+
+## Enable Producer to publish this data to Kafka topic
+
+Use "*sendMessage()*" method of **WikimediaProducer**.
+
+<img width="1035" alt="Screenshot 2024-08-25 at 1 07 59 PM" src="https://github.com/user-attachments/assets/c3a2abe4-b611-4913-ace3-a78943898670">
+
+Restart the application. Data should be published to our Kafka broker now.
+
+
+
+
+
+
+
+
+
+
+
