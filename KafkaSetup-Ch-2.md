@@ -94,6 +94,8 @@ If you also want to delete any data of your local Kafka environment including an
 $ rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs
 ```
 
+### Close Kafka server & then ZooKeeper
+
 ## Note
 
 There are multiple other things that can be done.
