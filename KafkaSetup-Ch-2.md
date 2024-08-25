@@ -82,6 +82,18 @@ Because events are durably stored in Kafka, they can be read as many times and b
 <img width="1386" alt="Screenshot 2024-08-24 at 9 04 08 PM" src="https://github.com/user-attachments/assets/0d6cbf60-2049-44de-b7d6-a0016cc4aaf1">
 <img width="1138" alt="Screenshot 2024-08-24 at 9 04 43 PM" src="https://github.com/user-attachments/assets/9ac8f80d-5242-4c3b-9a0d-74dea6f155f0">
 
+### Step 8: Terminate the Kafka environment
+
+- Stop the producer and consumer clients with Ctrl-C, if you haven't done so already.
+- Stop the Kafka broker with Ctrl-C.
+- Lastly, if the Kafka with ZooKeeper section was followed, stop the ZooKeeper server with Ctrl-C.
+  
+If you also want to delete any data of your local Kafka environment including any events you have created along the way, run the command:
+
+```
+$ rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs
+```
+
 ## Note
 
 There are multiple other things that can be done.
