@@ -33,7 +33,7 @@ Let's see how we can send Java objects in JSON format from the producer & consum
   To enable trusted packages,
 
   <img width="792" alt="Screenshot 2024-08-25 at 11 11 55 AM" src="https://github.com/user-attachments/assets/c2e89b88-ca0c-48f3-bdc4-40a9a3784513">
-  <img width="1029" alt="Screenshot 2024-08-25 at 11 40 41 AM" src="https://github.com/user-attachments/assets/00597570-f743-4b57-bf3e-6ec8f70a3b6f">
+  <img width="1022" alt="Screenshot 2024-08-25 at 11 58 54 AM" src="https://github.com/user-attachments/assets/1cea303b-0ac0-44e9-9878-aaa45a19a151">
 
   When we try to run now, we will come across another error - "Student cannot be converted to String".
 
