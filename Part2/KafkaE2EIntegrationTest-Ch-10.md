@@ -4,6 +4,8 @@ Without integration testing, we cannot be confident about the stability of our p
 
 We can use TestContainer which can reduce test configuration to almost zero.
 
+https://java.testcontainers.org/modules/kafka/
+
 Close Zookeeper and Kafka esrver. We want don't want to use these. Rather we will be taking the help of TestContainers to spin up a new Kafka instance for us.
 
 
