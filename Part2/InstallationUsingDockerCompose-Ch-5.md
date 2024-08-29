@@ -45,9 +45,7 @@ We can check if the instances are running or not with "docker ps" command.
 
 <img width="1398" alt="Screenshot 2024-08-29 at 9 25 01 AM" src="https://github.com/user-attachments/assets/f9cd6efc-89b6-4c9a-a1ce-b2d8888d28c5">
 
-## Create a topic
-
-Execute a bash shell (/bin/bash) inside a running Docker container
+## Execute a bash shell (/bin/bash) inside a running Docker container
 
 ```
 docker exec -it kafka /bin/sh
