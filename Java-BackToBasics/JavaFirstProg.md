@@ -98,3 +98,5 @@ In Java, Unicode refers to the standard for representing characters from differe
 ## Notes
 
 https://github.com/Malobika8/DSA-Bootcamp-Java/tree/main/lectures/05-first-java-program
+
+Please read - https://www.scaler.com/topics/course/java-beginners/
