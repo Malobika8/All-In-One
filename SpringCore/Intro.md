@@ -47,7 +47,7 @@ Example: Config when there's multiple implementations of an interface. The fully
 
 # **Spring Core**
 
-Spring is one of the most widely used Java EE frameworks. It is famous because it solves one of the most important issue i.e. dependency. Spring Framework is based on two 
+Spring is one of the most widely used Java EE frameworks. It is famous because it solves one of the most important issues i.e. dependency. Spring Framework is based on two 
 design principles - Dependency Injection and Aspect Oriented Programming.
 Spring Framework is built on the Inversion of Control principle. Dependency injection is the technique to implement IoC in applications.
 
@@ -60,9 +60,9 @@ modules of Spring Framework architecture.
 * Add spring context dependency
   <img width="798" alt="Screenshot 2024-05-10 at 11 49 03 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/11ae3706-426f-4d4e-bc04-b321b2a56084">
 * Create a simple class
-* Create an xml file and add configurations required for creating a bean(object of the class).
+* Create an XML file and add configurations required for creating a bean(object of the class).
   <img width="962" alt="Screenshot 2024-05-10 at 11 53 26 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/c9d41f10-2276-498e-baee-f431db2315d7">
-* Without creating an object of the class manually, we can get the bean using getBean method. This can be availed using Beanfactory(interface). To get a BeanFactory object, use a class
+* Without creating an object of the class manually, we can get the bean using the "getBean" method. This can be availed using Beanfactory(interface). To get a BeanFactory object, use a class
   that implements the same.
   <img width="902" alt="Screenshot 2024-05-10 at 11 53 15 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/9aaaacf2-0b97-467b-bede-1e1472d15b1a">
 
@@ -83,21 +83,25 @@ Even if we don't immediately use the object, spring creates and keeps the object
 
 *Why so?*
 
-ApplicationContext creates a Spring container for us. The container will have spring beans. The classes are specified in the xml file. Spring container checks the file and 
+ApplicationContext creates a Spring container for us. The container will have spring beans. The classes are specified in the XML file. Spring container checks the file and 
 creates beans accordingly.
 
 <img width="502" alt="Screenshot 2024-05-11 at 12 18 35 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d8592d51-1744-4466-ab6f-b57b320ae585">
 
-By default Spring follows Singleton pattern i.e. it gives only one instance of a class. Even if we ask multiple times, it will give the same instance.
+By default, Spring follows the Singleton pattern i.e. it gives only one instance of a class. Even if we ask multiple times, it will give the same instance.
 All the Spring beans are called Singleton beans because objects are created only once. All the references refer to the same object.
-For example, even though obj2 didn't set age, it still prints 15(the age set by obj1. 
+For example, even though obj2 didn't set the age, it still prints 4(the age set by obj1). 
+
 <img width="1372" alt="Screenshot 2024-05-11 at 9 07 46 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/e14f6fc8-8b98-4a10-94be-30ff902ecf26">
 
-*What if we don't want to follow singleton pattern?*
+*What if we don't want to follow a singleton pattern?*
+
 We can use a different scope.
-Prototype means whenever we ask for a bean, Spring container creates an object at that time. So even if we ask 10 time, it will give 10 different instances of the class.
+Prototype means whenever we ask for a bean, the Spring container creates an object at that time. So even if we ask 10 times, it will give 10 different instances of the class.
+
 <img width="972" alt="Screenshot 2024-05-11 at 9 16 15 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/bfab0a72-c3ee-4b66-b76f-b1ef7d9b8531">
-in case of Singleton, even if we dont ask for an object, Spring container creates and keeps the object ready for future use. However, when the scope is changed to Protoype, objects are created only when we ask for it.
+
+In the case of Singleton, even if we don't ask for an object, Spring container creates and keeps the object ready for future use. However, when the scope is changed to Prototype, objects are created only when we ask for it.
 
 
 
