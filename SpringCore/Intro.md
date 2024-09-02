@@ -3,7 +3,7 @@
 * Org- spring org/pivotal
 * Initial name - Interface 21 (later changed to Spring)
 
-Spring has become an alternative technology in Java world for the EJB model. Spring is lightweight as compared to ejb's.
+Spring has become an alternative technology in Java world for the EJB(Enterprise Java Bean) model. Spring is lightweight as compared to ejb's.
 Why AWT's are heavy weight and not Swings? Because the AWT's uses OS libraries but not swings. Swings just use jdk libraries.
 Similarly, for ejb's, application server is needed. In case of Spring, only spring jars and jdk is required.
 We have different frameworks available for different needs like struts for web development, ejb for enterprise application & jpa for database. Spring handles all of it.
