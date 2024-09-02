@@ -4,7 +4,10 @@
   <img width="784" alt="Screenshot 2024-07-15 at 8 56 15 PM" src="https://github.com/user-attachments/assets/d6dac31c-137d-46d8-9d0a-564404d1ffd8">
   <img width="1144" alt="Screenshot 2024-07-15 at 8 58 36 PM" src="https://github.com/user-attachments/assets/ce0cab42-85b8-4e06-a156-0754e5e94174">
 
+  Note:
+  ```
   The finalize() method in Java is not called by default because it is not guaranteed to be called at all. The finalize() method is intended   for releasing resources that are not already managed by other means, such as object finalization. However, due to the complexity of the      garbage collection process, the finalize() method may not be called in all circumstances. In addition, Java 9 and later versions             deprecated the finalize() method in favor of using try-finally and Closeable interfaces for resource management.
+  ```
 
 - Consider a class and object of that class. When we print the object, it checks if there's a "toString()" method available in our class. If yes, it prints whatever is there in that      method. Otherwise, it calls the default "toString()" method which basically prints the Hashcode.
 
