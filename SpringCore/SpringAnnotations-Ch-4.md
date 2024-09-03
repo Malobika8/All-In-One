@@ -1,11 +1,11 @@
 # **Spring Annotations**
 
 1. *@Component:* Creates an object for us and registers that object in the IOC container. @Component annotation can be used instead of       
-  specifying beans in xml file. Similar to how an id was added in xml file to each bean, an id can be added to each component.
+  specifying beans in an XML file. Similar to how an ID was added in XML file to each bean, an ID can be added to each component.
 
    <img width="722" alt="Screenshot 2024-05-22 at 7 21 41 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/af1662ac-ba86-4903-be21-3000c4d5c398">
 
-   However, if an id is not mentioned, the class name will be considered as bean id.
+   However, if an ID is not mentioned, the class name will be considered a bean ID.
   
    Make sure to enable Component Scan.
 
@@ -15,23 +15,21 @@
 
 2. *@Configuration:*  **What if we don't want to configure anything using xml file?**
 
-  We can create a Config class using @Configuration annotation.
+    We can create a Config class using @Configuration annotation.
 
 3. *@ComponentScan:* We can enable component scan using this annotation.
 
    <img width="1033" alt="Screenshot 2024-05-22 at 7 57 32 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/aa6e7de3-c678-4fb5-b599-dcbc49dcee6c">
 
-   In that case, we need to make use of AnnotationConfigApplicationContext class and mention our newly created Config class.
+   In that case, we need to make use of the "*AnnotationConfigApplicationContext*" class and mention our newly created Config class.
 
    <img width="1039" alt="Screenshot 2024-05-22 at 8 01 50 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/ca5bcf80-3685-4fdb-854e-17ca036d3778">
 
-4. *@Bean:* There's another way to create a bean. A method can be created in the Config class, method name being the bean id, which return 
-   the
-   object. For Spring to recognise method name as the bean id, @Bean annotation should be used.
+4. *@Bean:* There's another way to create a bean. A method can be created in the Config class, the method name being the bean id, which        returns the object. For Spring to recognize the method name as the bean ID, @Bean annotation should be used.
 
    <img width="703" alt="Screenshot 2024-05-22 at 8 11 26 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/3df91297-313d-4020-97c4-5addc4784938">
 
-   The bean name can be overriden as well.
+   The bean name can be overridden as well.
 
    <img width="725" alt="Screenshot 2024-05-22 at 8 14 17 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/e5d98c5b-0735-4fe1-96bd-5f7b816dba01">
    <img width="735" alt="Screenshot 2024-05-22 at 8 16 25 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/512e9caa-e203-410c-bb61-36d38178c120">
@@ -68,18 +66,18 @@
   <img width="1029" alt="Screenshot 2024-05-21 at 11 15 29 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/18cdb9f4-d493-49e9-8385-23f6a1655809">
   <img width="824" alt="Screenshot 2024-05-21 at 11 12 23 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/d70e7ba9-4342-437e-8c12-3f3845da3e54">
 
-**But what if we don't want to set properties through xml file? - We can use annotations.**
+  **But what if we don't want to set properties through an XML file? - We can use annotations.**
 
 8. *@Value:*
 
    <img width="1033" alt="Screenshot 2024-05-21 at 11 21 50 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/89379d1b-3b88-4887-a008-12413c958708">
    <img width="1126" alt="Screenshot 2024-05-21 at 11 21 59 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/748dcbb0-4f05-4803-86cb-e00b9d7f8b9f">
 
-   This can be done by using @PropertySources annotation as well if we dont want to configure using xml.
+   This can be done by using @PropertySources annotation if we don't want to configure using XML.
   
    <img width="951" alt="Screenshot 2024-05-22 at 9 30 24 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/2eb87138-2208-4555-bd41-f52cac28949f">
 
-   But which properties are mandatory? It we don't set any of the peroperty values, the value returned will be null. But a property can be     mandated using @Require annotation.
+   But which properties are mandatory? If we don't set any of the property values, the value returned will be null. But a property can be      mandated using @Require annotation.
 
    <img width="1026" alt="Screenshot 2024-05-21 at 11 26 00 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/161b9ff2-7867-4211-9596-28a5b5b08da8">
    <img width="475" alt="Screenshot 2024-05-21 at 11 26 45 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/1535104a-1ba6-44c3-bee2-a51f06cf1560">
@@ -88,17 +86,17 @@
   
    <img width="773" alt="Screenshot 2024-05-21 at 11 28 45 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/6a2c44a8-17e7-4ac9-a047-da9300eefa5b">
 
-*Note: We can set from properties file as well.*
+   *Note: We can set it from the properties file as well.*
 
-<img width="781" alt="Screenshot 2024-05-21 at 11 32 07 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/0b7c834e-b1fc-477f-85fc-8ce47ddfad14">
+   <img width="781" alt="Screenshot 2024-05-21 at 11 32 07 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/0b7c834e-b1fc-477f-85fc-8ce47ddfad14">
 
-@Value can be placed diretly above the fields. In that case, setter methods are not made use of.
+   @Value can be placed directly above the fields. In that case, setter methods are not made use of.
 
-<img width="709" alt="Screenshot 2024-05-21 at 11 38 25 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/eda6043e-1cd4-4526-9b22-71d1d72626f1">
+   <img width="709" alt="Screenshot 2024-05-21 at 11 38 25 PM" src="https://github.com/Malobika8/GitDemo/assets/111234135/eda6043e-1cd4-4526-9b22-71d1d72626f1">
 
-*Note: @Require can only be used above setter method and cant be used with fields directly.* 
+   *Note: @Require can only be used above setter method and can't be used with fields directly.* 
 
-<img width="723" alt="Screenshot 2024-05-22 at 9 43 59 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/4e3b2ca7-7765-4bbb-8d60-ce69a1c950fb">
+   <img width="723" alt="Screenshot 2024-05-22 at 9 43 59 AM" src="https://github.com/Malobika8/GitDemo/assets/111234135/4e3b2ca7-7765-4bbb-8d60-ce69a1c950fb">
 
 
 
