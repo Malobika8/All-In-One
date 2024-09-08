@@ -26,8 +26,8 @@ override all the abstract methods of the class.
 - Any class that contains one or more abstract methods must also be declared abstract.
 - If a class contains an abstract method it needs to be abstract and vice versa is not true.
 - If a non-abstract class extends an abstract class, then the class must implement all the abstract methods of the abstract class else the concrete class has to be declared as abstract as well.
-- Abstract classes can have constructors but Object of abstract classes cannot be created.
-- Abstract classes can have concrete classes.
+- Abstract classes can have constructors but "Object" of abstract classes cannot be created. Instead, the constructor is executed when an     instance of a derived class is created.  
+- Abstract classes can extend concrete classes.
 - The following are various illegal combinations of other modifiers for methods with respect to abstract modifiers: 
   - final
   - abstract native
