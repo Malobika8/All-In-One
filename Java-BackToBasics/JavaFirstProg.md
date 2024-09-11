@@ -88,6 +88,10 @@ Exceeds size limit. So it does result%size
 <img width="812" alt="Screenshot 2024-06-14 at 1 38 46 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a75cd55a-40b4-42c2-b0cb-0fc211a15e6e">
 <img width="680" alt="Screenshot 2024-06-14 at 1 39 01 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/f28d5413-8c21-4770-98d3-24cf020b66ca">
 
+## Encoding Systems
+
+<img width="1023" alt="Screenshot 2024-08-31 at 10 26 31 PM" src="https://github.com/user-attachments/assets/af16f98d-d6d7-4d66-a35a-554dfdc9962e">
+
 ## Unicode
 
 In Java, Unicode refers to the standard for representing characters from different writing systems in a single, uniform way. It allows for the use of a wide range of characters, including those that are not part of the ASCII character set, such as accented letters, symbols, and emojis. Unicode is used in Java through the use of the Unicode Standard, which defines the encoding of characters and provides a way to represent them in different formats. In Java, Unicode is typically used in conjunction with the String class, which represents a sequence of characters in a specific encoding.  
