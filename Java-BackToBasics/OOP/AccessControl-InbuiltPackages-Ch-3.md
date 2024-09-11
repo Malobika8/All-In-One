@@ -225,7 +225,7 @@ Here’s a basic algorithm for using access modifiers in Java:
 
 - User defined
 - In-built:
-  - lang: Java language specific stuff. (implicitly imported)
+  - lang: Java language specific stuff. (implicitly imported) (https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html)
 
     Every compilation unit implicitly imports every public type name declared in the predefined package java. lang , as if the declaration
     "import java. lang. *;" appeared at the beginning of each compilation unit immediately after any package declaration.
@@ -237,8 +237,8 @@ Here’s a basic algorithm for using access modifiers in Java:
      This helps simplify your code and reduces the amount of boilerplate imports.
     ```
     
-  - io: Input Output related items.
-  - util: Utility classes.
+  - io: Input Output related items. (https://docs.oracle.com/javase/8/docs/api/java/io/package-summary.html)
+  - util: Utility classes. (https://docs.oracle.com/javase/8/docs/api/java/util/package-summary.html)
   - applet: More on the development side.
   - awt
   - net
