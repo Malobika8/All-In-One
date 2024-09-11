@@ -10,7 +10,7 @@
 * Existing packages in Java
 * OOPs concept
 * Access Specifiers
-* "**Object**" class
+* "**Object**" class, instanceof Operator
 * Arrays(specially 2-D). Command line arguments.
 * Varargs
 * Strings, StringBuffer, StringBuilder
