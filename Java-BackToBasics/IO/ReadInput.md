@@ -23,3 +23,7 @@ There are some differences between the 2 as follows -
 <img width="1007" alt="Screenshot 2024-09-11 at 6 23 40 PM" src="https://github.com/user-attachments/assets/5a106fea-b4fa-4586-bfbb-98d8fec6f658">
 <img width="969" alt="Screenshot 2024-09-11 at 6 24 27 PM" src="https://github.com/user-attachments/assets/147faec2-db74-4793-9201-b69bfc6de62d">
 <img width="836" alt="Screenshot 2024-09-11 at 6 25 29 PM" src="https://github.com/user-attachments/assets/1dfacbee-fc31-4d80-bc93-444378866cf6">
+
+# Note
+
+In Java, when using a Scanner object (sc) to take input from the user, you need to use sc.nextLine() after sc.next() to consume the remaining newline character in the input buffer. This is because sc.next() reads the input until the next whitespace character, but doesn't consume the whitespace character itself. The sc.nextLine() call then reads the rest of the line, effectively clearing the buffer and allowing the next input operation to work correctly. Failing to do so can result in unexpected behavior, such as multiple inputs being treated as one.
