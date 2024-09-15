@@ -1,4 +1,4 @@
-# Static Binding and Dynamic Binding
+# Static(/Early) Binding and Dynamic(/Late) Binding 
 
 Connecting a method call to the method body is known as **Binding**.
 
