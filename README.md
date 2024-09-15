@@ -18,7 +18,9 @@
 * Constructor & various ways to create object of a class
 * Static keyword
 * Inner class
-* Methods: Compile & Runtime polymorphism
+* Methods: Compile & Runtime polymorphism(Dynamic Method Dispatch)
+* Pass By Value & Pass By Reference difference
+* Dynamic and Static Binding (Early/Late Binding)
 * Abstract
 * Inheritance
 * TypeCasting - Generalization & Specialization
