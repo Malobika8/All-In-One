@@ -10,6 +10,7 @@ The Java compiler applies autoboxing when a primitive value is:
 - Passed as a parameter to a method that expects an object of the corresponding wrapper class.
 - Assigned to a variable of the corresponding wrapper class.
 
+### To convert from int to Integer
 ```
 Integer.valueOf(i)
 ```
@@ -42,6 +43,7 @@ and unboxing.
 - The technique lets us use primitive types and Wrapper class objects interchangeably and we do not need to perform any typecasting
   explicitly.
 
+### To convert from Integer to int
 ```
 i.intValue()
 ```
