@@ -1,6 +1,6 @@
 # Process annotation for Class
 
-We have an "*myCat*" object that is an instance of the "*Cat*" class annotated.
+We have a "*myCat*" object that is an instance of the "*Cat*" class annotated.
 
 We can check if the Class is annotated with the *@VeryImportant* annotation.
 
