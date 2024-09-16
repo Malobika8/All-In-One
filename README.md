@@ -18,11 +18,13 @@
 * Constructor & various ways to create object of a class
 * Static keyword
 * Inner class
+* Comparable & Comparator
 * Methods: Compile & Runtime polymorphism(Dynamic Method Dispatch)
 * Pass By Value & Pass By Reference difference
 * Dynamic and Static Binding (Early/Late Binding)
 * Abstract
 * Inheritance
+* Inteface (Static & default from java 8)
 * TypeCasting - Generalization & Specialization
 * Autoboxing
 * Object Cloning
