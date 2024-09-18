@@ -1,10 +1,14 @@
 # Steps
 
 - Insert the node (n) normally
-- Start from node (n) and find the node that makes the tree unbalanced, bottom up
+- Start from node (n) and find the node that makes the tree unbalanced, bottom-up
 - Using one of the 4 rules, rotate
 
-## Note: grandchild is always in the line of where the element was added
+## Note: grandchild is always in the line where the element was added
+
+# How to rotate?
+
+<img width="1020" alt="Screenshot 2024-09-18 at 10 51 24 AM" src="https://github.com/user-attachments/assets/149dd739-4141-4700-a81c-2165cc8df068">
 
 # 4 Rules
 
