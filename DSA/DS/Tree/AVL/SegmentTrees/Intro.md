@@ -8,6 +8,10 @@ O(log n), making it a powerful tool in algorithm design and optimization.
 
 It is used while working with ranges. Segment tree nodes contain query results and segments.
 
+<img width="1018" alt="Screenshot 2024-09-20 at 6 31 31 PM" src="https://github.com/user-attachments/assets/70f25282-0f41-4643-8c3b-6a420accea38">
+<img width="1022" alt="Screenshot 2024-09-20 at 6 31 39 PM" src="https://github.com/user-attachments/assets/b0bd5aa8-dcba-4d7c-88cc-d7c3320a3af3">
+<img width="1024" alt="Screenshot 2024-09-20 at 6 31 47 PM" src="https://github.com/user-attachments/assets/4b86d436-f086-4f9b-a847-57b500ce92bd">
+
 ### Q1. Find the sum between two indices of an array.
 
 Steps:
