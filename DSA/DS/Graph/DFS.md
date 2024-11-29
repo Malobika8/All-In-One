@@ -1,6 +1,7 @@
 # DFS
 
-Recursion is used with visited array.
+- Recursion is used with a visited array.
+- Searches in a direction in-depth and then moves to another direction.
 
 <img width="1028" alt="Screenshot 2024-09-23 at 7 43 15 AM" src="https://github.com/user-attachments/assets/7186b999-d93b-4f85-9fb4-30e74f219142">
 <img width="850" alt="Screenshot 2024-09-23 at 7 45 42 AM" src="https://github.com/user-attachments/assets/bdd3de8c-8895-4d22-905a-482d0d95f11a">
