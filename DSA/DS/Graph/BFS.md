@@ -1,3 +1,4 @@
 # BFS
 
-Queue is used with visited array.
+- Queue is used with a visited array.
+- Finds equidistant nodes.
