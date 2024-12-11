@@ -1,3 +1,21 @@
+# Methods
+
+- Stream.generate()
+- Stream.of()
+- iterate()
+- forEach()
+- peek()
+- sorted()
+- limit()
+- filter()
+- takeWhile()
+- skip()
+- distinct()
+
+Stream functionality in Collections
+- List.stream()
+- Arrays.stream()
+  
 # In-built Functional Interfaces available:
 
 <img width="381" alt="Screenshot 2024-08-05 at 10 58 09 AM" src="https://github.com/user-attachments/assets/511be3b5-7eed-44bd-b8b4-b51bb4f77435">
