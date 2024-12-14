@@ -14,3 +14,7 @@ Output : -1, 10, -1, 10, -1, 20
 - Third element 11 has nothing greater or the same, so the answer is -1. 
 - Fourth element 6 has 10 as value wise closes, so the answer is 10 
 - Similarly, we get values for the fifth and sixth elements.
+
+# Nearest smaller to left
+
+# Nearest smaller to right
