@@ -369,6 +369,7 @@ From Java 9 onwards, interfaces can contain the following also:
    Multiple Inheritance is not supported through class in Java so to avoid certain challenges like Ambiguity and diamond problems.
 
 
+<img width="847" alt="Screenshot 2024-12-16 at 9 06 05 PM" src="https://github.com/user-attachments/assets/6fe3ec71-0e65-4122-8e23-f3ecb0971a22" />
 
 
 
