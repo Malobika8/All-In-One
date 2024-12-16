@@ -86,3 +86,5 @@ dog is eating...
 
 In the above example object type cannot be determined by the compiler, because the instance of Dog is also an instance of Animal.So compiler 
 doesn't know its type, only its base type.
+
+The compiler only considers the reference type to keep things generic and flexible for scenarios where the reference might point to different objects at runtime.
