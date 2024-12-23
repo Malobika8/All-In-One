@@ -6,8 +6,51 @@
      - Reach the window size
      - Move the window by increasing i and j by 1
      - Sample:
-
+      
        ```
+       public static List<Integer> firstNegativeInteger(int arr[], int k) {
+        // write code here
+        List<Integer> list = new ArrayList<>();
+        List<Integer> negative = new ArrayList<>();
+        int j = 0;
+
+        for(int i=0;j<arr.length;){
+            if(j-i+1<k){
+                if(j<arr.length && arr[j]<0){
+                    negative.add(arr[j]);
+                }
+                j++;
+            }
+            else if(j-i+1==k){
+                if(j<arr.length && arr[j]<0){
+                    negative.add(arr[j]);
+                }
+                if(negative.isEmpty()){
+                    list.add(0);
+                }
+                else if(negative.get(0) == arr[i]){
+                    list.add(arr[i]);
+                    negative.remove(0);
+                }
+                else{
+                    list.add(negative.get(0));
+                }
+                i++;
+                j++;
+            }
+        }
+
+        return list;
+       }
+     ```
+     
+## 3. Variable window size
+   - Window is of variable length
+   - Find max or min as given in the question
+   - Sample code:
+     
+     
+      ```
        while(j<s.length()){
             if(map.containsKey(s.charAt(j))){
                 if(map.get(s.charAt(j)) > 0)
@@ -44,44 +87,3 @@
             }
         }
        ```
-## 3. Variable window size
-   - Window is of variable length
-   - Find max or min as given in the question
-   - Sample code:
-     
-     ```
-       public static List<Integer> firstNegativeInteger(int arr[], int k) {
-        // write code here
-        List<Integer> list = new ArrayList<>();
-        List<Integer> negative = new ArrayList<>();
-        int j = 0;
-
-        for(int i=0;j<arr.length;){
-            if(j-i+1<k){
-                if(j<arr.length && arr[j]<0){
-                    negative.add(arr[j]);
-                }
-                j++;
-            }
-            else if(j-i+1==k){
-                if(j<arr.length && arr[j]<0){
-                    negative.add(arr[j]);
-                }
-                if(negative.isEmpty()){
-                    list.add(0);
-                }
-                else if(negative.get(0) == arr[i]){
-                    list.add(arr[i]);
-                    negative.remove(0);
-                }
-                else{
-                    list.add(negative.get(0));
-                }
-                i++;
-                j++;
-            }
-        }
-
-        return list;
-     }
-     ```
