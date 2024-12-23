@@ -10,3 +10,10 @@
 
   - https://www.youtube.com/watch?v=PfkBS9qIMRE
   - https://www.youtube.com/watch?v=bUSaenttI24
+
+# Problems with a similar pattern
+
+- Subset sum
+- Equal sum partition
+- Count of subsets sum with a given sum
+- Min subset sum difference
