@@ -1,4 +1,4 @@
-# Patterns
+# Pattern
 
 ## 1. Fixed window size:
    - Window size is given
