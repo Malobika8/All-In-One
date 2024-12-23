@@ -1,6 +1,9 @@
 # Pattern
 
-## 1. Fixed window size:
+## 1. Fixed window size: 
+
+   - Construct the initial window by incrementing the j pointer until the window size k is reached. Once the window size is reached,      
+     compute the sum, check if it’s the maximum, then slide the window by incrementing both i and j.
    - Window size is given
    - ### Algo:
      - Reach the window size
