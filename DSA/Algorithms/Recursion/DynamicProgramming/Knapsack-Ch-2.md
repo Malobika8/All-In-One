@@ -17,3 +17,4 @@
 - Equal sum partition
 - Count of subsets sum with a given sum
 - Min subset sum difference
+- Partitions with Given Difference
