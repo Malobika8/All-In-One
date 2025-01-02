@@ -18,3 +18,5 @@
 - Count of subsets sum with a given sum
 - Min subset sum difference
 - Partitions with Given Difference
+- Perfect sum: We need to consider "0" elements in the subsets as well if the target/sum is 0. We need to calculate from j=0 in that case.
+- Target sum
