@@ -20,3 +20,7 @@
 - Partitions with Given Difference
 - Perfect sum: We need to consider "0" elements in the subsets as well if the target/sum is 0. We need to calculate from j=0 in that case.
 - Target sum
+
+### Note
+
+In the recurrence relation for the dynamic programming, we use dp[i - 1][j] instead of dp[i][j] as we build the solution row by row, and each row depends on the previous row.
