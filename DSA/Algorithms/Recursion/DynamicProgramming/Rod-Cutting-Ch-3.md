@@ -11,4 +11,9 @@ continues with i (instead of i + 1).
 
 <img width="1120" alt="Screenshot 2025-01-02 at 7 11 08 PM" src="https://github.com/user-attachments/assets/e2bdc4db-5808-4397-8dcc-4ad19c9648ed" />
 
+# Related problems
+
+- Coin change (Max number of ways)
+- Coin change (Min number of coins)
+
 
