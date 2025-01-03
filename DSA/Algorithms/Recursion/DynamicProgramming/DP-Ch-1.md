@@ -6,7 +6,7 @@
 
   Simple recursion but with data stored which is used later, whenever required, instead of computing the same thing again.
 
-  Recursion should be done taking memoization into account. It should be designed in such a way that previous computations can be made use     of.
+  Recursion should be done taking memoization into account. It should be designed in such a way that previous computations can be used.
 
   #### Consider fibonacci series
 
