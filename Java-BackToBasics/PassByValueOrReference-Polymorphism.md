@@ -12,6 +12,63 @@ way to change the contents of the variable.
 By those definitions, Java is always pass-by-value. Unfortunately, when we deal with variables holding objects we are really dealing with 
 object-handles called references which are passed-by-value as well. 
 
+In Java, the method of passing arguments to methods is **pass-by-value**. However, this can be a bit confusing because **objects** and **primitive types** are passed in different ways.
+
+### 1. **Primitive Types (e.g., `int`, `char`, `float`)**:
+When you pass a **primitive type** to a method, Java passes the **value** of the variable (a copy of the value). This means that changes made to the parameter inside the method do not affect the original value.
+
+#### Example:
+```java
+public class PassByValue {
+    public static void main(String[] args) {
+        int x = 10;
+        modify(x);
+        System.out.println(x); // Outputs 10 (no change)
+    }
+
+    public static void modify(int a) {
+        a = 20; // Modifies only the local copy of 'a'
+    }
+}
+```
+- In this case, `x` is passed by value, so the method `modify` only changes the copy of `x`, not the original variable.
+
+### 2. **Objects (e.g., arrays, custom classes)**:
+When you pass an **object** to a method, you are passing the **reference** (the memory address) to that object, **but** the reference itself is passed by value. This means the method gets a copy of the reference to the object. While the object itself can be modified (since both the original and the copy of the reference point to the same object), the reference cannot be changed to point to a different object.
+
+#### Example:
+```java
+public class PassByReference {
+    public static void main(String[] args) {
+        Person p = new Person("Alice");
+        modify(p);
+        System.out.println(p.name); // Outputs "Bob" (changed inside modify)
+    }
+
+    public static void modify(Person person) {
+        person.name = "Bob"; // Changes the object that 'person' points to
+    }
+}
+
+class Person {
+    String name;
+    Person(String name) {
+        this.name = name;
+    }
+}
+```
+- In this case, the **reference to the `Person` object** is passed by value. The object inside the method is modified, so the changes are reflected outside the method, because both the original and the copied reference point to the same object.
+
+#### What Happens with Object References:
+- The reference itself is passed **by value**: you can't change the reference to point to a new object.
+- The object that the reference points to can be **modified** inside the method.
+
+### Key Takeaways:
+- **Java is always pass-by-value**. 
+- For **primitive types**, the value itself is passed.
+- For **objects**, the reference (memory address) to the object is passed by value. This allows the method to modify the object, but not the reference itself.
+
+
 ## Watch this
 https://www.youtube.com/watch?v=-5NC5_sI-vQ
 
