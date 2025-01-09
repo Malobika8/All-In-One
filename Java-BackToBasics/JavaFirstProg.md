@@ -105,3 +105,177 @@ https://github.com/Malobika8/DSA-Bootcamp-Java/tree/main/lectures/05-first-java-
 
 Please read - https://www.scaler.com/topics/java/how-java-program-works/
 https://www.geeksforgeeks.org/differences-jdk-jre-jvm/
+
+-------------------------------------------------------------------------------------------------------------------------
+
+## JDK
+
+- Provides javac(compiler - converts source code to bytecode)
+- Provides Javadoc
+- Provides debugger
+- Provides JRE
+
+## JRE
+
+- Provides an environment to run the code
+- Provides JVM
+- Provides libraries and core classes
+
+## JDK
+
+- Interpreter
+
+# Classloader
+
+Yes, the **ClassLoader** in Java is responsible for loading `.class` files into memory so they can be executed by the Java Virtual Machine (JVM). Here's a breakdown of how this process works:
+
+### 1. **What is a ClassLoader?**
+A **ClassLoader** is a part of the Java runtime that is responsible for dynamically loading Java classes into memory when they are needed. It is an integral part of the JVM, ensuring that classes are loaded into memory from sources such as:
+- **Local file systems** (e.g., `.class` files on disk)
+- **Network sources**
+- **JAR files**
+
+### 2. **How Does the ClassLoader Work?**
+The general steps involved in the **class loading process** are as follows:
+
+#### Step 1: **Find the Class File**
+When a class is referenced for the first time (either through method calls, object instantiation, or field access), the **ClassLoader** tries to locate its corresponding `.class` file. The class file is typically located based on:
+- **Classpath**: The classpath is a list of directories, JAR files, or ZIP files where the JVM looks for classes.
+
+#### Step 2: **Load the Class**
+Once the `.class` file is found, the **ClassLoader** loads it into the JVM’s memory. This process is handled by reading the binary data of the `.class` file, which contains bytecode that can be executed by the JVM.
+
+#### Step 3: **Verify the Class**
+The JVM verifies that the class's bytecode adheres to the correct format and is safe to execute. This ensures that the class doesn't contain malicious code or violate Java's security model.
+
+#### Step 4: **Linking**
+Once the class is loaded, it undergoes **linking**, which includes:
+- **Verification**: Ensure that the bytecode does not contain invalid code.
+- **Preparation**: Allocate memory for static variables and constants.
+- **Resolution**: Replace symbolic references in the class (e.g., to other classes or methods) with direct references.
+
+#### Step 5: **Initialize the Class**
+If the class contains any **static initializers** (like static blocks or static variables), the **ClassLoader** invokes them when the class is initialized. This is done only once during the lifetime of the class.
+
+#### Step 6: **Execute the Code**
+Once the class is loaded, linked, and initialized, the JVM can execute its methods, such as starting a `main` method or invoking a class's functions.
+
+### 3. **Types of Class Loaders**
+There are several types of **ClassLoaders** in Java:
+
+- **Bootstrap ClassLoader**: Loads core Java classes (like `java.lang.*`).
+- **Extension ClassLoader**: Loads classes from the Java extensions directory (`$JAVA_HOME/lib/ext`).
+- **System/Application ClassLoader**: Loads classes from the directories or JAR files specified in the classpath.
+
+In addition, you can also create custom **ClassLoaders** for loading classes from non-standard locations, like a database or network.
+
+---
+
+### Example:
+When you run a Java program, like:
+```java
+public class MyClass {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+Here’s how the **ClassLoader** works:
+1. The JVM starts by using the **Bootstrap ClassLoader** to load the core classes like `java.lang.String` and `java.lang.System`.
+2. The **System ClassLoader** (or **Application ClassLoader**) loads `MyClass` from the classpath.
+3. The JVM reads the bytecode from `MyClass.class` and loads it into memory.
+4. The class is verified, linked, and initialized.
+5. The `main` method of `MyClass` is executed.
+
+---
+
+### Summary:
+The **ClassLoader** in Java is responsible for dynamically loading classes (e.g., `.class` files) into memory. It finds, loads, verifies, links, and initializes classes before they can be used by the JVM. The class loading process ensures that Java classes are safely and efficiently loaded into memory for execution.
+
+# JVM - OS dependent
+
+The **Java Virtual Machine (JVM)** is **OS-dependent**. Here's why and how it works:
+
+### Why is the JVM OS-dependent?
+The JVM serves as an abstraction layer between the Java bytecode (which is platform-independent) and the underlying operating system. While the **Java bytecode** is platform-independent, the **JVM implementation** must interact with the underlying hardware and operating system to perform tasks like:
+
+- Memory management
+- File I/O
+- Network communication
+- Thread scheduling
+
+Each operating system (e.g., Windows, macOS, Linux) has its own architecture and system calls, so the JVM must be tailored to work with the specifics of that OS.
+
+### Key Points:
+1. **JVM is OS-dependent**:
+   - Different operating systems require different JVM implementations.
+   - For example:
+     - On Windows, you might have `java.exe` as the JVM binary.
+     - On Linux, you might have `java` as the JVM binary.
+
+2. **Java is platform-independent**:
+   - The bytecode generated by `javac` can run on any machine with a compatible JVM, regardless of the operating system.
+   - This is why Java has the "write once, run anywhere" capability.
+
+3. **Different JVM implementations**:
+   - Oracle JVM
+   - OpenJDK JVM
+   - IBM JVM
+   - These implementations may vary in performance but still adhere to the Java Virtual Machine Specification.
+
+---
+
+### Summary
+- The **JVM** is **OS-dependent** because it interacts directly with the operating system.
+- However, Java bytecode remains **platform-independent**, and any OS-specific JVM can execute it.
+
+# Leetcode and other platforms
+
+Yes, platforms like **LeetCode**, **HackerRank**, and **Codeforces** use different interpreters or virtual machines to execute code for each supported programming language. Here's how it works:
+
+---
+
+### How Platforms Like LeetCode Run Code
+
+1. **Java (JVM)**:
+   - For Java submissions, platforms use the **Java Virtual Machine (JVM)** to compile (`javac`) and run (`java`) the code.
+   - The JVM handles bytecode execution, making Java code platform-independent.
+
+2. **Python (CPython)**:
+   - For Python submissions, they typically use the **CPython interpreter**, the most common implementation of Python.
+   - The source code is compiled into Python bytecode, which is then executed by the Python Virtual Machine (PVM).
+
+3. **C/C++ (GCC or Clang)**:
+   - C/C++ code is compiled using compilers like **GCC** (GNU Compiler Collection) or **Clang**.
+   - The resulting machine code is executed directly by the underlying hardware, leading to very fast performance.
+
+4. **JavaScript (Node.js or V8)**:
+   - JavaScript submissions often use **Node.js** or the **V8 JavaScript engine** (used in Chrome) to execute the code.
+   - These engines interpret and execute JavaScript efficiently.
+
+5. **Other Languages**:
+   - Platforms provide specific compilers or interpreters for other languages, such as:
+     - **Ruby**: MRI (Matz's Ruby Interpreter)
+     - **Go**: Native Go compiler (`go run`)
+     - **Kotlin**: Kotlin's JVM or native compiler
+
+---
+
+### Why Different Interpreters and Runtimes?
+- **Language-Specific Requirements**: Each language has its own syntax, semantics, and runtime behavior.
+- **Optimized Execution**: Using the native interpreter or virtual machine ensures optimal performance and correct execution of language features.
+- **Isolation and Security**: Code is typically executed in isolated environments (e.g., Docker containers) to prevent interference between user submissions.
+
+---
+
+### Execution Workflow on Platforms:
+1. User submits code.
+2. The platform sends the code to a language-specific **interpreter, compiler, or virtual machine**.
+3. The compiled or interpreted code runs in a sandboxed environment.
+4. Outputs (e.g., results, errors, or runtime) are captured and displayed to the user.
+
+---
+
+### Summary
+Yes, platforms like LeetCode use different interpreters or runtimes depending on the programming language, such as the **JVM for Java**, **CPython for Python**, and **Node.js for JavaScript**, to ensure language-specific behavior and performance.
