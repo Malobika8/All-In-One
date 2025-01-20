@@ -1,7 +1,5 @@
 # INTRODUCTION
 
-Here’s a refined version of your text with improved flow and clarity:
-
 ---
 
 ### JDBC: A Bridge Between Java Applications and Databases
