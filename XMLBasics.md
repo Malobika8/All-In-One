@@ -99,3 +99,6 @@ The DTD above is interpreted like this:
 
 **An External DTD Declaration** - If the DTD is declared in an external file, the <!DOCTYPE> definition must contain a reference to the 
 DTD file:
+
+
+<img width="484" alt="Screenshot 2025-01-15 at 9 30 33 PM" src="https://github.com/user-attachments/assets/67a058f4-9385-4b73-ad9b-96c67b2bb511" />
