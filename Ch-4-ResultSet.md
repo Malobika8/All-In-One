@@ -2,6 +2,8 @@
 
 A **`ResultSet`** is a Java object provided by JDBC that represents the result of a SQL query executed on a database. It acts as a cursor pointing to the data retrieved from the database, allowing applications to iterate through rows and access column values.
 
+<img width="1104" alt="Screenshot 2025-01-20 at 8 17 28 PM" src="https://github.com/user-attachments/assets/c6294bbc-9203-4a7a-bfea-5c386e2f2dce" />
+
 ---
 
 ### **Key Features of `ResultSet`**
