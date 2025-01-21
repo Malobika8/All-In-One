@@ -24,7 +24,7 @@ After this, we can use any of the methods available to save, delete, update, etc
 
 # Note
 
-We can get all the hibernate XML properties from "AvailableSettings" extended by the "Environment" class present in "*org.hibernate.cfg*" package.
+We can get all the hibernate XML properties from "AvailableSettings" implemented by the "Environment" class present in "*org.hibernate.cfg*" package.
 
 <img width="1057" alt="Screenshot 2025-01-21 at 6 55 13 PM" src="https://github.com/user-attachments/assets/786f19c3-132e-4348-92c9-d3d9a80fe641" />
 <img width="1037" alt="Screenshot 2025-01-21 at 6 55 23 PM" src="https://github.com/user-attachments/assets/bf4b2a36-726f-433b-af6c-4001144fb329" />
