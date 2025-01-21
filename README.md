@@ -14,4 +14,10 @@ Post this, we can use any of the methods available for saving, deleting, updatin
 <img width="958" alt="Screenshot 2025-01-21 at 1 55 26 PM" src="https://github.com/user-attachments/assets/aa36d5b1-1658-4ccb-8d44-fac50560208b" />
 <img width="973" alt="Screenshot 2025-01-21 at 1 59 30 PM" src="https://github.com/user-attachments/assets/3e7712f7-c16d-4187-9fad-eacd1f1fd4a3" />
 
+# Common hibernate annotations 
 <img width="1019" alt="Screenshot 2025-01-21 at 5 12 53 PM" src="https://github.com/user-attachments/assets/a30e4e96-c4fb-424a-b6bd-2b304f811213" />
+
+# get vs load
+
+<img width="974" alt="Screenshot 2025-01-21 at 5 31 46 PM" src="https://github.com/user-attachments/assets/ef981b0c-17ff-4d8b-8d12-e22241b88244" />
+<img width="910" alt="Screenshot 2025-01-21 at 5 36 35 PM" src="https://github.com/user-attachments/assets/05073efd-d297-4b08-999f-38a0ece4098a" />
