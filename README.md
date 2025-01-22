@@ -1,3 +1,7 @@
+# Please read
+
+https://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#preface
+
 # Basic setup that we always require
 
 1. Create a Configuration object.
