@@ -153,3 +153,7 @@ If your repositories are in a package like `com.example.repositories`, and this 
 
 ### **Conclusion**
 The presence of `@SpringBootApplication` and `spring-boot-starter-data-jpa` enables JPA repository support without requiring `@EnableJpaRepositories`. This is part of Spring Boot's philosophy of convention over configuration, reducing boilerplate code and simplifying application setup.
+
+# Checkout the project
+
+https://github.com/Malobika8/SpringDataJPAAdmissionApp
