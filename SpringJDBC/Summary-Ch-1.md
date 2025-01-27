@@ -158,3 +158,4 @@ jdbcTemplate.batchUpdate("INSERT INTO users (name, email) VALUES (?, ?)", batchA
 ---
 
 Spring JDBC is a powerful tool when you need precision and performance while interacting with databases but don't want the complexity of an ORM. It strikes a balance between ease of use and control, making it an excellent choice for many applications.
+
