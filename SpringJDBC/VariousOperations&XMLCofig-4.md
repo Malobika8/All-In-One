@@ -1,3 +1,5 @@
+# XML Config
+
 <img width="1122" alt="Screenshot 2025-01-27 at 1 47 24 PM" src="https://github.com/user-attachments/assets/4f522cca-9858-42fe-bada-6942364a5628" />
 
 # Insert, Update, Delete
@@ -20,10 +22,10 @@
 
   <img width="907" alt="Screenshot 2025-01-27 at 6 08 03 PM" src="https://github.com/user-attachments/assets/e46080e1-5680-4351-acb0-dd4e859059b0" />
 
-  ### To get single object
+  ### To get a single object
 
   <img width="884" alt="Screenshot 2025-01-27 at 6 12 33 PM" src="https://github.com/user-attachments/assets/45d618ec-c2b2-4786-b4e9-d70c87f5ec40" />
 
-  ### To get a list of objecta
+  ### To get a list of objects
 
   <img width="877" alt="Screenshot 2025-01-27 at 6 20 07 PM" src="https://github.com/user-attachments/assets/0453dbc8-b29f-491c-b74a-d613718885a7" />
