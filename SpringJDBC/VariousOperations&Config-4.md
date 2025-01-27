@@ -1,6 +1,14 @@
-# XML Config
+# Config
 
-<img width="1122" alt="Screenshot 2025-01-27 at 1 47 24 PM" src="https://github.com/user-attachments/assets/4f522cca-9858-42fe-bada-6942364a5628" />
+  * XML Config
+
+  <img width="1122" alt="Screenshot 2025-01-27 at 1 47 24 PM" src="https://github.com/user-attachments/assets/4f522cca-9858-42fe-bada-6942364a5628" />
+
+OR
+
+  * Java Config
+
+  <img width="931" alt="Screenshot 2025-01-27 at 6 39 38 PM" src="https://github.com/user-attachments/assets/a95d3fd1-3eed-49f4-89d9-91db3c29fdf6" />
 
 # Insert, Update, Delete
 
