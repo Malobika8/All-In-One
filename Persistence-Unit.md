@@ -78,4 +78,3 @@ In this example:
   
 By including multiple `<class>` tags, you can map several entity classes under the same persistence unit, and JPA will manage them together in a single context.
 
-Let me know if you need further clarification or examples!
