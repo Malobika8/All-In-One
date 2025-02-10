@@ -113,4 +113,3 @@ In this case, `emp1` and `emp2` will refer to the same object in memory.
 
 ---
 
-If you're still unclear on some parts, feel free to ask for more details or specific examples!
