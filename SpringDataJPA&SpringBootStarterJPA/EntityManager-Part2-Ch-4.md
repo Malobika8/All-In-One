@@ -1,10 +1,10 @@
-![Screenshot 2024-06-24 at 10 46 37 PM](https://github.com/Malobika8/All-In-One/assets/111234135/bbc437a0-f2d5-448f-acb7-6188cff78199)## It is not required to create EntityManager on our own. 
+## It is not required to create EntityManager on our own. 
 
-##### Why so?
+### Why so?
 
-This is because with our current setup/approach, we cannot Autowire EntityManager.
+This is because, with our current setup/approach, we cannot Autowire EntityManager.
 
-(It is possible but on special cases. In such cases, we are required to use *SpringDataJpa*).
+(It is possible but in special cases. In such cases, we are required to use *SpringDataJpa*).
 
 But then if we don't, how will it create the Bean?
 
@@ -14,7 +14,7 @@ But then if we don't, how will it create the Bean?
     A persistence context is a set of entity instances in which for any persistent entity identity, there is a unique entity instance. 
     Within the persistence context, the entity instances and their lifecycle are managed.
 
-    Persistence Context is a place which contains different Entities. It takes the responsibility of persisting entities onto the Database.
+    Persistence Context is a place that contains different Entities. It takes responsibility for persisting entities in the database.
    
 <img width="1005" alt="Screenshot 2024-06-25 at 8 57 05 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/d53af30e-d750-4608-a299-9600c4ae0a94">
 
@@ -24,12 +24,12 @@ Let's try to run the Application now.
    
 <img width="975" alt="Screenshot 2024-06-25 at 8 58 27 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/51a305ff-73e8-4f38-8559-8c16df89af9b">
 
-Currently the PersistenceUnit Name is set to "default. Let's first change the Persistence Unit name.
+Currently, the PersistenceUnit Name is set to "default. Let's first change the Persistence Unit name.
 
 <img width="961" alt="Screenshot 2024-06-25 at 9 00 59 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/8b1d4c23-a18d-4f4e-9ff4-d32ef14e40d8">
 <img width="927" alt="Screenshot 2024-06-25 at 9 02 24 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/47c00a76-a8b9-48c3-9a20-e648fd48380b">
 
-Run the application and notice unit name in the error.
+Run the application and notice the unit name in the error.
 
 <img width="539" alt="Screenshot 2024-06-25 at 9 29 36 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/5dcfce7d-5f7f-4f09-a4a0-366b416c2aee">
 
@@ -47,7 +47,7 @@ This is because whenever we use @PersistenceContext, PersistenceContextType is s
 <img width="844" alt="Screenshot 2024-06-25 at 10 22 51 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/1335f4ae-b76f-4a5e-918b-5b75d7962713">
 
 This means if we use PersistenceContext or EntityManager, by default it uses PersistenceContextType.TRANSACTION which is why we need to 
-activate the TransactionManager. So whenever we do "persist", the transaction begins from method statement 1 and commit happens after the last statement.
+activate the TransactionManager. So whenever we do "persist", the transaction begins from method statement 1 and the commit happens after the last statement.
 
 <img width="829" alt="Screenshot 2024-06-25 at 10 29 06 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/3dcd11db-6766-458b-a689-5be018f6687b">
 
@@ -57,20 +57,20 @@ Let's try to run the Application.
 
 #### Error
 
-Just by adding the annotation, the TransactionManager won't be setup automatically for us.
+Just by adding the annotation, the TransactionManager won't be set up automatically for us.
 
 **We need to configure TransactionManager.**
 
 ----------------------
 *TransactionManager is a software component that manages transactions in a database. It ensures that multiple database operations, known      as transactions, are executed as a single, all-or-nothing unit of work. This means that if one operation within the transaction fails,       the entire transaction is rolled back, and all previous changes are reverted. TransactionManagers are commonly used in distributed           systems, financial applications, and other scenarios where data consistency and reliability are critical. They provide features such as      atomicity, consistency, isolation, and durability (ACID) to ensure data integrity and maintain business logic.*
 
-*TransactionManager provides Transaction management facility to our application.*
+*TransactionManager provides a Transaction management facility for our application.*
 
 ----------------------
 
-TransactionManager is the Interface. We need to use an appropriate implementation for the same.
+TransactionManager is the Interface. We need to use an appropriate implementation for this.
 
-There are multiple implemenatations available.
+There are multiple implementations available.
 
 <img width="957" alt="Screenshot 2024-06-24 at 10 37 14 PM" src="https://github.com/Malobika8/All-In-One/assets/111234135/a5acd542-9acc-441c-aba6-77a0ced606e8">
 
