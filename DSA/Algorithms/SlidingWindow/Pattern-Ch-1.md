@@ -3,7 +3,7 @@
 ## 1. Fixed window size: 
 
    - Construct the initial window by incrementing the j pointer until the window size k is reached. Once the window size is reached,      
-     compute the sum, check if it’s the maximum, then slide the window by incrementing both i and j.
+     compute the sum, check if it’s the maximum, and then slide the window by incrementing both i and j.
    - Window size is given
    - ### Algo:
      - Reach the window size
@@ -11,40 +11,36 @@
      - Sample:
       
        ```
-       public static List<Integer> firstNegativeInteger(int arr[], int k) {
-        // write code here
-        List<Integer> list = new ArrayList<>();
-        List<Integer> negative = new ArrayList<>();
-        int j = 0;
-
-        for(int i=0;j<arr.length;){
-            if(j-i+1<k){
-                if(j<arr.length && arr[j]<0){
-                    negative.add(arr[j]);
-                }
+       public static List<Integer> FirstNegativeInteger(int arr[], int k) {
+        List<Integer> list = new LinkedList<>();
+        List<Integer> negative = new LinkedList<>();
+        int i=0;
+        int j=0;
+        
+        while(j<arr.length){
+            if(arr[j]<0){
+                negative.add(arr[j]);
+            }
+            if(j-i+1 < k){
                 j++;
             }
-            else if(j-i+1==k){
-                if(j<arr.length && arr[j]<0){
-                    negative.add(arr[j]);
-                }
+            else if(j-i+1 == k){
                 if(negative.isEmpty()){
                     list.add(0);
-                }
-                else if(negative.get(0) == arr[i]){
-                    list.add(arr[i]);
-                    negative.remove(0);
                 }
                 else{
                     list.add(negative.get(0));
                 }
+                if(!negative.isEmpty() && arr[i] == negative.get(0)){
+                    negative.remove(0);
+                }
                 i++;
                 j++;
             }
-        }
-
-        return list;
-       }
+         }
+        
+         return list;
+         }
      ```
      
 ## 3. Variable window size
