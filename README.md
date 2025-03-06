@@ -48,4 +48,3 @@ Here’s what it means:
 - You avoid writing repetitive transaction-related code.
 - It's easier to manage and maintain transactions across your application. 
 
-Would you like a deeper dive into how to configure it?
