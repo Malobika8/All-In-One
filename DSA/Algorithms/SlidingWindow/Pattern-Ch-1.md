@@ -8,6 +8,22 @@
    - ### Algo:
      - Reach the window size
      - Move the window by increasing i and j by 1
+     - Pattern
+
+       ```
+         while(j<arr.length){
+             calculations;
+
+             if(j-i+1 < k){
+                j++;
+             }
+             else if(j-i+1 == k){
+                ans
+
+                slide (i++, j++)
+             }
+          }
+       ```
      - Sample:
       
        ```
