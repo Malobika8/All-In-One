@@ -12,3 +12,75 @@ Inside the container has a special file called deployment descriptor web.xml whe
 Servlets are normal java classes which extends HttpServlet to utilize servlet features.
 
 We can use annotations as well instead of configuring in web.xml. Mapping can be done using annotations.
+
+## Servlet Context
+
+### 🌐 **What is `ServletContext`?**
+
+`ServletContext` is a special object provided by the **Servlet API** that represents the entire web application. It acts as a **global storage** and allows different parts of your app (like servlets, JSPs, filters, and listeners) to share information.
+
+Think of it like a **shared notepad** for your whole web app — any servlet or JSP can write to it, and everyone else can read from it.
+
+---
+
+### 📌 **What Can You Do with `ServletContext`?**
+
+1. **Store Global Data:**  
+   You can store objects that all servlets and JSPs can access throughout the app's lifecycle.
+
+```java
+// Store data
+ServletContext context = request.getServletContext();
+context.setAttribute("appName", "SaveNotesApp");
+
+// Retrieve data
+String appName = (String) context.getAttribute("appName");
+```
+
+2. **Access App-Level Configuration:**  
+   You can load global config parameters from `web.xml`.
+
+```xml
+<context-param>
+    <param-name>appVersion</param-name>
+    <param-value>1.0</param-value>
+</context-param>
+```
+
+Access it in your code:
+
+```java
+String appVersion = context.getInitParameter("appVersion");
+```
+
+3. **Get the App’s Path and Resources:**  
+   - Get the **context path** (the app’s base URL):  
+
+```java
+String contextPath = context.getContextPath();  // "/SaveNotesApp"
+```
+
+   - Access files in `/WEB-INF/`:
+
+```java
+InputStream is = context.getResourceAsStream("/WEB-INF/config.properties");
+```
+
+4. **Logging:**  
+   No need to set up a logger — `ServletContext` has a built-in one:
+
+```java
+context.log("User logged in: " + userId);
+```
+
+---
+
+### ⚙️ **When to Use `ServletContext`?**
+
+- ✅ When you need **global variables** accessible to all servlets and JSPs.  
+- ✅ When you want to **share configuration values** across the app.  
+- ✅ For **cross-servlet communication**.  
+
+🚫 **Avoid it** if:
+- You only need data for a single user/session (use `HttpSession` instead).
+- You’re using Spring — Spring’s `ApplicationContext` is a much better option for dependency injection and app-level beans.
