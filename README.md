@@ -117,3 +117,7 @@ public class JDBCExample {
 - Database vendors provide **JDBC drivers** that implement these specifications with database-specific logic.
 - The **driver selected by `DriverManager`** based on the URL handles all the actual database communication, including connection establishment, query execution, and result retrieval.
 - You, as the developer, work with the JDBC interfaces, while the driver takes care of the implementation details.
+
+## Notes
+
+*By default, JDBC operates in auto-commit mode, meaning each SQL statement is executed and committed immediately. However, if you need to control transactions manually, you can disable auto-commit and manage transactions explicitly using commit() and rollback().*
