@@ -62,43 +62,67 @@
 ## 3. Variable window size
    - Window is of variable length
    - Find max or min as given in the question
+   - Pattern
+
+       ```
+         while(j<arr.length){
+             calculations;
+
+             if(count < k){
+                j++;
+             }
+             else if(count == k){
+                find max/min; //whatever is given
+                j++;
+             }
+             else{
+                calculations;
+                slide;
+             }
+          }
+       ```
+       
    - Sample code:
      
      
       ```
-       while(j<s.length()){
+       public int longestkSubstr(String s, int k) {
+        Map<Character,Integer> map = new HashMap<>();
+        int i=0;
+        int j=0;
+        int count=0;
+        int max=-1;
+        
+        while(j<s.length()){
             if(map.containsKey(s.charAt(j))){
-                if(map.get(s.charAt(j)) > 0)
-                    count--;
-                map.put(s.charAt(j), map.get(s.charAt(j))-1);
+                map.put(s.charAt(j), map.get(s.charAt(j))+1);
             }
-       
-            if(count > 0){
+            else{
+                map.put(s.charAt(j), 1);
+                count++;
+            }
+            
+            if(count < k){
                 j++;
             }
-            else if(count == 0){
-                if(min > j-i+1){
-                    min = j-i+1;
-                    minString = s.substring(i,j+1);
-                }
-                while(count<=0){
-                    if(map.containsKey(s.charAt(i))){
-                        map.put(s.charAt(i), map.get(s.charAt(i))+1);
-                        if(map.get(s.charAt(i)) > 0)
-                            count++;
-                    }
-                    if(min > j-i+1){
-                        min = j-i+1;
-                        minString = s.substring(i,j+1);
+            else if(count == k){
+                max = Math.max(max, j-i+1);
+                j++;
+            }
+            else{
+                while(count>k){
+                    map.put(s.charAt(i), map.get(s.charAt(i))-1);
+                    if(map.get(s.charAt(i))==0){
+                        map.remove(s.charAt(i));
+                        count--;
                     }
                     i++;
                 }
-
-                if(i>j)
-                    break;
-                while(!map.containsKey(s.charAt(i)))
-                    i++;
                 j++;
             }
         }
-       ```
+        
+        return max;
+    }
+    
+   ```
