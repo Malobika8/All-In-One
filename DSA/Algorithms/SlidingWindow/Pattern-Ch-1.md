@@ -84,7 +84,6 @@
        
    - Sample code:
      
-     
       ```
        public int longestkSubstr(String s, int k) {
         Map<Character,Integer> map = new HashMap<>();
@@ -121,8 +120,7 @@
                 j++;
             }
         }
-        
         return max;
-    }
+       }
     
-   ```
+      ```
