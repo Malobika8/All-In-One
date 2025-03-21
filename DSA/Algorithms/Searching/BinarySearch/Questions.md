@@ -9,7 +9,7 @@
 7. [Position of an Element in Infinite Sorted Array](#question5)
 8. [Peak Index in a Mountain Array (bitonic array)](#question6)
 9. [Find in Mountain Array](#question7)
-10. [Search in Rotated Sorted Array](#question8)
+10. [Search in Rotated Sorted Array](#question8) - Find pivot
 11. [What if the array contains duplicate values?](#question9)
 12. [Rotation Count](#question10)
 13. [Split Array Largest Sum](#question11)
