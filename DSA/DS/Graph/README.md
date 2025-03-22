@@ -9,3 +9,4 @@
 7. Detect cycle in an undirected graph: Use parent concept. If the next vertex is visited and the parent of current vertex is not the same as the next vertex, there's a cycle.
 8. Detect cycle in a directed graph: Simple DFS with two boolean arrays - visited & dfsvisited. If a vertex is visited and dfsvisited, there's a cycle present.
 9. Detect nodes in a cycle: Have a new boolean array and track nodes if present in a cycle. (Practise eventual safe nodes (leetcode))
+10. Shortest path in undirected graph: Use bfs and take help of distance stored for previous nodes.
