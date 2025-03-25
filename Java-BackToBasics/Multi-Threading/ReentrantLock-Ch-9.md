@@ -104,6 +104,98 @@ try {
 }
 ```
 
+Let’s create an example to demonstrate **`lockInterruptibly()`** in action. 🚀
+
+### 🌟 **What does `lockInterruptibly()` do?**
+
+- `lockInterruptibly()` allows a thread to **respond to interrupts** while waiting for the lock.
+- If another thread interrupts the waiting thread, it **exits immediately** with an `InterruptedException`.
+
+Without `lockInterruptibly()`, a thread waiting for `lock()` will **block indefinitely** until the lock is released, ignoring interruptions.
+
+---
+
+### ⚙️ **Example: Simulating Interruptible Locking**
+
+In this example:
+- `Worker` threads try to perform a task by acquiring a lock.
+- One thread is **interrupted** while waiting for the lock, causing it to stop gracefully.
+
+```java
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class InterruptibleLockExample {
+
+    private static final Lock lock = new ReentrantLock();
+
+    static class Worker implements Runnable {
+        private final String name;
+
+        Worker(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public void run() {
+            try {
+                System.out.println(name + " is trying to acquire the lock...");
+                lock.lockInterruptibly();  // Allows interruption while waiting for the lock
+                try {
+                    System.out.println(name + " acquired the lock. Working...");
+                    Thread.sleep(5000);  // Simulate long-running task
+                } finally {
+                    lock.unlock();
+                    System.out.println(name + " released the lock.");
+                }
+            } catch (InterruptedException e) {
+                System.out.println(name + " was interrupted while waiting for the lock.");
+            }
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        Thread t1 = new Thread(new Worker("Thread-1"));
+        Thread t2 = new Thread(new Worker("Thread-2"));
+
+        t1.start();
+        Thread.sleep(100);  // Let t1 acquire the lock first
+        t2.start();
+
+        // Interrupt t2 after 1 second (it will be waiting for the lock)
+        Thread.sleep(1000);
+        t2.interrupt();
+    }
+}
+```
+
+---
+
+### 📝 **Explanation:**
+
+1. `Thread-1` acquires the lock and holds it for **5 seconds**.
+2. `Thread-2` tries to acquire the lock but gets **stuck waiting**.
+3. After **1 second**, `Thread-2` is interrupted while waiting.
+4. Since `Thread-2` used `lockInterruptibly()`, it **exits immediately** when interrupted, printing a message.
+
+---
+
+### 📌 **Expected Output:**
+
+```
+Thread-1 is trying to acquire the lock...
+Thread-1 acquired the lock. Working...
+Thread-2 is trying to acquire the lock...
+Thread-2 was interrupted while waiting for the lock.
+Thread-1 released the lock.
+```
+
+---
+
+### 🌟 **Why is this special?**
+
+If you used `lock()` instead of `lockInterruptibly()`, `Thread-2` would keep waiting, ignoring the interruption!
+
 ---
 
 ## ⚖️ **3. Fairness (First Come, First Served)**
