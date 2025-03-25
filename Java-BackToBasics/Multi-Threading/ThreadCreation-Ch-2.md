@@ -38,7 +38,7 @@ Creating threads is achieved in one of two ways:
      <img width="861" alt="Screenshot 2024-07-24 at 12 25 31 PM" src="https://github.com/user-attachments/assets/79407683-bbca-456c-8b3b-b0e624532d31">
      <img width="876" alt="Screenshot 2024-07-24 at 12 35 52 PM" src="https://github.com/user-attachments/assets/aaddc570-3c0e-414a-85ba-ca08c324d3c5">
 
-2. Implementing the "java.lang.Runnable" Interface:
+3. Implementing the "java.lang.Runnable" Interface:
 
    Runnable interface is a Functional interface as it has only 1 abstract method.
 
@@ -94,6 +94,52 @@ So, it is always better to implement "Runnable".
 <img width="1145" alt="Screenshot 2024-07-24 at 7 09 06 PM" src="https://github.com/user-attachments/assets/1e8e9c5a-99c8-451c-bf1f-9b6517e4ed6c">
 <img width="1063" alt="Screenshot 2024-07-24 at 7 10 20 PM" src="https://github.com/user-attachments/assets/1db18677-9008-4acf-a60a-d98f9fed8630">
 
+When you create a new thread like this:
+
+```java
+Thread t1 = new Thread(() -> System.out.println("Thread-1 is running"));
+```
+
+You’ve **created a thread object** (`t1`), but you haven’t started the new thread yet! It’s just an object representing the thread. The thread itself doesn’t exist until you call `t1.start()`.
+
+---
+
+### 🏗️ **What Happens When You Call `run()` Directly?**
+
+```java
+t1.run();  // WRONG! Runs in the main thread
+```
+
+- `run()` is just a **normal method call**.  
+- It executes in the **current thread** (usually the `main` thread) — no new thread is created.  
+- The `main` thread runs the code inside `run()` just like any other method.
+
+✅ **Correct Way:** Call `start()`:
+
+```java
+t1.start();  // CORRECT! Creates a new thread and runs the code in parallel
+```
+
+- `start()` tells the JVM to create a new thread and run `run()` in that new thread.  
+- The `main` thread doesn’t wait — it keeps running its own code concurrently.  
+
+---
+
+### 🏅 **Analogy:**
+
+Imagine you’re the **main thread** and you want someone else to do a task:
+
+1. Calling `run()` is like **doing the task yourself** — no one else helps you.
+2. Calling `start()` is like **hiring an assistant**. You assign the task, and they work independently while you continue with your own tasks.
+
+---
+
+### 🧩 **Why Does Java Work This Way?**
+
+This design gives you flexibility:
+
+- Sometimes, you don’t need concurrency and might want to reuse the `Runnable` logic in the current thread.
+- If `start()` automatically called `run()` in the background, you’d lose control over when the new thread actually starts.
 
 
      
