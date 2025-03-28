@@ -17,7 +17,7 @@
 
 - Map.of
 - Map.ofEntries
-- Collections.getSingletonMap
+- Collections.singletonMap
 - SimpleEntry
 - AbstractMap.SimpleImmutableEntry
   
@@ -47,6 +47,4 @@
 <img width="936" alt="Screenshot 2025-03-28 at 11 53 54 AM" src="https://github.com/user-attachments/assets/7428f013-ec0c-4e4b-abf2-754198cb6fe8" />
 <img width="936" alt="Screenshot 2025-03-28 at 11 55 31 AM" src="https://github.com/user-attachments/assets/c2a33127-7973-4953-9f98-3b3537dfc3f2" />
 
-## Common methods
 
-* 
