@@ -190,3 +190,90 @@ But using `HashSet` instead of `HashMap` provides:
 ✔ It **ensures uniqueness** because elements are stored as **keys in `HashMap`**, and **keys in a `HashMap` must be unique**.  
 ✔ It is **easier to use** than directly managing a `HashMap` for set operations.  
 
+### **🔍 Constructors of `HashSet` in Java**  
+
+`HashSet` provides **four constructors**, allowing flexibility in how it initializes. Let's go through them one by one.  
+
+---
+
+### **1️⃣ `HashSet()` (Default Constructor)**
+🔹 Creates an empty `HashSet` with an **initial capacity of 16** and a **load factor of 0.75**.  
+🔹 Uses the default settings of an underlying `HashMap`.  
+
+**Example:**
+```java
+HashSet<String> set = new HashSet<>();
+set.add("Apple");
+set.add("Banana");
+System.out.println(set); // Output: [Apple, Banana]
+```
+
+---
+
+### **2️⃣ `HashSet(int initialCapacity)`**
+🔹 Creates an empty `HashSet` with a **specified initial capacity**.  
+🔹 Helps optimize memory if the number of elements is known in advance.  
+
+**Example:**
+```java
+HashSet<Integer> set = new HashSet<>(50); // Initial capacity is 50
+set.add(10);
+set.add(20);
+System.out.println(set);
+```
+🔹 **Why use this?**  
+   - Reduces unnecessary resizing if you expect to store a large number of elements.  
+
+---
+
+### **3️⃣ `HashSet(int initialCapacity, float loadFactor)`**
+🔹 Creates a `HashSet` with a **specified initial capacity** and **load factor**.  
+🔹 The **load factor** determines when resizing occurs:  
+   - If load factor = `0.75`, resizing happens when **75%** of the capacity is filled.  
+
+**Example:**
+```java
+HashSet<String> set = new HashSet<>(20, 0.5f); // Initial capacity 20, load factor 0.5
+set.add("Mango");
+set.add("Orange");
+System.out.println(set);
+```
+🔹 **Why use this?**  
+   - **Lower load factor (e.g., 0.5)** → More space, fewer collisions (better performance, but higher memory usage).  
+   - **Higher load factor (e.g., 0.9)** → Saves memory but may cause collisions (slower performance).  
+
+---
+
+### **4️⃣ `HashSet(Collection<? extends E> c)`**
+🔹 Creates a `HashSet` from an **existing collection** (like `ArrayList`, `LinkedList`, or another `Set`).  
+🔹 Automatically removes **duplicates** while copying.  
+
+**Example:**
+```java
+List<Integer> list = Arrays.asList(1, 2, 3, 4, 4, 5); // List with duplicate 4
+HashSet<Integer> set = new HashSet<>(list);
+
+System.out.println(set); // Output: [1, 2, 3, 4, 5] (No duplicates)
+```
+🔹 **Why use this?**  
+   - Quickly convert a list to a set while **removing duplicates**.  
+   - Useful for **filtering unique elements** from a collection.  
+
+---
+
+## 🎯 **Summary Table**
+| Constructor | Description |
+|------------|------------|
+| `HashSet()` | Creates a `HashSet` with default capacity `16` and load factor `0.75`. |
+| `HashSet(int initialCapacity)` | Creates a `HashSet` with a specified initial capacity. |
+| `HashSet(int initialCapacity, float loadFactor)` | Creates a `HashSet` with a specified capacity and load factor. |
+| `HashSet(Collection<? extends E> c)` | Creates a `HashSet` from an existing collection, removing duplicates. |
+
+---
+
+### **🚀 When to Use Which Constructor?**
+- ✅ **Default constructor (`HashSet()`)** – Best for general-purpose use.  
+- ✅ **Capacity-based (`HashSet(int capacity)`)** – If you know the number of elements in advance.  
+- ✅ **Load factor (`HashSet(int capacity, float loadFactor)`)** – If performance tuning is required.  
+- ✅ **Collection-based (`HashSet(Collection c)`)** – If converting an existing list or set to a `HashSet`.  
+
