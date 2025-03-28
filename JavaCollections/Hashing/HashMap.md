@@ -15,10 +15,17 @@
 
 *Immutable map*
 
+- Map.of
+- Map.ofEntries
+- Collections.getSingletonMap
+- SimpleEntry
+- AbstractMap.SimpleImmutableEntry
+  
 <img width="946" alt="Screenshot 2025-03-28 at 12 54 24 PM" src="https://github.com/user-attachments/assets/1d2a79a6-73de-47d1-a827-978cca5a8842" />
 <img width="943" alt="Screenshot 2025-03-28 at 12 56 02 PM" src="https://github.com/user-attachments/assets/82321589-f0a5-4369-9edd-3d057481b051" />
 <img width="765" alt="Screenshot 2025-03-28 at 12 58 07 PM" src="https://github.com/user-attachments/assets/51e2d02a-3df3-42e9-8f6d-1ab8a81a0c87" />
 <img width="942" alt="Screenshot 2025-03-28 at 12 59 30 PM" src="https://github.com/user-attachments/assets/4e43e818-71b2-48c1-b753-b1b02aa2c5eb" />
+<img width="949" alt="Screenshot 2025-03-28 at 1 07 24 PM" src="https://github.com/user-attachments/assets/05e11842-6406-4b64-8d15-6cacbd0ef1cf" />
 
 ## How to iterate?
 
