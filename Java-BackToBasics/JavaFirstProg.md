@@ -121,13 +121,13 @@ https://www.geeksforgeeks.org/differences-jdk-jre-jvm/
 - Provides JVM
 - Provides libraries and core classes
 
-## JDK
+## JVM
 
 - Interpreter
 
 # Classloader
 
-Yes, the **ClassLoader** in Java is responsible for loading `.class` files into memory so they can be executed by the Java Virtual Machine (JVM). Here's a breakdown of how this process works:
+The **ClassLoader** in Java is responsible for loading `.class` files into memory so they can be executed by the Java Virtual Machine (JVM). Here's a breakdown of how this process works:
 
 ### 1. **What is a ClassLoader?**
 A **ClassLoader** is a part of the Java runtime that is responsible for dynamically loading Java classes into memory when they are needed. It is an integral part of the JVM, ensuring that classes are loaded into memory from sources such as:
