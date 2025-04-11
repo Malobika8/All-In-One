@@ -232,7 +232,7 @@ Each operating system (e.g., Windows, macOS, Linux) has its own architecture and
 
 # Leetcode and other platforms
 
-Yes, platforms like **LeetCode**, **HackerRank**, and **Codeforces** use different interpreters or virtual machines to execute code for each supported programming language. Here's how it works:
+Platforms like **LeetCode**, **HackerRank**, and **Codeforces** use different interpreters or virtual machines to execute code for each supported programming language. Here's how it works:
 
 ---
 
@@ -278,4 +278,4 @@ Yes, platforms like **LeetCode**, **HackerRank**, and **Codeforces** use differe
 ---
 
 ### Summary
-Yes, platforms like LeetCode use different interpreters or runtimes depending on the programming language, such as the **JVM for Java**, **CPython for Python**, and **Node.js for JavaScript**, to ensure language-specific behavior and performance.
+Platforms like LeetCode use different interpreters or runtimes depending on the programming language, such as the **JVM for Java**, **CPython for Python**, and **Node.js for JavaScript**, to ensure language-specific behavior and performance.
