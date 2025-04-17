@@ -260,8 +260,4 @@ System.out.println("Hold count: " + lock.getHoldCount());
 - It supports **try-locking**, **timeouts**, **interruptibility**, and **fairness**.
 - You need to **manually lock and unlock**, so forgetting `unlock()` leads to **deadlocks**.
 
-Would you like me to dive into:
-- 🐞 **Deadlocks** and how to avoid them?
-- 🏎️ **Performance comparison** between `synchronized` and `ReentrantLock`?
-- 🏗️ A **real-world app** using ReentrantLock to avoid race conditions?
 
