@@ -97,9 +97,9 @@ public class ExplicitLockExample {
 ```
 
 2. **Features of Explicit Locks:**
-   - `tryLock()` — Try to acquire the lock without blocking.
+   - `tryLock()` — Try to acquire the lock without blocking. tryLock() attempts to acquire the lock without blocking. It’s like asking if the lock is available, and if it is, you take it. If it’s not available, you don’t wait — you just move on.
    - `tryLock(long timeout, TimeUnit unit)` — Wait for a certain amount of time to acquire the lock.
-   - `lockInterruptibly()` — Allows the thread to be interrupted while waiting for the lock.
+   - `lockInterruptibly()` — Allows the thread to be interrupted while waiting for the lock. If the waiting thread is interrupted, it no longer waits.
    - Supports **fairness** — Ensures the longest waiting thread gets the lock next if fairness is set to `true`.
 
 ```java
