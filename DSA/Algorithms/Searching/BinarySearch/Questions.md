@@ -24,7 +24,7 @@ Eg. sq root of a number
 
 <img width="1021" alt="Screenshot 2024-06-17 at 11 53 32 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/2987da0b-1008-4d5c-9ba6-4d7e21d062a8">
 
-## Q1. Ceiling of a given number (Find the smallest number that is greater than or equal to target) <a name="question1"></a>
+## Q1. Search insert position <a name="question1"></a>
 
 https://leetcode.com/problems/search-insert-position/
 
@@ -41,7 +41,7 @@ https://leetcode.com/problems/search-insert-position/
 
 Same as above. Consider "end" this time.
 
-## Q3. Find smallest letter greater than the target <a name="question3"></a>
+## Q3. Ceiling of a given number (Find the smallest number that is greater than or equal to target) <a name="question3"></a>
 
 https://leetcode.com/problems/find-smallest-letter-greater-than-target/description/
 
@@ -56,10 +56,10 @@ Or we can also just return "letters[start % letters.length]".
 
 https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 
-We can solve this using linear search as well in O(n) time. However, better would be to do using binary search as time would then reduce to 
+We can solve this using linear search in O(n) time as well. However, it would be better to do it using binary search, as time would then be reduced to 
 O(log n).
 
-Run binary search twice - to find first occurrence of target and last occurrence of target
+Run binary search twice - to find first occurrence of the target and last occurrence of the target
 
 <img width="1018" alt="Screenshot 2024-06-16 at 1 30 04 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/f45e6de3-a2f2-4d61-8dbd-c46c16002333">
 
@@ -72,7 +72,7 @@ https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-number
 
 <img width="669" alt="Screenshot 2024-06-16 at 1 33 01 AM" src="https://github.com/Malobika8/All-In-One/assets/111234135/cb8909e0-182f-4af8-b851-959b35de2404">
 
-- Find bound first
+- Find the bound first
 - Check for bound till the target is greater than end index of the array
 - Run binary search
 
