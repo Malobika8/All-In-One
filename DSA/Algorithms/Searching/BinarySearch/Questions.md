@@ -17,6 +17,7 @@
 Bonus Questions (Easy but tricky)
 - Minimum difference element in a sorted array (Aditya Verma)
 - Search in Row wise And Column wise Sorted Array (Aditya Verma)
+- Allocate Minimum Number Of Pages
 
 ## How do we know when to apply binary search? <a name="general"></a>
 If in the prolem statement, we are given a sorted array, we can try binary search first. Other problem statements include something like we
