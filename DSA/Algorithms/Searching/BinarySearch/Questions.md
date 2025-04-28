@@ -14,6 +14,10 @@
 12. [Rotation Count](#question10)
 13. [Split Array Largest Sum](#question11)
 
+Bonus Questions (Easy but tricky)
+- Minimum difference element in a sorted array (Aditya Verma)
+- Search in Row wise And Column wise Sorted Array (Aditya Verma)
+
 ## How do we know when to apply binary search? <a name="general"></a>
 If in the prolem statement, we are given a sorted array, we can try binary search first. Other problem statements include something like we
 are required to get one particular answer & we are following a continuous sequence to get that answer.
