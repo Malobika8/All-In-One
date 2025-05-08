@@ -365,3 +365,10 @@ The summary is depicted via visual aid below as follows:
 
 <img width="775" alt="Screenshot 2024-07-17 at 7 08 29 PM" src="https://github.com/user-attachments/assets/c5eb30a4-e273-4612-8974-8eb6f602d405">
 
+# 🔥 Golden Rule to Remember:
+
+| ✅ **Checked Exceptions**                           | ❌ **Unchecked Exceptions**                             |
+| -------------------------------------------------- | ------------------------------------------------------ |
+| Must be handled (try-catch) or declared (`throws`) | No need to handle or declare                           |
+| Compiler **forces** you to handle them             | Compiler does **not force**                            |
+| Example: `IOException`, `SQLException`             | Example: `NullPointerException`, `ArithmeticException` |
