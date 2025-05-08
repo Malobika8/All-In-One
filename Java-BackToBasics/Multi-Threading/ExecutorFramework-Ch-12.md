@@ -140,6 +140,8 @@ scheduler.schedule(() -> System.out.println("Delayed Task"), 2, TimeUnit.SECONDS
 
 // Runs every 1 second after initial delay of 3 seconds
 scheduler.scheduleAtFixedRate(() -> System.out.println("Repeating Task"), 3, 1, TimeUnit.SECONDS);
+
+//There’s another method scheduleWithFixedDelay() that waits after the task finishes before starting the next one (this is more relaxed timing).
 ```
 
 ---
