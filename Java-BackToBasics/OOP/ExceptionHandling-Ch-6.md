@@ -372,3 +372,12 @@ The summary is depicted via visual aid below as follows:
 | Must be handled (try-catch) or declared (`throws`) | No need to handle or declare                           |
 | Compiler **forces** you to handle them             | Compiler does **not force**                            |
 | Example: `IOException`, `SQLException`             | Example: `NullPointerException`, `ArithmeticException` |
+
+## ⚡ Bonus Tip: Related Unchecked Exception
+NoClassDefFoundError ➔ ❌ Unchecked (this is an Error, not an Exception).
+
+People often confuse these two 👇
+| ✅ `ClassNotFoundException` (Checked)          | ❌ `NoClassDefFoundError` (Unchecked Error)        |
+| --------------------------------------------- | ------------------------------------------------- |
+| Happens during **class loading (reflection)** | Happens during **runtime (JVM can't find class)** |
+| Must be handled                               | Crashes app, can't be caught normally             |
