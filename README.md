@@ -33,3 +33,11 @@ We can get all the hibernate XML properties from "AvailableSettings" implemented
 <img width="1057" alt="Screenshot 2025-01-21 at 6 55 13 PM" src="https://github.com/user-attachments/assets/786f19c3-132e-4348-92c9-d3d9a80fe641" />
 <img width="1037" alt="Screenshot 2025-01-21 at 6 55 23 PM" src="https://github.com/user-attachments/assets/bf4b2a36-726f-433b-af6c-4001144fb329" />
 <img width="1062" alt="Screenshot 2025-01-21 at 6 55 31 PM" src="https://github.com/user-attachments/assets/93a0e2f3-a390-4fef-b8e1-98658cb92757" />
+
+# ✅ Default fetch behavior in JPA
+| Mapping Type  | Default `fetch` type | Behavior                         |
+| ------------- | -------------------- | -------------------------------- |
+| `@OneToOne`   | `EAGER`              | Immediately loads related entity |
+| `@ManyToOne`  | `EAGER`              | Immediately loads related entity |
+| `@OneToMany`  | `LAZY`               | Delays loading until accessed    |
+| `@ManyToMany` | `LAZY`               | Delays loading until accessed    |
