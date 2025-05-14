@@ -118,3 +118,89 @@ rs.deleteRow();
    );
    ResultSet rs = stmt.executeQuery("SELECT * FROM students");
    ```
+
+Here's a **step-by-step working example** that demonstrates the behavior of `TYPE_SCROLL_INSENSITIVE` vs `TYPE_SCROLL_SENSITIVE` using JDBC with a simple in-memory H2 database.
+
+---
+
+## ✅ Example: See Whether `TYPE_SCROLL_SENSITIVE` Reflects DB Updates
+
+### 📦 Requirements:
+
+* H2 database (`h2-1.x.x.jar`)
+* JDBC-compatible Java setup
+
+---
+
+### 🚀 Step 1: Java Code
+
+```java
+import java.sql.*;
+
+public class ScrollSensitivityDemo {
+    public static void main(String[] args) throws Exception {
+        // Load H2 driver
+        Class.forName("org.h2.Driver");
+
+        // Create in-memory DB
+        Connection conn = DriverManager.getConnection("jdbc:h2:mem:testdb", "sa", "");
+
+        Statement setupStmt = conn.createStatement();
+        setupStmt.execute("CREATE TABLE employee (id INT PRIMARY KEY, name VARCHAR(100), salary INT)");
+        setupStmt.execute("INSERT INTO employee VALUES (1, 'Alice', 5000)");
+        setupStmt.execute("INSERT INTO employee VALUES (2, 'Bob', 6000)");
+
+        // Use SCROLL_SENSITIVE
+        Statement stmt = conn.createStatement(
+                ResultSet.TYPE_SCROLL_SENSITIVE,
+                ResultSet.CONCUR_UPDATABLE
+        );
+
+        ResultSet rs = stmt.executeQuery("SELECT * FROM employee");
+
+        // Move to second row (Bob)
+        rs.absolute(2);
+        System.out.println("Before DB update: " + rs.getString("name") + ", salary = " + rs.getInt("salary"));
+
+        // Simulate external update
+        Statement updateStmt = conn.createStatement();
+        updateStmt.executeUpdate("UPDATE employee SET salary = 9000 WHERE id = 2");
+
+        // Now refresh and print again
+        rs.refreshRow(); // Required for many drivers to see latest row data
+        System.out.println("After DB update:  " + rs.getString("name") + ", salary = " + rs.getInt("salary"));
+
+        rs.close();
+        stmt.close();
+        conn.close();
+    }
+}
+```
+
+---
+
+### 🧾 Output (Expected with driver support for SCROLL\_SENSITIVE):
+
+```
+Before DB update: Bob, salary = 6000
+After DB update:  Bob, salary = 9000
+```
+
+---
+
+### 🔁 What to Try:
+
+* Run this with `TYPE_SCROLL_INSENSITIVE` — and you'll see **no change** in salary even after `refreshRow()`.
+* Run with `TYPE_SCROLL_SENSITIVE` — and `refreshRow()` may show the **updated** salary.
+* Behavior **depends on JDBC driver**. H2 supports basic sensitivity. Oracle/PostgreSQL/MySQL vary.
+
+---
+
+### ✅ Recap:
+
+| Action                   | INSENSITIVE Result | SENSITIVE Result |
+| ------------------------ | ------------------ | ---------------- |
+| `resultSet.getInt()`     | Old value          | Possibly updated |
+| `resultSet.refreshRow()` | No effect          | Triggers reload  |
+
+---
