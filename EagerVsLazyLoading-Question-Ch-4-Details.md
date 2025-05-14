@@ -84,3 +84,11 @@ Assume:
 
 ### **Conclusion**
 The **eager loading behavior of `get()` applies to the primary entity**, not necessarily to its collections or relationships, unless explicitly configured. For collections like `@OneToMany`, you need to use `fetch = FetchType.EAGER` if you want them loaded immediately. Otherwise, lazy loading ensures efficient fetching but requires explicit access to trigger queries.
+
+# ✅ Default fetch behavior in JPA
+| Mapping Type  | Default `fetch` type | Behavior                         |
+| ------------- | -------------------- | -------------------------------- |
+| `@OneToOne`   | `EAGER`              | Immediately loads related entity |
+| `@ManyToOne`  | `EAGER`              | Immediately loads related entity |
+| `@OneToMany`  | `LAZY`               | Delays loading until accessed    |
+| `@ManyToMany` | `LAZY`               | Delays loading until accessed    |
