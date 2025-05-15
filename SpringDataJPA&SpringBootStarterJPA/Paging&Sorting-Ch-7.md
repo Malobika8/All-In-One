@@ -1,5 +1,3 @@
----
-
 ### **1. What is Paging?**
 
 Paging is a way to break large amounts of data into smaller chunks, called pages. This allows you to:
