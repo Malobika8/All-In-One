@@ -55,7 +55,7 @@ CMD ["java", "HelloWorld"]
 ```
 ---
 
-### ✅ 1. `FROM openjdk:11-jdk` — **This is the base image name**
+##### ✅ A. `FROM openjdk:11-jdk` — **This is the base image name**
 
 Yes! This line means:
 
@@ -69,7 +69,7 @@ Yes! This line means:
 
 ---
 
-### ✅ 2. `WORKDIR /app` — **We can name this anything**
+##### ✅ B. `WORKDIR /app` — **We can name this anything**
 
 * This sets the **working directory inside the container**.
 * `/app` is just a convention (like `C:\Project` or `~/myapp`).
@@ -79,7 +79,7 @@ Yes! This line means:
 
 ---
 
-### ✅ 3. `COPY HelloWorld.class .` — **We're copying into `/app`**
+##### ✅ C. `COPY HelloWorld.class .` — **We're copying into `/app`**
 
 Here’s what happens:
 
@@ -92,7 +92,7 @@ So this command copies the file from your local machine into `/app` inside the i
 
 ---
 
-### ✅ 4. `CMD ["java", "HelloWorld"]` — **Tells Docker what to run**
+##### ✅ D. `CMD ["java", "HelloWorld"]` — **Tells Docker what to run**
 
 * `CMD` sets the **default command** that will run when the container starts.
 * In this case, it runs:
