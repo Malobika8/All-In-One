@@ -45,8 +45,14 @@ my-java-app/
 | ----------------------- | ------------------------------- | -------------------------------- |
 | Build Docker image      | `docker build -t my-java-app .` | Build image from Dockerfile      |
 | Run container           | `docker run my-java-app`        | Runs container, exits after run  |
+| Rebuild images          | `docker compose build`          | Rebuild images manually |
 | Compose up              | `docker-compose up`             | Runs all services, attached logs |
 | Compose up detached     | `docker-compose up -d`          | Runs all in background           |
+| View logs for a service | `docker compose logs [service]` | View logs for a service          |
 | Follow logs             | `docker-compose logs -f`        | Follow container logs            |
 | Stop containers         | `docker-compose down`           | Stop and remove containers       |
 | List running containers | `docker ps`                     | See running containers           |
+| List running containers | `docker compose ps`             | Show running containers           |
+| Stop/start services     | `docker compose stop/start`     | Stop/start services without removing them |
+| Run bash inside the container | `docker compose exec app bash` | Run bash inside the container           |
+| Run one-off commands in service container     | `docker compose run app [command]`     | Run one-off commands in service container |
