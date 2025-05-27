@@ -26,6 +26,19 @@ my-java-app/
 
 ---
 
+# Basic Docker CLI Commands
+
+| Command               | Purpose                            |
+| --------------------- | ---------------------------------- |
+| `docker pull <image>` | Download an image                  |
+| `docker images`       | Show downloaded images             |
+| `docker run <image>`  | Create & start a container         |
+| `docker ps`           | Show running containers            |
+| `docker ps -a`        | Show all containers (even stopped) |
+| `docker stop <id>`    | Stop a running container           |
+| `docker rm <id>`      | Remove a container                 |
+| `docker rmi <id>`     | Remove an image                    |
+
 # Summary Cheat Sheet
 
 | Task                    | Command                         | Notes                            |
