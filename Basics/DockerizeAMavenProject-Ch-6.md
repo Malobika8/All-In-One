@@ -81,3 +81,130 @@ Hello World
 * Running a Java JAR from a Docker container
 
 ---
+
+## ✅ Do you need to **remember** Dockerfile commands?
+
+**No, you don’t need to memorize them.**
+But you should understand **what each line does**, so you can reuse and tweak them as needed.
+
+Think of it like **Java syntax**: you don’t remember everything, but you remember patterns like:
+
+```java
+public static void main(String[] args)
+```
+
+Similarly, Dockerfiles follow a pattern. Let’s break it down line by line.
+
+---
+
+## 🧱 Dockerfile Line-by-Line (explained for beginners)
+
+```dockerfile
+# 1. Use Maven and JDK to build the app
+FROM maven:3.8.5-openjdk-17 AS build
+```
+
+👉 Pulls a Docker image with Maven and Java 17 preinstalled.
+`AS build` gives this stage a name — “build”.
+
+---
+
+```dockerfile
+WORKDIR /app
+```
+
+👉 Inside the container, it sets the working directory to `/app`.
+Like doing `cd /app`.
+
+---
+
+```dockerfile
+COPY pom.xml .
+COPY src ./src
+```
+
+👉 Copies your Maven files from your computer to the container.
+
+* `.` here means “copy to current WORKDIR (which is `/app`)”.
+* First line copies `pom.xml`
+* Second line copies your `src` directory
+
+---
+
+```dockerfile
+RUN mvn package -DskipTests
+```
+
+👉 Runs the Maven command **inside the container** to build your project.
+
+* It produces a `.jar` file inside `/app/target/`.
+
+---
+
+```dockerfile
+# 2. Use JDK only to run the app (cleaner image)
+FROM openjdk:17-jdk-slim
+```
+
+👉 This is a second stage! A cleaner final image with just Java (no Maven).
+
+---
+
+```dockerfile
+WORKDIR /app
+```
+
+👉 Set working directory again for the final image.
+
+---
+
+```dockerfile
+COPY --from=build /app/target/*.jar app.jar
+```
+
+👉 Copy the `.jar` we built earlier (from `build` stage) into this final image.
+
+---
+
+```dockerfile
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
+👉 When you run the container, this is the command it will run.
+
+---
+
+## 🟨 Confused about `"."`? Let’s simplify:
+
+When you do:
+
+```bash
+docker build -t my-image-name .
+```
+
+The `.` here means:
+
+> "Build the Docker image using the Dockerfile in the **current directory** and copy content **from here** into the image."
+
+So inside the Dockerfile, if you write:
+
+```dockerfile
+COPY pom.xml .
+```
+
+This means:
+
+> “Copy `pom.xml` from current host directory (where you’re running `docker build`) **into** the current working directory inside the container.”
+
+---
+
+## 🔁 Summary
+
+* You don’t need to memorize Dockerfile lines — just reuse and tweak based on needs.
+* Understand that Dockerfile has 2 goals: **build your app**, and **prepare an image to run it**.
+* `"."` means “current directory” — context matters:
+
+  * In terminal: “build from current directory”
+  * In Dockerfile: “copy to current directory in container”
+
+---
