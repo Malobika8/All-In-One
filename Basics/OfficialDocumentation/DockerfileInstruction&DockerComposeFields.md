@@ -1,4 +1,4 @@
-Great question! You can find **all valid Dockerfile instructions** and **Docker Compose fields** in the official Docker documentation. Here’s exactly where and how to access them:
+You can find **all valid Dockerfile instructions** and **Docker Compose fields** in the official Docker documentation. Here’s exactly where and how to access them:
 
 ---
 
