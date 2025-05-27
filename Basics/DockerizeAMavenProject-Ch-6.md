@@ -164,6 +164,73 @@ COPY --from=build /app/target/*.jar app.jar
 
 👉 Copy the `.jar` we built earlier (from `build` stage) into this final image.
 
+The `--from=build` part in:
+
+```dockerfile
+COPY --from=build /app/target/*.jar app.jar
+```
+
+is one of the **rare but important** places in Docker where `--` is used — and it's **not like a shell flag**, but part of Docker’s **multi-stage build syntax**.
+
+Let me explain clearly:
+
+---
+
+## 🧠 What does `--from=build` mean?
+
+### 🧱 In multi-stage Docker builds:
+
+You define multiple stages like this:
+
+```dockerfile
+FROM maven:3.8.5-openjdk-17 AS build
+# (build stuff)
+
+FROM openjdk:17-jdk-slim
+# (run stuff)
+```
+
+You give the first stage a name: `AS build`.
+
+Then later, in the second stage, you copy something **from that earlier stage**:
+
+```dockerfile
+COPY --from=build /app/target/*.jar app.jar
+```
+
+This says:
+
+> "Copy the `.jar` file from the previous image stage called `build` (not from your local machine)."
+
+---
+
+### 🔍 Why the `--`?
+
+`COPY` normally only accepts two arguments:
+
+```dockerfile
+COPY <src> <dest>
+```
+
+But when you add `--from=...`, you're using a **flag** (like a CLI flag).
+This is a special syntax **only available in multi-stage builds**.
+
+So:
+
+* `--from=build` → copy from the **build stage**
+* Without it, Docker tries to copy from your **local system**, which will fail inside a multi-stage setup
+
+---
+
+## 📌 Summary
+
+| Syntax                  | Meaning                                       |
+| ----------------------- | --------------------------------------------- |
+| `COPY file.txt .`       | Copy `file.txt` from local context into image |
+| `COPY --from=build ...` | Copy from an earlier Docker image stage       |
+
+So you're not writing `--` by itself — it’s part of `--from=build`, which is a required flag.
+
 ---
 
 ```dockerfile
