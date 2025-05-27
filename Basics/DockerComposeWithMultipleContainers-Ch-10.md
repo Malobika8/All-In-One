@@ -41,7 +41,6 @@ services:
     container_name: docker-java-app
     depends_on:
       - mysql
-    command: ["java", "-jar", "app.jar"]
 
   mysql:
     image: mysql:8
@@ -108,6 +107,40 @@ To see logs of only the app:
 docker compose logs app
 ```
 
+##### 🔍 Why `docker compose logs docker-java-app` won't work?
+
+You might see this error:
+
+```
+no such service: docker-java-app
+```
+
+That's because:
+
+* In `docker-compose.yml`, the **service name** is what you should use with `docker compose logs`, not the **container name**.
+* You have:
+
+```yaml
+services:
+  app:               <-- this is the service name
+    container_name: docker-java-app
+```
+
+So the correct command is:
+
+```bash
+docker compose logs app
+```
+
+**Not:**
+
+```bash
+docker compose logs docker-java-app
+```
+
+> ✔️ Use the **service name** (`app`) with `docker compose logs`, `up`, `down`, etc.
+> ❌ Don’t use `container_name` in those commands.
+
 ---
 
 ### 🔁 Restart Just the App
@@ -128,3 +161,7 @@ docker compose up -d --build app
 * You don’t need to run `docker build` and `docker run` manually when using Compose.
 
 ---
+
+## Note
+
+As of recent Docker Compose versions, you **don’t need to specify** `version: "3.9"` anymore. It’s safe to remove it.
