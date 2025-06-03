@@ -118,3 +118,71 @@ try (Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/m
 ```
 
 This example demonstrates how to execute a query, iterate through the `ResultSet`, and access column data.
+
+## FYI
+
+If you create a `ResultSet` with:
+
+```java
+ResultSet.TYPE_SCROLL_SENSITIVE
+ResultSet.CONCUR_READ_ONLY
+```
+
+It means:
+
+---
+
+### ✅ What This Combination Does
+
+| Feature                       | Behavior                                                                        |
+| ----------------------------- | ------------------------------------------------------------------------------- |
+| **Scrollability**             | Yes — you can move forward, backward, to any row                                |
+| **Sensitivity to DB Changes** | Yes — the `ResultSet` **reflects updates** made to the database while it's open |
+| **Updatability**              | ❌ No — you **cannot** modify the data using this `ResultSet` (read-only)        |
+
+---
+
+### 🧠 Example Use Case
+
+* You want to **scroll through** the data in both directions.
+* You **do not intend to update** data via the `ResultSet`.
+* You **want to see real-time changes** made by others (or by triggers, etc.) in the database **while** the `ResultSet` is still open.
+
+---
+
+### ⚠️ Important Caveats
+
+* Not all JDBC drivers or databases **support `TYPE_SCROLL_SENSITIVE`**.
+
+  * For example, **MySQL Connector/J** does **not support it** — it silently downgrades it to `TYPE_SCROLL_INSENSITIVE`.
+* Performance may degrade if the JDBC driver has to check the database frequently to reflect changes.
+
+---
+
+### 🧪 Example
+
+```java
+Statement stmt = conn.createStatement(
+    ResultSet.TYPE_SCROLL_SENSITIVE,
+    ResultSet.CONCUR_READ_ONLY
+);
+
+ResultSet rs = stmt.executeQuery("SELECT * FROM employees");
+
+// Assume another user updates this employee's name in the DB
+Thread.sleep(5000); // Simulate delay
+rs.absolute(1); // Move to first row again (may refresh row data)
+
+System.out.println(rs.getString("name")); // Might show updated name (if driver supports it)
+```
+
+---
+
+### ✅ Summary
+
+Using `TYPE_SCROLL_SENSITIVE` with `CONCUR_READ_ONLY`:
+
+* Gives you **real-time visibility of changes**
+* **No permission to update/delete**
+* Depends on **driver and DB support**
+
