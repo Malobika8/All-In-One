@@ -1,16 +1,17 @@
 # Exceptions in Java
 
-Exception Handling in Java is one of the effective means to handle runtime errors so that the regular flow of the application can be 
+Exception Handling in Java is one of the most effective means of handling runtime errors so that the regular flow of the application can be 
 preserved. Java Exception Handling is a mechanism to handle runtime errors such as ClassNotFoundException, IOException, SQLException, 
 RemoteException, etc.
 
 ### What are Java Exceptions?
-In Java, Exception is an unwanted or unexpected event, which occurs during the execution of a program, i.e. at run time, that disrupts the 
+In Java, an Exception is an unwanted or unexpected event that occurs during the execution of a program, i.e. at run time, that disrupts the 
 normal flow of the program’s instructions. Exceptions can be caught and handled by the program. When an exception occurs within a method, 
 it creates an object. This object is called the exception object. It contains information about the exception, such as the name and 
-description of the exception and the state of the program when the exception occurred.
+description of the exception, and the state of the program when the exception occurred.
 
-### Major reasons why an exception Occurs
+### Major reasons why an exception occurs
+
 - Invalid user input
 - Device failure
 - Loss of network connection
@@ -23,7 +24,7 @@ library incompatibility, infinite recursion, etc. Errors are usually beyond the 
 handle errors.
 
 ### Difference between Error and Exception
-Let us discuss the most important part which is the differences between Error and Exception that is as follows: 
+Let us discuss the most important part, which is the differences between Error and Exception, as follows: 
 
 - Error: An Error indicates a serious problem that a reasonable application should not try to catch.
 - Exception: Exception indicates conditions that a reasonable application might try to catch.
@@ -31,7 +32,7 @@ Let us discuss the most important part which is the differences between Error an
   
 All exception and error types are subclasses of the class Throwable, which is the base class of the hierarchy. One branch is headed by 
 Exception. This class is used for exceptional conditions that user programs should catch. NullPointerException is an example of such an 
-exception. Another branch, Error is used by the Java run-time system(JVM) to indicate errors having to do with the run-time environment 
+exception. Another branch, Error, is used by the Java run-time system(JVM) to indicate errors having to do with the run-time environment 
 itself(JRE). StackOverflowError is an example of such an error.
 
 ## Java Exception Hierarchy
@@ -50,7 +51,7 @@ Exceptions can be categorized in two ways:
   - Unchecked Exception 
 - User-Defined Exceptions
   
-Let us discuss the above-defined listed exception that is as follows:
+Let us discuss the above-defined exception which is as follows:
 
 1. Built-in Exceptions: Built-in exceptions are the exceptions that are available in Java libraries. These exceptions are suitable to
    explain certain error situations.
@@ -58,7 +59,7 @@ Let us discuss the above-defined listed exception that is as follows:
    - Checked Exceptions: Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the
      compiler.
  
-   - Unchecked Exceptions: The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these
+   - Unchecked Exceptions: The unchecked exceptions are just the opposite to the checked exceptions. The compiler will not check these
      exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn’t handle or declare it,
      the program would not give a compilation error.
 
@@ -81,7 +82,7 @@ Let us discuss the above-defined listed exception that is as follows:
    Example:
 
 
-   //program to print the exception information using printStackTrace() method
+   //program to print the exception information using the printStackTrace() method
 
 ```
 import java.io.*;
@@ -109,7 +110,7 @@ at GFG.main(File.java:10)
 
    Example:
 
-   //program to print the exception information using toString() method
+   //program to print the exception information using the toString() method
    
 ```
 import java.io.*;
@@ -137,7 +138,7 @@ java.lang.ArithmeticException: / by zero
    Example:
 
 
-   //program to print the exception information using getMessage() method
+   //program to print the exception information using the getMessage() method
 
 ```
 import java.io.*;
@@ -165,19 +166,19 @@ Default Exception Handling: Whenever inside a method, if an exception has occurr
 Object and hands it off to the run-time system(JVM). The exception object contains the name and description of the exception and the 
 current state of the program where the exception has occurred. Creating the Exception Object and handling it in the run-time system is 
 called throwing an Exception. There might be a list of the methods that had been called to get to the method where an exception occurred. 
-This ordered list of methods is called Call Stack. Now the following procedure will happen. 
+This ordered list of methods is called the Call Stack. Now, the following procedure will happen. 
 
 The run-time system searches the call stack to find the method that contains a block of code that can handle the occurred exception. The block of the code is called an Exception handler.
 The run-time system starts searching from the method in which the exception occurred and proceeds through the call stack in the reverse order in which methods were called.
 If it finds an appropriate handler, then it passes the occurred exception to it. An appropriate handler means the type of exception object thrown matches the type of exception object it can handle.
-If the run-time system searches all the methods on the call stack and couldn’t have found the appropriate handler, then the run-time system handover the Exception Object to the default exception handler, which is part of the run-time system. This handler prints the exception information in the following format and terminates the program abnormally.
+If the run-time system searches all the methods on the call stack and couldn’t find the appropriate handler, then the run-time system hands over the Exception Object to the default exception handler, which is part of the run-time system. This handler prints the exception information in the following format and terminates the program abnormally.
 
 ```
 Exception in thread "xxx" Name of Exception : Description
 ... ...... ..  // Call Stack
 ```
 
-Look at the below diagram to understand the flow of the call stack. 
+Look at the diagram below to understand the flow of the call stack. 
 
 <img width="777" alt="Screenshot 2024-07-17 at 7 05 07 PM" src="https://github.com/user-attachments/assets/3a85f527-e538-4ddf-b3ca-b4f1e29b630b">
 
@@ -185,7 +186,7 @@ Flow of class stack for exceptions in Java
 Illustration:
 
 
-// Java Program to Demonstrate How Exception Is Thrown
+// Java Program to Demonstrate How an Exception Is Thrown
 
 ```
 // Class
@@ -213,7 +214,7 @@ Example:
 
 
 // Java Program to Demonstrate Exception is Thrown
-// How the runTime System Searches Call-Stack
+// How the Runtime System Searches Call-Stack
 // to Find Appropriate Exception Handler
 
 ```
@@ -289,19 +290,19 @@ class GFG {
 #### Output
 / by zero
 
-### How Programmer Handle an Exception?
+### How Programmers Handle an Exception?
 Customized Exception Handling: Java exception handling is managed via five keywords: try, catch, throw, throws, and finally. Briefly, here
 is how they work. Program statements that you think can raise exceptions are contained within a try block. If an exception occurs within 
-the try block, it is thrown. Your code can catch this exception (using catch block) and handle it in some rational manner. System-generated
+the try block, it is thrown. Your code can catch this exception (using a catch block) and handle it in some rational manner. System-generated
 exceptions are automatically thrown by the Java run-time system. To manually throw an exception, use the keyword throw. Any exception that 
 is thrown out of a method must be specified as such by a throws clause. Any code that absolutely must be executed after a try block 
 completes is put in a finally block.
 
-#### Tip: One must go through control flow in try catch finally block for better understanding.  
+#### Tip: One must go through the  control flow in try, catch, and finally block for better understanding.  
 
 #### Need for try-catch clause(Customized Exception Handling)
 
-Consider the below program in order to get a better understanding of the try-catch clause.
+Consider the program below in order to get a better understanding of the try-catch clause.
 
 Example:
 
@@ -332,12 +333,12 @@ class GFG {
 
 <img width="766" alt="Screenshot 2024-07-17 at 7 07 35 PM" src="https://github.com/user-attachments/assets/205fe376-97ce-49ae-9977-3a98753e1e5f">
 
-*Output explanation:* In the above example, an array is defined with size i.e. you can access elements only from index 0 to 3. But you trying 
-to access the elements at index 4(by mistake) that’s why it is throwing an exception. In this case, JVM terminates the program abnormally. 
-The statement System.out.println(“Hi, I want to execute”); will never execute. To execute it, we must handle the exception using try-catch. 
-Hence to continue the normal flow of the program, we need a try-catch clause. 
+*Output explanation:* In the above example, an array is defined with a size, i.e., you can access elements only from index 0 to 3. But you are trying 
+to access the elements at index 4(by mistake), that’s why it is throwing an exception. In this case, the JVM terminates the program abnormally. 
+The statement System.out.println(“Hi, I want to execute”); will never execute. To execute it, we must handle the exception using a try-catch. 
+Hence, to continue the normal flow of the program, we need a try-catch clause. 
 
-### How to Use the Try-catch Clause?
+### How to Use the Try-Catch Clause?
 
 ```
 try {
@@ -353,13 +354,13 @@ finally {  // block of code to be executed after try block ends
 }
 ```
 
-Certain key points need to be remembered that are as follows:   
+Certain key points need to be remembered, as follows:   
 
 - In a method, there can be more than one statement that might throw an exception, So put all these statements within their own try block and provide a separate exception handler within their own catch block for each of them.
-- If an exception occurs within the try block, that exception is handled by the exception handler associated with it. To associate the exception handler, we must put a catch block after it. There can be more than one exception handler. Each catch block is an exception handler that handles the exception to the type indicated by its argument. The argument, ExceptionType declares the type of exception that it can handle and must be the name of the class that inherits from the Throwable class.
+- If an exception occurs within the try block, that exception is handled by the exception handler associated with it. To associate the exception handler, we must put a catch block after it. There can be more than one exception handler. Each catch block is an exception handler that handles the exception of the type indicated by its argument. The argument, ExceptionType, declares the type of exception that it can handle and must be the name of the class that inherits from the Throwable class.
 - For each try block, there can be zero or more catch blocks, but only one final block.
-- The finally block is optional. It always gets executed whether an exception occurred in try block or not. If an exception occurs, then it will be executed after try and catch blocks. And if an exception does not occur, then it will be executed after the try block. The finally block in Java is used to put important codes such as clean-up code e.g., closing the file or closing the connection.
-- If we write System.exit in the try block, then finally block will not be executed.
+- The finally block is optional. It always gets executed, whether an exception occurred in the try block or not. If an exception occurs, then it will be executed after try and catch blocks. And if an exception does not occur, then it will be executed after the try block. The finally block in Java is used to put important code, such as clean-up code e.g., closing the file or closing the connection.
+- If we write System.exit in the try block, then the  finally block will not be executed.
 
 The summary is depicted via visual aid below as follows: 
 
