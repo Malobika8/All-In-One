@@ -100,8 +100,6 @@ If you want to make it dynamic (like LeetCode: accepts user code and runs), you 
 
 ## FYI
 
-Good question — let’s clear that up simply.
-
 When you ran this command:
 
 ```bash
