@@ -46,3 +46,96 @@ For SpringBoot 3, we can just use
 ```
 
 With this configuration, the Spring Boot Maven Plugin will create 2 JARs: the main one will be the same as a usual Maven project, while the second one will have the classifier appended and be the executable JAR.
+
+
+## 💡 What is a **Fat JAR** in Spring Boot?
+
+A **fat JAR** is a **JAR file that contains your application code AND all its dependencies** bundled inside it — so it's self-contained.
+
+✅ **You can run it directly** with just one command:
+
+```bash
+java -jar myapp.jar
+```
+
+---
+
+## 🔍 Why “Fat”?
+
+Because unlike a normal JAR (which only contains your classes), a fat JAR also includes:
+
+* All Spring Boot dependencies
+* All third-party libraries (like Jackson, Logback, etc.)
+* Embedded server (like Tomcat or Jetty)
+* Your compiled `.class` files
+
+That makes the JAR **“fat”** — it carries everything it needs to run.
+
+---
+
+## 📦 Example: Fat JAR Structure
+
+```
+myapp.jar
+├── BOOT-INF/
+│   ├── classes/        <-- Your compiled Java classes
+│   └── lib/            <-- All dependencies (Spring Boot, DB drivers, etc.)
+├── META-INF/
+└── org/springframework/boot/loader/  <-- Spring Boot launcher
+```
+
+---
+
+## 🛠️ How It's Created (Using Maven)
+
+If you're using Maven:
+
+```xml
+<build>
+  <plugins>
+    <plugin>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-maven-plugin</artifactId>
+    </plugin>
+  </plugins>
+</build>
+```
+
+Then run:
+
+```bash
+mvn clean package
+```
+
+It will generate a fat JAR in:
+
+```
+target/myapp-0.0.1-SNAPSHOT.jar
+```
+
+You can now run it:
+
+```bash
+java -jar target/myapp-0.0.1-SNAPSHOT.jar
+```
+
+---
+
+## ✅ Benefits of Fat JAR
+
+| Feature                  | Explanation                            |
+| ------------------------ | -------------------------------------- |
+| ✔ Self-contained         | No need to install Tomcat separately   |
+| ✔ Easy deployment        | Just copy the `.jar` to server and run |
+| ✔ Works anywhere Java is | Portable                               |
+| ✔ Dev-friendly           | Fast development and testing           |
+
+---
+
+## ❗ Note:
+
+* Spring Boot fat JAR **embeds Tomcat** (or Jetty/Undertow), so **you don’t need to deploy a WAR** to Tomcat.
+* This is what makes Spring Boot different from traditional Java web apps.
+
+---
+
