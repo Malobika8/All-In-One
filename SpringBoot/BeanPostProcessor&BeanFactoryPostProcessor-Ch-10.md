@@ -200,3 +200,10 @@ public class AppConfig {
 
 ---
 
+# At a glance
+
+<img width="799" alt="Screenshot 2025-07-08 at 7 12 09 PM" src="https://github.com/user-attachments/assets/f0101d9b-c4ab-4ada-ad3b-67b21e9dec85" />
+<img width="880" alt="Screenshot 2025-07-08 at 7 26 18 PM" src="https://github.com/user-attachments/assets/1cc1d81c-e4cc-4db8-b256-30ac9c1530ea" />
+<img width="928" alt="Screenshot 2025-07-08 at 7 09 38 PM" src="https://github.com/user-attachments/assets/406eeea6-2eaf-4a86-86a6-ce4b5d721e81" />
+<img width="1090" alt="Screenshot 2025-07-08 at 7 10 08 PM" src="https://github.com/user-attachments/assets/c011646a-2184-4074-b91e-e30193dda514" />
+<img width="1121" alt="Screenshot 2025-07-08 at 7 11 40 PM" src="https://github.com/user-attachments/assets/9b6da7d5-9fd5-4700-9298-916a82a6aaf7" />
