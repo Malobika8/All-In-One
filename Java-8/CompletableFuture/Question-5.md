@@ -340,3 +340,128 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
     record User(String name) {}
     record Settings(String language) {}
 ```
+
+# ✅ Challenge: Fetch Product Info + Pricing + Reviews in Parallel
+
+### 🔹 Scenario:
+
+You are building a product detail page.
+
+You need to fetch in **parallel**:
+
+1. `getProductInfo(productId)` → product name & description
+2. `getProductPricing(productId)` → price
+3. `getProductReviews(productId)` → rating
+
+---
+
+### 🧩 Requirements:
+
+1. Fetch all three in parallel
+2. Use `CompletableFuture.allOf(...)` to wait for all
+3. After all complete:
+
+   * Combine results
+   * Format the output:
+     `"Product: <name> | Price: <price> | Rating: <rating>"`
+4. Use `.join()` at the end
+5. Simulate delays in all services (e.g. 1 second each)
+
+---
+
+### ✅ Method Stubs:
+
+```java
+static CompletableFuture<Product> getProductInfo(String productId)
+static CompletableFuture<Pricing> getProductPricing(String productId)
+static CompletableFuture<Review> getProductReviews(String productId)
+```
+
+---
+
+### 🧾 Sample Output:
+
+```
+Product: UltraPen | Price: ₹499.0 | Rating: 4.5
+```
+
+---
+
+### Starter code
+
+```
+static CompletableFuture<Product> getProductInfo(String productId) {
+        return CompletableFuture.supplyAsync(() -> {
+            sleep(1000);
+            return new Product("UltraPen", "A smooth writing experience.");
+        });
+    }
+
+    static CompletableFuture<Pricing> getProductPricing(String productId) {
+        return CompletableFuture.supplyAsync(() -> {
+            sleep(1000);
+            return new Pricing(499.0);
+        });
+    }
+
+    static CompletableFuture<Review> getProductReviews(String productId) {
+        return CompletableFuture.supplyAsync(() -> {
+            sleep(1000);
+            return new Review(4.5);
+        });
+    }
+
+    static void sleep(long millis) {
+        try { Thread.sleep(millis); } catch (InterruptedException ignored) {}
+    }
+
+    record Product(String name, String description) {}
+    record Pricing(double price) {}
+    record Review(double rating) {}
+```
+
+## Solution
+
+```
+public static void main(String[] args) {
+        CompletableFuture<Product> f1 = getProductInfo("1");
+        CompletableFuture<Pricing> f2 = getProductPricing("1");
+        CompletableFuture<Review> f3 = getProductReviews("1");
+
+        CompletableFuture<Void> result = CompletableFuture.allOf(f1, f2, f3);
+        CompletableFuture<String> string = result.thenApply(v -> {
+            return "Name: " + f1.join().name() + " , Pricing: " + f2.join().price() + " , Rating: " + f3.join().rating();
+        });
+
+        System.out.println(string.join());
+    }
+    static CompletableFuture<Product> getProductInfo(String productId) {
+        return CompletableFuture.supplyAsync(() -> {
+            sleep(1000);
+            return new Product("UltraPen", "A smooth writing experience.");
+        });
+    }
+
+    static CompletableFuture<Pricing> getProductPricing(String productId) {
+        return CompletableFuture.supplyAsync(() -> {
+            sleep(1000);
+            return new Pricing(499.0);
+        });
+    }
+
+    static CompletableFuture<Review> getProductReviews(String productId) {
+        return CompletableFuture.supplyAsync(() -> {
+            sleep(1000);
+            return new Review(4.5);
+        });
+    }
+
+    static void sleep(long millis) {
+        try { Thread.sleep(millis); } catch (InterruptedException ignored) {}
+    }
+
+    record Product(String name, String description) {}
+    record Pricing(double price) {}
+    record Review(double rating) {}
+```
+
