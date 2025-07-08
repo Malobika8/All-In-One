@@ -1,10 +1,14 @@
+# Bean Lifecycle
+
+<img width="803" alt="Screenshot 2025-07-08 at 8 56 21 PM" src="https://github.com/user-attachments/assets/a20047e3-2ebb-4fce-8d3f-49b5bebdeafe" />
+
 # FYI
 
 By default, Spring Boot repackages your JAR into an executable JAR, and it does that by putting all of your classes inside BOOT-INF/classes, and all of the dependent libraries inside BOOT-INF/lib. The consequence of creating this fat JAR is that you can no longer use it as a dependency for other projects.
 
 From Custom repackage classifier:
 
-By default, the repackage goal will replace the original artifact with the repackaged one. That's same behavior for modules that represent an app but if your module is used as a dependency of another module, you need to provide a classifier for the repackaged one.
+By default, the repackage goal will replace the original artifact with the repackaged one. That's the same behavior for modules that represent an app but if your module is used as a dependency of another module, you need to provide a classifier for the repackaged one.
 
 The reason for that is that application classes are packaged in BOOT-INF/classes so that the dependent module cannot load a repackaged jar's classes.
 
