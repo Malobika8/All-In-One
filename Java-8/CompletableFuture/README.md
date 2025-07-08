@@ -21,3 +21,5 @@
   - Questions - misc
 * ## Ch-6:
   - Quiz
+* ## Ch-7:
+  - CompletableFuture Quick Summary Sheet
