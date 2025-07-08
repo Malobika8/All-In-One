@@ -17,3 +17,7 @@
   - Questions
   - Comparison cheat sheet
   - What Can Be Returned in exceptionally, handle, and whenComplete
+* ## Ch-5:
+  - Questions - misc
+* ## Ch-6:
+  - Quiz
