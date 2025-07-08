@@ -332,7 +332,7 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 
 ---
 
-## ✅ Quick Summary for Your Notes
+## ✅ Quick Summary
 
 ```java
 // ✅ exceptionally: only on error, must return same type
