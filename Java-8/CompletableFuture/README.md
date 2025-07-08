@@ -12,7 +12,7 @@
   - *handle*:
     - Consumes the error and has a fallback response.
     - It can also take the result, modify it, and return.
-  - *whenComplete*: To log or observe the error. It doesn't consume the error.
+  - *whenComplete*: To log or observe the error/result. It doesn't consume the error.
 * ## Ch-4:
   - Questions
   - Comparison cheat sheet
