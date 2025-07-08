@@ -6,4 +6,10 @@
   - *thenCompose*: For dependent tasks
   - *thenApply vs thenCompose*
     - thenApply: When it simply returns something.
-    - thenCompose: When it returns a CompletableFuture. It flattens nested CompletableFuture unlike thenApply.
+    - thenCompose: When it returns a CompletableFuture. It flattens nested CompletableFuture, unlike thenApply.
+* ## Ch-3:
+  - *exceptionally*: Consumes the error and has a fallback response.
+  - *handle*:
+    - Consumes the error and has a fallback response.
+    - It can also take the result, modify it, and return.
+  - *whenComplete*: To log or observe the error. It doesn't consume the error.
