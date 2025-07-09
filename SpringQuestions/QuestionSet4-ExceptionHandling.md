@@ -119,11 +119,7 @@ public class UserController {
 
 ---
 
-### ✅ Now it’s 100% correct and production-ready!
-
----
-
-## 3. **Q: How would you return a structured JSON error response like this?**
+## 3. **How would you return a structured JSON error response like this?**
 
 ```json
 {
