@@ -148,3 +148,125 @@ resilience4j:
 
 ---
 
+# Extra (Read if time permits)
+
+### ✅ Step 1: Add Required Dependencies
+
+If using Spring Boot 3.x:
+
+```xml
+<dependency>
+    <groupId>io.github.resilience4j</groupId>
+    <artifactId>resilience4j-spring-boot3</artifactId>
+</dependency>
+```
+
+Also add:
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
+```
+
+---
+
+### ✅ Step 2: Annotate Your Method
+
+```java
+@CircuitBreaker(name = "movieInfoCB", fallbackMethod = "getFallbackMovieInfo")
+public Movie getMovieInfo(String movieId) {
+    return restTemplate.getForObject("http://external-moviedb.com/info/" + movieId, Movie.class);
+}
+
+public Movie getFallbackMovieInfo(String movieId, Throwable ex) {
+    return new Movie(movieId, "Title unavailable", "MovieDB service is currently down");
+}
+```
+
+**🧠 Resilience4j passes the **exception** to the fallback method — unlike Hystrix which doesn’t require it by default.**
+
+---
+
+### ✅ Step 3: Add Configuration in `application.yml`
+
+```yaml
+resilience4j:
+  circuitbreaker:
+    instances:
+      movieInfoCB:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10               # Last 10 calls
+        minimumNumberOfCalls: 5
+        failureRateThreshold: 50            # Open if 50% fail
+        waitDurationInOpenState: 10s        # Stay open for 10 seconds
+        permittedNumberOfCallsInHalfOpenState: 2
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        recordExceptions:
+          - java.io.IOException
+          - java.util.concurrent.TimeoutException
+        ignoreExceptions:
+          - com.yourapp.MovieNotFoundException
+```
+
+---
+
+### ✅ Optional: Add Timeout (TimeLimiter) for Async Calls
+
+If you make the method `@Async` or `CompletableFuture` based:
+
+```java
+@TimeLimiter(name = "movieInfoCB", fallbackMethod = "getFallbackMovieInfo")
+@CircuitBreaker(name = "movieInfoCB", fallbackMethod = "getFallbackMovieInfo")
+public CompletableFuture<Movie> getMovieInfo(String movieId) {
+    return CompletableFuture.supplyAsync(() -> {
+        return restTemplate.getForObject("http://external-moviedb.com/info/" + movieId, Movie.class);
+    });
+}
+
+public CompletableFuture<Movie> getFallbackMovieInfo(String movieId, Throwable t) {
+    return CompletableFuture.completedFuture(new Movie(movieId, "Fallback", "MovieDB is down"));
+}
+```
+
+You also configure timeout duration:
+
+```yaml
+resilience4j:
+  timelimiter:
+    instances:
+      movieInfoCB:
+        timeoutDuration: 3s
+```
+
+---
+
+### 🔁 Optional: Add Retry for Temporary Failures
+
+```java
+@Retry(name = "movieInfoRetry", fallbackMethod = "getFallbackMovieInfo")
+```
+
+```yaml
+resilience4j:
+  retry:
+    instances:
+      movieInfoRetry:
+        maxAttempts: 3
+        waitDuration: 1s
+```
+
+---
+
+### ✅ Final Summary
+
+| Feature        | Hystrix                 | Resilience4j                                |
+| -------------- | ----------------------- | ------------------------------------------- |
+| Annotation     | `@HystrixCommand`       | `@CircuitBreaker`, `@Retry`, `@TimeLimiter` |
+| Fallback Param | Optional                | Must accept `Throwable`                     |
+| Timeout config | YAML + Hystrix internal | Use `TimeLimiter`                           |
+| Isolation      | Thread (default)        | None by default, but can customize          |
+| Future proof   | ❌ Deprecated            | ✅ Maintained and modern                     |
+
+---
