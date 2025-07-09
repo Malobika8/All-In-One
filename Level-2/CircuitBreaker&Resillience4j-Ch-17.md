@@ -1,3 +1,4 @@
+# Citcuit Breaker
 The **Circuit Breaker Pattern** is one of the most **essential patterns for building resilient microservices**.
 
 <img width="1102" alt="Screenshot 2025-07-09 at 6 43 41 PM" src="https://github.com/user-attachments/assets/6f5f8414-762b-4b24-bb1e-3f5b43fe2886" />
@@ -17,8 +18,6 @@ Without a circuit breaker:
 * **Cascading failure**: Service A becomes slow or crashes too.
 
 🧨 **Problem**: Your app wastes time and threads calling something that’s already broken.
-
----
 
 ## ✅ What Is the Circuit Breaker Pattern?
 
@@ -42,9 +41,7 @@ It has **3 states**:
          └────────────┘
 ```
 
----
-
-### 🔁 Lifecycle in Simple Terms:
+#### 🔁 Lifecycle in Simple Terms:
 
 | State         | What Happens                                                             |
 | ------------- | ------------------------------------------------------------------------ |
@@ -52,9 +49,7 @@ It has **3 states**:
 | **Open**      | No calls go through. After `X` seconds, go to **Half-Open**.             |
 | **Half-Open** | Try one or two calls. If success → go **Closed**, else → **Open** again. |
 
----
-
-## 🎯 Real-World Analogy
+#### 🎯 Real-World Analogy
 
 > Imagine calling a friend whose phone is always switched off.
 
@@ -63,9 +58,25 @@ It has **3 states**:
 * Then try again after a while (**Half-Open**).
 * If it connects, you start calling normally again (**Closed**).
 
----
+## Circuit Breaker parameter
 
-## 💻 Implementing Circuit Breaker in Spring Boot using Resilience4j
+<img width="987" alt="Screenshot 2025-07-09 at 6 55 48 PM" src="https://github.com/user-attachments/assets/5473e0ed-cb94-42b6-a6b8-399a8c19287a" />
+<img width="938" alt="Screenshot 2025-07-09 at 6 59 56 PM" src="https://github.com/user-attachments/assets/1376a340-6f1e-45ae-8e27-00223b2018f8" />
+<img width="980" alt="Screenshot 2025-07-09 at 7 02 37 PM" src="https://github.com/user-attachments/assets/63e1ed58-e708-4dab-b85d-655ee98d5834" />
+<img width="1095" alt="Screenshot 2025-07-09 at 7 05 50 PM" src="https://github.com/user-attachments/assets/6d28bda6-1e08-4bf3-b522-4b7766a2e454" />
+
+## What to do when a circuit breaks
+
+<img width="867" alt="Screenshot 2025-07-09 at 7 10 19 PM" src="https://github.com/user-attachments/assets/4416219e-fc94-4119-adde-8bde12c92af2" />
+<img width="1003" alt="Screenshot 2025-07-09 at 7 10 53 PM" src="https://github.com/user-attachments/assets/16a7067d-5919-4d7f-afd4-212f27a96b7b" />
+<img width="1017" alt="Screenshot 2025-07-09 at 7 12 32 PM" src="https://github.com/user-attachments/assets/a6ecf0c2-d689-47a5-8dca-12459a6f4a39" />
+
+## Why circuit breakers
+
+<img width="996" alt="Screenshot 2025-07-09 at 7 16 19 PM" src="https://github.com/user-attachments/assets/467a6991-fd16-4b8e-8eee-d7d698126f54" />
+<img width="1109" alt="Screenshot 2025-07-09 at 7 16 46 PM" src="https://github.com/user-attachments/assets/1d0761fd-8f75-4ab4-8185-5bcdf88d5a7e" />
+
+# 💻 Implementing Circuit Breaker in Spring Boot using Resilience4j
 
 Add to `pom.xml`:
 
