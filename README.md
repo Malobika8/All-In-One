@@ -1,3 +1,41 @@
+## ✅ Spring Bean Lifecycle (Step-by-Step)
+
+1. **Spring Container Created**
+2. **Bean Definitions Loaded** from configuration (`@Component`, `@Bean`, XML, etc.)
+3. **`BeanFactoryPostProcessor` invoked**
+
+   * Modifies bean definitions **before beans are instantiated**
+4. **Bean Instantiated** (using constructor or factory method)
+5. **Aware Interfaces Called** (if implemented)
+
+   * `BeanNameAware`, `BeanFactoryAware`, `ApplicationContextAware`, etc.
+6. **`BeanPostProcessor#postProcessBeforeInitialization`**
+7. **Custom Init Hooks (in order):**
+
+   * `@PostConstruct`
+   * `InitializingBean.afterPropertiesSet()`
+   * Custom init method (`@Bean(initMethod="...")`)
+8. **`BeanPostProcessor#postProcessAfterInitialization`**
+9. **Ready for Use**
+10. **Shutdown Phase:**
+
+    * `@PreDestroy`
+    * `DisposableBean.destroy()`
+    * Custom destroy method (`@Bean(destroyMethod="...")`)
+
+---
+
+### 🔸 How can you hook into the lifecycle?
+
+* Aware interfaces
+* `@PostConstruct`, `@PreDestroy`
+* `InitializingBean`, `DisposableBean`
+* `@Bean(initMethod=…, destroyMethod=…)`
+* `BeanPostProcessor`
+
+---
+
+
 https://www.geeksforgeeks.org/spring/
 
 ## Note: Check SpringBoot folder for OenAPI/Swagger-UI & Splunk related doc
