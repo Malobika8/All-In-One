@@ -93,6 +93,10 @@ hystrix:
         sleepWindowInMilliseconds: 10000  # Wait 10s before trying again
 ```
 
+We can also configure parameters like this:
+
+<img width="1130" alt="Screenshot 2025-07-09 at 8 57 56 PM" src="https://github.com/user-attachments/assets/d4f31af3-25f4-4f44-9e13-538bc36bba37" />
+
 ---
 
 ## 🧠 What Hystrix Offers (Built-in)
