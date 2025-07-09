@@ -177,8 +177,7 @@ return ResponseEntity.status(404).body("User not found");
   "path": "/users/10"
 }
 ```
-
-you will need to:
+You will need to:
 
 1. Create a **custom error response DTO**
 2. Return that from your `@ExceptionHandler`
@@ -283,4 +282,40 @@ public class UserController {
 ```
 
 ---
+
+## 4. `MethodArgumentNotValidException`
+
+#### ❗Scenario:
+
+You have this endpoint:
+
+```java
+@PostMapping("/users")
+public User createUser(@RequestBody @Valid User user) { ... }
+```
+
+If the client sends invalid data (e.g., empty name), you’ll get `MethodArgumentNotValidException`.
+
+---
+
+#### 🔹 Coding Task:
+
+1. Add validation to your `User` class using `@NotBlank` and `@Email`.
+2. Handle `MethodArgumentNotValidException` in your `@ControllerAdvice` and return a structured JSON like:
+
+```json
+{
+  "timestamp": "2025-07-09T14:30:00",
+  "status": 400,
+  "errors": [
+    "name: must not be blank",
+    "email: must be a valid email"
+  ],
+  "path": "/users"
+}
+```
+
+### Sol:
+
+
 
