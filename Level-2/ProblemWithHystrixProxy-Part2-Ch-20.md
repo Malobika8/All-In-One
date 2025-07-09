@@ -91,6 +91,10 @@ public class CatalogService {
 }
 ```
 
+<img width="790" alt="Screenshot 2025-07-09 at 8 55 42 PM" src="https://github.com/user-attachments/assets/ac5a1232-e0d7-4e79-8f6a-5af99fe911bb" />
+<img width="789" alt="Screenshot 2025-07-09 at 8 56 16 PM" src="https://github.com/user-attachments/assets/dcc73a38-247b-42f7-ac67-b518b7ca2233" />
+<img width="792" alt="Screenshot 2025-07-09 at 8 55 54 PM" src="https://github.com/user-attachments/assets/f509ebe2-d944-43f5-9ef4-5425a321c83f" />
+
 ---
 
 ### Option 2: Call the current bean’s proxy via `ApplicationContext`
