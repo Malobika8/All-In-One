@@ -32,8 +32,6 @@ Give one real-world example where you'd prefer each.
 
 ✅ `@RestController = @Controller + @ResponseBody`
 
----
-
 #### 🔸 Real-World Use Cases
 
 * **`@Controller`**: A JSP-based web app where users interact via HTML pages.
@@ -103,8 +101,6 @@ public class UserController {
     }
 }
 ```
-
----
 
 ### 🔎 Tip:
 
