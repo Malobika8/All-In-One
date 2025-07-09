@@ -143,3 +143,5 @@ Overdoing microservices = **"Death by microservices"**
 
 ---
 
+<img width="747" alt="Screenshot 2025-07-09 at 6 20 47 PM" src="https://github.com/user-attachments/assets/6a239940-150e-4ba9-9208-da42c7412588" />
+
