@@ -72,6 +72,8 @@ public Rating getFallbackRating(String userId) {
     return new Rating("default", 0);
 }
 ```
+<img width="1016" alt="Screenshot 2025-07-09 at 8 33 47 PM" src="https://github.com/user-attachments/assets/735b02fa-8a62-4776-aabe-f1ba6ffd60ff" />
+<img width="997" alt="Screenshot 2025-07-09 at 8 33 02 PM" src="https://github.com/user-attachments/assets/3b4e49a9-3412-4be0-ba52-3b5e91ca26af" />
 
 ✅ Now each service:
 
