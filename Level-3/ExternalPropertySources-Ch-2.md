@@ -86,6 +86,77 @@ Spring Boot will pick up that external config automatically, and start on port 9
 * You want to **mount a volume** in Docker containing configuration.
 * You want a **clean separation** between code and config.
 
+## 📂 Where should `/config/` go?
+
+You should place the `/config/` folder **outside** the `target/` directory — ideally, **alongside your final `.jar`** after you've packaged and moved it.
+
+### 📌 Typical Setup
+
+After building:
+
+```
+$ mvn clean package
+```
+
+You get:
+
+```
+target/
+├── my-app.jar
+```
+
+Now for deployment, **copy `my-app.jar` to a separate folder** and place a `config/` folder next to it.
+
+```
+deploy/
+├── my-app.jar
+└── config/
+    └── application.properties
+```
+
+Then run:
+
+```bash
+cd deploy
+java -jar my-app.jar
+```
+
+Spring Boot will detect the `config/application.properties` because it's in the same directory as the JAR (thanks to `file:./config/` being a default search location).
+
+### 🧪 Example Directory Structure (Correct Deployment)
+
+```
+project-root/
+├── target/
+│   └── my-app.jar            <-- Just a build artifact
+└── deploy/
+    ├── my-app.jar            <-- Deployed JAR
+    └── config/
+        └── application.properties
+```
+
+Run it from `deploy/`:
+
+```bash
+cd deploy
+java -jar my-app.jar
+```
+
+### ❌ What Not to Do
+
+| Mistake                                    | Why it’s bad                                  |
+| ------------------------------------------ | --------------------------------------------- |
+| Put `config/` inside `src/main/resources`  | Gets bundled inside JAR, not externalized     |
+| Put `config/` inside `target/` after build | `mvn clean` will delete it                    |
+| Expect Spring to scan `~/config` randomly  | Only looks in defined paths unless customized |
+
+### ✅ Best Practices
+
+| Goal                           | Recommended Approach                           |
+| ------------------------------ | ---------------------------------------------- |
+| Keep config separate from code | Use a `deploy/` or `release/` folder           |
+| Avoid rebuilds for env changes | Externalize `application.properties`           |
+| Prevent accidental deletion    | Keep outside `target/` or use a mounted volume |
 
 ---
 
