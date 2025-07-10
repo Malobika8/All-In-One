@@ -10,7 +10,7 @@
 <img width="783" alt="Screenshot 2025-07-10 at 11 49 06 AM" src="https://github.com/user-attachments/assets/49b1d32a-ab61-4886-8558-6318497f073d" />
 <img width="700" alt="Screenshot 2025-07-10 at 11 49 11 AM" src="https://github.com/user-attachments/assets/b36fec48-68b2-4d90-80a0-d9860c2529e2" />
 
-## We can have a map of data
+## We can have a map of data (We need to Spring Expression Language (spel - #{}))
 
 <img width="636" alt="Screenshot 2025-07-10 at 11 50 11 AM" src="https://github.com/user-attachments/assets/8e387832-3918-4dc6-a024-d0709d01ec18" />
 <img width="814" alt="Screenshot 2025-07-10 at 11 51 16 AM" src="https://github.com/user-attachments/assets/e37ecaf8-ca3c-4b77-a110-bff21bd63159" />
