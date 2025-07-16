@@ -89,5 +89,11 @@ emf.close();
 
 ### Sol:
 
-
+```java
+TypedQuery<String> tq = em.createQuery(
+    "select e.name from Employee e where e.name like 'A%'", String.class
+);
+tq.setMaxResults(5); // limit to 5 results
+List<String> list = tq.getResultList();
+```
 
