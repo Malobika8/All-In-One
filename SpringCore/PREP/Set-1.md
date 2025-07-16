@@ -131,6 +131,125 @@ public class NotificationService{
 
 ---
 
-# 
+# Task:
+
+- Create the AlertService interface.
+- Implement two classes: EmailAlertService and SmsAlertService
+- Use @Qualifier to inject the Email one in AlertManager
+- Print “Email alert sent!” from trigger().
+
+### Sol:
+
+```
+@Configuration
+@ComponentScan
+class Main {
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
+        AlertManager alertManager = context.getBean("alertManager", AlertManager.class);
+        alertManager.alert();
+    }
+}
+
+@Component
+public class AlertManager{
+    
+    @Autowired
+    @Qualifier("emailAlertService")
+    AlertService alertService;
+    
+    public void alert(){
+        alertService.trigger();
+    }
+}
+
+public interface AlertService{
+    public void trigger();
+}
+
+@Service
+public class EmailAlertService implements AlertService{
+    public void trigger(){
+        System.out.println("Email alert sent!");
+    }
+}
+
+@Service
+public class SmsAlertService implements AlertService{
+    public void trigger(){
+        System.out.println("Sms alert sent!");
+    }
+}
+```
+
+---
+
+# Perfect — let’s now dive into:
+
+---
+
+## 🔹 Step 4: `@Value` Injection in Spring
+
+`@Value` is used to inject:
+
+* **Static values**
+* **Values from `application.properties`**
+* **Default fallback values**
+
+---
+
+### ✅ Use Cases
+
+| Syntax                            | Injects                                         |
+| --------------------------------- | ----------------------------------------------- |
+| `@Value("Hello")`                 | A static string                                 |
+| `@Value("${app.greeting}")`       | Value from `application.properties`             |
+| `@Value("${app.greeting:Hello}")` | Value from properties, or fallback to `"Hello"` |
+
+---
+
+# Task:
+
+1. Create a `GreetingService` with:
+   ```java
+   private String message;
+   ```
+2. Create a method that prints the message.
+3. Fetch this service in `Main` and call that method.
+
+We’ll skip using a real `application.properties` file right now — instead, you can pass system properties via:
+
+```java
+System.setProperty("greeting.message", "Hello from System Property");
+```
+
+### Sol:
+
+```
+@Component
+public class GreetingService {
+    
+    @Value("${greeting.message:Default Hello}")
+    private String message;
+
+    public void greet() {
+        System.out.println(message);
+    }
+}
+
+public static void main(String[] args) {
+    System.setProperty("greeting.message", "Hello from System Property");
+
+    ApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
+    GreetingService service = context.getBean(GreetingService.class);
+    service.greet();
+}
+```
+
+---
+
+
+
+
 
 
