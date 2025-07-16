@@ -19,3 +19,4 @@ Repository (marker)
    └── CrudRepository
          └── PagingAndSortingRepository
                └── JpaRepository
+
