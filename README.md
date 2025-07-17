@@ -25,6 +25,20 @@
 
 ---
 
+## Spring Bean Lifecycle with PostProcessors
+
+1. Load Configuration (XML / @Configuration)
+2. Load Bean Definitions (metadata)
+3. 🔧 BeanFactoryPostProcessor is triggered
+4. Instantiate Bean (via Constructor)
+5. Inject Dependencies (Autowired, etc.)
+6. 🔄 BeanPostProcessor (before initialization)
+7. Call @PostConstruct / init-method / InitializingBean
+8. 🔄 BeanPostProcessor (after initialization)
+9. Bean is Ready to Use
+
+---
+
 ### 🔸 How can you hook into the lifecycle?
 
 * Aware interfaces
