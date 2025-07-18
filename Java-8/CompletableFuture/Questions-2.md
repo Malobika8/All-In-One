@@ -147,10 +147,6 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
     record Settings(String language) {}
 ```
 
-✅ **Exactly right!** Your understanding is now spot-on.
-
----
-
 > `thenCompose` flattens nested `CompletableFuture` ?
 
 - ✅ Yes! That is the **core purpose** of `thenCompose`.
