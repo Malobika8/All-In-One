@@ -71,6 +71,96 @@ public class GlobalException {
 }
 ```
 
+---
+
+# Custom Error Response Format
+
+#### Expected Output:
+
+```json
+{
+  "error": "Division by zero is not allowed",
+  "timestamp": "2025-07-17T12:34:56",
+  "status": 400
+}
+```
+
+#### Step 1: Create `ErrorResponse` DTO
+
+```java
+import lombok.*;
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class ErrorResponse {
+    private String error;
+    private LocalDateTime timestamp;
+    private int status;
+}
+```
+
+#### Step 2: Modify Global Exception Handler
+
+```java
+@ControllerAdvice
+public class GlobalException {
+
+    @ExceptionHandler(ArithmeticException.class)
+    public ResponseEntity<ErrorResponse> handleArithmetic(ArithmeticException ex) {
+        ErrorResponse error = new ErrorResponse(
+            "Division by zero is not allowed",
+            LocalDateTime.now(),
+            HttpStatus.BAD_REQUEST.value()
+        );
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(error);
+    }
+}
+```
+
+#### Step 3: Controller (Same as Before)
+
+```java
+@RestController
+public class TestController {
+
+    @GetMapping("/divide")
+    public String divide(@RequestParam int a, @RequestParam int b) {
+        int result = a / b;
+        return "Result: " + result;
+    }
+}
+```
+
+#### Request:
+
+```
+GET /divide?a=10&b=0
+```
+
+#### Response:
+
+```http
+HTTP 400 Bad Request
+Content-Type: application/json
+
+{
+  "error": "Division by zero is not allowed",
+  "timestamp": "2025-07-17T12:34:56.123",
+  "status": 400
+}
+```
+
+#### Tip:
+
+> "Returning a custom error structure using a global `@ControllerAdvice` helps standardize error formats across REST APIs and improves client-side error handling."
+
+---
 
 
 
