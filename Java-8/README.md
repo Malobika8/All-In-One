@@ -245,6 +245,23 @@ public interface ToLongFunction<T> {
 }
 ```
 
+---
+# Stream methods
+
+## Map:
+- Collectors.toMap()
+- Collectors.groupingBy(): returns a Map<K, List<V>>
+  - Collectors.mapping(): It is a downstream collector used within another collector like groupingBy() or partitioningBy() to transform elements before collecting them.
+
+## List:
+- Collectors.toList();
+
+## Split elements into 2 groups:
+- partitioningBy() — Split elements into two groups (true/false)
+
+## Summarizing or aggregating manually
+- Collectors.reducing()
+
 
 
 
