@@ -162,6 +162,69 @@ Content-Type: application/json
 
 ---
 
+# `@ResponseStatus` in Spring
+
+#### Purpose:
+
+> To directly set the **HTTP status code** for a response without returning a `ResponseEntity`.
+
+You can apply it on:
+
+* Exception classes
+* `@ExceptionHandler` methods
+* Even controller methods (for simple cases)
+
+#### Example 1: On Exception Class
+
+```java
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public class DivisionByZeroException extends RuntimeException {
+    public DivisionByZeroException(String message) {
+        super(message);
+    }
+}
+```
+
+#### Modified Controller Using Custom Exception:
+
+```java
+@RestController
+public class TestController {
+
+    @GetMapping("/divide")
+    public String divide(@RequestParam int a, @RequestParam int b) {
+        if (b == 0) {
+            throw new DivisionByZeroException("Cannot divide by zero");
+        }
+        return "Result: " + (a / b);
+    }
+}
+```
+
+#### Output:
+
+```http
+HTTP 400 Bad Request
+Body: Cannot divide by zero
+```
+
+🧠 No need to write a custom `@ExceptionHandler` — Spring picks the response status from the exception.
+
+#### Example 2: On `@ExceptionHandler` Method (Alternative):
+
+```java
+@ExceptionHandler(IllegalArgumentException.class)
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+public String handleIllegalArgument(IllegalArgumentException ex) {
+    return "Bad request: " + ex.getMessage();
+}
+```
+
+#### Summary:
+
+> “`@ResponseStatus` is a quick way to map a specific exception (or controller response) to an HTTP status without returning a full `ResponseEntity`. It’s useful for simple, declarative error handling.”
+
+---
 
 
 
