@@ -50,3 +50,26 @@ If the commit is already pushed, **don't amend**, or your teammates may get conf
 
 ---
 
+## 🧠 Git Amend – Scenario-Based Question
+
+You're working locally on a Git project.
+
+You just ran:
+
+```bash
+git add file1.txt
+git commit -m "Initial content for file1"
+```
+
+Then you realize you **forgot to include `file2.txt`**, which is **also ready**.
+
+---
+
+### ❓What’s the **best and cleanest** way to include `file2.txt` in the same commit, **without creating a second commit**?
+
+**A.** `git add file2.txt && git commit -m "Initial content for both files"`
+**B.** `git add file2.txt && git commit --amend`
+**C.** `git add file2.txt && git commit`
+**D.** `git add file2.txt && git merge`
+
+
