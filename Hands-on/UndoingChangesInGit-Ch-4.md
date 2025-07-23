@@ -68,3 +68,42 @@ git reset --hard HEAD~1
 
 ---
 
+### 💡 Breakdown:
+
+* `HEAD` → points to the **latest commit on your current branch**.
+* `HEAD~1` → the **parent** of `HEAD` (1 commit behind).
+* `HEAD~2` → 2 commits behind HEAD.
+* And so on...
+
+So:
+
+| Command                    | Meaning                                       |
+| -------------------------- | --------------------------------------------- |
+| `git reset --soft HEAD~1`  | Undo last commit, keep changes staged         |
+| `git reset --mixed HEAD~1` | Undo last commit, unstage changes             |
+| `git reset --hard HEAD~1`  | Undo last commit **and** discard code changes |
+
+## 🧠 Git Undo Practice Question:
+
+You have the following situation:
+
+```bash
+$ git log --oneline
+f4a123d (HEAD -> main) Add contact page
+1b2c34a Add home page
+a3d4e5f Initial commit
+```
+
+You realize you **don’t want the last commit** `Add contact page`.
+You **want to undo it completely**, including the code changes.
+
+---
+
+### ❓Which command will you run?
+
+**A.** `git reset --soft HEAD~1`
+**B.** `git reset --mixed HEAD~1`
+**C.** `git reset --hard HEAD~1`
+**D.** `git revert HEAD`
+
+
