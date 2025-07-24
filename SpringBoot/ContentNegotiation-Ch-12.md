@@ -46,7 +46,7 @@ You **don’t need to configure anything** to support JSON. For XML, you need de
 
 ## ✅ 5. Example Code – Basic Setup
 
-### ✅ Step 1: Simple POJO
+#### Step 1: Simple POJO
 
 ```java
 public class User {
@@ -57,9 +57,7 @@ public class User {
 }
 ```
 
----
-
-### ✅ Step 2: Controller
+#### Step 2: Controller
 
 ```java
 @RestController
@@ -73,9 +71,7 @@ public class UserController {
 }
 ```
 
----
-
-### ✅ Step 3: XML Support (optional)
+#### Step 3: XML Support (optional)
 
 To support XML, add this dependency:
 
@@ -109,9 +105,7 @@ public class User {
 }
 ```
 
----
-
-### ✅ Step 4: Test with Curl or Postman
+#### Step 4: Test with Curl or Postman
 
 #### JSON
 
@@ -190,7 +184,7 @@ Spring Boot allows you to use **`produces`** and **`consumes`** attributes in `@
 * `produces`: what content types your method **returns**
 * `consumes`: what content types your method **accepts**
 
-### ✅ `produces` – What the method can **return**
+### `produces` – What the method can **return**
 
 #### Example: JSON and XML response supported
 
@@ -214,7 +208,7 @@ Accept: application/xml
 
 Then Spring matches it and sends XML, **if possible**.
 
-### ✅ `consumes` – What the method can **accept** as input
+### `consumes` – What the method can **accept** as input
 
 #### Example: Accepting only JSON
 
@@ -247,7 +241,7 @@ Content-Type: application/xml
 
 ❌ 415 Unsupported Media Type error is returned.
 
-### ✅ Both Together Example
+### Both Together Example
 
 ```java
 @PostMapping(
