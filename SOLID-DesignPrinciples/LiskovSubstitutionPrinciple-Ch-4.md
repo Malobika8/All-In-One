@@ -75,7 +75,7 @@ class Ostrich implements Bird {
 
 ---
 
-## 💬 Interview Tip:
+## Questions:
 
 🗣️ **Q:** What is LSP?
 
