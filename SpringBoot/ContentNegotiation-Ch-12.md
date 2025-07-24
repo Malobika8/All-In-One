@@ -190,9 +190,9 @@ Spring Boot allows you to use **`produces`** and **`consumes`** attributes in `@
 * `produces`: what content types your method **returns**
 * `consumes`: what content types your method **accepts**
 
-## ✅ `produces` – What the method can **return**
+### ✅ `produces` – What the method can **return**
 
-### Example: JSON and XML response supported
+#### Example: JSON and XML response supported
 
 ```java
 @GetMapping(
@@ -204,7 +204,7 @@ public User getUser() {
 }
 ```
 
-### Use Case:
+#### Use Case:
 
 Client says:
 
@@ -214,9 +214,9 @@ Accept: application/xml
 
 Then Spring matches it and sends XML, **if possible**.
 
-## ✅ `consumes` – What the method can **accept** as input
+### ✅ `consumes` – What the method can **accept** as input
 
-### Example: Accepting only JSON
+#### Example: Accepting only JSON
 
 ```java
 @PostMapping(
@@ -229,7 +229,7 @@ public ResponseEntity<String> saveUser(@RequestBody User user) {
 }
 ```
 
-### Use Case:
+#### Use Case:
 
 If client sends:
 
@@ -247,7 +247,7 @@ Content-Type: application/xml
 
 ❌ 415 Unsupported Media Type error is returned.
 
-## ✅ Both Together Example
+### ✅ Both Together Example
 
 ```java
 @PostMapping(
