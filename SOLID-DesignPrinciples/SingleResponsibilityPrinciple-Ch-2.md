@@ -1,4 +1,4 @@
-## Single Responsibility Principle (SRP)
+# Single Responsibility Principle (SRP)
 
 ### ✅ Definition:
 
@@ -6,9 +6,7 @@
 
 This means: A class should **do one thing**, and **only one thing**.
 
----
-
-### ❌ Bad Example: (Violates SRP)
+#### ❌ Bad Example: (Violates SRP)
 
 ```java
 public class ReportService {
@@ -41,9 +39,7 @@ So, it has **3 reasons to change**:
 * If file saving changes
 * If email sending changes
 
----
-
-### ✅ Good Example (Follows SRP)
+#### ✅ Good Example (Follows SRP)
 
 ```java
 public class ReportGenerator {
@@ -70,8 +66,6 @@ Now:
 * Each class has **only one job**
 * Each class changes for **one reason only**
 
----
-
 ### 🧠 Why It Matters:
 
 ✅ Makes code:
@@ -83,7 +77,7 @@ Now:
 
 ---
 
-### 💬 Questions:
+## 💬 Questions:
 
 🗣️ **Q:** What is SRP?
 
@@ -97,9 +91,7 @@ Now:
 
 * By encouraging the use of multiple `@Service`, `@Component`, `@Repository` classes — each focused on one job.
 
-## 🔍 **Question:**
-
-You are designing a `UserService` class that handles:
+🗣️ **Q:** You are designing a `UserService` class that handles:
 
 1. User registration
 2. Password validation
@@ -181,7 +173,7 @@ public class NotificationService {
 }
 ```
 
-### Optional test:
+#### Optional test:
 
 ```java
 public class Main {
