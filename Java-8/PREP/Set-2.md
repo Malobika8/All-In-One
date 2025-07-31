@@ -110,12 +110,21 @@ List<String> finalList = list.stream()
 You are given a list of `Employee` where each employee has a `name`, `salary`, and a `department`.
 
 ```java
+
 class Employee {
     String name;
     int salary;
     String department;
 
-    // constructor + getters
+    Employee(String name, int salary, String department) {
+        this.name = name;
+        this.salary = salary;
+        this.department = department;
+    }
+
+    public String getName() { return name; }
+    public int getSalary() { return salary; }
+    public int getDepartment() { return department; }
 }
 ```
 
