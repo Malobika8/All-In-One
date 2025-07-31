@@ -205,5 +205,12 @@ MongoDB = Charlie
 * `Collectors.groupingBy(...)`
 * `Collectors.mapping(..., joining(","))`
 
----
+```
+Map<String, List<String>> map = students.stream()
+        .flatMap(stu->stu.getCourses().stream().map(c->new String[]{
+                stu.getName(),c}))
+        .collect(Collectors.groupingBy(strArr->strArr[0], Collectors.mapping(strArr->strArr[1], Collectors.toList())));
+        
+        System.out.println(map);
+```
 
