@@ -251,7 +251,7 @@ public interface ToLongFunction<T> {
 ## Map:
 - Collectors.toMap()
 - Collectors.groupingBy(): returns a Map<K, List<V>>
-  - Collectors.mapping(): It is a downstream collector used within another collector like groupingBy() or partitioningBy() to transform elements before collecting them.
+  - Collectors.mapping(): It is a downstream collector used within another collector like groupingBy() or partitioningBy() to transform elements before collecting them. If we want the list to contain specific data rather than the entire object, we can use this.
 
 ## List:
 - Collectors.toList();
