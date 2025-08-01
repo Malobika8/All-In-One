@@ -8,7 +8,7 @@ While Hibernate is the most common JPA provider, others like **EclipseLink**, **
 
 ---
 
-# What are the rules to make a class a valid JPA entity? Try answering. You can list the must-haves.
+# What are the rules to make a class a valid JPA entity?
 
 ### Sol:
 
@@ -200,8 +200,6 @@ em.close();
 After `em.close()`, what state is `e` in?
 
 ### Sol:
-
-✅ **Exactly right!**
 
 After you call `em.persist(e)`, the entity is:
 
