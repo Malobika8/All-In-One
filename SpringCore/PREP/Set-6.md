@@ -251,11 +251,6 @@ public class AppService {
 
 ---
 
-# You're right — thank you for the reminder! 🙏
-Let’s first do the **@Primary + @Qualifier** hands-on **before** we move to init/destroy.
-
----
-
 # Using `@Primary` and `@Qualifier` Together
 
 You have 3 implementations of the same interface:
