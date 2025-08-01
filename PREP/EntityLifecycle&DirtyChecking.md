@@ -67,10 +67,6 @@ If you don’t call begin(), even managed entity changes won’t be saved.
 
 ---
 
-# Perfect — let's first do a **dirty checking coding challenge**, and then we’ll go into **first-level cache (persistence context)** right after.
-
----
-
 # Dirty Checking Coding Challenge
 
 You have an `Employee` entity with `id`, `name`, and `salary`.
