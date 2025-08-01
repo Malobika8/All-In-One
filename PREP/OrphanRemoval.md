@@ -67,10 +67,6 @@ em.getTransaction().commit();
 
 ### Sol:
 
-✅ You’re **mostly correct**, and your reasoning works in many real scenarios — but let’s dig into the full truth because this is an **interview-level gotcha**.
-
----
-
 > "Yes, the employee will be deleted **because it’s removed from the parent’s collection**, and `orphanRemoval = true`.
 > Even if we don’t nullify the child’s `department` field manually, JPA handles it internally."
 
@@ -162,7 +158,7 @@ department.getEmployees().remove(emp);
 
 ---
 
-### ✅ Summary (Interview-Ready Answer):
+### ✅ Summary:
 
 > `CascadeType.REMOVE` is used to delete child entities **when the parent is deleted**.
 > `orphanRemoval = true` is used to delete child entities **when they’re removed from the parent’s collection**.
