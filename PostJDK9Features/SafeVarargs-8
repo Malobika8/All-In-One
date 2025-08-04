@@ -1,0 +1,172 @@
+## ✅ Java 9: `@SafeVarargs` on Private and Static Methods in Interfaces
+
+---
+
+### 🔙 Background:
+
+Before Java 9, `@SafeVarargs` was only allowed on:
+
+* Static methods
+* Final instance methods
+* Constructors
+* And methods in `final` classes
+
+You **could not** use it on **private** or **static methods inside interfaces**, even though they were safe.
+
+---
+
+### ✅ Java 9 Fix:
+
+You can now use `@SafeVarargs` on:
+
+* **Private methods** (anywhere)
+* **Static methods inside interfaces**
+
+---
+
+### 🧠 Why was this needed?
+
+Because varargs (e.g. `T... args`) with generics can lead to **heap pollution**, and Java gives a warning.
+
+If you're sure that the method **doesn't cause unsafe behavior**, you can suppress that warning with `@SafeVarargs`.
+
+---
+
+### ✅ Example 1: Private Method (Java 9+)
+
+```java
+public class Logger {
+
+    @SafeVarargs
+    private final <T> void log(T... messages) {
+        for (T msg : messages) {
+            System.out.println(msg);
+        }
+    }
+}
+```
+
+✅ This works in Java 9 and beyond.
+
+---
+
+### ✅ Example 2: Static Method in Interface (Java 9+)
+
+```java
+public interface Printer {
+
+    @SafeVarargs
+    static <T> void printAll(T... items) {
+        for (T item : items) {
+            System.out.println(item);
+        }
+    }
+}
+```
+
+Before Java 9 — ❌ compile-time error
+After Java 9 — ✅ allowed
+
+---
+
+### ⚠️ Without `@SafeVarargs`, you’ll get a warning:
+
+> *Note: Reifiable type warning: "Possible heap pollution from parameterized vararg type"*
+
+---
+
+### Question
+
+Write a static method inside an interface `Utils` that:
+
+* Takes varargs `T... items`
+* Prints each item
+* Uses `@SafeVarargs` to suppress the warning
+
+## Deep-dive
+
+In Java, you can use **varargs** to pass a flexible number of arguments:
+
+```java
+void printNames(String... names) {
+    for (String name : names) {
+        System.out.println(name);
+    }
+}
+
+printNames("Alice", "Bob"); // Works
+printNames();               // Works
+```
+
+Behind the scenes, Java treats it as an **array**:
+
+```java
+printNames(new String[]{"Alice", "Bob"});
+```
+
+### What are **Generics**?
+
+```java
+List<String> list = new ArrayList<>();
+list.add("Java");
+// Only strings allowed
+```
+
+Generics add **type safety**.
+
+But at **runtime**, Java removes that type information — this is called **type erasure**.
+So `List<String>` becomes just `List`.
+
+### The Problem: Varargs **+** Generics
+
+Let’s say we do:
+
+```java
+public static <T> void myMethod(List<T>... lists) {
+    Object[] arr = lists;
+    arr[0] = List.of(10);  // Integer list inserted
+    T t = lists[0].get(0); // Uh-oh! You expected T, but it's an Integer
+}
+```
+
+You think you're working with `List<String>...`, but at runtime it’s just `Object[]`.
+
+So now, you put in a `List<Integer>` into that array, and later try to cast it back to `String`.
+
+💥 This is what we call **heap pollution**. The **type safety is broken** at runtime.
+
+### What’s the fix?
+
+Java gives a **warning** on such code. If **you are sure** your varargs + generics method is safe, then you add:
+
+```java
+@SafeVarargs
+```
+
+It tells Java:
+
+> “I promise I won’t do anything unsafe with this varargs array.”
+
+### Real Example:
+
+```java
+public class Demo {
+    @SafeVarargs
+    private static <T> void printAll(T... items) {
+        for (T item : items) {
+            System.out.println(item);
+        }
+    }
+
+    public static void main(String[] args) {
+        printAll("A", "B", "C"); // ✅ safe
+    }
+}
+```
+
+* This is totally safe.
+* No weird casting or modifying arrays.
+* So `@SafeVarargs` is allowed in Java 9 even on **private methods** like this.
+
+---
+
