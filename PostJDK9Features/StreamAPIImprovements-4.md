@@ -82,3 +82,53 @@ words.stream()
      .takeWhile(str -> str.length() <= 3)
      .forEach(System.out::println);
 ```
+
+---
+
+### Question:
+
+You're given a list of numbers:
+
+```java
+List<Integer> numbers = List.of(2, 4, 6, 7, 9, 10, null, 12, 14);
+```
+
+Your goal is to:
+
+1. **Filter out nulls** safely using `Stream.ofNullable(...)`
+2. **Drop** all even numbers from the start using `dropWhile(...)`
+3. **Then take** numbers **< 12** using `takeWhile(...)`
+4. Print the final result.
+
+⚠️ Rules:
+
+* You **must use** `Stream.ofNullable(...)` to handle potential `null` values.
+* You can use flatMap or any technique you find suitable.
+* Output should be printed using `forEach(System.out::println)`
+
+**`ofNullable(null)`** is a **static method** of `Stream`, not of a Stream instance. 
+
+```java
+List<Integer> numbers = List.of(2, 4, 6, 7, 9, 10, null, 12, 14);
+
+numbers.stream()
+       .flatMap(Stream::ofNullable)                        // Step 1: skip nulls safely
+       .dropWhile(num -> num % 2 == 0)                     // Step 2: drop even numbers from start
+       .takeWhile(num -> num < 12)                         // Step 3: take numbers less than 12
+       .forEach(System.out::println);                      // Step 4: print
+```
+
+#### Explanation:
+
+* `Stream::ofNullable` → safely ignores `null` values
+* `dropWhile(num -> num % 2 == 0)` drops 2, 4, 6 — but **stops dropping at 7**
+* `takeWhile(num -> num < 12)` takes 7, 9, 10 → but stops at 12 (which fails condition)
+
+#### Output:
+
+```
+7
+9
+10
+```
+
