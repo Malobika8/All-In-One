@@ -70,3 +70,19 @@ Map<String, Integer> map = Map.ofEntries(
 
 ---
 
+Java 9's `List.of(...)`, `Set.of(...)`, and `Map.of(...)` all throw a:
+
+```
+java.lang.NullPointerException
+```
+
+if **any argument is null** — even a single null element.
+
+### 📌 Why?
+
+Because:
+
+* These factory methods create **immutable** collections.
+* Allowing `null` values could lead to unsafe behavior, especially when unmodifiable.
+
+
