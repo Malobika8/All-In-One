@@ -63,4 +63,3 @@
 ---
 
 
-Would you like to continue with **Java 10 next**? Or pause here?
