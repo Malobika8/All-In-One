@@ -131,6 +131,80 @@ List<Employee> findByNameContainingIgnoreCaseAndSalaryBetweenOrderByNameAsc(Stri
 List<Employee> findByDepartment_DepartmentNameInAndSalaryIsNotNull(List<String> departmentNames);
 ```
 
+---
+
+# In Spring Data JPA, what is the difference between findById() and getOne() (or getReferenceById() in newer versions)?
+
+### Sol:
+
+1. **`findById(id)`**
+
+   * **Eagerly fetches** the entity from the database immediately.
+   * Returns `Optional<T>` (in Spring Data JPA), so **never returns `null`** — you check with `.isPresent()` or `.orElse(...)`.
+   * If the entity is not found, it returns an **empty `Optional`**.
+
+2. **`getOne(id)`** *(deprecated since Spring Data JPA 2.5, replaced by `getReferenceById(id)`)*
+
+   * **Does not hit the DB immediately** — returns a **lazy proxy**.
+   * Actual SQL query happens **only when you access a field**.
+   * If the entity doesn’t exist and you try to access it, JPA throws **`EntityNotFoundException`**.
+   * Requires an **active transaction** when you access the fields (lazy loading).
+
+#### **Note:**
+
+   * `getOne()` / `getReferenceById()` **does not return the first row in the table**. It always returns a proxy for the **given ID**, not arbitrary data.
+
+---
+
+💡 **When to use:**
+
+* **`findById()`** → When you actually need the entity data immediately, and want to handle absence safely.
+* **`getReferenceById()`** → When you just need a reference (e.g., to set a foreign key in another entity) without triggering a full fetch.
+
+---
+
+# In Spring Data JPA, what is the difference between save() and saveAndFlush()? When would you use saveAndFlush() instead of save()?
+
+### Sol:
+
+#### **`save(entity)`**
+
+* Persists a **new** entity or merges an **existing** one into the **persistence context**.
+* Changes are **not immediately written to the database**.
+* The actual SQL is executed when:
+
+  * The **transaction commits**, or
+  * The persistence context is **flushed** automatically (e.g., before a JPQL query).
+
+#### **`saveAndFlush(entity)`**
+
+* Calls `save(entity)` **and** immediately calls `EntityManager.flush()`.
+* This forces Hibernate to:
+
+  * Synchronize the persistence context with the database **right now**.
+  * Execute any pending SQL statements immediately.
+* **Use cases:**
+
+  * When you need the database to reflect changes **before the transaction commits** (e.g., when subsequent code relies on updated DB state).
+  * Example: saving an entity and then running a native query that depends on it.
+
+💡 **Note:**
+You can also manually flush anytime via:
+
+```java
+@PersistenceContext
+private EntityManager em;
+
+em.flush();
+```
+
+…but `saveAndFlush()` is the Spring Data JPA convenience method.
+
+---
+
+# What is the N+1 select problem in JPA, and how can you solve it in Spring Data JPA?
+
+### Sol:
 
 
 
