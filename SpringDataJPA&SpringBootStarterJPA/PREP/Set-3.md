@@ -86,10 +86,6 @@ List<EmployeeNameDTO> findBySalary();
 
 ---
 
-# Love it — let’s lock this in with one more challenge! 🔥
-
----
-
 # Write a native query that:
 
 > ✅ Retrieves all **departments**
