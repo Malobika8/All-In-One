@@ -322,6 +322,44 @@ class InfoDTO{
 
 ---
 
+# What will happen if two controller methods have **exact same URI and HTTP method**, but their parameter lists are different? Will Spring allow this or throw an error? Why?
+
+#### Example:
+
+```java
+@GetMapping("/test")
+public String method1(@RequestParam String name) { ... }
+
+@GetMapping("/test")
+public String method2(@RequestParam int age) { ... }
+```
+
+### Sol:
+
+Suppose the request looks like, `/test?name=lila` or `/test?age=9`, **Spring MVC will not be able to resolve the method just based on the type of the query parameter**.
+
+Spring’s `HandlerMapping` doesn’t look at query param **types** when deciding which method to call. It looks at:
+
+* The URL path (e.g., `/test`)
+* The HTTP method (`GET`, `POST`, etc.)
+* Any explicit parameter mapping annotations (`@RequestParam`, `@PathVariable`, etc.)
+
+If both methods map to the same path and HTTP verb without distinct `@RequestParam` constraints (like `params="name"` vs `params="age"`), **Spring will throw an `IllegalStateException: Ambiguous mapping`** during application startup — **not at runtime** — because the mappings are indistinguishable.
+
+If you want them to be different, you’d do something like:
+
+```java
+@GetMapping(value = "/test", params = "name")
+public String testWithName(@RequestParam String name) { ... }
+
+@GetMapping(value = "/test", params = "age")
+public String testWithAge(@RequestParam int age) { ... }
+```
+
+Now `HandlerMapping` can unambiguously decide which method to pick.
+
+---
+
 
 
 
