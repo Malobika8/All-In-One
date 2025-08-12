@@ -1,3 +1,4 @@
+```
    ┌───────────────────┐
    │   Client Browser   │
    └─────────┬─────────┘
@@ -33,6 +34,8 @@
    ┌───────────────────┐
    │   Client Browser   │
    └───────────────────┘
+
+```
 
 - HandlerMapping → Decides which controller method should handle the request.
 - HandlerAdapter → Actually invokes that method, handling method parameters, return types, etc.
