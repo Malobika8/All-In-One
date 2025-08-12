@@ -360,6 +360,36 @@ Now `HandlerMapping` can unambiguously decide which method to pick.
 
 ---
 
+# In Spring MVC, suppose you completely remove **all HandlerAdapters** from the `DispatcherServlet`’s configuration (either by setting `setDetectAllHandlerAdapters(false)` and not registering any, or in a custom minimal config).
+
+You still have:
+
+* A `@Controller` class with a valid `@RequestMapping` method
+* A proper `HandlerMapping` that can find the right method
+* No other errors in configuration
+
+What happens when a request comes in? Will your controller method still get called? If not, why — even though `HandlerMapping` found the method?
+
+### Sol:
+
+The **HandlerMapping** just says *“this is the handler object (or method) you need”*. But the **HandlerAdapter** is the one that actually knows *how to call it* and deal with the request/response lifecycle.
+
+If there’s no matching **HandlerAdapter** for the handler object:
+
+* Spring *will* find the method via `HandlerMapping`.
+* But then it stops and says: *“Uh… I don’t know how to execute this”*.
+* The result is a **`ServletException`** — usually something like:
+
+  ```
+  No adapter for handler [<handler-class>]: 
+  The DispatcherServlet configuration needs to include a HandlerAdapter that supports this handler.
+  ```
+
+The mapping step succeeds, but the execution step fails because there’s no one to *adapt* the handler into an actual method invocation with parameters, return value handling, view rendering, etc.
+
+---
+
+
 
 
 
