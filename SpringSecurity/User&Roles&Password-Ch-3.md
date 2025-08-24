@@ -59,11 +59,10 @@ I can either **implement `UserDetails`** myself or use the built‑in **`org.spr
 So either write:
 
 ```java
-.authorizeHttpRequests(auth -> auth
+httpSecurity.authorizeHttpRequests()
   .requestMatchers("/admin/**").hasRole("ADMIN")  // adds ROLE_ automatically
   .requestMatchers("/reports/**").hasAuthority("READ_REPORTS")
-  .anyRequest().authenticated()
-)
+  .anyRequest().authenticated();
 ```
 
 ### 1.3 `GrantedAuthority` & `SimpleGrantedAuthority`
@@ -164,16 +163,15 @@ public class SecurityConfig {
 
   // 3) Authorization rules + login
   @Bean
-  public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-    http
-      .authorizeHttpRequests(auth -> auth
+  public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+    httpSecurity
+      .authorizeHttpRequests()
         .requestMatchers("/", "/public/**").permitAll()
         .requestMatchers("/admin/**").hasRole("ADMIN")
         .requestMatchers("/reports/**").hasAuthority("READ_REPORTS")
-        .anyRequest().authenticated()
-      )
-      .formLogin(with -> {})       // default login page
-      .httpBasic(with -> {});      // enable Basic for curl/testing
+        .anyRequest().authenticated();
+    httpSecurity.formLogin()       // default login page
+    httpSecurity.httpBasic();      // enable Basic for curl/testing
 
     return http.build();
   }
@@ -207,12 +205,11 @@ public UserDetailsService userDetailsService() {
 ## 4) URL Authorization Examples (roles vs authorities)
 
 ```java
-.authorizeHttpRequests(auth -> auth
+httpSecurity.authorizeHttpRequests()
   .requestMatchers("/profile/**").hasAnyRole("USER", "ADMIN")
   .requestMatchers("/manage/**").hasAuthority("ROLE_ADMIN")  // explicit authority
   .requestMatchers("/ops/**").hasAnyAuthority("DEPLOY", "ROLLBACK")
-  .anyRequest().authenticated()
-)
+  .anyRequest().authenticated();
 ```
 
 **Cheat sheet**
