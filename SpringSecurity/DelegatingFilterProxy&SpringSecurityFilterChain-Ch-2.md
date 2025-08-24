@@ -238,35 +238,25 @@ public class SecurityInitializer extends AbstractSecurityWebApplicationInitializ
 }
 ```
 
-**B. `@EnableWebSecurity` + a `SecurityFilterChain` bean**
+**B. `@EnableWebSecurity`(internally creates a bean of springSecurityFilterChain) + a `SecurityFilterChain` bean**
 
 ```java
 // src/main/java/com/example/web/SecurityConfig.java
 package com.example.web;
 
 import org.springframework.context.annotation.*;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-@EnableWebSecurity
+@EnableWebSecurity //this internally creates a bean of springSecurityFilterChain
 public class SecurityConfig {
 
-  @Bean
-  public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-    http
-      .authorizeHttpRequests(auth -> auth
-        .requestMatchers("/").permitAll()   // home is open
-        .anyRequest().authenticated()        // everything else needs auth
-      )
-      .formLogin(with -> {})                 // use default login page for now
-      .httpBasic(with -> {});                // also allow basic (for testing)
-
-    return http.build();
-  }
 }
 ```
+
+<img width="845" height="408" alt="Screenshot 2025-08-24 at 9 12 24 PM" src="https://github.com/user-attachments/assets/5eb9467c-4ac4-44b6-8d90-dfd512f7992f" />
+<img width="848" height="373" alt="Screenshot 2025-08-24 at 9 12 31 PM" src="https://github.com/user-attachments/assets/9faa7c1a-9c61-4b7d-bcaa-8ae9b986aae0" />
+<img width="844" height="411" alt="Screenshot 2025-08-24 at 9 12 39 PM" src="https://github.com/user-attachments/assets/f9fd8594-33d5-484c-b075-f33449ccc4cf" />
 
 > **Result now:** the app starts; navigating to `/hello` shows the **default login page**. Since we haven’t configured users yet, login attempts won’t succeed.
 
