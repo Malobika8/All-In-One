@@ -109,7 +109,9 @@ We'll try to login again,
 
 ---
 
-## 2) Minimal Working Setup (in‑memory users)
+## 2) Minimal Working Setup (in‑memory users). 
+
+**We can use builder pattern to create User.**
 
 We’ll define:
 
