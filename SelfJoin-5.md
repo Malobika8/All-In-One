@@ -124,3 +124,73 @@ ON e.manager_id = m.emp_id;
    left join employees mm
        on m.manager_id = mm.emp_id;
    ```
+
+---
+
+# Understanding the diff. 
+
+Consider the employee table
+
+| emp\_id | name    | manager\_id |
+| ------- | ------- | ----------- |
+| 1       | Alice   | NULL        |
+| 2       | Bob     | 1           |
+| 3       | Charlie | 1           |
+| 4       | David   | 2           |
+| 5       | Emma    | 2           |
+| 6       | Frank   | 3           |
+
+### Case A: ❌ Wrong join
+
+```sql
+... on e.emp_id = m.manager_id
+```
+
+👉 Means: "match employees whose **id = some other’s manager\_id**."
+So it pairs **employee = manager-of-someone**.
+
+Result of the join:
+
+| e.emp\_id | e.name  | e.manager\_id | m.emp\_id | m.name  | m.manager\_id |
+| --------- | ------- | ------------- | --------- | ------- | ------------- |
+| 1         | Alice   | NULL          | 2         | Bob     | 1             |
+| 1         | Alice   | NULL          | 3         | Charlie | 1             |
+| 2         | Bob     | 1             | 4         | David   | 2             |
+| 2         | Bob     | 1             | 5         | Emma    | 2             |
+| 3         | Charlie | 1             | 6         | Frank   | 3             |
+
+🛑 Problem: Here **e is manager** and **m is employee**, but you meant the opposite!
+So when you `count(e.emp_id)`, you’re not really counting employees per manager correctly.
+
+### Case B: ✅ Correct join
+
+```sql
+... on e.manager_id = m.emp_id
+```
+
+👉 Means: "match an employee’s **manager\_id** to the manager’s **emp\_id**."
+
+Result of the join:
+
+| e.emp\_id | e.name  | e.manager\_id | m.emp\_id | m.name  | m.manager\_id |
+| --------- | ------- | ------------- | --------- | ------- | ------------- |
+| 2         | Bob     | 1             | 1         | Alice   | NULL          |
+| 3         | Charlie | 1             | 1         | Alice   | NULL          |
+| 4         | David   | 2             | 2         | Bob     | 1             |
+| 5         | Emma    | 2             | 2         | Bob     | 1             |
+| 6         | Frank   | 3             | 3         | Charlie | 1             |
+
+✔ This is the **employee → manager mapping** we want.
+Now grouping by `m.name` gives correct counts:
+
+* Alice → 2 (Bob, Charlie)
+* Bob → 2 (David, Emma)
+* Charlie → 1 (Frank)
+
+So the difference:
+
+* `e.emp_id = m.manager_id` → treats **employee as manager**, flipping roles.
+* `e.manager_id = m.emp_id` → correctly matches **employee → their manager**.
+
+
+
