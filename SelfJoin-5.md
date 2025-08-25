@@ -93,26 +93,34 @@ ON e.manager_id = m.emp_id;
    👉 (Hint: SELF JOIN twice)
 
 
-2. select e.name 
-from employees e 
-inner join employees m 
-on e.emp_id = m.manager_id;
+2. ```sql
+   select e.name 
+   from employees e 
+   inner join employees m 
+   on e.emp_id = m.manager_id;
+   ```
 
-3. select name 
-from employees 
-where manager_id is null;
+3. ```sql
+   select name 
+   from employees 
+   where manager_id is null;
+   ```
 
-4. select m.name as manager, count(e.emp_id) as num_reports
-from employees e
-inner join employees m
-on e.manager_id = m.emp_id
-group by m.name;
+4. ```sql
+   select m.name as manager, count(e.emp_id) as num_reports
+   from employees e
+   inner join employees m
+   on e.manager_id = m.emp_id
+   group by m.name;
+   ```
 
-5. select e.name as employee, 
+5. ```sql
+   select e.name as employee, 
        m.name as manager, 
        mm.name as managers_manager
-from employees e
-left join employees m 
+   from employees e
+   left join employees m 
        on e.manager_id = m.emp_id
-left join employees mm
+   left join employees mm
        on m.manager_id = mm.emp_id;
+   ```
