@@ -6,6 +6,11 @@
 <img width="845" height="370" alt="Screenshot 2025-08-23 at 11 59 09 AM" src="https://github.com/user-attachments/assets/611ca4fb-c273-4012-b6e6-59b0b3a8cbc6" />
 <img width="1024" height="522" alt="Screenshot 2025-08-23 at 12 01 16 PM" src="https://github.com/user-attachments/assets/18b1eee5-279b-4a9a-8b89-84626bda637f" />
 
+## User Schema
+
+<img width="1079" height="412" alt="Screenshot 2025-08-25 at 11 42 12 AM" src="https://github.com/user-attachments/assets/b23ea2da-dc99-443f-841d-5dc29d7c6352" />
+
+
 
 
 
