@@ -35,7 +35,7 @@
 <img width="585" height="366" alt="Screenshot 2025-08-25 at 12 43 22 PM" src="https://github.com/user-attachments/assets/d31723dc-f367-449f-9408-046b52f4bffa" />
 <img width="793" height="297" alt="Screenshot 2025-08-25 at 12 43 30 PM" src="https://github.com/user-attachments/assets/cc0e0adf-9fa4-45f8-ad78-7fc48e839574" />
 
-#### Note: if a user doesn't exist, we might come across this error. ("*queryForObject()*" always expects a return value. If it's null, it throws an error. It's better to use "*query()*" method instead)
+#### Note: if a user doesn't exist, we might come across this error. ("*queryForObject()*" always expects a return value. If it's null, it throws an error. It's better to use "*query()*" method instead. Note that "*query()*" returns a Collection.)
 
 <img width="620" height="325" alt="Screenshot 2025-08-25 at 12 43 59 PM" src="https://github.com/user-attachments/assets/3255cc56-195b-447b-bcc4-8a279cda099a" />
 <img width="532" height="370" alt="Screenshot 2025-08-25 at 12 44 03 PM" src="https://github.com/user-attachments/assets/92533dda-2d0f-4eb3-9def-a4a5ada7ff1e" />
