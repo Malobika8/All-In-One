@@ -1,13 +1,11 @@
----
-
-### ✅ 1. **"An image when run is called a container" — Correct ✅**
+### ✅ 1. **"An image when run is called a container"**
 
 * Think of an **image** as a *frozen recipe*.
 * When you run it, Docker **"unfreezes"** it to create a **live, isolated environment** = a **container**.
 
 ---
 
-### ✅ 2. **"That image is only of JDK which has been packaged" — Correct ✅**
+### ✅ 2. **"That image is only of JDK which has been packaged"**
 
 * The image `openjdk:11-jdk` is **a pre-built environment** that includes:
 
@@ -19,7 +17,7 @@ So yes — this image is just a *packaged JDK environment* with nothing else yet
 
 ---
 
-### ✅ 3. **"When we run the container, it will keep things ready" — Correct ✅**
+### ✅ 3. **"When we run the container, it will keep things ready"**
 
 * Docker **instantiates** the image into a **ready-to-use Linux environment**.
 * JDK is **pre-installed**, so you can immediately use `java`, `javac`, etc.
@@ -27,7 +25,7 @@ So yes — this image is just a *packaged JDK environment* with nothing else yet
 
 ---
 
-### ✅ 4. **"We can confirm with java --version" — Absolutely ✅**
+### ✅ 4. **"We can confirm with java --version"**
 
 Inside the container, try:
 
