@@ -56,3 +56,5 @@ my-java-app/
 | Stop/start services     | `docker compose stop/start`     | Stop/start services without removing them |
 | Run bash inside the container | `docker compose exec app bash` | Run bash inside the container           |
 | Run one-off commands in service container     | `docker compose run app [command]`     | Run one-off commands in service container |
+
+<img width="859" height="491" alt="Screenshot 2025-08-26 at 3 29 19 PM" src="https://github.com/user-attachments/assets/e98beb82-245f-41e4-ae54-889583b195d5" />
