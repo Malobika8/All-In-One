@@ -1,5 +1,7 @@
 ## 🔑 Steps for JWT Authentication in Spring Security
 
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/c63eb01f-e032-4cf4-b69d-cf1574716b4c" />
+
 ### **1. User login**
 
 * User sends **username + password** to `/login`.
