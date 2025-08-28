@@ -80,3 +80,147 @@
 
 ---
 
+# 🟢 JWT (JSON Web Token) Authentication – Step by Step
+
+## 1. **User Logs In**
+
+* The client (browser / mobile app / Postman) sends:
+
+  ```json
+  { "username": "alice", "password": "password123" }
+  ```
+* This request goes to `/login` or `/authenticate` API in your backend.
+
+---
+
+## 2. **Backend Verifies Credentials**
+
+* Spring Security (via `AuthenticationManager`) checks:
+
+  * Does `alice` exist in the database?
+  * Does her password match (after encoding, e.g., BCrypt)?
+
+✅ If **yes** → Authentication successful.
+❌ If **no** → Throw error (401 Unauthorized).
+
+---
+
+## 3. **JWT is Created (Issued by Server)**
+
+If authentication is successful, the server generates a JWT.
+This JWT has **3 parts**:
+
+1. **Header** (metadata about token):
+
+   ```json
+   {
+     "alg": "HS256",   // algorithm
+     "typ": "JWT"      // type of token
+   }
+   ```
+
+2. **Payload (Claims)** (user details + extra info):
+
+   ```json
+   {
+     "sub": "alice",       // subject (username)
+     "roles": ["USER"],    // user’s roles/authorities
+     "iat": 1693200000,    // issued at
+     "exp": 1693203600     // expiry time
+   }
+   ```
+
+3. **Signature** (security seal):
+
+   ```
+   HMACSHA256(
+      base64UrlEncode(header) + "." + base64UrlEncode(payload),
+      secretKey
+   )
+   ```
+
+👉 This signature ensures that the token **cannot be tampered with** (if someone edits payload, signature breaks).
+
+---
+
+## 4. **Send JWT to Client**
+
+* The JWT looks like this:
+
+  ```
+  eyJhbGciOiJIUzI1NiIsInR5cCI... (long string)
+  ```
+* Server sends it back in the response (usually JSON):
+
+  ```json
+  { "token": "eyJhbGciOi..." }
+  ```
+
+The client must **store this token** (not in cookies for APIs, but in localStorage/sessionStorage or memory).
+
+---
+
+## 5. **Client Sends JWT with Each Request**
+
+For every new request (say fetching profile):
+
+```http
+GET /profile
+Authorization: Bearer eyJhbGciOi...
+```
+
+* The JWT is placed in the `Authorization` header (with `Bearer` prefix).
+
+---
+
+## 6. **Server Validates JWT**
+
+Each request passes through Spring Security filters (e.g., `JwtAuthenticationFilter`).
+Steps:
+
+1. Extract token from `Authorization` header.
+2. Decode the token (Base64 decode header + payload).
+3. Verify signature using secret key (or public key in RSA).
+
+   * If tampered → reject.
+4. Check expiry (`exp`).
+
+   * If expired → reject.
+5. Extract claims (username, roles).
+
+---
+
+## 7. **Set Authentication in SecurityContext**
+
+* If token is valid, Spring Security creates an `Authentication` object with:
+
+  * `Principal` = user (username)
+  * `Authorities` = roles (like ROLE\_USER, ROLE\_ADMIN)
+* It sets this into **SecurityContext**, so downstream code (controllers/services) knows **who the user is**.
+
+---
+
+## 8. **Authorization Happens**
+
+* When you access `/admin`, Spring Security checks:
+
+  * Does the `Authentication` have `ROLE_ADMIN`?
+  * If yes → allow.
+  * If no → 403 Forbidden.
+
+---
+
+## 🔄 Summary Flow (Easy to Remember)
+
+1. **Login** → send username/password.
+2. **Validate** → check credentials in DB.
+3. **Create Token** → header + payload (claims) + signature.
+4. **Send Token** → back to client.
+5. **Use Token** → client attaches `Authorization: Bearer token`.
+6. **Verify Token** → server checks signature + expiry.
+7. **Set Authentication** → put user details in Spring Security context.
+8. **Authorize** → allow/deny access based on roles.
+
+---
+
+
