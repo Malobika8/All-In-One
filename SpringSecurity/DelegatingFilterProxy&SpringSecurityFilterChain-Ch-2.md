@@ -309,7 +309,7 @@ UsernamePasswordAuthenticationFilter
 
 ---
 
-## 8) What we will do next (later episodes)
+## 8) Next steps
 
 * Add **users/authentication** (in‑memory, JDBC, or custom `UserDetailsService`).
 * Understand `AuthenticationManager`, providers, and the login flow end‑to‑end.
