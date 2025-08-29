@@ -119,7 +119,7 @@ CREATE TABLE authorities (
 
 ## 7. 📊 Flow of User Registration with JDBC
 
-```mermaid
+```
 flowchart TD
     A[User Submits Registration Form] --> B[Controller Creates UserDetails Object]
     B --> C[JdbcUserDetailsManager.createUser()]
