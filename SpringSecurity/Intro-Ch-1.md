@@ -140,3 +140,109 @@ developers can focus on building their application's core functionality while en
    ------------
 
    We can also do XML config for the same.
+
+---
+
+Let’s carefully unpack **what “registering the filter chain” means in Spring Security**.
+
+### 1. The `springSecurityFilterChain` Bean
+
+* When you add `@EnableWebSecurity`, Spring Security **creates a bean of type `FilterChainProxy`**.
+* This bean is actually named `springSecurityFilterChain`.
+* It’s a **Servlet `Filter`** — so it can intercept HTTP requests before they reach your controllers.
+
+---
+
+### 2. Registering the Filter Chain with the Servlet Container
+
+* A plain Spring `Filter` bean is **not automatically applied** to web requests.
+* To make it active, it needs to be **registered with the Servlet container** (Tomcat, Jetty, etc.).
+* This is done by **`DelegatingFilterProxy`**, which is a special bridge between the Servlet container and Spring.
+
+---
+
+### 3. Where `SpringInitializer` Comes In
+
+* In a Spring Boot (or `SpringInitializer` in non-Boot apps), you extend `AbstractSecurityWebApplicationInitializer`.
+* This initializer registers a `DelegatingFilterProxy` in the `ServletContext`.
+* That proxy is mapped to all URL patterns (`/*`).
+* The proxy **looks up the bean named `springSecurityFilterChain`** in the Spring context and delegates filtering to it.
+
+So:
+
+* **SpringInitializer** → registers `DelegatingFilterProxy` with servlet container.
+* **DelegatingFilterProxy** → delegates work to `springSecurityFilterChain` bean.
+* **springSecurityFilterChain** → contains your security filter chain logic.
+
+---
+
+### 4. What “Registering the Filter Chain” Really Means
+
+When we say “registering the filter chain”:
+
+* It means **telling the Servlet container**:
+  *“Before any request reaches my controllers, run it through the Spring Security filter chain.”*
+* Technically:
+
+  * A `DelegatingFilterProxy` is registered in the container.
+  * That proxy points to the Spring-managed bean `springSecurityFilterChain`.
+  * Now, Spring Security’s entire chain of filters (authentication, CSRF, etc.) will execute on every request.
+
+---
+
+✅ In short:
+“Registering the filter chain” doesn’t just mean *creating the bean*. It means:
+
+1. Create the `springSecurityFilterChain` bean (a `FilterChainProxy`).
+2. Register a `DelegatingFilterProxy` with the servlet container.
+3. That proxy forwards all web requests into the Spring-managed filter chain.
+
+---
+
+### 🔄 Request Flow Diagram
+
+```
+   [Browser]
+      |
+      v
+[Servlet Container]  (e.g. Tomcat)
+      |
+      |  (DelegatingFilterProxy is registered by SpringInitializer)
+      v
+[DelegatingFilterProxy]  --> looks for bean named "springSecurityFilterChain"
+      |
+      v
+[springSecurityFilterChain]  (FilterChainProxy)
+      |
+      |--> [Security Filters in order]
+      |       - UsernamePasswordAuthenticationFilter
+      |       - CsrfFilter
+      |       - ExceptionTranslationFilter
+      |       - SecurityContextPersistenceFilter
+      |       - ... (etc, based on config)
+      |
+      v
+[DispatcherServlet / Your Controllers]
+      |
+      v
+   [Response]
+```
+
+---
+
+### 🔑 Step-by-step
+
+1. **Browser sends request** → hits Servlet container (Tomcat/Jetty/etc.).
+2. **Servlet container sees a registered filter** (`DelegatingFilterProxy`) mapped to `/*`.
+3. **DelegatingFilterProxy** → delegates to Spring-managed bean `springSecurityFilterChain`.
+4. **springSecurityFilterChain (FilterChainProxy)** → runs a **list of security filters** (auth, csrf, session, etc.) configured in your `MySecurityConfig`.
+5. If everything passes → request continues to your controller.
+6. If security fails → one of the filters returns an error response (e.g., 403 Forbidden, redirect to login, etc.).
+
+---
+
+✅ So when we say **“registering the filter chain”**:
+It means **hooking Spring Security’s `FilterChainProxy` (`springSecurityFilterChain`) into the Servlet container request flow via `DelegatingFilterProxy`**.
+
+---
+
