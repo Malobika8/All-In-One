@@ -177,7 +177,7 @@ class SecurityUsersConfig {
 * If you need to create/update users dynamically.
 * If you must comply with password policies, audits, or integrations.
 
-> Next steps (later videos): JDBC/LDAP stores, adding **authorization rules**, method security, and token‑based flows (JWT/OAuth2).
+> Next steps: JDBC/LDAP stores, adding **authorization rules**, method security, and token‑based flows (JWT/OAuth2).
 
 ---
 
