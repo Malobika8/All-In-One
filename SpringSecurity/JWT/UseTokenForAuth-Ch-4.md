@@ -176,4 +176,9 @@ public class SecurityConfig {
 
 ---
 
+# Let's try to run and see
+
+<img width="884" height="689" alt="Screenshot 2025-09-01 at 8 49 33 PM" src="https://github.com/user-attachments/assets/e701f4c3-b01e-46b3-bcfc-714be794290b" />
+<img width="861" height="636" alt="Screenshot 2025-09-01 at 8 49 39 PM" src="https://github.com/user-attachments/assets/405e6cf3-fe95-46bd-a30c-3e2ed9aa3e38" />
+
 
