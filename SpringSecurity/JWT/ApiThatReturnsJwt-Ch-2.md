@@ -1,6 +1,28 @@
 # 🛠 Step 2: Login API + Generate JWT
 
 ---
+## Maven dependencies:
+
+```java
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-api</artifactId>
+    <version>0.12.6</version>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-impl</artifactId>
+    <version>0.12.6</version>
+    <scope>runtime</scope>
+</dependency>
+<dependency>
+    <groupId>io.jsonwebtoken</groupId>
+    <artifactId>jjwt-jackson</artifactId>
+    <version>0.12.6</version>
+    <scope>runtime</scope>
+</dependency>
+
+```
 
 ## 1. Create DTOs (Request & Response)
 
@@ -200,3 +222,44 @@ But right now, this token is useless — we don’t yet use it to protect other 
 
 📌 Next Step → **Step 3: Create a JWT Filter to validate token on every request**.
 
+# Note: We might come across this error
+
+```
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.cfg.DatatypeFeature
+```
+
+tells us that **our project is missing a compatible `jackson-databind` dependency**.
+
+Here’s what’s happening:
+
+* `jjwt-jackson` 0.12.6 internally uses **Jackson 2.15+** classes (`DatatypeFeature` was introduced in 2.15).
+* Our Spring version probably brings an **older Jackson version** (maybe 2.13 or 2.14), so at runtime `DatatypeFeature` class isn’t found.
+
+✅ **Fix:** Explicitly add the correct Jackson version (2.15.x or higher) to `pom.xml`.
+
+Add this dependency:
+
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.15.2</version>
+</dependency>
+```
+
+Optionally, we can also align the rest of Jackson libs:
+
+```xml
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.15.2</version>
+</dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>2.15.2</version>
+</dependency>
+```
+
+---
