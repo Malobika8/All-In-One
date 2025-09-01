@@ -89,6 +89,8 @@ So it goes like this:
        - If JWT (stateless) → our filter sets it manually
 ```
 
+<img width="1053" height="545" alt="Screenshot 2025-08-27 at 12 38 33 AM" src="https://github.com/user-attachments/assets/1c901a94-f691-4ae9-957d-943e041c32e3" />
+
 # ✅ Key Takeaways
 
 * `UserDetailsService` is **not called first**.
