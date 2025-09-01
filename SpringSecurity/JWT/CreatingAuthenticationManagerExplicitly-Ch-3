@@ -64,7 +64,8 @@ For REST/JWT login, we must manually create the token inside our controller.
 
 ---
 
-⚡ Alternative (cleaner) code:
+## Note: We don't need to call `customUserDetailsManager.loadUserByUsername(...)` again, because `auth.getPrincipal()` already has the authenticated user.
+
 
 ```java
 Authentication auth = authenticationManager.authenticate(
@@ -74,8 +75,6 @@ UserDetails userDetails = (UserDetails) auth.getPrincipal();
 
 return new AuthResponse(jwtUtil.generateNewToken(userDetails));
 ```
-
-👉 No need to call `customUserDetailsManager.loadUserByUsername(...)` again, because `auth.getPrincipal()` already has the authenticated user.
 
 ---
 
