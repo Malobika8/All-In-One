@@ -15,7 +15,7 @@
 
 ---
 
-## 22) Introduction to Dockerfile 
+# 22) Introduction to Dockerfile 
 
 * **Dockerfile = Blueprint** to create custom images.
 * Contains a set of **instructions** to build an image.
@@ -105,7 +105,7 @@ We **can** build the JAR inside the container itself — that’s where a **mult
 
 This way we don’t need Maven/Gradle installed locally; Docker takes care of both building and running our Spring Boot app.
 
-## Example: Multi-stage Dockerfile
+# Example: Multi-stage Dockerfile
 
 ```dockerfile
 # Stage 1 : Build
@@ -228,7 +228,7 @@ The `mvn clean package` step still runs every time (to recompile our code), but 
 
 ---
 
-## 24) Introduction to Docker Compose
+# 24) Introduction to Docker Compose
 
 * **Problem:** Running multiple containers manually with `docker run` is complex.
 * **Solution:** Docker Compose → manages multi-container apps with a single YAML file.
