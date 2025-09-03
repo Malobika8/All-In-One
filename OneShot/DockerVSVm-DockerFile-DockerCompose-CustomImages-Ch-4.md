@@ -27,13 +27,179 @@
   * `CMD` → default command when container runs
 * Example (Node.js app):
 
-  ```dockerfile
-  FROM node:16
-  WORKDIR /app
-  COPY . .
-  RUN npm install
-  CMD ["node", "app.js"]
   ```
+  FROM openjdk:26-trixie
+
+  WORKDIR /testapp
+
+  COPY /target/SpringBootApp-1.0-SNAPSHOT.jar .
+
+  CMD ["java", "-jar", "SpringBootApp-1.0-SNAPSHOT.jar"]
+  ```
+### Package your Spring Boot app
+
+First, build your jar locally:
+
+```bash
+mvn clean package -DskipTests
+```
+
+This creates something like:
+
+```
+target/myapp-0.0.1-SNAPSHOT.jar
+```
+
+### Create a minimal Dockerfile
+
+In the root of your project, create `Dockerfile`:
+
+```dockerfile
+# 1. Use an official JDK base image
+FROM openjdk:17-jdk-slim
+
+# 2. Set working directory inside container
+WORKDIR /app
+
+# 3. Copy jar from local machine to container
+COPY target/myapp-0.0.1-SNAPSHOT.jar app.jar
+
+# 4. Run the jar
+CMD ["java", "-jar", "app.jar"]
+```
+
+### Build the image
+
+Run this from your project root:
+
+```bash
+docker build -t my-springboot-app .
+```
+
+### Run the container
+
+```bash
+docker run -p 8080:8080 my-springboot-app
+```
+
+* Maps port 8080 of container → 8080 on your host.
+* Now visit [http://localhost:8080](http://localhost:8080).
+
+### Verify
+
+Check logs:
+
+```bash
+docker logs <container_id>
+```
+
+Check running containers:
+
+```bash
+docker ps
+```
+
+✅ That’s the cleanest “hello-world” style Dockerization for Spring Boot.
+
+We **can** build the JAR inside the container itself — that’s where a **multi-stage Docker build** comes in.
+
+This way we don’t need Maven/Gradle installed locally; Docker takes care of both building and running our Spring Boot app.
+
+## Example: Multi-stage Dockerfile
+
+```dockerfile
+# Stage 1 : Build
+FROM maven:sapmachine AS build
+
+WORKDIR /testapp
+
+COPY pom.xml .
+
+RUN mvn dependency:go-offline
+
+COPY src ./src
+
+RUN mvn clean package -DskipTests
+
+# Stage 2 :  Run
+
+FROM openjdk:17-jdk-slim
+
+WORKDIR /testapp
+
+COPY --from=build /testapp/target/*.jar springbootapp.jar
+
+CMD ["java", "-jar", "springbootapp.jar"]
+```
+
+### How it works
+
+- First stage (`maven:sapmachine`):
+
+   * Has Maven & JDK
+   * Builds your Spring Boot jar inside the container.
+
+- Second stage (`openjdk:17-jdk-slim`):
+
+   * Lighter base image with just JDK.
+   * Copies the built jar from stage 1.
+   * Runs it.
+
+So your final image is small, clean, and doesn’t include Maven.
+
+### Build & Run
+
+```bash
+docker build -t my-springboot-app .
+docker run -p 8080:8080 my-springboot-app
+```
+
+✅ This is the **most common production-ready approach**: build inside Docker, then run on a minimal base image.
+
+## Note:
+
+### How Docker caching works
+
+#### Case 1: With `mvn dependency:go-offline`
+
+```dockerfile
+COPY pom.xml .
+RUN mvn dependency:go-offline   # <-- dependencies downloaded & cached here
+COPY src ./src
+RUN mvn clean package -DskipTests
+```
+
+* On **first build**:
+
+  * Docker sees new `pom.xml`, runs `mvn dependency:go-offline`, downloads dependencies.
+  * Then builds our jar.
+
+* On **subsequent builds (only src changed)**:
+
+  * `pom.xml` hasn’t changed → Docker reuses cached dependencies layer.
+  * Only `src` step runs again → rebuilds jar quickly.
+
+⚡ So dependencies don’t get downloaded again unless `pom.xml` changes.
+
+#### Case 2: Without `mvn dependency:go-offline`
+
+```dockerfile
+COPY . .
+RUN mvn clean package -DskipTests
+```
+
+* On **every build**:
+
+  * Any change in source invalidates the cache for the `COPY . .` layer.
+  * That means Maven dependencies are **always redownloaded**, even if unchanged.
+  * Slower builds.
+
+Docker caches the **dependency download step** (`mvn dependency:go-offline`).
+
+* If `pom.xml` didn’t change → cache is reused → no re-download.
+* If `pom.xml` changed (new dependency/version) → cache invalidated → Maven downloads again.
+
+The `mvn clean package` step still runs every time (to recompile our code), but it **reuses cached dependencies**.
 
 ---
 
