@@ -253,6 +253,117 @@ The `mvn clean package` step still runs every time (to recompile our code), but 
   docker-compose up      # start all services
   docker-compose down    # stop all services
   ```
+  
+## Dockerfile for Spring Boot app
+
+Assume you already have a Spring Boot jar built (`target/myapp.jar`):
+
+```dockerfile
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY target/myapp.jar app.jar
+CMD ["java", "-jar", "app.jar"]
+```
+
+Build the image:
+
+```bash
+docker build -t springbootapp .
+```
+
+### `docker-compose.yml`
+
+Create a file named `docker-compose.yml` in project root:
+
+```yaml
+services:
+  app:
+    image: springbootapp:1.0
+    build: .
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.3.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: security
+    ports:
+      - 3333:3306
+```
+
+### How it works
+
+* **MySQL service (`db`)**
+
+  * Runs official `mysql:8.0` image.
+  * Creates a database `mydb`.
+  * Root user password is `root`.
+  * What does build: . mean?
+    - build tells Docker Compose: build an image from a Dockerfile.
+    - The . means current directory. So Compose will look in the same folder (where docker-compose.yml is) for a Dockerfile.
+    - It’s basically the same as running: docker build -t springbootapp .
+
+* **Spring Boot service (`app`)**
+
+  * Built from your Dockerfile.
+  * Exposes `8080`.
+  * Connects to MySQL using environment variables.
+  * Uses `db` as hostname (because Docker Compose creates a network, and service names resolve as hostnames).
+
+* `depends_on` ensures MySQL starts before Spring Boot (but note: it doesn’t wait for DB to be *ready*, just started — we can handle readiness with retries if needed).
+
+### Start everything
+
+```bash
+docker-compose up --build
+```
+
+* Access Spring Boot: [http://localhost:8080](http://localhost:8080)
+* MySQL is available on port `3333`
+
+✅ This is the cleanest, minimal setup. Later, we can add:
+
+* **Volumes** to persist MySQL data
+* **Custom networks**
+* **Healthchecks**
+
+## docker-compose up VS docker-compose up --build
+
+### 🔹 `docker-compose up`
+
+* Just **starts the services** defined in `docker-compose.yml`.
+* If the image already exists locally, it will use it.
+* If the image doesn’t exist, it will **build it once** (if a `build:` section is present).
+* If the image exists but your source code changed → it **won’t rebuild automatically**.
+
+### 🔹 `docker-compose up --build`
+
+* Does everything that `docker-compose up` does, **plus** forces a **rebuild** of the images, even if they already exist.
+* Useful when you’ve made changes to your app code, Dockerfile, or dependencies.
+
+### Typical workflow
+
+* First time (or after code changes):
+
+  ```bash
+  docker-compose up --build
+  ```
+* Next runs (no code changes, just want to start everything):
+
+  ```bash
+  docker-compose up
+  ```
+
+✅ **Shortcut**: We can also rebuild separately with:
+
+```bash
+docker-compose build
+docker-compose up
+```
 
 ---
 
