@@ -78,3 +78,9 @@ public class OrderController {
 
 ---
 
+# Quick look
+
+<img width="964" height="127" alt="Screenshot 2025-09-04 at 1 00 13 PM" src="https://github.com/user-attachments/assets/f2e20cb3-01f9-4e0d-b880-99699d66ff44" />
+<img width="940" height="502" alt="Screenshot 2025-09-04 at 1 00 19 PM" src="https://github.com/user-attachments/assets/c854fa3c-d250-41dc-ab07-89ebd84659ff" />
+<img width="991" height="612" alt="Screenshot 2025-09-04 at 1 00 34 PM" src="https://github.com/user-attachments/assets/9bbb5174-e5bb-436d-ac19-3b5838f7dbe3" />
+<img width="928" height="179" alt="Screenshot 2025-09-04 at 1 00 56 PM" src="https://github.com/user-attachments/assets/b55f4acf-d693-424b-96e7-20b744d7e691" />
