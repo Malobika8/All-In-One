@@ -152,4 +152,5 @@ public class OrderController {
 
 👉 Go to [http://localhost:8761](http://localhost:8761) → you should see both services registered 🎉
 
+<img width="1393" height="737" alt="Screenshot 2025-09-04 at 12 54 59 PM" src="https://github.com/user-attachments/assets/39c88c81-a9a8-4b36-98f1-00c25e082485" />
 
