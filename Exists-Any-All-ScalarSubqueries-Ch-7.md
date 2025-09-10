@@ -129,3 +129,54 @@ WHERE salary > ALL (
 );
 ```
 
+---
+
+## Scalar Subqueries
+
+### **Question:** For each employee, display their **name, salary**, and the **average salary of their department** (as a new column).
+
+💡 Hint:
+
+* Outer query: loop through each employee.
+* Subquery: calculate `AVG(salary)` for that employee’s department.
+* Since it returns exactly **one value per row**, it’s a scalar subquery.
+
+#### Explanation:
+
+```sql
+SELECT e.name,
+       e.salary,
+       (
+           SELECT AVG(e2.salary)
+           FROM Employees e2
+           WHERE e2.dept_id = e.dept_id
+       ) AS dept_avg_salary
+FROM Employees e;
+```
+
+* For each employee `e` in outer query →
+* Subquery calculates the average salary for their department (`e2.dept_id = e.dept_id`).
+* Returns exactly **one number per row**, so it fits nicely in the `SELECT`.
+
+
+#### Output with our data:
+
+| name  | salary | dept\_avg\_salary |
+| ----- | ------ | ----------------- |
+| Alice | 60000  | 67500             |
+| Bob   | 50000  | 57500             |
+| Carol | 75000  | 67500             |
+| Dave  | 40000  | 40000             |
+| Eve   | 65000  | 57500             |
+
+---
+
+### **Question:** Write a query to find employees whose salary is **above the overall average salary**. (Think of it as a **scalar subquery in WHERE**).
+
+#### Explanation:
+
+```sql
+select name from Employees where salary > (select avg(salary) from Employees)
+```
+
+
