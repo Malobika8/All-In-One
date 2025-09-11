@@ -1,4 +1,4 @@
-## **Question 1:** Clustered index is only for primary keys?
+# **Question 1:** Clustered index is only for primary keys?
 
 ### Explanation:
 
@@ -37,7 +37,7 @@ CREATE CLUSTERED INDEX idx_order_date ON Orders(order_date);
 
 So: **primary key → often clustered**, but clustered index **can exist on any column** (unique or not).
 
-## **Question 2: Conceptual**
+# **Question 2: Conceptual**
 
 You have a table `Orders`:
 
@@ -82,7 +82,7 @@ You frequently run these queries:
 
 ---
 
-## **Question 3: True/False**
+# **Question 3: True/False**
 
 For each statement, answer True or False:
 
@@ -102,4 +102,4 @@ For each statement, answer True or False:
 
 ---
 
-## **Question 4:** 
+# **Question 4:** 
