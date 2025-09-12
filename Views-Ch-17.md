@@ -215,3 +215,91 @@ Now:
 
 * Any `INSERT` or `UPDATE` through this view must satisfy the condition (`salary > 50000`).
 * Otherwise, the statement will fail.
+
+---
+
+# Real-world scenario
+
+### 🏢 Example: Employee Database
+
+#### Tables
+
+**Employees**
+
+| emp\_id | name    | dept\_id | salary | ssn         |
+| ------- | ------- | -------- | ------ | ----------- |
+| 101     | Alice   | 1        | 90000  | 123-45-6789 |
+| 102     | Bob     | 2        | 50000  | 987-65-4321 |
+| 103     | Charlie | 1        | 70000  | 456-78-1234 |
+
+**Departments**
+
+| dept\_id | dept\_name  |
+| -------- | ----------- |
+| 1        | HR          |
+| 2        | Engineering |
+
+### Problem Without Views
+
+Suppose management asks:
+
+> "Give us a report of employee name, department name, and salary for employees earning more than 60k."
+
+Query each time:
+
+```sql
+SELECT e.name, d.dept_name, e.salary
+FROM Employees e
+JOIN Departments d ON e.dept_id = d.dept_id
+WHERE e.salary > 60000;
+```
+
+Now imagine:
+
+* This query is used in **10 reports**,
+* Developers may forget the exact join condition,
+* Someone might apply `salary >= 60000` instead of `> 60000`.
+
+👉 Leads to **duplication** and **inconsistency**.
+
+### Solution With a View
+
+Create a view once:
+
+```sql
+CREATE VIEW HighEarners AS
+SELECT e.name, d.dept_name, e.salary
+FROM Employees e
+JOIN Departments d ON e.dept_id = d.dept_id
+WHERE e.salary > 60000;
+```
+
+Now the report query is dead simple:
+
+```sql
+SELECT * FROM HighEarners;
+```
+
+👉 Benefits:
+
+* **Developers don’t need to know the join logic.**
+* **Everyone uses the same salary > 60000 rule.**
+* **Query is shorter, cleaner, and less error-prone.**
+* **Sensitive info (`ssn`) never leaves the base table.**
+
+### Real-World Use Case (Java App)
+
+In a Java microservice, instead of writing a long query in code, you might just call:
+
+```sql
+SELECT * FROM HighEarners WHERE dept_name = 'HR';
+```
+
+and map the results to your DTO.
+
+👉 The business rule (`salary > 60000`) is centralized in the DB, not scattered across the codebase.
+
+✅ That’s the real power of views: **abstraction, simplification, security, and consistency**.
+
+---
+
