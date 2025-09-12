@@ -4,14 +4,14 @@
 * It doesn’t store data physically (except in case of *materialized views* in some databases).
 * Instead, it stores the **query definition**, and whenever you query the view, the underlying query runs.
 
-## Why use Views?
+### Why use Views?
 
 1. **Security** – You can expose only specific columns/rows from a table (e.g., hide salary column from employees).
 2. **Simplification** – Complex joins/subqueries can be saved as a view, so developers just query the view.
 3. **Consistency** – Ensure everyone uses the same query logic.
 4. **Reusability** – One view can be reused across multiple applications/reports.
    
-## Creating a View
+### Creating a View
 
 ```sql
 CREATE VIEW EmployeeDept AS
@@ -26,7 +26,7 @@ Now you can query it like a table:
 SELECT * FROM EmployeeDept WHERE dept_name = 'HR';
 ```
 
-## Updating Through Views
+### Updating Through Views
 
 * Some views are **updatable** – meaning you can `INSERT`, `UPDATE`, or `DELETE` through them.
 * Rules for updatable views:
@@ -47,7 +47,7 @@ You can do:
 ```sql
 UPDATE EmpBasic SET salary = 60000 WHERE emp_id = 101;
 ```
-## Dropping a View
+### Dropping a View
 
 ```sql
 DROP VIEW EmployeeDept;
@@ -55,7 +55,7 @@ DROP VIEW EmployeeDept;
 
 ---
 
-## Indexes vs Views – Storage Perspective
+# Indexes vs Views – Storage Perspective
 
 **Indexes**
 
