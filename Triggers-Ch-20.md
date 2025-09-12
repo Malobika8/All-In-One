@@ -49,4 +49,26 @@ Suppose we want to **log all salary updates** into another table `salary_audit`.
 
 ---
 
+# Q1 (Trigger – Insert Logging)
+Suppose you have a table `users(id INT, username VARCHAR(50), created_at TIMESTAMP)`. Create a trigger `before_user_insert` that:
+* Automatically sets `created_at = NOW()` before a new user is inserted (so you don’t have to supply it manually).
+
+### Explanation:
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER before_user_insert
+BEFORE INSERT ON users
+FOR EACH ROW
+BEGIN
+    SET NEW.created_at = NOW();
+END$$
+
+DELIMITER ;
+```
+
+---
+
+
 
