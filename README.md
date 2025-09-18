@@ -1,112 +1,136 @@
-# Roadmap
+# 1. What is Project Reactor?
 
-## 🔹 1. Core Java (Strong Foundation)
+👉 **Project Reactor** is a **Reactive Programming library for the JVM**.
+It implements the **Reactive Streams specification** and provides powerful APIs (`Flux`, `Mono`) to handle **asynchronous, non-blocking, event-driven streams** of data.
 
-Expected to be fluent in:
+Think of it as:
 
-* **Java Fundamentals**: OOP, Collections, Generics, Exception handling.
-* **Java 8+ Features**: Streams, Lambdas, Optional, Date/Time API.
-* **Concurrency & Multithreading**: Executors, Futures, CompletableFuture, synchronization, locks, thread pools.
-* **New Java Versions**: Know key features from 9–21 (modules, var, records, switch expressions, pattern matching, virtual threads).
-
-📌 At 3 years, you should **solve medium-hard coding problems** using Java Streams, Collections, and multithreading comfortably.
+* **Java Stream API** but for **async + infinite data**
+* **RxJava’s cousin** (similar concepts, different ecosystem)
+* The **foundation for Spring WebFlux** (reactive web framework in Spring Boot)
 
 ---
 
-## 🔹 2. Frameworks & Backend Development
+## 2. Why Do We Need Reactor?
 
-### Spring & Spring Boot (non-negotiable):
+Traditional programming (blocking):
 
-* **Spring Core**: IoC, DI, Bean Scopes, Lifecycle.
-* **Spring Boot**: Auto-configuration, properties, starters, profiles.
-* **Spring MVC**: Controllers, REST endpoints, request mapping.
-* **Spring Data JPA**: CRUD repositories, queries, relationships, pagination.
-* **Spring Security**: Authentication (basic, JWT, OAuth2), Authorization.
-* **Spring Cloud (microservices)**: Config server, Eureka, Feign, Resilience4j, API Gateway basics.
+* Each request → takes up a thread.
+* Threads wait (DB calls, API calls, file IO).
+* If you have 1000 requests, you need 1000 threads.
+* **Scaling is limited.**
 
----
+Reactor (non-blocking):
 
-## 🔹 3. Microservices & Architecture
+* Uses **event loop model** (like Node.js).
+* A few threads can handle **thousands of requests**.
+* Instead of blocking, Reactor **reacts** when data is available.
 
-* Microservices principles: Loose coupling, scalability, API contracts.
-* Inter-service communication: REST, gRPC, Kafka.
-* **Design Patterns**: Singleton, Factory, Builder, Observer, Proxy, Circuit Breaker.
-* **Saga Pattern / Event-Driven Design** basics.
-* **API Best Practices**: URI design, versioning, idempotency, error handling.
+👉 Perfect for **microservices**, **APIs**, **real-time systems**.
 
 ---
 
-## 🔹 4. Databases
+## 3. Core Concepts in Project Reactor
 
-* **SQL**: Joins, subqueries, window functions, indexes, transactions.
-* **NoSQL**: MongoDB basics (when and why to use).
-* **Performance**: Indexing, query optimization, connection pooling.
+### a) **Publisher types**:
 
----
+* **Mono<T>** → A publisher that emits **0 or 1** item.
+  (Think: a single result → like Optional or Future).
+* **Flux<T>** → A publisher that emits **0…N** items.
+  (Think: a stream/list of values, possibly infinite).
 
-## 🔹 5. Cloud & DevOps Awareness
+### b) **Operators** (like in Java Stream):
 
-Companies expect some **cloud knowledge**:
+* Transform: `map`, `flatMap`, `filter`
+* Combine: `merge`, `zip`, `concat`
+* Handle errors: `onErrorReturn`, `retry`
+* Control flow: `take`, `skip`, `delayElements`
 
-* **AWS** (at least basics): EC2, S3, RDS, Lambda.
-* **CI/CD**: GitHub Actions, Jenkins, GitLab CI.
-* **Docker**: Containerize a Spring Boot app.
-* **Kubernetes (K8s)** basics (deployment, scaling, services).
+### c) **Subscriber**:
 
----
-
-## 🔹 6. Testing
-
-* **JUnit 5** and **Mockito** for unit testing.
-* **Spring Boot Test** for integration testing.
-* TDD / BDD familiarity.
+* Reactor provides default subscribers (via `.subscribe()`),
+  but you can create your own for custom backpressure control.
 
 ---
 
-## 🔹 7. Git & Collaboration
+## 4. Example (Mono & Flux)
 
-* Git commands deeply: branch, merge, rebase, stash, reflog.
-* Git workflows: GitFlow, trunk-based.
-* Conflict resolution.
+### Mono (single value):
 
----
+```java
+import reactor.core.publisher.Mono;
 
-## 🔹 8. Problem Solving & DSA
+public class MonoExample {
+    public static void main(String[] args) {
+        Mono.just("Hello Reactor")
+            .map(String::toUpperCase)
+            .subscribe(System.out::println); // Subscriber consumes
+    }
+}
+```
 
-* Solve coding challenges (LeetCode/InterviewBit/Codeforces).
-* Arrays, Strings, Hashing, Stack/Queue, LinkedList, Trees, Graphs, DP.
-* System Design basics (even for 3 years!): URL shortener, chat app, e-commerce cart.
+Output:
 
----
-
-## 🔹 9. AI + Developer Productivity
-
-* Use **AI tools smartly** (Copilot/ChatGPT):
-
-  * Generate boilerplate code, configs.
-  * Speed up unit tests, SQL queries.
-  * Assist in debugging & documentation.
-* But also **show that you can code without AI** in interviews.
+```
+HELLO REACTOR
+```
 
 ---
 
-## 🔹 10. Soft Skills & Mindset
+### Flux (multiple values):
 
-* Communicate technical trade-offs.
-* Participate in code reviews.
-* Write clean, maintainable, testable code.
-* Adaptability → Learn quickly (AI, cloud, new frameworks).
-* Team collaboration (remote/hybrid setups).
+```java
+import reactor.core.publisher.Flux;
+
+public class FluxExample {
+    public static void main(String[] args) {
+        Flux.range(1, 5)
+            .map(n -> n * n)
+            .subscribe(System.out::println);
+    }
+}
+```
+
+Output:
+
+```
+1
+4
+9
+16
+25
+```
 
 ---
 
-✅ **Summary**:
-At 3 years, you’re expected to be a **solid contributor** who can independently develop and deploy features, debug production issues, and write clean tested code.
-You don’t need to be a "tech architect," but you must:
+## 5. How It Differs from Java Streams
 
-* Have **strong Java + Spring Boot fundamentals**.
-* Know **microservices + cloud basics**.
-* Be good at **DSA for interviews**.
-* Be **aware of AI tools** (and not afraid of them).
+| Feature      | Java Streams             | Project Reactor (Flux/Mono)               |
+| ------------ | ------------------------ | ----------------------------------------- |
+| Data type    | `Stream<T>`              | `Flux<T>` / `Mono<T>`                     |
+| Sync/Async   | Synchronous (blocking)   | Asynchronous (non-blocking)               |
+| Size         | Finite only              | Finite or infinite                        |
+| Backpressure | ❌ Not supported          | ✅ Supported                               |
+| Laziness     | Yes                      | Yes (nothing happens until `subscribe()`) |
+| Use case     | In-memory collection ops | Reactive APIs, WebFlux, messaging, IO     |
 
+---
+
+## 6. Where Is Reactor Used?
+
+* **Spring WebFlux** → non-blocking REST APIs (instead of Spring MVC).
+* **R2DBC** → Reactive Database Connectivity (non-blocking DB calls).
+* **Messaging** → Kafka, RabbitMQ, WebSockets.
+* **Real-time pipelines** → Data streams, event-driven apps.
+
+---
+
+✅ So in short:
+
+* **Project Reactor = a Reactive Programming library for Java.**
+* Provides **Flux** (0…N items) and **Mono** (0/1 item).
+* Asynchronous, non-blocking, supports backpressure.
+* Forms the foundation of **Spring WebFlux** and reactive microservices.
+
+---
 
