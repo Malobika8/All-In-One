@@ -28,6 +28,7 @@ public interface Subscriber<T> {
 <img width="797" height="303" alt="Screenshot 2025-09-18 at 7 11 22 PM" src="https://github.com/user-attachments/assets/356779a7-7d20-4cb1-a4ea-eb974ac3c961" />
 <img width="790" height="523" alt="Screenshot 2025-09-18 at 7 12 02 PM" src="https://github.com/user-attachments/assets/28340c44-6ae2-4848-b119-2ffccd5d6ac3" />
 <img width="714" height="581" alt="Screenshot 2025-09-18 at 7 13 00 PM" src="https://github.com/user-attachments/assets/a1bf0078-05c4-44fd-86f9-46916f0758af" />
+<img width="716" height="445" alt="Screenshot 2025-09-18 at 7 44 31 PM" src="https://github.com/user-attachments/assets/a6826c98-191a-440f-af0e-daac650a75de" />
 
 ### Here’s a simple custom Subscriber example:
 
