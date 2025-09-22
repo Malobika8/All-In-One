@@ -89,3 +89,56 @@ This improves performance by reducing the overhead of creating/closing DB connec
 In real apps, tools like HikariCP, Apache DBCP, or C3P0 are used.
 
 ---
+
+# Suppose you want to call a **stored procedure** named `raiseSalary` that takes an `employeeId` and `increment` as input parameters, and returns the updated salary as output. Can you write a JDBC code snippet using `CallableStatement`?
+
+### Sol:
+
+1. **Creating a stored procedure** syntax depends on the DB (Oracle, MySQL, PostgreSQL, etc.), but the idea is:
+
+   * `IN` parameters (inputs).
+   * `OUT` parameters (outputs).
+
+   Example (MySQL style):
+
+   ```sql
+   CREATE PROCEDURE raiseSalary (
+       IN empId INT,
+       IN inc INT,
+       OUT updated_salary INT
+   )
+   BEGIN
+       UPDATE employee 
+       SET salary = salary + inc
+       WHERE id = empId;
+
+       SELECT salary INTO updated_salary 
+       FROM employee 
+       WHERE id = empId;
+   END;
+   ```
+2. **CallableStatement in JDBC**
+
+   * Use `connection.prepareCall()`.
+   * For OUT params, you must **register** them before executing.
+   * Execution returns `true/false`, not the OUT value directly. You fetch OUT params separately.
+
+```java
+CallableStatement cs = connection.prepareCall("{call raiseSalary(?, ?, ?)}");
+
+// Set IN parameters
+cs.setInt(1, 101);    // employeeId
+cs.setInt(2, 5000);   // increment
+
+// Register OUT parameter
+cs.registerOutParameter(3, java.sql.Types.INTEGER);
+
+// Execute
+cs.execute();
+
+// Get OUT parameter value
+int updatedSalary = cs.getInt(3);
+System.out.println("Updated Salary: " + updatedSalary);
+
+cs.close();
+```
