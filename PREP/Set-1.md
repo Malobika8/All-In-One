@@ -182,7 +182,7 @@ So always prefer:
 
 * It's **not in the database**
 * It's **not being tracked by JPA**
-* So yes, it's in the **transient** state.
+* So, it's in the **transient** state.
 
 ---
 
