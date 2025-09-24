@@ -166,5 +166,58 @@ department.getEmployees().remove(emp);
 
 ---
 
+# There is a common point of confusion in **JPA/Hibernate**.
+
+### 1. What happens without `orphanRemoval=true`?
+
+* You have a `Department` entity with a `List<Employee>` mapped by a `@OneToMany` (usually).
+* When you do:
+
+  ```java
+  d.getEmployees().remove(0);
+  ```
+
+  You are just **removing the association** in memory (in the persistence context).
+* On `commit()`, Hibernate synchronizes the persistence context with the database:
+
+  * It updates the **foreign key (department\_id)** of that `Employee` to `NULL` (or removes the row from the join table if it’s `@ManyToMany`).
+  * The `Employee` row itself is **not deleted**, it just becomes “unlinked” from the Department.
+  * The object is still in a **managed state**, but being managed does not automatically mean it will be deleted — it only means Hibernate will keep track of its changes.
+
+So: **without orphan removal, the employee stays in the DB**, just no longer associated with the Department.
+
+---
+
+### 2. What happens with `orphanRemoval=true`?
+
+* With `orphanRemoval=true` on the relationship, Hibernate interprets "removing from the collection" as "this entity has no parent anymore, so it’s an orphan".
+* When you do:
+
+  ```java
+  d.getEmployees().remove(0);
+  ```
+
+  Hibernate marks that employee for **DELETE**, not just for disassociation.
+* On `commit()`, the corresponding row in the `Employee` table is actually deleted.
+
+---
+
+### 3. Why being **persistent/managed** doesn’t imply delete
+
+* The persistence state (`persistent`, `detached`, `removed`) tells Hibernate **how to track the object**, not what to do with it.
+* A `persistent` entity will get **updates flushed** automatically if its fields change.
+* A `removed` entity is explicitly scheduled for **DELETE** (`em.remove(entity)` or orphan removal).
+* Just being `persistent` and changing associations does not cause deletion — unless `orphanRemoval=true`.
+
+---
+
+✅ **Conclusion:**
+
+* **Without orphan removal:** employee is just disassociated (FK null or join row removed).
+* **With orphan removal:** employee row is deleted from DB.
+* Being in **persistent state** only ensures Hibernate notices changes, not that it will delete the entity.
+
+---
+
 
 
