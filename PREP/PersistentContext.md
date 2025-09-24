@@ -105,10 +105,6 @@ Yes, using Hibernate's query cache, which is separate from second-level entity c
 
 ---
 
-# Great! Here's a **real-world caching scenario** to test your understanding of 1st-level vs 2nd-level cache:
-
----
-
 # Use Case Challenge
 
 You have:
