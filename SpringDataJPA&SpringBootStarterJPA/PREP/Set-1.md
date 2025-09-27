@@ -206,6 +206,49 @@ em.flush();
 
 ### Sol:
 
+**1. Using `@OneToOne` / `@ManyToOne` EAGER fetching**
+
+* By default:
+
+  * `@ManyToOne` → **EAGER** (but check JPA provider, Hibernate may default to LAZY in practice).
+  * `@OneToMany` / `@ManyToMany` → **LAZY**.
+* Eager fetching ensures that associated entity is loaded immediately, avoiding N+1 problem **for that association**.
+
+```java
+@Entity
+public class Book {
+    @ManyToOne(fetch = FetchType.EAGER) // default for ManyToOne
+    private Author author;
+}
+```
+
+**2. Using `JOIN FETCH` in JPQL**
+
+* Best approach to **avoid N+1 queries** especially for collections (`OneToMany`) or when you don’t want global EAGER fetch.
+
+```java
+@Query("SELECT b FROM Book b JOIN FETCH b.author")
+List<Book> findAllBooksWithAuthors();
+```
+
+* This tells JPA/Hibernate to fetch `Book` **and its `Author` in one query**.
+* Avoids extra queries for each `Book` accessing `author`.
+
+**3. Bonus Notes**
+
+* `JOIN FETCH` works for **nested associations** too:
+
+  ```java
+  SELECT b FROM Book b 
+  JOIN FETCH b.author a 
+  JOIN FETCH a.publisher
+  ```
+* For collections, you may need `DISTINCT` to avoid duplicates:
+
+  ```java
+  SELECT DISTINCT b FROM Book b JOIN FETCH b.orders
+  ```
+  
 ---
 
 # Suppose you have an entity `Book` with fields `id`, `title`, `price`. You want to update the `price` of a book with id = 1 to `500` **without fetching the whole entity first**. How would you write this in **Spring Data JPA** (method or annotation-based approach)?
