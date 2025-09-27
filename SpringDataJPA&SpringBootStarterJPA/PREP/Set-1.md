@@ -206,5 +206,46 @@ em.flush();
 
 ### Sol:
 
+---
+
+# Suppose you have an entity `Book` with fields `id`, `title`, `price`. You want to update the `price` of a book with id = 1 to `500` **without fetching the whole entity first**. How would you write this in **Spring Data JPA** (method or annotation-based approach)?
+
+### Sol:
+
+- **Update queries in JPA**
+   * You must add `@Modifying` above `@Query` to tell Spring this is an update/delete query.
+   * The return type should usually be `int` (rows updated), not `void`.
+
+**JPQL:**
+
+```java
+@Repository
+public interface BookRepository extends JpaRepository<Book, Integer> {
+
+    @Modifying
+    @Query("update Book b set b.price = :price where b.id = :id")
+    int updateBookPrice(@Param("id") int id, @Param("price") double price);
+}
+```
+
+**Native SQL:**
+
+```java
+@Repository
+public interface BookRepository extends JpaRepository<Book, Integer> {
+
+    @Modifying
+    @Query(value = "update book set price = :price where id = :id", nativeQuery = true)
+    int updateBookPrice(@Param("id") int id, @Param("price") double price);
+}
+```
+
+⚠️ **Important:**
+
+* You also need to run this method inside a `@Transactional` context (either on service method or repository method). Otherwise, the update won’t execute.
+
+---
+
+
 
 
