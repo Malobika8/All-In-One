@@ -50,3 +50,36 @@
 
 Think of it as the **bridge** between the raw `HttpServletRequest/Response` and the controller method you wrote.
 
+# **Complete Spring MVC flow:**
+
+1. **Client Request → DispatcherServlet**
+
+   * Every request first hits the **DispatcherServlet**, which acts as the front controller.
+
+2. **Handler Mapping**
+
+   * DispatcherServlet consults the **HandlerMapping** to find the correct **Controller** method (`@Controller` + `@RequestMapping`).
+
+3. **Handler Adapter**
+
+   * Once the handler (controller method) is found, the **HandlerAdapter** executes it.
+   * It also binds request parameters (`@RequestParam`, `@ModelAttribute`, etc.) and prepares arguments.
+
+4. **Controller Execution**
+
+   * The controller method executes and returns either:
+
+     * A **ModelAndView** (classic Spring MVC)
+     * A **View name + Model**
+     * Or just data (e.g., with `@ResponseBody` in REST).
+
+5. **View Resolver**
+
+   * If a view name is returned, DispatcherServlet asks the **ViewResolver** to resolve it (e.g., JSP, Thymeleaf, etc.).
+
+6. **Render Response**
+
+   * The chosen View is rendered with the Model data and sent back to the client as an HTTP response.
+
+⚡ So the keywords are:
+**DispatcherServlet → HandlerMapping → HandlerAdapter → Controller → Model & View → ViewResolver → Response.**
