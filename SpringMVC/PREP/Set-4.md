@@ -101,6 +101,54 @@ class Product{
 
 ---
 
+# Redirect VS Forward
+
+## Sol
+
+#### 🔹 `forward`
+
+* **Definition**: Server-side transfer of a request to another resource **without changing the URL** in the browser.
+* **How it works**:
+
+  * The original request is **forwarded internally** to another controller or view.
+  * The client/browser **does not know** the request was forwarded.
+* **Syntax in Spring MVC**:
+
+```java
+return "forward:/otherHandler";
+```
+
+* **Use case**:
+
+  * When you want to **reuse a handler or view** internally without a new HTTP request.
+  * Example: Forwarding to a JSP after some preprocessing in a controller.
+
+#### 🔹 `redirect`
+
+* **Definition**: Sends an **HTTP redirect (302)** to the client, telling the browser to make a **new request** to a different URL.
+* **How it works**:
+
+  * Browser URL **changes**.
+  * A **new request** is initiated.
+* **Syntax in Spring MVC**:
+
+```java
+return "redirect:/otherHandler";
+```
+
+* **Use case**:
+
+  * After **form submission** (POST), redirect to avoid **duplicate submissions** (Post/Redirect/Get pattern).
+  * When navigating to a **different resource/controller**.
+
+#### 🔹 Key Differences
+
+| Feature      | Forward                    | Redirect                |
+| ------------ | -------------------------- | ----------------------- |
+| Browser URL  | Does **not** change        | **Changes** to new URL  |
+| Request type | Same request object        | **New request**         |
+| Use case     | Internal resource handling | Navigation, PRG pattern |
+
 
 
 
