@@ -149,6 +149,19 @@ return "redirect:/otherHandler";
 | Request type | Same request object        | **New request**         |
 | Use case     | Internal resource handling | Navigation, PRG pattern |
 
+#### Extra tip:
 
+This pattern avoids duplicate form submissions (Post/Redirect/Get).
+You cannot directly use the POST Model after redirect; for passing messages you can use RedirectAttributes:
+
+```
+@PostMapping("/submitForm")
+public String submit(@ModelAttribute UserFormDTO userFormDto, RedirectAttributes redirectAttributes){
+    redirectAttributes.addFlashAttribute("message", "Successful");
+    return "redirect:/success";
+}
+```
+
+addFlashAttribute ensures the message survives the redirect.
 
 
