@@ -336,8 +336,6 @@ public class Main {
 
 ## Sol:
 
-✅ Excellent answer — very clear, and you captured both the **problem** and the **solution** perfectly!
-
 > A **race condition** occurs when **multiple threads** access and modify a **shared resource** at the same time, and the final outcome depends on the timing of their execution.
 > This leads to **unpredictable behavior** and **inconsistent or corrupt data**.
 
