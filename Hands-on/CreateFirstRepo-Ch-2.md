@@ -25,7 +25,7 @@ This means Git is now **watching** this folder.
 Set remote:
 
 ```bash
-set remote add origin <git-url>
+git remote add origin <git-url>
 ```
 
 ---
