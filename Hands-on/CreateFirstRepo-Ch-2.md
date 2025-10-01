@@ -22,6 +22,12 @@ git init
 
 This means Git is now **watching** this folder.
 
+Set remote:
+
+```bash
+set remote add origin <git-url>
+```
+
 ---
 
 ## ✅ **Step 2: Create and Track Your First File**
@@ -119,6 +125,13 @@ git log
 
 You now have **two commits**!
 
+### 5. Push to remote
+
+For the first time, we need to set upstream
+
+```bash
+git push --set-upstream origin main
+```
 ---
 
 ## 🧠 Quick Summary
