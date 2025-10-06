@@ -103,4 +103,9 @@ Flux.range(1, 1000).subscribe(new PrintSubscriber());
 
 Here the `PrintSubscriber` processes one element at a time — the `Flux` will not blast all 1000 items into memory.
 
+### Extending Base Subscriber
+
+<img width="814" height="424" alt="Screenshot 2025-09-19 at 8 05 45 PM" src="https://github.com/user-attachments/assets/287955e4-af8e-4f9e-8f6f-bce1bed9dfd7" />
+<img width="818" height="475" alt="Screenshot 2025-09-19 at 8 06 53 PM" src="https://github.com/user-attachments/assets/551bcb2d-b855-45d4-9ee2-25c793afa42c" />
+<img width="1102" height="270" alt="Screenshot 2025-09-19 at 8 21 54 PM" src="https://github.com/user-attachments/assets/accace53-0857-4c1d-ab71-002209c9e3e6" />
 
