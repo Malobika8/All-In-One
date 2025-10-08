@@ -262,6 +262,10 @@ public interface ToLongFunction<T> {
 ## Summarizing or aggregating manually
 - Collectors.reducing()
 
+---
+
+# Please check: https://docs.oracle.com/javase/8/docs/api/java/util/stream/Collectors.html
+
 
 
 
