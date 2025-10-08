@@ -15,6 +15,31 @@
 Stream functionality in Collections
 - List.stream()
 - Arrays.stream()
+
+## Intermediate Operations
+- Return a Stream → allow further chaining
+- Lazy → executed only when a terminal operation is called
+
+#### Examples:
+- map()
+- filter()
+- flatMap()
+- distinct()
+- sorted()
+- peek()
+
+## Terminal Operations
+
+- Consume the stream → produce a result or side-effect
+- Trigger the execution of intermediate operations
+
+#### Examples:
+- collect()
+- reduce()
+- count()
+- forEach()
+- findFirst() / findAny()
+- anyMatch() / allMatch() / noneMatch()
   
 # In-built Functional Interfaces available:
 
