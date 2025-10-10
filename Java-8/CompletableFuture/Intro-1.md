@@ -143,3 +143,40 @@ all.thenRun(() -> {
 
 ---
 
+# CompletableFuture.supplyAsync()
+
+By default, **`CompletableFuture.supplyAsync()`** uses the **ForkJoinPool.commonPool()**, and the threads in that pool are **daemon threads**, not user threads.
+
+💡 **Daemon threads**
+
+* JVM does **not** wait for daemon threads to finish.
+* When only daemon threads are left running, the JVM exits immediately.
+
+💡 **User threads**
+
+* JVM waits for them to finish before shutting down.
+
+So in our code:
+
+```java
+final int num = 4;
+CompletableFuture<Integer> cf = CompletableFuture.supplyAsync(() -> num * num);
+cf.thenApply(no -> 2 * no)
+  .thenAccept(no -> System.out.println(no));
+```
+
+If the main thread exits before the async computation finishes, and since `supplyAsync()` runs on daemon threads by default, our program **might terminate before printing anything**.
+
+✅ **To prevent that**, we can:
+
+* Either call `cf.join()` (waits for completion), or
+* Use a custom Executor with user threads:
+
+  ```java
+  ExecutorService executor = Executors.newFixedThreadPool(2);
+  CompletableFuture.supplyAsync(() -> num * num, executor)
+      .thenApply(no -> 2 * no)
+      .thenAccept(System.out::println);
+  executor.shutdown();
+  ```
+
