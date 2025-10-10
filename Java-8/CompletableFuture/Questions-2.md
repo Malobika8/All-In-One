@@ -1,3 +1,57 @@
+# thenCombine VS thenCombineAsync
+
+### 🔹 `thenCombine`
+
+* Suppose you have:
+
+```java
+cf1.thenCombine(cf2, (a, b) -> a + b)
+```
+
+* Behavior:
+
+  1. `cf1` and `cf2` run independently on their threads (maybe common pool threads or custom executor).
+  2. **Whichever future completes last** (either `cf1` or `cf2`) — that thread immediately runs the combining function `(a, b) -> a + b`.
+* ✅ This is **synchronous** in the sense that it runs on an existing thread — no extra thread is created.
+
+### 🔹 `thenCombineAsync`
+
+* Now with:
+
+```java
+cf1.thenCombineAsync(cf2, (a, b) -> a + b)
+```
+
+* Behavior:
+
+  1. `cf1` and `cf2` run independently.
+  2. Once both are complete, the combining function `(a, b) -> a + b` is **scheduled asynchronously** in:
+
+     * **ForkJoinPool.commonPool** by default, or
+     * **Custom executor** if you provide one.
+* ✅ This guarantees the combining runs **in a separate thread** (not necessarily the thread that completed the last future).
+
+### 🔹 Visualization
+
+```
+cf1 ---> [thread A] -----\
+                           \
+                            --> thenCombine --> runs on LAST completing thread (A or B)
+cf2 ---> [thread B] -----/
+
+cf1 ---> [thread A] -----\
+                           \
+                            --> thenCombineAsync --> runs in ForkJoinPool (maybe thread C)
+cf2 ---> [thread B] -----/
+```
+
+### 🔹 Key takeaway
+
+* **thenCombine** → no extra thread, runs on completing thread of the last future.
+* **thenCombineAsync** → extra thread from common pool (or your executor), truly asynchronous.
+
+---
+
 # **Problem 1: Combine Two Asynchronous Tasks**
 
 Write a `CompletableFuture` example where:
