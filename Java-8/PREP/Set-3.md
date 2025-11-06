@@ -103,10 +103,6 @@ Optional<Employee> result = department.stream()
 
 ---
 
-# Got it! Let’s sharpen your **method reference skills** by converting some common lambdas into method references.
-
----
-
 # Convert each lambda to a method reference
 
 **1. Lambda:**
