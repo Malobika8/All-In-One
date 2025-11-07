@@ -1,3 +1,96 @@
+# Imperative VS Declarative VS Functional
+
+> **Find all names starting with “J” and ending with “a”, convert them to uppercase, and print them.**
+
+We’ll write it in **three styles** —
+1️⃣ Imperative (traditional Java)
+2️⃣ Declarative (SQL-like logic)
+3️⃣ Functional (Java Streams)
+
+### Imperative Style — *“How to do it”*
+
+```java
+List<String> names = Arrays.asList("Java", "Jaya", "Jenna", "Jira", "Julia");
+
+List<String> result = new ArrayList<>();
+
+for (String name : names) {
+    if (name.startsWith("J") && name.endsWith("a")) {
+        result.add(name.toUpperCase());
+    }
+}
+
+for (String r : result) {
+    System.out.println(r);
+}
+```
+
+### Characteristics:
+
+* Focuses on **how** to do each step.
+* You manage **iteration**, **conditions**, and **mutable state** (`result` list).
+* Verbose but explicit — classic procedural Java.
+
+### Declarative Style — *“What to do” (SQL mindset)*
+
+Imagine if your data were in a database table named `names`.
+
+You’d simply write:
+
+```sql
+SELECT UPPER(name)
+FROM names
+WHERE name LIKE 'J%a';
+```
+
+### Characteristics:
+
+* Describes **what you want** (“names starting with J and ending with a”)
+* Doesn’t tell how iteration or filtering happens.
+* SQL engine handles the “how.”
+
+### Functional Style — *Declarative in Java (using functions)*
+
+```java
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> names = Arrays.asList("Java", "Jaya", "Jenna", "Jira", "Julia");
+
+        names.stream()
+             .filter(n -> n.startsWith("J") && n.endsWith("a"))
+             .map(String::toUpperCase)
+             .forEach(System.out::println);
+    }
+}
+```
+
+### Characteristics:
+
+* Also **describes what**, not **how**.
+* Uses **higher-order functions** (`filter`, `map`, `forEach`).
+* No mutable state, no explicit loops.
+* Can be parallelized easily with `.parallelStream()`.
+
+### Summary Comparison
+
+| Feature         | Imperative | Declarative (SQL)    | Functional (Streams)        |
+| --------------- | ---------- | -------------------- | --------------------------- |
+| Style           | Procedural | Declarative          | Declarative + Functional    |
+| “How” or “What” | **How**    | **What**             | **What**                    |
+| Code length     | Long       | Short                | Compact                     |
+| Mutability      | Mutable    | Immutable            | Immutable                   |
+| Example         | For-loops  | SQL Query            | Stream operations           |
+| Parallelization | Manual     | Built-in (DB engine) | Built-in (`parallelStream`) |
+
+### So in short:
+
+* **Declarative style** = say what you want.
+* **Functional style** = declarative style + use of functions (lambdas, pure functions, composition).
+
+
 # Methods
 
 - Stream.generate()
