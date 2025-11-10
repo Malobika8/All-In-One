@@ -37,7 +37,7 @@ For example:
 
 Let’s break it down very simply.
 
-### 1. META-INF/services/java.sql.Driver — What is this file?
+### META-INF/services/java.sql.Driver — What is this file?
 
 In modern JDBC drivers (e.g., MySQL, PostgreSQL, Oracle), the JAR contains a file at this exact path:
 
@@ -57,7 +57,7 @@ So the JAR itself declares:
 
 > “Hey, I provide this JDBC driver class.”
 
-### 2. What is Java's Service Provider Interface (SPI)?
+### What is Java's Service Provider Interface (SPI)?
 
 Java has a mechanism called **SPI — Service Provider Interface**.
 
@@ -81,7 +81,7 @@ META-INF/services/java.sql.Driver
 
 If it finds such a file, it reads the class name from it and loads the driver automatically.
 
-### 3. Why do we care?
+### Why do we care?
 
 Old way (Java 6/7):
 
@@ -103,7 +103,7 @@ Java will:
 2. Look for META-INF/services/java.sql.Driver
 3. Load the driver class automatically
 
-### 4. Example inside `mysql-connector-j.jar`
+### Example inside `mysql-connector-j.jar`
 
 If you open the JAR:
 
@@ -121,7 +121,7 @@ com.mysql.cj.jdbc.Driver
 
 This file is what enables auto-loading.
 
-### 5. Summary (super simple)
+### Summary (super simple)
 
 | Concept                           | Meaning                                                       |
 | --------------------------------- | ------------------------------------------------------------- |
