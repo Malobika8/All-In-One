@@ -1,4 +1,4 @@
-## ✅ **Order of SQL Keywords (Query Execution Order)**
+## **Order of SQL Keywords (Query Execution Order)**
 
 ### 1️⃣ **Logical Execution Order** (How DB *processes* the query — **interview important**)
 
@@ -34,3 +34,70 @@ LIMIT number OFFSET number;
 ```
 
 ---
+
+In SQL, commands are divided into categories based on what they do.
+Two very important categories are **DDL** and **DML**.
+
+## **DDL – Data Definition Language**
+
+These commands are used to **define or modify the structure of the database and its objects** (tables, schemas, indexes, etc.).
+
+### 🔹 What DDL does
+
+* Creates database objects
+* Modifies structure of objects
+* Deletes objects
+
+### 🔹 Common DDL Commands
+
+| Command    | Purpose                                                  |
+| ---------- | -------------------------------------------------------- |
+| `CREATE`   | Creates new database objects (table, database, view…)    |
+| `ALTER`    | Modifies existing objects (add column, modify datatype…) |
+| `DROP`     | Deletes database objects                                 |
+| `TRUNCATE` | Removes all rows from a table (faster than DELETE)       |
+| `RENAME`   | Renames a table or other object                          |
+
+> ⚠ DDL commands are **auto-committed** → changes cannot be rolled back.
+
+## ✅ **DML – Data Manipulation Language**
+
+These commands are used to **manipulate the data stored inside database tables**.
+
+### 🔹 What DML does
+
+* Insert data
+* Update existing data
+* Delete data
+* Read data (in ANSI SQL, SELECT is considered DQL, but many consider it under DML in interviews)
+
+### 🔹 Common DML Commands
+
+| Command  | Purpose                                              |
+| -------- | ---------------------------------------------------- |
+| `INSERT` | Adds new rows/data                                   |
+| `UPDATE` | Modifies existing data                               |
+| `DELETE` | Removes data row-wise                                |
+| `MERGE`  | Inserts or updates depending on condition (“upsert”) |
+
+> 🔁 DML commands **are not auto-committed** → can be rolled back.
+
+## 📝 Summary
+
+| Category | Full Form                  | Works On           | Auto Commit | Examples                      |
+| -------- | -------------------------- | ------------------ | ----------- | ----------------------------- |
+| **DDL**  | Data Definition Language   | Structure / schema | Yes         | CREATE, ALTER, DROP, TRUNCATE |
+| **DML**  | Data Manipulation Language | Data inside tables | No          | INSERT, UPDATE, DELETE, MERGE |
+
+## Other SQL Categories
+
+| Category | Full Form                    | Examples                    |
+| -------- | ---------------------------- | --------------------------- |
+| **DQL**  | Data Query Language          | SELECT                      |
+| **TCL**  | Transaction Control Language | COMMIT, ROLLBACK, SAVEPOINT |
+| **DCL**  | Data Control Language        | GRANT, REVOKE               |
+
+**“Is SQL = DML?”**
+→ No. SQL is a language that includes multiple categories (DDL, DML, DQL, TCL, DCL).
+DML is only one part of SQL.
+
