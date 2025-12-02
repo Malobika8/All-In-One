@@ -101,3 +101,48 @@ These commands are used to **manipulate the data stored inside database tables**
 → No. SQL is a language that includes multiple categories (DDL, DML, DQL, TCL, DCL).
 DML is only one part of SQL.
 
+---
+
+## **TRUNCATE vs DELETE**
+
+| Feature              | **DELETE**                             | **TRUNCATE**                      |
+| -------------------- | -------------------------------------- | --------------------------------- |
+| Type                 | **DML** (Data manipulation)            | **DDL** (Schema modification)     |
+| Removes              | Selected rows (with WHERE) or all rows | **All rows only**                 |
+| WHERE allowed?       | ✔ Yes                                  | ❌ No                              |
+| Speed                | Slower (row by row)                    | Very fast                         |
+| Auto-commit          | ❌ Can rollback if transaction used     | ✔ Auto-commit → cannot rollback   |
+| Auto Increment Reset | ❌ No (continues from last value)       | ✔ Yes (resets to 1)               |
+| Triggers             | ✔ `BEFORE/AFTER DELETE` triggers fire  | ❌ DELETE triggers **do NOT fire** |
+| Disk space released  | ❌ No                                   | ✔ Yes (table storage freed)       |
+| Locks                | Row-level locking                      | Table-level locking               |
+
+### 🔑 Why DELETE is slower
+
+`DELETE` removes rows **one by one** and logs each deletion in the transaction log.
+
+### 🔑 Why TRUNCATE is faster
+
+`TRUNCATE` removes data by **deallocating all storage pages at once** — it does not log each row.
+
+### ⚠️ RULE OF THUMB (Interviews love this)
+
+| Use          | When                                                                           |
+| ------------ | ------------------------------------------------------------------------------ |
+| **DELETE**   | You want to remove **specific rows** or maintain **transaction safety**        |
+| **TRUNCATE** | You want to **quickly remove all data** and **reset the table to empty state** |
+
+### Quick Example
+
+```sql
+DELETE FROM employees WHERE department = 'HR';
+-- removes only HR employees
+```
+
+```sql
+TRUNCATE TABLE employees;
+-- removes ALL employees and resets AUTO_INCREMENT
+```
+
+---
+
