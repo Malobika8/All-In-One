@@ -181,7 +181,7 @@ Not Java, not your code — the **driver JARs** got updated.
 
 ---
 
-# ✅ Simple Summary (Interview Ready)
+# ✅ Simple Summary
 
 **Before JDBC 4.0:**
 Drivers did NOT include the SPI file → developer had to load them manually using `Class.forName()`.
@@ -193,4 +193,3 @@ Drivers added `META-INF/services/java.sql.Driver` → Java auto-discovers them v
 
 
 
-Would you like the **next JDBC interview question** now?
