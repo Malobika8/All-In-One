@@ -31,5 +31,3 @@
 
 ---
 
-**Q12 (Theory)**
-In JDBC, what is the difference between using `DriverManager` and using a `DataSource` for getting connections?
