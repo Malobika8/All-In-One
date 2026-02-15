@@ -50,3 +50,7 @@ If objects are immutable:
   Example: String, Wrapper classes
 
 Race conditions can be avoided by ensuring proper synchronization, using lock mechanisms, atomic variables, concurrent collections, or by designing immutable objects.
+
+## Deadlock
+
+Two or more threads are permanently blocked because each is waiting for a resource held by another.
