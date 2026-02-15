@@ -189,4 +189,4 @@ Choosing:
 
 Is critical for stability.
 
-
+Once the core threads are busy and the queue is full, the pool creates additional threads up to maxPoolSize. If the maximum limit is reached, the RejectedExecutionHandler decides what to do — either throw exception, run in caller thread, or discard tasks. In production systems, we usually configure a bounded queue with an explicit rejection policy to avoid memory issues.
