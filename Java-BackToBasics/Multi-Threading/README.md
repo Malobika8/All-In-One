@@ -54,3 +54,62 @@ Race conditions can be avoided by ensuring proper synchronization, using lock me
 ## Deadlock
 
 Two or more threads are permanently blocked because each is waiting for a resource held by another.
+
+## Does `notifyAll()` wake all waiting threads?
+
+It wakes **all threads waiting on that object's monitor**.
+
+But important nuance:
+* They all move from WAITING → BLOCKED
+* They compete to re-acquire the monitor
+* Only one acquires it at a time
+
+They do NOT all run simultaneously.
+
+## Do `wait()`, `notify()`, `notifyAll()` come from `Object`?
+
+Yes. They belong to `java.lang.Object`.
+
+## Why can’t they be used with explicit (extrinsic) locks like `ReentrantLock`?
+
+Because:
+
+* `wait/notify` work with the **intrinsic monitor lock**
+* `synchronized` uses the object’s monitor
+
+But `ReentrantLock` does NOT use object monitors. It uses a completely different locking mechanism built on **AbstractQueuedSynchronizer (AQS)**.
+
+So instead of:
+
+```
+wait() / notify()
+```
+
+With `ReentrantLock`, we use:
+
+```
+Condition.await()
+Condition.signal()
+Condition.signalAll()
+```
+
+Example:
+
+```java
+ReentrantLock lock = new ReentrantLock();
+Condition condition = lock.newCondition();
+
+lock.lock();
+try {
+    condition.await();
+} finally {
+    lock.unlock();
+}
+```
+
+So:
+
+Intrinsic lock → wait/notify
+Explicit lock → await/signal
+
+
