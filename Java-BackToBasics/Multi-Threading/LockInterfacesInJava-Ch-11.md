@@ -8,6 +8,52 @@
 - **`StampedLock`**  
   - **Package**: `java.util.concurrent.locks`  
   - Provides an advanced lock with **optimistic locking** and more fine-grained control over lock acquisition, designed for high-performance scenarios.
+ 
+StampedLock was introduced in Java 8. It is designed for high-performance read-heavy systems.
+
+Key idea: It introduces Optimistic Locking.
+
+### Features of StampedLock
+
+It provides three modes:
+
+1️⃣ Write Lock
+2️⃣ Read Lock
+3️⃣ Optimistic Read
+
+#### What is Optimistic Read?
+
+This is the powerful part. Instead of blocking readers: It allows a thread to read without locking. It returns a stamp (version number). After reading, you validate the stamp. If no write happened → data is valid. If write happened → retry with proper read lock.
+
+#### Why is this powerful?
+
+In read-heavy systems: Most of the time, no write happens. So optimistic reads succeed. No blocking. No context switching. Very high throughput.
+
+#### Example Use Case
+
+Market data system: 1000 threads reading stock price 1 thread updating price occasionally
+
+#### ReentrantReadWriteLock:
+- Readers still acquire read lock.
+
+#### StampedLock:
+- Readers use optimistic read.
+- Much faster.
+
+
+#### StampedLock is:
+
+- Not reentrant
+- Not condition-based
+- Harder to use correctly
+- Not always better
+- You use it only in performance-critical read-heavy systems.
+
+### When would you NOT use StampedLock?
+
+- When reentrancy is required
+- When condition variables are needed
+- When simplicity is more important than raw performance
 
 ---
 
