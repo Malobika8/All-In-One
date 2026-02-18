@@ -102,3 +102,39 @@ Here’s what it means:
 - You avoid writing repetitive transaction-related code.
 - It's easier to manage and maintain transactions across your application. 
 
+---
+
+# What is `CommandLineRunner`?
+
+`CommandLineRunner` is a **Spring Boot interface** that allows you to run some code **after the application context is fully loaded** but **before the app starts serving requests**. Think of it as a **startup hook**.
+
+## Key Points
+
+1. **Runs once on startup**
+
+   ```java
+   @Component
+   public class MyRunner implements CommandLineRunner {
+       @Override
+       public void run(String... args) {
+           System.out.println("App has started!");
+       }
+   }
+   ```
+
+   Output: `App has started!` when Spring Boot launches.
+
+2. **Good for initialization**
+
+   * Load test data
+   * Insert default departments
+   * Seed admin user
+   * Perform migrations
+
+3. **Automatically managed**
+
+   * Spring detects beans that implement `CommandLineRunner`
+   * Calls their `run` method after context is ready
+
+---
+
