@@ -75,18 +75,18 @@ So what happens?
 
 > Most likely the service method is not transactional and save() is not being called, so the entity becomes detached and dirty checking does not persist changes.
 
-#### Other Possible Causes 
+#### Other Possible Causes
 
-1️⃣ No `@Transactional` and no save
-2️⃣ readOnly = true used somewhere
-3️⃣ Entity is detached manually (e.g., using DTO mapping incorrectly)
-4️⃣ Database trigger rolling back silently
-5️⃣ Exception happening but swallowed somewhere
-6️⃣ Wrong datasource (updating test DB but checking prod DB)
-7️⃣ Optimistic locking failure (`@Version`)
-8️⃣ Hibernate flush mode set to MANUAL
-9️⃣ ID mismatch — updating wrong entity
-🔟 Caching issue (second-level cache)
+- No `@Transactional` and no save
+- readOnly = true used somewhere
+- Entity is detached manually (e.g., using DTO mapping incorrectly)
+- Database trigger rolling back silently
+- Exception happening but swallowed somewhere
+- Wrong datasource (updating test DB but checking prod DB)
+- Optimistic locking failure (`@Version`)
+- Hibernate flush mode set to MANUAL
+- ID mismatch — updating wrong entity
+- Caching issue (second-level cache)
 
 Strong debugging answer:
 
