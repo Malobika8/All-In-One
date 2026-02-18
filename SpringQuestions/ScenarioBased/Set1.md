@@ -1,4 +1,4 @@
-# 🧠 Situation 1 — “Update API Works But Data Not Updated”
+# Situation 1 — “Update API Works But Data Not Updated”
 
 ### Interviewer says:
 
@@ -105,5 +105,106 @@ Strong debugging answer:
 4. Check if method has `@Transactional`.
 5. Verify datasource connection.
 
+---
 
+# If you were designing a high-concurrency system: Would you always use optimistic locking? Or are there cases where pessimistic locking is better?
+
+### Explanation:
+
+### Optimistic Locking — When It’s Best
+
+Characteristics:
+
+* No DB row lock
+* Conflict checked at commit time
+* Uses `@Version`
+* Fails fast on conflict
+
+Best for:
+
+* ✅ Read-heavy systems
+* ✅ Low probability of conflict
+* ✅ Short transactions
+* ✅ Web applications (user think-time between read & write)
+
+Why?
+
+Because holding DB locks during user think-time is dangerous.
+
+Imagine:
+
+User opens edit form
+Goes for coffee ☕
+Comes back after 5 minutes
+Clicks Save
+
+If you had pessimistic locking, that row would be locked for 5 minutes. That’s terrible.
+
+So for most REST applications:
+
+👉 Optimistic locking is preferred.
+
+### Now About Write-Heavy Systems
+
+> For write heavy systems pessimistic might be better.
+
+This is sometimes true, but depends.
+
+Pessimistic locking:
+
+```java
+@Lock(LockModeType.PESSIMISTIC_WRITE)
+```
+
+What it does:
+
+* Acquires DB-level lock (`SELECT ... FOR UPDATE`)
+* Other transactions must wait
+
+Good when:
+
+* High conflict probability
+* Short transactions
+* Critical financial operations
+* Inventory deduction systems
+
+Example:
+
+* Stock trading
+* Bank balance updates
+* Payment systems
+
+#### But Important Clarification
+
+Pessimistic locking is NOT always better for write-heavy systems.
+
+If contention is very high:
+
+* Threads will block
+* Throughput drops
+* Deadlocks may occur
+* DB becomes bottleneck
+
+So decision depends on:
+
+* Conflict frequency
+* Transaction duration
+* Business tolerance for retries
+
+#### Clean Comparison
+
+| Feature                | Optimistic | Pessimistic |
+| ---------------------- | ---------- | ----------- |
+| Locks row immediately  | ❌          | ✅           |
+| Risk of deadlock       | ❌          | ✅           |
+| Best for read-heavy    | ✅          | ❌           |
+| Best for high-conflict | ❌          | ✅           |
+| Scales better          | ✅          | ❌           |
+| Requires retry logic   | ✅          | ❌           |
+
+> When would you choose pessimistic over optimistic locking?
+
+> I would choose pessimistic locking in high-conflict scenarios involving critical updates like financial transactions or inventory deduction, where preventing concurrent modification is more important than throughput. For most web applications with low conflict probability, optimistic locking is preferred because it scales better and avoids long-held database locks.
+
+---
 
