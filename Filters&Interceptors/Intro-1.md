@@ -129,5 +129,5 @@ public class WebConfig implements WebMvcConfigurer {
 - Leverage Ordering: Use @Order for filters to control execution sequence.
 - Test Thoroughly: Mock requests/responses to ensure your logic behaves as expected.
 
-## Conclusion
+# Conclusion
 Filters and interceptors are powerful tools for controlling request/response processing in Spring Boot applications. By understanding their differences and use cases, you can design cleaner, more maintainable code. Whether you’re logging requests, enforcing security, or adding custom headers, these components will help you keep your application robust and efficient.
