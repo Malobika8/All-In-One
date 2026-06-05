@@ -78,3 +78,15 @@ Role is a way to give AWS entities permissions to do stuff on AWS.
 
 <img width="1035" height="532" alt="Screenshot 2026-06-05 at 9 08 59 AM" src="https://github.com/user-attachments/assets/25031b84-b58e-44db-8dd1-c6a97d719de0" />
 
+## Quiz
+
+<img width="949" height="491" alt="Screenshot 2026-06-05 at 9 10 52 AM" src="https://github.com/user-attachments/assets/0b52125c-3de7-4415-931b-8a0a7dcf5826" />
+<img width="967" height="452" alt="Screenshot 2026-06-05 at 9 11 27 AM" src="https://github.com/user-attachments/assets/24a2681e-22cc-458f-909c-d16fc831131f" />
+<img width="969" height="458" alt="Screenshot 2026-06-05 at 9 11 57 AM" src="https://github.com/user-attachments/assets/c359e799-c468-461c-8212-c379cf82de0b" />
+<img width="908" height="462" alt="Screenshot 2026-06-05 at 9 12 21 AM" src="https://github.com/user-attachments/assets/3301ce37-eb25-4b24-869c-4c3348e652c9" />
+<img width="909" height="423" alt="Screenshot 2026-06-05 at 9 12 55 AM" src="https://github.com/user-attachments/assets/de3fe537-4775-4dde-80d5-034a8d85cbcd" />
+<img width="952" height="441" alt="Screenshot 2026-06-05 at 9 13 33 AM" src="https://github.com/user-attachments/assets/133a7ba5-3ef2-47bb-9362-2bfdd9c756b9" />
+<img width="906" height="447" alt="Screenshot 2026-06-05 at 9 13 52 AM" src="https://github.com/user-attachments/assets/f98f2b48-f3f6-4eba-9f0f-1cb3b4e70481" />
+<img width="888" height="297" alt="Screenshot 2026-06-05 at 9 14 12 AM" src="https://github.com/user-attachments/assets/72d8ed7e-a97e-43bc-ac5d-8473f330aa04" />
+<img width="826" height="533" alt="Screenshot 2026-06-05 at 9 15 40 AM" src="https://github.com/user-attachments/assets/53e3bf8e-2ede-4fd9-80c4-f988600058ec" />
+<img width="842" height="389" alt="Screenshot 2026-06-05 at 9 16 21 AM" src="https://github.com/user-attachments/assets/af9c8444-0eef-4e24-b657-d7b53ff3f09f" />
